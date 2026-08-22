@@ -1,4 +1,3 @@
-// Assets/Scripts/Player/PlayerMovement.cs
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
@@ -24,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
         controller.Move(direction * moveSpeed * Time.deltaTime);
-        
+
         if (controller.isGrounded && velocity.y < 0f)
             velocity.y = -2f;
 
