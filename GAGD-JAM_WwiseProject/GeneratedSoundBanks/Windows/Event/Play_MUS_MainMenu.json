@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1043591872",
+    "Type": "Event",
+    "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
+    "Language": "SFX",
+    "Hash": "{869D8E45-65FF-0189-2167-05EC4D173E6F}",
+    "ObjectPath": "Play_MUS_MainMenu",
+    "ShortName": "Play_MUS_MainMenu",
+    "Path": "Event/Play_MUS_MainMenu.bnk",
+    "Media": [
+     {
+      "Id": "39292364",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "HauntedLullabiesofJapan_EdoLullaby3.wav",
+      "Path": "Media/39292364.wem",
+      "CachePath": "D5/{D52DD6B6-18A7-C6C4-7881-25289CE44B87}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1043591872",
+      "Name": "Play_MUS_MainMenu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_MainMenu",
+      "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "39292364"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F0A36158-7345-97D5-AD6E-305B68C89F15}"
+ }
+}

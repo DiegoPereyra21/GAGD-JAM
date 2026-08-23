@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4243441902",
+    "Type": "Event",
+    "GUID": "{B0D30FCC-4B19-4A72-A8B4-89D12FD8A037}",
+    "Language": "SFX",
+    "Hash": "{62435164-D9F0-75A4-80B2-7310A8B03DB7}",
+    "ObjectPath": "Stop_MUS_MainMenu",
+    "ShortName": "Stop_MUS_MainMenu",
+    "Path": "Event/Stop_MUS_MainMenu.bnk",
+    "Events": [
+     {
+      "Id": "4243441902",
+      "Name": "Stop_MUS_MainMenu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_MUS_MainMenu",
+      "GUID": "{B0D30FCC-4B19-4A72-A8B4-89D12FD8A037}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A22ADC95-DFE2-E77B-9E02-A3B1DE6A97C3}"
+ }
+}
