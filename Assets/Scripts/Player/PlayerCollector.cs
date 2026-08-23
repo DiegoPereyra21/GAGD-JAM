@@ -6,6 +6,7 @@ public class PlayerCollector : MonoBehaviour
 {
     [SerializeField] private float collectRadius = 1.5f;
     [SerializeField] private LayerMask collectibleLayer;
+    [SerializeField] private PlayerInventory inventory;
 
     private InputAction interactAction;
     private void Awake()
@@ -16,7 +17,13 @@ public class PlayerCollector : MonoBehaviour
     private void OnDisable() => interactAction.performed -= OnInteract;
     private void OnInteract(InputAction.CallbackContext ctx)
     {
-        FindNearestCollectible()?.Collect();
+        Collectible target = FindNearestCollectible();
+        if (target == null) return;
+
+        CollectibleType type = target.Type;
+        int value = target.Value;
+
+        target.Collect(() => inventory.AddItem(type, value));
     }
     //hace como un collider frente al player para que "agarre" lo que tenga al frente suyo(luego tengo q hacer un inventario en el player para q los "guarde")
     private Collectible FindNearestCollectible()
