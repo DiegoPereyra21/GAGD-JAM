@@ -7,6 +7,11 @@ public class PlayerCollector : MonoBehaviour
     [SerializeField] private float collectRadius = 1.5f;
     [SerializeField] private LayerMask collectibleLayer;
     [SerializeField] private PlayerInventory inventory;
+    //para cesto interactivo
+    [SerializeField] private BasketDisplay basketDisplay;
+    //para avisar q tiene q pausarse el movimiento del player cuando recolecta algo, usar oninteract
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private float freezeDuration = 0.8f; //LUEGO AJUSTAR SEGUN ANIMACION Y TIEMPO HASTA Q SE HAGA KINEMATIC EL HONGO
 
     private InputAction interactAction;
     private void Awake()
@@ -22,8 +27,16 @@ public class PlayerCollector : MonoBehaviour
 
         CollectibleType type = target.Type;
         int value = target.Value;
+        GameObject visualPrefab = target.BasketVisualPrefab;
 
-        target.Collect(() => inventory.AddItem(type, value));
+        playerMovement.FreezeMovement(freezeDuration);
+
+        target.Collect(() =>
+        {
+            inventory.AddItem(type, value);
+            if (visualPrefab != null)
+                basketDisplay.Drop(visualPrefab);
+        });
     }
     //hace como un collider frente al player para que "agarre" lo que tenga al frente suyo(luego tengo q hacer un inventario en el player para q los "guarde")
     private Collectible FindNearestCollectible()

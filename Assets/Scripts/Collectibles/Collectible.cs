@@ -11,6 +11,9 @@ namespace Game.Collectibles
         //esta bastante bien asi, no creo q haga falta tocarlo
         [SerializeField] private float collectDuration = 0.3f;
         [SerializeField] private float collectRiseHeight = 1f;
+        //para hacer el menu interactivo dentro del cesto
+        [SerializeField] private GameObject basketVisualPrefab;
+        public GameObject BasketVisualPrefab => basketVisualPrefab;
         public CollectibleType Type => type;
         public int Value => value;
         private bool collected;

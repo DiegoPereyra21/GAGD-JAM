@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//vista que pidieron, no parece que sepan muy bien la diferencia entre las perspectivas pero bueno, les convencio esta vista
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] private Transform target;
@@ -8,15 +8,21 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float smoothSpeed = 10f;
 
     private Vector3 offset;
-    private void Start()
+    private Quaternion fixedRotation;
+
+    private void Awake()
     {
         float rad = angle * Mathf.Deg2Rad;
         offset = new Vector3(0f, distance * Mathf.Sin(rad), -distance * Mathf.Cos(rad));
-        transform.rotation = Quaternion.Euler(angle, 0f, 0f);
+        fixedRotation = Quaternion.Euler(angle, 0f, 0f);
+        transform.rotation = fixedRotation;
     }
+
     private void LateUpdate()
     {
-        Vector3 targetPosition = target.position + offset;
-        transform.position = Vector3.Lerp(transform.position, targetPosition, smoothSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, GetDesiredPosition(), smoothSpeed * Time.deltaTime);
     }
+
+    public Vector3 GetDesiredPosition() => target.position + offset;
+    public Quaternion FixedRotation => fixedRotation;
 }
