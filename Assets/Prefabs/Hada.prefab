@@ -129,3 +129,4 @@ MonoBehaviour:
   value: 1
   collectDuration: 0.3
   collectRiseHeight: 1
+  basketVisualPrefab: {fileID: 550371918017911446, guid: 36848bf36faa6224982343ad8a3e443a, type: 3}

@@ -1,3 +1,4 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Label text="Label" name="InventoryLabel"/>
+    <ui:VisualElement name="BasketPanel" style="display: none; position: absolute; top: 50px; left: 50%; width: 300px; height: 300px;" />
 </ui:UXML>
