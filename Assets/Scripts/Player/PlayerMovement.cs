@@ -9,15 +9,17 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private InputAction moveAction;
     private Vector3 velocity;
-    private bool isFrozen;//para pausar al pj cuando este recolectando hongos, la ides es q sea reutilizable para distintas situaciones donde necesite una pausa
+    private int freezeCount;
+    private bool IsFrozen => freezeCount > 0;//para pausar al pj cuando este recolectando hongos, la ides es q sea reutilizable para distintas situaciones donde necesite una pausa
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         moveAction = GetComponent<PlayerInput>().actions["Move"];
     }
+
     private void Update()
     {
-        Vector2 input = isFrozen ? Vector2.zero : moveAction.ReadValue<Vector2>();
+        Vector2 input = IsFrozen ? Vector2.zero : moveAction.ReadValue<Vector2>();
         Vector3 direction = new Vector3(input.x, 0f, input.y);
 
         if (direction.sqrMagnitude > 0.0001f)
@@ -34,16 +36,24 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
-    //freeze
-        public void FreezeMovement(float duration)
+
+    // Freeze temporal por duración fija (ej. animación de recolección)
+    public void FreezeMovement(float duration)
     {
-        StopAllCoroutines();
-        StartCoroutine(FreezeRoutine(duration));
+        StartCoroutine(TimedFreezeRoutine(duration));
     }
-    private IEnumerator FreezeRoutine(float duration)
+
+    private IEnumerator TimedFreezeRoutine(float duration)
     {
-        isFrozen = true;
+        freezeCount++;
         yield return new WaitForSeconds(duration);
-        isFrozen = false;
+        freezeCount--;
+    }
+
+    // Freeze indefinido, controlado manualmente (ej. mientras el canasto está abierto)
+    public void SetFrozen(bool frozen)
+    {
+        freezeCount += frozen ? 1 : -1;
+        freezeCount = Mathf.Max(0, freezeCount);
     }
 }

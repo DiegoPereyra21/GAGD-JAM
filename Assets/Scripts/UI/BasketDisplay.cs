@@ -1,56 +1,38 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
-using System.Collections;
-
-[RequireComponent(typeof(UIDocument))]
+//administra todo lo referido al "spawnear" el item dentro del canasto
 public class BasketDisplay : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private Camera basketCamera;
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private CameraTransition cameraTransition;
     [SerializeField] private Transform dropPoint;
-    [SerializeField] private RenderTexture renderTexture;
-    //para ajustar el area donde spawnean los visibles, aveces aparecian fuera del basket
-    [SerializeField] private float spawnHorizontalSpread = 0.3f; // qué tan lejos del centro en X/Z
-    [SerializeField] private float spawnHeight = 0.5f;           // altura desde la que cae
+    [SerializeField] private float spawnHorizontalSpread = 0.3f;
+    [SerializeField] private float spawnHeight = 0.5f;
+    [SerializeField] private float settleDelay = 0.5f;
 
-
-    private VisualElement panel;
     private InputAction toggleAction;
     private bool isOpen;
 
     private void Awake()
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-        panel = root.Q<VisualElement>("BasketPanel");
-        panel.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(renderTexture));
-
         toggleAction = playerInput.actions["Inventory"];
     }
 
-    private void OnEnable()
-    {
-        toggleAction.performed += OnToggle;
-        SetOpen(false);
-    }
-
-    private void OnDisable()
-    {
-        toggleAction.performed -= OnToggle;
-    }
+    private void OnEnable() => toggleAction.performed += OnToggle;
+    private void OnDisable() => toggleAction.performed -= OnToggle;
 
     private void OnToggle(InputAction.CallbackContext ctx)
     {
-        SetOpen(!isOpen);
-    }
+        isOpen = !isOpen;
+        playerMovement.SetFrozen(isOpen);
 
-    private void SetOpen(bool open)
-    {
-        isOpen = open;
-        panel.style.display = open ? DisplayStyle.Flex : DisplayStyle.None;
-        basketCamera.enabled = open;
+        if (isOpen)
+            cameraTransition.TransitionToBasket();
+        else
+            cameraTransition.TransitionToPlayer();
     }
-
+    //logica de spawneo del item en el canasto
     public void Drop(GameObject visualPrefab)
     {
         Vector3 spawnPos = dropPoint.position + new Vector3(
@@ -61,23 +43,24 @@ public class BasketDisplay : MonoBehaviour
         GameObject go = Instantiate(visualPrefab, spawnPos, Random.rotation);
         StartCoroutine(SettleThenFreeze(go));
     }
-
-    private void OnDrawGizmosSelected()
+    //FIX BUG, se salia todo el rato los objetos de dentro del canasto
+    //con esto quedan inmoviles luego de 0.5f
+    private System.Collections.IEnumerator SettleThenFreeze(GameObject go)
     {
-        if (dropPoint == null) return;
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(dropPoint.position + Vector3.up * spawnHeight * 0.5f,
-            new Vector3(spawnHorizontalSpread * 2f, spawnHeight, spawnHorizontalSpread * 2f));
-    }
-
-    private IEnumerator SettleThenFreeze(GameObject go)
-    {
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(settleDelay);
         if (go == null) yield break;
 
         if (go.TryGetComponent(out Rigidbody rb))
             rb.isKinematic = true;
 
         go.transform.SetParent(dropPoint, true);
+    }
+    //para visualizar el "area" donde pueden aparecer los objetos en el canasto, sigue sin convencerme
+    private void OnDrawGizmosSelected()
+    {
+        if (dropPoint == null) return;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(dropPoint.position + Vector3.up * spawnHeight * 0.5f,
+            new Vector3(spawnHorizontalSpread * 2f, spawnHeight, spawnHorizontalSpread * 2f));
     }
 }
