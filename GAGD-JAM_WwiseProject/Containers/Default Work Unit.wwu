@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="SFX" ID="{1DE6F581-8444-43E5-95DA-86944B06940F}" ShortID="842398046">
+					<ChildrenList>
+						<Folder Name="Player" ID="{923B9A06-8222-4F35-96BF-103971042B73}" ShortID="852517494">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Footsteps" ID="{11E94152-5FB8-4F5D-A508-CE0AB773DA0B}" ShortID="739915784">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="UI" ID="{D769E960-5929-4DBB-BFDC-95019FACE2D7}" ShortID="109017226"/>
+						<RandomSequenceContainer Name="Menu Button Hover" ID="{D268ADE6-EE81-4F19-B507-CC79569DCE40}" ShortID="265265689">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="button_hover_01" ID="{37C10AA1-AE53-4B4E-A392-EF1DFF25545B}" ShortID="729524508">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-500</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="a" ID="{98D94120-5E2C-47B3-8CD4-7668B09A4385}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.17957"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.08955"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.26575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.27862"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>a.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56377940"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="p" ID="{CBE79A5A-ABA8-4DFF-B448-02CD6E616498}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05984"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.22037"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.96429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>p.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809076942"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{5FCFA857-6DFD-4D06-8E9B-17B05B8A6AE9}" ShortID="536205196">
+												<PropertyList>
+													<Property Name="Render" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="p" ID="{CBE79A5A-ABA8-4DFF-B448-02CD6E616498}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="button_hover_02" ID="{540FDD47-BF6F-4574-9BE0-E51176A2E486}" ShortID="1068097065">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-400</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="a" ID="{A33E7249-C7F2-440B-B025-6B83053F71F8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.17957"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.08955"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.26575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.27862"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>a.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56377940"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="p" ID="{C7C1FF4B-CDB3-4119-A080-DA8E4F5410A8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05984"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.22037"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.96429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>p.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809076942"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{0E722C1B-3D95-4953-A0F6-CB9B0BAE6DE6}" ShortID="511385111">
+												<PropertyList>
+													<Property Name="Render" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="p" ID="{C7C1FF4B-CDB3-4119-A080-DA8E4F5410A8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="button_hover_03" ID="{4F1B7DF9-C2D9-4167-B4F4-3A768A6B8924}" ShortID="182239442">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-300</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="a" ID="{8B641B6A-D69F-424C-BAC6-BDC6AEE7F58C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.17957"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.08955"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.26575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.27862"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>a.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56377940"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="p" ID="{3BE44B7C-3F1B-4311-A7B6-ACB50B83BF80}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05984"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.22037"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.96429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>p.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809076942"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{B693B0C4-BF2E-4410-AA43-C56EA0D8D8FD}" ShortID="723902623">
+												<PropertyList>
+													<Property Name="Render" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="p" ID="{3BE44B7C-3F1B-4311-A7B6-ACB50B83BF80}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="button_hover_04" ID="{BAB25E81-233D-4703-A3D3-319630D6AC85}" ShortID="712063028">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="a" ID="{07D43AC1-0B9B-4EDD-9C2E-950A232C55DA}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.17957"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.08955"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.26575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.27862"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>a.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56377940"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="p" ID="{A4338FB1-E488-40D4-B39F-E3BF40AF0A9A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05984"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.22037"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.96429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>p.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809076942"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{DDA21FD9-A828-4E48-90C4-CC0A5404246E}" ShortID="1007515316">
+												<PropertyList>
+													<Property Name="Render" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="p" ID="{A4338FB1-E488-40D4-B39F-E3BF40AF0A9A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="button_hover_05" ID="{337B2CC9-DB88-423F-8D2B-12AB1C88A36E}" ShortID="782010067">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="a" ID="{3BED58A4-92CB-4310-8066-06F9B1F96008}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.17957"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.08955"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.26575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.27862"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>a.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56377940"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="p" ID="{83ABF615-D554-4CB4-BD40-8C3323DB23F2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05984"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.22037"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.96429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>p.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809076942"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{50EDCDA8-3FB2-4E32-9A1C-6B859BCA3B23}" ShortID="775667849">
+												<PropertyList>
+													<Property Name="Render" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="p" ID="{83ABF615-D554-4CB4-BD40-8C3323DB23F2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="button_hover_06" ID="{2E511ADE-3556-417A-A611-7DE9CB0A3D11}" ShortID="1049180306">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="a" ID="{F4280BDF-CC59-4DD2-8A1C-C36AA2A93403}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.17957"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.08955"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.26575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.27862"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>a.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56377940"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="p" ID="{84D94F8C-90B7-4689-9B8A-E0341A0E57D6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05984"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.22037"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.96429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>p.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809076942"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{E548E7F4-B765-4A9A-9C06-A14CD936CB4A}" ShortID="216164236">
+												<PropertyList>
+													<Property Name="Render" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="p" ID="{84D94F8C-90B7-4689-9B8A-E0341A0E57D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{00234AF7-A75A-4593-AD38-CA3AB9A68B6E}" ShortID="446469605">
+										<PropertyList>
+											<Property Name="Render" Type="bool" Value="True"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+												<ObjectRef Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{BF74C68C-E4FF-4E7C-A29C-1388C26DAA27}" ShortID="309601629">
+					<ChildrenList>
+						<Folder Name="Stingers" ID="{F03C651C-956D-4FBE-A5AD-98214693DBCC}" ShortID="39512441"/>
+						<Folder Name="Tracks" ID="{B0837AEC-A012-463C-AFB0-E108EA822553}" ShortID="954044033">
+							<ChildrenList>
+								<Sound Name="idoberg-creepy-halloween-bells-loop-408748" ID="{D71AFCDB-2857-4700-A29F-503B4C93E79F}" ShortID="562177743">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>60</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Menu" ID="{55FB71EC-CC87-4529-9C99-C18F9FF08817}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="idoberg-creepy-halloween-bells-loop-408748" ID="{3EB3A7C5-C56A-4F48-ABD1-06C837609BD8}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="6"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.62765"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.79662"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>idoberg-creepy-halloween-bells-loop-408748.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="869888867"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{263CB7B5-DBF7-4C0B-B118-B2091500943E}" ShortID="708235858">
+												<PropertyList>
+													<Property Name="Render" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+														<ObjectRef Name="Secret_message" ID="{2F5DE612-1AAD-4A84-8FB4-3E66521C920E}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="idoberg-creepy-halloween-bells-loop-408748" ID="{3EB3A7C5-C56A-4F48-ABD1-06C837609BD8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HauntedLullabiesofJapan_EdoLullaby3" ID="{0E8B92C0-C4EF-4A57-B166-F0B9870B4DDA}" ShortID="846807957">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>61</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-300</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HauntedLullabiesofJapan_EdoLullaby3" ID="{73F13452-1217-4A85-A4DB-43D9A4229FDA}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.99346"/>
+												<Property Name="FadeInShape" Type="int16" Value="6"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.69403"/>
+												<Property Name="FadeOutShape" Type="int16" Value="6"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.47131"/>
+												<Property Name="LoopEnd" Type="Real64" Value="57.94164"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="60.04351"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HauntedLullabiesofJapan_EdoLullaby3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="39292364"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HauntedLullabiesofJapan_EdoLullaby3" ID="{73F13452-1217-4A85-A4DB-43D9A4229FDA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambience" ID="{B0A163DB-030C-4741-971F-7DF8B7ECF201}" ShortID="71701263"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

@@ -18,5 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Day.unity
     guid: 4c2deca536c72664ebf3930ded713dfb
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 851420b1d0c8f7847af58cacf434cf17, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: add075d936ebe0c448de9ecd3ba85c16, type: 2}
   m_UseUCBPForAssetBundles: 0

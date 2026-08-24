@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1043591872",
+    "Type": "Event",
+    "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
+    "Language": "SFX",
+    "Hash": "{9E2C0077-12AB-5685-0816-D08EA0A0F2C6}",
+    "ObjectPath": "Play_MUS_MainMenu",
+    "ShortName": "Play_MUS_MainMenu",
+    "Path": "Event/Play_MUS_MainMenu.bnk",
+    "Media": [
+     {
+      "Id": "869888867",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "idoberg-creepy-halloween-bells-loop-408748.wav",
+      "Path": "Media/869888867.wem",
+      "CachePath": "1A/{1A1AF148-38C9-1504-BEF0-F3877CB6F06D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1043591872",
+      "Name": "Play_MUS_MainMenu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_MainMenu",
+      "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "869888867"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C60919FD-9D0C-A2FA-5332-12EDAFFF8F8D}"
+ }
+}
