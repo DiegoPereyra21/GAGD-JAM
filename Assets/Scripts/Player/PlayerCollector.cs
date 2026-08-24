@@ -30,12 +30,12 @@ public class PlayerCollector : MonoBehaviour
         GameObject visualPrefab = target.BasketVisualPrefab;
 
         playerMovement.FreezeMovement(freezeDuration);
-
+        
         target.Collect(() =>
         {
             inventory.AddItem(type, value);
             if (visualPrefab != null)
-                basketDisplay.Drop(visualPrefab);
+                basketDisplay.Drop(type, visualPrefab);
         });
     }
     //hace como un collider frente al player para que "agarre" lo que tenga al frente suyo(luego tengo q hacer un inventario en el player para q los "guarde")

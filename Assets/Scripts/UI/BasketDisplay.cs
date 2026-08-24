@@ -1,3 +1,4 @@
+using Game.Collectibles;
 using UnityEngine;
 using UnityEngine.InputSystem;
 //administra todo lo referido al "spawnear" el item dentro del canasto
@@ -10,13 +11,36 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private float spawnHorizontalSpread = 0.3f;
     [SerializeField] private float spawnHeight = 0.5f;
     [SerializeField] private float settleDelay = 0.5f;
-
+    [SerializeField] private PlayerInventory inventory;
+    [SerializeField] private LayerMask basketItemLayer;
+    
     private InputAction toggleAction;
     private bool isOpen;
 
     private void Awake()
     {
         toggleAction = playerInput.actions["Inventory"];
+    }
+    private void Update()
+    {
+        if (!isOpen) return;
+        if (Mouse.current == null || !Mouse.current.leftButton.wasPressedThisFrame) return;
+
+        TryRemoveClickedItem();
+    }
+
+    private void TryRemoveClickedItem()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f, basketItemLayer))
+        {
+            if (hit.collider.TryGetComponent(out BasketItemVisual visual))
+            {
+                inventory.RemoveItem(visual.Type, 1);
+                Destroy(visual.gameObject);
+            }
+        }
     }
 
     private void OnEnable() => toggleAction.performed += OnToggle;
@@ -33,7 +57,7 @@ public class BasketDisplay : MonoBehaviour
             cameraTransition.TransitionToPlayer();
     }
     //logica de spawneo del item en el canasto
-    public void Drop(GameObject visualPrefab)
+    public void Drop(CollectibleType type, GameObject visualPrefab)
     {
         Vector3 spawnPos = dropPoint.position + new Vector3(
             Random.Range(-spawnHorizontalSpread, spawnHorizontalSpread),
@@ -41,6 +65,7 @@ public class BasketDisplay : MonoBehaviour
             Random.Range(-spawnHorizontalSpread, spawnHorizontalSpread));
 
         GameObject go = Instantiate(visualPrefab, spawnPos, Random.rotation);
+        go.AddComponent<BasketItemVisual>().Init(type);
         StartCoroutine(SettleThenFreeze(go));
     }
     //FIX BUG, se salia todo el rato los objetos de dentro del canasto

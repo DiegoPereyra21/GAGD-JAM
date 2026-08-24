@@ -25,4 +25,12 @@ public class PlayerInventory : MonoBehaviour
         items.Clear();
         OnInventoryChanged?.Invoke();
     }
+    //nueva, para q al hacer click en un item este desaparezca y se reste en el inventario
+    public void RemoveItem(CollectibleType type, int amount = 1)
+    {
+        if (!items.ContainsKey(type)) return;
+
+        items[type] = Mathf.Max(0, items[type] - amount);
+        OnInventoryChanged?.Invoke();
+    }
 }
