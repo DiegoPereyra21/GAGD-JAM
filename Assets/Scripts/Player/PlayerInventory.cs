@@ -5,11 +5,17 @@ using Game.Collectibles;
 //inventario del player donde POR AHORA, va guardando los items en un inventario, la idea es luego hacer la UI interactiva
 public class PlayerInventory : MonoBehaviour
 {
+    //para q tengaq sentido el "tirar" items, q tenga limite
+    [SerializeField] private int maxTotalItems = 10;
+    public bool IsFull => TotalCount >= maxTotalItems;
+
     public event Action OnInventoryChanged;
     private readonly Dictionary<CollectibleType, int> items = new Dictionary<CollectibleType, int>();
     public IReadOnlyDictionary<CollectibleType, int> Items => items;
     public void AddItem(CollectibleType type, int amount = 1)
     {
+        if (IsFull) return;
+
         if (!items.ContainsKey(type))
             items[type] = 0;
 
@@ -32,5 +38,15 @@ public class PlayerInventory : MonoBehaviour
 
         items[type] = Mathf.Max(0, items[type] - amount);
         OnInventoryChanged?.Invoke();
+    }
+    public int TotalCount
+    {
+        get
+        {
+            int total = 0;
+            foreach (var count in items.Values)
+                total += count;
+            return total;
+        }
     }
 }

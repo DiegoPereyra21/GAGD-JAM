@@ -22,6 +22,8 @@ public class PlayerCollector : MonoBehaviour
     private void OnDisable() => interactAction.performed -= OnInteract;
     private void OnInteract(InputAction.CallbackContext ctx)
     {
+        if (inventory.IsFull) return;
+
         Collectible target = FindNearestCollectible();
         if (target == null) return;
 
