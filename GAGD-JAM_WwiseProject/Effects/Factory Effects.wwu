@@ -69,7 +69,7 @@
 						<Effect Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
 								<Property Name="AttackTime" Type="Real32" Value="0.001"/>
-								<Property Name="OutputGain" Type="Real32" Value="12"/>
+								<Property Name="OutputGain" Type="Real32" Value="-2.3"/>
 								<Property Name="Ratio" Type="Real32" Value="20"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.001"/>
 								<Property Name="Threshold" Type="Real32" Value="-50"/>
@@ -1678,6 +1678,7 @@
 						</Effect>
 						<Effect Name="Secret_message" ID="{2F5DE612-1AAD-4A84-8FB4-3E66521C920E}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 							<PropertyList>
+								<Property Name="DryLevel" Type="Real32" Value="-15"/>
 								<Property Name="Voice1FilterFrequency" Type="Real32" Value="3656"/>
 								<Property Name="Voice1FilterType" Type="int32" Value="4"/>
 								<Property Name="Voice1Pitch" Type="Real32" Value="-1200"/>
@@ -1686,7 +1687,8 @@
 								<Property Name="Voice2FilterType" Type="int32" Value="4"/>
 								<Property Name="Voice2Gain" Type="Real32" Value="-4"/>
 								<Property Name="Voice2Pitch" Type="Real32" Value="-1200"/>
-								<Property Name="WindowSize" Type="int32" Value="256"/>
+								<Property Name="WetLevel" Type="Real32" Value="-15"/>
+								<Property Name="WindowSize" Type="int32" Value="2304"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Secret_message_Distant" ID="{54C3F2D2-6B8D-4873-A383-2F6F7189C076}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">

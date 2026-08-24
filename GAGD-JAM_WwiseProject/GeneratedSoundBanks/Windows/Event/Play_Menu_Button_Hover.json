@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3305792757",
+    "Type": "Event",
+    "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
+    "Language": "SFX",
+    "Hash": "{A253A973-33E5-EF9E-3209-FB6F77AD8C13}",
+    "ObjectPath": "Play_Menu_Button_Hover",
+    "ShortName": "Play_Menu_Button_Hover",
+    "Path": "Event/Play_Menu_Button_Hover.bnk",
+    "Media": [
+     {
+      "Id": "809076942",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "p.wav",
+      "Path": "Media/809076942.wem",
+      "CachePath": "2A/{2A3D866E-717E-519C-7E80-61CD236C1F4C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3305792757",
+      "Name": "Play_Menu_Button_Hover",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Menu_Button_Hover",
+      "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.74392",
+      "DurationMax": "0.9930141",
+      "MediaRefs": [
+       {
+        "Id": "809076942"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1B63A174-7DB0-B80A-B5BB-75F04D3FA627}"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "XboxOne",
+  "BasePlatform": "XboxOne",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3305792757",
+    "Type": "Event",
+    "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
+    "Language": "SFX",
+    "Hash": "{E99D1CC2-871D-1C9A-2BE9-BD9E2DA374D2}",
+    "ObjectPath": "Play_Menu_Button_Hover",
+    "ShortName": "Play_Menu_Button_Hover",
+    "Path": "Event/Play_Menu_Button_Hover.bnk",
+    "Media": [
+     {
+      "Id": "809076942",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "p.wav",
+      "Path": "Media/809076942.wem",
+      "CachePath": "0C/{0C857345-685E-2CCD-586B-A461692FC95C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3305792757",
+      "Name": "Play_Menu_Button_Hover",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Menu_Button_Hover",
+      "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.74392",
+      "DurationMax": "0.9930141",
+      "MediaRefs": [
+       {
+        "Id": "809076942"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C0F4A9D9-8C02-E4A1-F23E-E8C65DA4C18F}"
+ }
+}

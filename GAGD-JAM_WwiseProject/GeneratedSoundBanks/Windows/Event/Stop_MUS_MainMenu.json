@@ -8,9 +8,9 @@
    {
     "Id": "4243441902",
     "Type": "Event",
-    "GUID": "{B0D30FCC-4B19-4A72-A8B4-89D12FD8A037}",
+    "GUID": "{00063086-C8F5-4E31-B546-3BA30C57B3FC}",
     "Language": "SFX",
-    "Hash": "{62435164-D9F0-75A4-80B2-7310A8B03DB7}",
+    "Hash": "{FDB06760-B43A-5E05-07E3-677004BC09A6}",
     "ObjectPath": "Stop_MUS_MainMenu",
     "ShortName": "Stop_MUS_MainMenu",
     "Path": "Event/Stop_MUS_MainMenu.bnk",
@@ -19,7 +19,7 @@
       "Id": "4243441902",
       "Name": "Stop_MUS_MainMenu",
       "ObjectPath": "\\Events\\Default Work Unit\\Stop_MUS_MainMenu",
-      "GUID": "{B0D30FCC-4B19-4A72-A8B4-89D12FD8A037}",
+      "GUID": "{00063086-C8F5-4E31-B546-3BA30C57B3FC}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{A22ADC95-DFE2-E77B-9E02-A3B1DE6A97C3}"
+  "FileHash": "{FF5CFE41-D0B8-1770-80CE-0CEC46A83C06}"
  }
 }

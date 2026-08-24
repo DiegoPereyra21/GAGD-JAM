@@ -10,21 +10,32 @@
 						<Action Name="" ID="{94CABC4D-DC18-43E3-BF5C-80BEBF65AE90}" ShortID="783092025">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="HauntedLullabiesofJapan_EdoLullaby3" ID="{0E8B92C0-C4EF-4A57-B166-F0B9870B4DDA}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+									<ObjectRef Name="idoberg-creepy-halloween-bells-loop-408748" ID="{D71AFCDB-2857-4700-A29F-503B4C93E79F}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_MUS_MainMenu" ID="{B0D30FCC-4B19-4A72-A8B4-89D12FD8A037}">
+				<Event Name="Play_Menu_Button_Hover" ID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}">
 					<ChildrenList>
-						<Action Name="" ID="{3E8FF3E1-AEF3-4794-B931-49C16A90D3E7}" ShortID="211588918">
+						<Action Name="" ID="{C8A30A8F-E488-4B7A-BCD2-F989CEEF9DAE}" ShortID="624021064">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu Button Hover" ID="{D268ADE6-EE81-4F19-B507-CC79569DCE40}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_MUS_MainMenu" ID="{00063086-C8F5-4E31-B546-3BA30C57B3FC}">
+					<ChildrenList>
+						<Action Name="" ID="{AF7B3FE3-D859-46C1-B7FF-B6AAF952E7E8}" ShortID="944329902">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="HauntedLullabiesofJapan_EdoLullaby3" ID="{0E8B92C0-C4EF-4A57-B166-F0B9870B4DDA}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+									<ObjectRef Name="idoberg-creepy-halloween-bells-loop-408748" ID="{D71AFCDB-2857-4700-A29F-503B4C93E79F}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

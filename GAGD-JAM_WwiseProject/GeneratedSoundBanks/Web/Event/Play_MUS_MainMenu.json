@@ -10,19 +10,19 @@
     "Type": "Event",
     "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
     "Language": "SFX",
-    "Hash": "{869D8E45-65FF-0189-2167-05EC4D173E6F}",
+    "Hash": "{9E2C0077-12AB-5685-0816-D08EA0A0F2C6}",
     "ObjectPath": "Play_MUS_MainMenu",
     "ShortName": "Play_MUS_MainMenu",
     "Path": "Event/Play_MUS_MainMenu.bnk",
     "Media": [
      {
-      "Id": "39292364",
+      "Id": "869888867",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "HauntedLullabiesofJapan_EdoLullaby3.wav",
-      "Path": "Media/39292364.wem",
-      "CachePath": "D5/{D52DD6B6-18A7-C6C4-7881-25289CE44B87}.wem"
+      "ShortName": "idoberg-creepy-halloween-bells-loop-408748.wav",
+      "Path": "Media/869888867.wem",
+      "CachePath": "1A/{1A1AF148-38C9-1504-BEF0-F3877CB6F06D}.wem"
      }
     ],
     "Events": [
@@ -34,13 +34,13 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "39292364"
+        "Id": "869888867"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{855A910E-93AA-5DEC-C6F8-73FF788CDEBD}"
+  "FileHash": "{3AB72E0E-DFD0-DBC5-8548-4A5AF3423A59}"
  }
 }
