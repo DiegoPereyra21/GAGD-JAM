@@ -68,6 +68,10 @@ public class QuestJournalUI : MonoBehaviour
         row.Q<Label>("IngredientLabel").text = objective.type.ToString();
         row.Q<Label>("ProgressLabel").text = $"{allocated}/{objective.targetAmount}";
 
+        //para q cambie de color a verde en caso de compelto
+        bool isComplete = allocated >= objective.targetAmount;
+        row.Q<Label>("ProgressLabel").style.color = isComplete ? Color.green : Color.red;
+
         return row;
     }
 }
