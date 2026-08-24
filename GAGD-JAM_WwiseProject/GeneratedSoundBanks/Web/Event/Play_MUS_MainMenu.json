@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
     "Language": "SFX",
-    "Hash": "{9E2C0077-12AB-5685-0816-D08EA0A0F2C6}",
+    "Hash": "{F7E70E12-630F-F7FF-AAEF-79717E1CB98B}",
     "ObjectPath": "Play_MUS_MainMenu",
     "ShortName": "Play_MUS_MainMenu",
     "Path": "Event/Play_MUS_MainMenu.bnk",
@@ -41,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{3AB72E0E-DFD0-DBC5-8548-4A5AF3423A59}"
+  "FileHash": "{6EA58BB9-CEF3-3854-9814-271D21F5B58E}"
  }
 }
