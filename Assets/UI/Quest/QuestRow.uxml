@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Fila" style="flex-direction: row; justify-content: space-between; background-color: rgba(19, 19, 19, 0.937); color: rgb(236, 236, 236);">
+        <ui:Label name="IngredientLabel" text="Hongo" style="padding-left: 20px;"/>
+        <ui:Label name="ProgressLabel" text="0/3" style="padding-right: 20px;"/>
+    </ui:VisualElement>
+</ui:UXML>
