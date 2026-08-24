@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 using AK.Wwise;
 
 public class MainMenu : MonoBehaviour
@@ -13,7 +14,11 @@ public class MainMenu : MonoBehaviour
     [Header("Evento para el hover")]
     [SerializeField] private AK.Wwise.Event buttonHoverEvent;
 
+    [Header("Primer Nivel")]
+    [SerializeField] private string gameSceneName = "Game";
+
     private VisualElement root;
+    private Button playButton;
     private Button optionsButton;
     private Button backButton;
     private VisualElement optionsPanel;
@@ -31,12 +36,19 @@ public class MainMenu : MonoBehaviour
         musicEvent.Post(gameObject);
 
         content = root.Q<VisualElement>("Content");
+        playButton = root.Q<Button>("PlayButton");
         optionsButton = root.Q<Button>("OptionsButton");
         backButton = root.Q<Button>("BackButton");
         optionsPanel = root.Q<VisualElement>("OptionsPanel");
 
-        optionsButton.clicked += OpenOptions;
-        backButton.clicked += CloseOptions;
+        if (playButton != null)
+            playButton.clicked += PlayGame;
+
+        if (optionsButton != null)
+            optionsButton.clicked += OpenOptions;
+
+        if (backButton != null)
+            backButton.clicked += CloseOptions;
 
         optionsPanel.style.display = DisplayStyle.None;
     }
@@ -51,15 +63,27 @@ public class MainMenu : MonoBehaviour
             button.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
         });
 
-        stopMusicEvent.Post(gameObject);
+        if (playButton != null)
+            playButton.clicked -= PlayGame;
 
-        optionsButton.clicked -= OpenOptions;
-        backButton.clicked -= CloseOptions;
+        if (optionsButton != null)
+            optionsButton.clicked -= OpenOptions;
+
+        if (backButton != null)
+            backButton.clicked -= CloseOptions;
+
+        stopMusicEvent.Post(gameObject);
     }
 
     private void OnButtonHover(MouseEnterEvent evt)
     {
         buttonHoverEvent.Post(gameObject);
+    }
+
+    private void PlayGame()
+    {
+        stopMusicEvent.Post(gameObject);
+        SceneManager.LoadScene(gameSceneName);
     }
 
     private void OpenOptions()
