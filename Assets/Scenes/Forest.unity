@@ -945,6 +945,10 @@ PrefabInstance:
       propertyPath: basketDisplay
       value: 
       objectReference: {fileID: 263165654}
+    - target: {fileID: 2597916423183099627, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: pickupEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a5501912e42bc8e4db3d9b9af47e6029, type: 2}
     - target: {fileID: 5548705520305781567, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1017,13 +1021,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 8215b81a4ae40b946bcb8c3a9d5c90bc, type: 2}
   distancePerStep: 5
-  requireGrounded: 1
-  characterController: {fileID: 1456227260}
---- !u!143 &1456227260 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 802142821682206277, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
-  m_PrefabInstance: {fileID: 1456227253}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1560979841
 PrefabInstance:
   m_ObjectHideFlags: 0

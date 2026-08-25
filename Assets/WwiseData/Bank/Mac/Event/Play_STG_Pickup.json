@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1532146285",
+    "Type": "Event",
+    "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
+    "Language": "SFX",
+    "Hash": "{9330F747-DD51-3902-572C-936046D45AD9}",
+    "ObjectPath": "Play_STG_Pickup",
+    "ShortName": "Play_STG_Pickup",
+    "Path": "Event/Play_STG_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "669185545",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "freesound_community-tomar-un-objeto-46562.wav",
+      "Path": "Media/669185545.wem",
+      "CachePath": "4E/{4E39AAAE-5F3F-B5DE-0210-799C39D5BB58}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1532146285",
+      "Name": "Play_STG_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_STG_Pickup",
+      "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.36288",
+      "DurationMax": "0.36288",
+      "MediaRefs": [
+       {
+        "Id": "669185545"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7ABC2803-9D66-563A-46B7-99B946C81E25}"
+ }
+}

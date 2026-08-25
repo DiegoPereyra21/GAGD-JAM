@@ -164,6 +164,35 @@
 				<GameParameter Id="3546521921" Name="AmbientVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbientVolume" GUID="{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"/>
 			</GameParameters>
 		</SoundBank>
+		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{CE3205EF-2AA4-D54C-C54D-25BCF51D9CF8}">
+			<ObjectPath>Play_STG_Pickup</ObjectPath>
+			<ShortName>Play_STG_Pickup</ShortName>
+			<Path>Event/Play_STG_Pickup.bnk</Path>
+			<Media>
+				<File Id="10179816" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>a.wav</ShortName>
+					<Path>Media/10179816.wem</Path>
+					<CachePath>E1/{E136A2D0-604C-A290-CBAA-A7BA9F911C80}.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="213844949" Name="Parametric EQ (Custom)" ObjectPath="\Containers\Default Work Unit\SFX\Stingers\UI\a\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{73A24686-4B8F-481A-BFE8-C85120C75762}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="0.26110864" DurationMax="0.26110864">
+					<MediaRefs>
+						<MediaRef Id="10179816"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="213844949"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{A253A973-33E5-EF9E-3209-FB6F77AD8C13}">
 			<ObjectPath>Play_Menu_Button_Hover</ObjectPath>
 			<ShortName>Play_Menu_Button_Hover</ShortName>
@@ -192,5 +221,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FDAEA47F-2981-A472-815A-08E1CFC1E76B}</FileHash>
+	<FileHash>{D9EBDD6F-FD73-7597-23DA-F3C39E5797BF}</FileHash>
 </SoundBanksInfo>

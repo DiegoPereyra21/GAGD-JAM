@@ -115,6 +115,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2f9b419e6c2b884584a480473bd32eb
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_STG_Pickup.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3c36b006c98d4943b5a4709c00f0935
+    m_Address: Assets/WwiseData/Bank/Mac/Media/669185545.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ee22a5ecec1e4b7418a698f90d9e7569
     m_Address: Assets/WwiseData/Bank/Mac/Media/99849529.wem
     m_ReadOnly: 0

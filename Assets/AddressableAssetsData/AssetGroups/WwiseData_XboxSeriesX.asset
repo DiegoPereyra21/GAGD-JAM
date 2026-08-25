@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c3a8b136a66f524088fbc010993e487
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/669185545.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5ecaca712aa260c42bb17183b653c74f
     m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/3496576.wem
     m_ReadOnly: 0
@@ -52,6 +57,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6b558174643189f45b9cff920d5500f3
     m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/358363011.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6bad3864af9e92d43892d0bbc0b3869d
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Play_STG_Pickup.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

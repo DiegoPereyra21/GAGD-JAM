@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{58DA186E-51EC-DA7E-5AF0-71B3EE931896}">
+		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{0F6253C2-3E02-6C28-CBFA-CD6E3A32EA27}">
 			<ObjectPath>Play_Grass_Footsteps</ObjectPath>
 			<ShortName>Play_Grass_Footsteps</ShortName>
 			<Path>Event/Play_Grass_Footsteps.bnk</Path>
@@ -96,7 +96,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="546793308" Name="Play_Grass_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Grass_Footsteps" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" DurationType="OneShot" DurationMin="2.8024638" DurationMax="3.3556685">
+				<Event Id="546793308" Name="Play_Grass_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Grass_Footsteps" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" DurationType="OneShot" DurationMin="1.0436919" DurationMax="1.2497159">
 					<MediaRefs>
 						<MediaRef Id="3496576"/>
 						<MediaRef Id="51774552"/>
@@ -164,6 +164,25 @@
 				<GameParameter Id="3546521921" Name="AmbientVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbientVolume" GUID="{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"/>
 			</GameParameters>
 		</SoundBank>
+		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{9330F747-DD51-3902-572C-936046D45AD9}">
+			<ObjectPath>Play_STG_Pickup</ObjectPath>
+			<ShortName>Play_STG_Pickup</ShortName>
+			<Path>Event/Play_STG_Pickup.bnk</Path>
+			<Media>
+				<File Id="669185545" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>freesound_community-tomar-un-objeto-46562.wav</ShortName>
+					<Path>Media/669185545.wem</Path>
+					<CachePath>4E/{4E39AAAE-5F3F-B5DE-0210-799C39D5BB58}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="0.36288" DurationMax="0.36288">
+					<MediaRefs>
+						<MediaRef Id="669185545"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{A253A973-33E5-EF9E-3209-FB6F77AD8C13}">
 			<ObjectPath>Play_Menu_Button_Hover</ObjectPath>
 			<ShortName>Play_Menu_Button_Hover</ShortName>
@@ -192,5 +211,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9799DAFC-170F-D644-A9D5-7196A2389B82}</FileHash>
+	<FileHash>{7655B7F1-9818-CBFE-2872-62B7182A7B59}</FileHash>
 </SoundBanksInfo>

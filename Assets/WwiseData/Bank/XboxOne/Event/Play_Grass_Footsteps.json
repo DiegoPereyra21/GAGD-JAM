@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}",
     "Language": "SFX",
-    "Hash": "{58DA186E-51EC-DA7E-5AF0-71B3EE931896}",
+    "Hash": "{0F6253C2-3E02-6C28-CBFA-CD6E3A32EA27}",
     "ObjectPath": "Play_Grass_Footsteps",
     "ShortName": "Play_Grass_Footsteps",
     "Path": "Event/Play_Grass_Footsteps.bnk",
@@ -170,8 +170,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Grass_Footsteps",
       "GUID": "{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}",
       "DurationType": "OneShot",
-      "DurationMin": "2.8024638",
-      "DurationMax": "3.3556685",
+      "DurationMin": "1.0436919",
+      "DurationMax": "1.2497159",
       "MediaRefs": [
        {
         "Id": "3496576"
@@ -230,6 +230,6 @@
     ]
    }
   ],
-  "FileHash": "{918EE15A-6C80-BF61-A98B-742DE2EBF28B}"
+  "FileHash": "{BD67A5E7-BA7B-3118-7D2F-FF9C44ED3B80}"
  }
 }

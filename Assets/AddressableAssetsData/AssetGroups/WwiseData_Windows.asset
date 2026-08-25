@@ -80,6 +80,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 958d637fba6cf534681bc67ff6a3a0c8
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Pickup.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a56e6f1712d40646b347a60fce4ff2c
     m_Address: Assets/WwiseData/Bank/Windows/Media/392187951.wem
     m_ReadOnly: 0
@@ -97,6 +102,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae83d4e64c29f7f43b85b977a54d58ae
     m_Address: Assets/WwiseData/Bank/Windows/Media/86574945.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3817266f9028a144a2d4ae8d923d2e7
+    m_Address: Assets/WwiseData/Bank/Windows/Media/10179816.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

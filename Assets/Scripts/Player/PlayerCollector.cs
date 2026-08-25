@@ -13,6 +13,9 @@ public class PlayerCollector : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private float freezeDuration = 0.8f; //LUEGO AJUSTAR SEGUN ANIMACION Y TIEMPO HASTA Q SE HAGA KINEMATIC EL HONGO
 
+    // Sonido de pickup
+    [SerializeField] private AK.Wwise.Event pickupEvent;
+
     private InputAction interactAction;
     private void Awake()
     {
@@ -35,6 +38,7 @@ public class PlayerCollector : MonoBehaviour
         
         target.Collect(() =>
         {
+            pickupEvent.Post(gameObject); //emite sonido we
             inventory.AddItem(type, value);
             if (visualPrefab != null)
                 basketDisplay.Drop(type, visualPrefab);

@@ -53,6 +53,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_STG_Pickup" ID="{413F87E7-B318-4C26-9D8C-522516E4F81A}">
+					<ChildrenList>
+						<Action Name="" ID="{282EA88F-18DE-4548-B4D9-859F634BA0C2}" ShortID="515158298">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="a" ID="{A4F1BC3E-1539-4075-AD1B-F5041E0E1D53}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -100,6 +100,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba95fea7ad56eb64b8b314c65c916d20
+    m_Address: Assets/WwiseData/Bank/Web/Media/10179816.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5c8dc22c0f63664d8e27d4015540fbf
+    m_Address: Assets/WwiseData/Bank/Web/Event/Play_STG_Pickup.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5d7ff07ffee8c64eb07fff376b663a6
     m_Address: Assets/WwiseData/Bank/Web/Media/635418451.wem
     m_ReadOnly: 0
