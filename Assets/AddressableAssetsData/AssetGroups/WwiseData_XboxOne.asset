@@ -15,8 +15,53 @@ MonoBehaviour:
   m_GroupName: WwiseData_XboxOne
   m_GUID: f6ec216eee6644944aa0b4d83dfd7cc7
   m_SerializeEntries:
+  - m_GUID: 0fb3581e70edb26498b6742ae859c725
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/635418451.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 24354f6a08972a945bc5e9bd64d40dee
     m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_Menu_Button_Hover.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26795486082bd7c439a556f9542865be
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/228208572.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29df48b87f21c884483581a7b983d96e
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/86574945.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b19f022c17767b4cb47941d08289346
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/656645410.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 343f3ce8d0fbfd341b62d9138608298d
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/51774552.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bc752e87549c414fb8ea99c1beeae67
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/3496576.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40357f66398c1514da3a4ea9ddaeae25
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_Grass_Footsteps.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c5bb76e2a130cf4a883e2f4fe09b3e8
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/354389179.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cdf5a1c4bfd4294fab87155990f90a6
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/277566653.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -25,8 +70,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac80877a165cdf84db38524c581cd76a
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/392187951.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0d9a8c2f94ade744a95362d794e50c3
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/99849529.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be2c47cfc1e329d4cbd7c6a5a23674fd
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/358363011.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c0ef3ec1635223b4a89d50393b7b1ad3
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/869888867.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8b337fef5a9dec44aef18969eeb0189
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/1028783762.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -37,6 +102,21 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d3cbb47fa900163469ec862b9c5d997f
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/809076942.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da2a754cae7120d4b95282b14a29470d
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/260049539.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc93adceacf2b4549a12c0f4d249f915
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/749912226.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe34d9560bf43f0498d87c591b789150
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/229322620.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

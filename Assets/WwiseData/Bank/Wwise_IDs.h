@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_GRASS_FOOTSTEPS = 546793308U;
         static const AkUniqueID PLAY_MENU_BUTTON_HOVER = 3305792757U;
         static const AkUniqueID PLAY_MUS_MAINMENU = 1043591872U;
         static const AkUniqueID STOP_MUS_MAINMENU = 4243441902U;

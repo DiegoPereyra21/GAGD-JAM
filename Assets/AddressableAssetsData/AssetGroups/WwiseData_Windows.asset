@@ -15,8 +15,23 @@ MonoBehaviour:
   m_GroupName: WwiseData_Windows
   m_GUID: 9949b0ae8892bc24dbf7a1558339e282
   m_SerializeEntries:
+  - m_GUID: 069a76c67a547ed4d97134e5d5eb508b
+    m_Address: Assets/WwiseData/Bank/Windows/Media/358363011.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c4b8ec6a1d5c354eb0bd1717c8ead2c
+    m_Address: Assets/WwiseData/Bank/Windows/Media/277566653.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0e7c865c28a738d4595ab9a590d2b74b
     m_Address: Assets/WwiseData/Bank/Windows/Media/869888867.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17e2aa626fe47f94fbab2afbf2008323
+    m_Address: Assets/WwiseData/Bank/Windows/Media/99849529.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -25,13 +40,78 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 342a6f9f4ecb9964a995870cd8f006c8
+    m_Address: Assets/WwiseData/Bank/Windows/Media/229322620.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f9ae805b4e381f4b8aac64813c8aa8f
+    m_Address: Assets/WwiseData/Bank/Windows/Media/3496576.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6cd7d4ef4f630be4d8a1869ec5a169f3
+    m_Address: Assets/WwiseData/Bank/Windows/Media/1028783762.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7700635c47c2f604da96731981a3bda5
     m_Address: Assets/WwiseData/Bank/Windows/Media/809076942.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8455e922c2073cb47a13bf053db00c81
+    m_Address: Assets/WwiseData/Bank/Windows/Media/354389179.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a82dd3cb9dffbc46952fa4cff4dda50
+    m_Address: Assets/WwiseData/Bank/Windows/Media/228208572.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8c6ede587d8c7b447ae179b201b863be
     m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cb7cc955db23e74c9029ddcf7dce5ce
+    m_Address: Assets/WwiseData/Bank/Windows/Media/656645410.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a56e6f1712d40646b347a60fce4ff2c
+    m_Address: Assets/WwiseData/Bank/Windows/Media/392187951.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d9b0ec41856b694e8222fa9c6f3ef30
+    m_Address: Assets/WwiseData/Bank/Windows/Media/51774552.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9dd1a0e0db9974c43ae6611e7fe437e5
+    m_Address: Assets/WwiseData/Bank/Windows/Media/260049539.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae83d4e64c29f7f43b85b977a54d58ae
+    m_Address: Assets/WwiseData/Bank/Windows/Media/86574945.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e66accf69be06134998d8a83810d820e
+    m_Address: Assets/WwiseData/Bank/Windows/Media/635418451.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e71481f6044f2a0489c2101b57df357e
+    m_Address: Assets/WwiseData/Bank/Windows/Media/749912226.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed9b68ce8b148164aa7b764c0ee6ac10
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_Grass_Footsteps.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

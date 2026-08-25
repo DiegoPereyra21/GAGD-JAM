@@ -9,6 +9,119 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{0F6253C2-3E02-6C28-CBFA-CD6E3A32EA27}">
+			<ObjectPath>Play_Grass_Footsteps</ObjectPath>
+			<ShortName>Play_Grass_Footsteps</ShortName>
+			<Path>Event/Play_Grass_Footsteps.bnk</Path>
+			<Media>
+				<File Id="3496576" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 09_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/3496576.wem</Path>
+					<CachePath>24/{240A7C36-7372-C911-A02E-EFD02FE06E35}.wem</CachePath>
+				</File>
+				<File Id="51774552" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 05_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/51774552.wem</Path>
+					<CachePath>B2/{B2DCC31D-56ED-C294-29D4-0099121C2C16}.wem</CachePath>
+				</File>
+				<File Id="86574945" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 10_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/86574945.wem</Path>
+					<CachePath>ED/{ED84DD71-B240-3F0B-F626-E7EFC1C5E116}.wem</CachePath>
+				</File>
+				<File Id="99849529" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 03_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/99849529.wem</Path>
+					<CachePath>00/{0032FA28-9559-9CBA-DB38-BFCF8C0900C0}.wem</CachePath>
+				</File>
+				<File Id="228208572" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 04_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/228208572.wem</Path>
+					<CachePath>0D/{0D3E97D5-4821-784B-94ED-D7A61DBE5967}.wem</CachePath>
+				</File>
+				<File Id="229322620" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 02_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/229322620.wem</Path>
+					<CachePath>A6/{A66C8F23-AA8C-5EE8-3236-E3A6DAD90926}.wem</CachePath>
+				</File>
+				<File Id="260049539" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 01_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/260049539.wem</Path>
+					<CachePath>E1/{E1CC66BC-948A-F350-F7E5-1E9246909C53}.wem</CachePath>
+				</File>
+				<File Id="277566653" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 14_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/277566653.wem</Path>
+					<CachePath>38/{38C7FD6B-0F08-C39B-E8FF-67448AF65BE0}.wem</CachePath>
+				</File>
+				<File Id="354389179" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 12_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/354389179.wem</Path>
+					<CachePath>78/{786A904D-75F5-AD17-BD87-971831F47B57}.wem</CachePath>
+				</File>
+				<File Id="358363011" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 11_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/358363011.wem</Path>
+					<CachePath>7F/{7FBAF725-246D-FD1E-B3D8-86D1F8577C39}.wem</CachePath>
+				</File>
+				<File Id="392187951" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 13_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/392187951.wem</Path>
+					<CachePath>06/{065ECADE-97E9-F059-0F55-68388BAEE1FA}.wem</CachePath>
+				</File>
+				<File Id="635418451" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 08_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/635418451.wem</Path>
+					<CachePath>D1/{D1F1AB11-5FE3-1009-5D34-66991A72E6C3}.wem</CachePath>
+				</File>
+				<File Id="656645410" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 07_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/656645410.wem</Path>
+					<CachePath>2C/{2CE6DF8B-6308-35FE-573D-4D99F1AEF43F}.wem</CachePath>
+				</File>
+				<File Id="749912226" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 15_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/749912226.wem</Path>
+					<CachePath>09/{09E82503-9A65-A0BE-4DBC-6B23C88694F8}.wem</CachePath>
+				</File>
+				<File Id="1028783762" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 06_AUDIOELK_AUDIOELK.wav</ShortName>
+					<Path>Media/1028783762.wem</Path>
+					<CachePath>6E/{6E409FF9-37EB-8F72-76F0-C53CFDA3AC86}.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="4239446561" Name="Dual_Filters_Narrow_Bandwidth" ObjectPath="\Effects\Factory Effects\Parametric EQ\Band Pass Filters\Dual_Filters_Narrow_Bandwidth" GUID="{A24607C6-04E1-4D41-B513-28C0914D138D}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="546793308" Name="Play_Grass_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Grass_Footsteps" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" DurationType="OneShot" DurationMin="1.0436919" DurationMax="1.2497159">
+					<MediaRefs>
+						<MediaRef Id="3496576"/>
+						<MediaRef Id="51774552"/>
+						<MediaRef Id="86574945"/>
+						<MediaRef Id="99849529"/>
+						<MediaRef Id="228208572"/>
+						<MediaRef Id="229322620"/>
+						<MediaRef Id="260049539"/>
+						<MediaRef Id="277566653"/>
+						<MediaRef Id="354389179"/>
+						<MediaRef Id="358363011"/>
+						<MediaRef Id="392187951"/>
+						<MediaRef Id="635418451"/>
+						<MediaRef Id="656645410"/>
+						<MediaRef Id="749912226"/>
+						<MediaRef Id="1028783762"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4239446561"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{CE01EEDE-C1CF-6F5A-9E32-6D7DFF380221}">
 			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
 			<ShortName>Play_MUS_MainMenu</ShortName>
@@ -28,7 +141,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{66B79C5A-403C-268E-7EBA-43B9E353E1F8}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{075F7BF4-1A38-A7D9-263F-1DB46310DCA3}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -79,5 +192,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A14D1F14-A14A-513E-61B5-E9D3C5D828FC}</FileHash>
+	<FileHash>{70F0C9DD-A2F1-D284-3D50-2C0D667C6F7F}</FileHash>
 </SoundBanksInfo>

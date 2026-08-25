@@ -15,8 +15,38 @@ MonoBehaviour:
   m_GroupName: WwiseData_Web
   m_GUID: acfbfe90744c2b240b3cefc3827d1c8f
   m_SerializeEntries:
+  - m_GUID: 0316c26763cba614eb27bfabf4d0e7cd
+    m_Address: Assets/WwiseData/Bank/Web/Media/86574945.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dc0147b032173e46903ee1c238e14f6
+    m_Address: Assets/WwiseData/Bank/Web/Media/51774552.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 22e98f980c867b340906b938b66c7d15
     m_Address: Assets/WwiseData/Bank/Web/Event/Stop_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47857c4da5194b04aa605151f570af9b
+    m_Address: Assets/WwiseData/Bank/Web/Media/354389179.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d2933616c1135c45abb6007603b0b5e
+    m_Address: Assets/WwiseData/Bank/Web/Media/3496576.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54213b4422144344b99107b04eba9a01
+    m_Address: Assets/WwiseData/Bank/Web/Media/656645410.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a55018fa3ff3654787fe5e7fda2f5f6
+    m_Address: Assets/WwiseData/Bank/Web/Media/260049539.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -25,13 +55,63 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7daed1dd3435fbd46b205c4850e0e3d3
+    m_Address: Assets/WwiseData/Bank/Web/Media/749912226.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82444dbf73270f04f9bc6fcefe75614a
+    m_Address: Assets/WwiseData/Bank/Web/Media/228208572.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85272331abaf2f746b0fe75ea161c5a1
+    m_Address: Assets/WwiseData/Bank/Web/Event/Play_Grass_Footsteps.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 87896c11e88f0c441844c5f22b8307b8
     m_Address: Assets/WwiseData/Bank/Web/Event/Play_MUS_MainMenu.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 904df0f6d308e6c46aa64af5404c599b
+    m_Address: Assets/WwiseData/Bank/Web/Media/99849529.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95343908a2a552344a5ea4122d302bbc
+    m_Address: Assets/WwiseData/Bank/Web/Media/358363011.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9aec069e3ffccde47bc16b8c24dee32f
+    m_Address: Assets/WwiseData/Bank/Web/Media/392187951.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b0255fa3cb367349b562b5248e29c7a
     m_Address: Assets/WwiseData/Bank/Web/Media/869888867.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a90afa4588d8ee54394315dcdfb72257
+    m_Address: Assets/WwiseData/Bank/Web/Media/277566653.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5d7ff07ffee8c64eb07fff376b663a6
+    m_Address: Assets/WwiseData/Bank/Web/Media/635418451.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8cbc50a525d9e94f861a7242cfef047
+    m_Address: Assets/WwiseData/Bank/Web/Media/1028783762.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e14dcd1d351eb0d45afb95726d450a4a
+    m_Address: Assets/WwiseData/Bank/Web/Media/229322620.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

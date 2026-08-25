@@ -4,6 +4,13 @@
   "BasePlatform": "XboxOne",
   "PluginLibs": [
    {
+    "LibName": "Wwise Parametric EQ",
+    "LibId": "6881283",
+    "Type": "Effect",
+    "DLL": "AkParametricEQ",
+    "StaticLib": "AkParametricEQFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -14,6 +21,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{16E64944-4068-F122-D908-DDC8110AABF1}"
+  "FileHash": "{6C2E13D8-AEA4-7796-C2C7-0E869D94E20C}"
  }
 }

@@ -39,6 +39,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Grass_Footsteps" ID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}">
+					<ChildrenList>
+						<Action Name="" ID="{CED4B37B-3BE2-4AFC-AC1A-67E5D2799F9C}" ShortID="141040030">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{11E94152-5FB8-4F5D-A508-CE0AB773DA0B}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
