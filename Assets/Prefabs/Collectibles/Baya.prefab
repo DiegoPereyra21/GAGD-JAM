@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3969141797491688085}
   - component: {fileID: 8853403250342608055}
   - component: {fileID: 6031773625262861230}
+  - component: {fileID: -4447950719788988167}
   m_Layer: 8
   m_Name: Baya
   m_TagString: Untagged
@@ -69,6 +70,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 505ff8ff167626c4caa6bea1a8d8c673, type: 2}
+  - {fileID: 2100000, guid: 8e2c7c577db99d74c84e8640d08f2eb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,3 +132,19 @@ MonoBehaviour:
   collectDuration: 0.3
   collectRiseHeight: 1
   basketVisualPrefab: {fileID: 3707681147446501937, guid: 24a61b8c11f6a2447b62f9b47b4eab9b, type: 3}
+  outline: {fileID: -4447950719788988167}
+--- !u!114 &-4447950719788988167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600067778302569439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  targetRenderer: {fileID: 3969141797491688085}
+  outlineMaterialSlot: 1
+  highlightedSize: 1.1

@@ -14,6 +14,10 @@ namespace Game.Collectibles
         //para hacer el menu interactivo dentro del cesto
         [SerializeField] private GameObject basketVisualPrefab;
         public GameObject BasketVisualPrefab => basketVisualPrefab;
+        //para el outline al acercarse
+        [SerializeField] private InteractableOutline outline;
+        public void SetHighlighted(bool highlighted) => outline?.SetHighlighted(highlighted);
+
         public CollectibleType Type => type;
         public int Value => value;
         private bool collected;

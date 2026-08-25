@@ -67,7 +67,7 @@ namespace Game.Collectibles
         {
             float x = UnityEngine.Random.Range(-areaSize.x * 0.5f, areaSize.x * 0.5f);
             float z = UnityEngine.Random.Range(-areaSize.y * 0.5f, areaSize.y * 0.5f);
-            return transform.position + new Vector3(x, 0f, z);
+            return transform.position + new Vector3(x, 0.5f, z);
         }
 
         private void OnDrawGizmosSelected()

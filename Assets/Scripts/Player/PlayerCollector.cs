@@ -21,6 +21,25 @@ public class PlayerCollector : MonoBehaviour
     {
         interactAction = GetComponent<PlayerInput>().actions["Interact"];
     }
+
+    private Collectible currentHighlighted;
+
+    private void Update()
+    {
+        Collectible nearest = FindNearestCollectible();
+
+        if (nearest != currentHighlighted)
+        {
+            if (currentHighlighted != null)
+                currentHighlighted.SetHighlighted(false);
+
+            if (nearest != null)
+                nearest.SetHighlighted(true);
+
+            currentHighlighted = nearest;
+        }
+    }
+
     private void OnEnable() => interactAction.performed += OnInteract;
     private void OnDisable() => interactAction.performed -= OnInteract;
     private void OnInteract(InputAction.CallbackContext ctx)

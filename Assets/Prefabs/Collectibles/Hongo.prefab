@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5727604814996972055}
   - component: {fileID: 105075232090913537}
   - component: {fileID: 4647179387018558853}
+  - component: {fileID: 2997771131796472727}
   m_Layer: 8
   m_Name: Hongo
   m_TagString: Untagged
@@ -69,6 +70,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0d9920c009d00fd428d30d6c109d214f, type: 2}
+  - {fileID: 2100000, guid: 8e2c7c577db99d74c84e8640d08f2eb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,3 +132,19 @@ MonoBehaviour:
   collectDuration: 0.3
   collectRiseHeight: 1
   basketVisualPrefab: {fileID: 3855075491024189442, guid: a7d7754bcf155924dad249de49853f35, type: 3}
+  outline: {fileID: 2997771131796472727}
+--- !u!114 &2997771131796472727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3855075491024189442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  targetRenderer: {fileID: 5727604814996972055}
+  outlineMaterialSlot: 1
+  highlightedSize: 1.1

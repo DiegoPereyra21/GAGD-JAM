@@ -273,6 +273,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1362061631}
     m_Modifications:
     - target: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.02512
       objectReference: {fileID: 0}
@@ -1370,6 +1374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8014131021340824055, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6735337694680400919, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
     m_RemovedGameObjects: []
@@ -1643,6 +1651,7 @@ GameObject:
   - component: {fileID: 2118675953}
   - component: {fileID: 2118675952}
   - component: {fileID: 2118675955}
+  - component: {fileID: 2118675956}
   m_Layer: 0
   m_Name: Mailbox
   m_TagString: Untagged
@@ -1763,6 +1772,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3fe175dbb28617047afe5d54bf67f4c4, type: 2}
   - {fileID: 11400000, guid: 0b12a81e78542af418e55b1aac7165f4, type: 2}
   - {fileID: 11400000, guid: 80594e01674d28448b42d61085b66914, type: 2}
+  outline: {fileID: 2118675956}
+--- !u!114 &2118675956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118675950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  targetRenderer: {fileID: 2118675953}
+  outlineMaterialSlot: 1
+  highlightedSize: 1.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
