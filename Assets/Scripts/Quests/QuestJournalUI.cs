@@ -23,12 +23,14 @@ public class QuestJournalUI : MonoBehaviour
     private void OnEnable()
     {
         inventory.OnInventoryChanged += Refresh;
+        questManager.OnQuestsChanged += Refresh;
         Refresh();
     }
 
     private void OnDisable()
     {
         inventory.OnInventoryChanged -= Refresh;
+        questManager.OnQuestsChanged -= Refresh;
     }
 
     private void Refresh()
