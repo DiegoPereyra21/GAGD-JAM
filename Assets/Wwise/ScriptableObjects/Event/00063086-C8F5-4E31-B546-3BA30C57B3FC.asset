@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Stop_MUS_MainMenu
   id: 4243441902
   guid: 00063086-C8F5-4E31-B546-3BA30C57B3FC
+  AutoBank: {fileID: 11400000, guid: 0fa6c78f0e6db2a4eb1476aec322879d, type: 2}
   IsInUserDefinedSoundBank: 0

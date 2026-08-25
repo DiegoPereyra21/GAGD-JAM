@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="XboxOne" BasePlatform="XboxOne" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{A253A973-33E5-EF9E-3209-FB6F77AD8C13}">
+			<ObjectPath>Play_Menu_Button_Hover</ObjectPath>
+			<ShortName>Play_Menu_Button_Hover</ShortName>
+			<Path>Event/Play_Menu_Button_Hover.bnk</Path>
+			<Media>
+				<File Id="809076942" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>p.wav</ShortName>
+					<Path>Media/809076942.wem</Path>
+					<CachePath>2A/{2A3D866E-717E-519C-7E80-61CD236C1F4C}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3305792757" Name="Play_Menu_Button_Hover" ObjectPath="\Events\Default Work Unit\Play_Menu_Button_Hover" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" DurationType="OneShot" DurationMin="0.74392" DurationMax="0.9930141">
+					<MediaRefs>
+						<MediaRef Id="809076942"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{8DBDE83A-05B8-484D-3658-55874780A42E}</FileHash>
+</SoundBanksInfo>

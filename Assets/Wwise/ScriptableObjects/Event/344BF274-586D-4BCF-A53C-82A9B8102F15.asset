@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_MUS_MainMenu
   id: 1043591872
   guid: 344BF274-586D-4BCF-A53C-82A9B8102F15
+  AutoBank: {fileID: 11400000, guid: c6a59f20978195f4a898cd38e5c772bd, type: 2}
   IsInUserDefinedSoundBank: 0

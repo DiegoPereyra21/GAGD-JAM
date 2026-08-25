@@ -1,0 +1,57 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "GAGD-JAM_WwiseProject",
+   "GUID": "{E07FC0C7-F1D1-4C29-A3EE-58989F0229E3}",
+   "Generator": "2025.1.10.9233"
+  },
+  "CacheRoot": "../../../../GAGD-JAM_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{AE98B059-9A74-45E4-A5A1-646222D73B46}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../GAGD-JAM_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Web",
+    "GUID": "{A54A8524-6820-44D4-B4A8-871FD8EA99A8}",
+    "BasePlatform": "Web",
+    "BasePlatformGUID": "{639AD233-23F2-4C0F-9127-79F44C15E1DA}",
+    "Path": "../../../../GAGD-JAM_WwiseProject/GeneratedSoundBanks/Web"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{46139708-5573-4FAC-BC72-7C16EEEEEB20}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../GAGD-JAM_WwiseProject/GeneratedSoundBanks/Windows"
+   },
+   {
+    "Name": "XboxOne",
+    "GUID": "{F2301E07-3C02-4DB0-AFB3-7E4B9D25B670}",
+    "BasePlatform": "XboxOne",
+    "BasePlatformGUID": "{B131584B-9961-4BB5-9C58-A3E9ABFFBBF6}",
+    "Path": "../../../../GAGD-JAM_WwiseProject/GeneratedSoundBanks/XboxOne"
+   },
+   {
+    "Name": "XboxSeriesX",
+    "GUID": "{F09830F2-0797-4767-B233-EF9E6DB9F347}",
+    "BasePlatform": "XboxSeriesX",
+    "BasePlatformGUID": "{26352FC0-7716-4F97-8DAF-3665EC2BB501}",
+    "Path": "../../../../GAGD-JAM_WwiseProject/GeneratedSoundBanks/XboxSeriesX"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{9A456FA4-E765-4BE0-822B-5E0CAE28EE45}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{C216113A-9F25-3D2E-8B6E-F48319B3B4E7}"
+ }
+}

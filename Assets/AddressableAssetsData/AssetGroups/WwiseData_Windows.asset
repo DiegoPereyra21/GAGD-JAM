@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: WwiseData_Windows
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: WwiseData_Windows
+  m_GUID: 9949b0ae8892bc24dbf7a1558339e282
+  m_SerializeEntries:
+  - m_GUID: 0e7c865c28a738d4595ab9a590d2b74b
+    m_Address: Assets/WwiseData/Bank/Windows/Media/869888867.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28106ff430b18ed44b0e0b26235cfce0
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_Menu_Button_Hover.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7700635c47c2f604da96731981a3bda5
+    m_Address: Assets/WwiseData/Bank/Windows/Media/809076942.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c6ede587d8c7b447ae179b201b863be
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f119b4b42a9e7ef45a4471a7796a7688
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Stop_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 51c430c19f2a31e47a720f8bdf76379d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 843cca897a43dfa43bcfb2580eac70ed, type: 2}

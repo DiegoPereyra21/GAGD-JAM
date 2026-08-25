@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{CE01EEDE-C1CF-6F5A-9E32-6D7DFF380221}">
+			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
+			<ShortName>Play_MUS_MainMenu</ShortName>
+			<Path>Event/Play_MUS_MainMenu.bnk</Path>
+			<Media>
+				<File Id="869888867" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>idoberg-creepy-halloween-bells-loop-408748.wav</ShortName>
+					<Path>Media/869888867.wem</Path>
+					<CachePath>1A/{1A1AF148-38C9-1504-BEF0-F3877CB6F06D}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1043591872" Name="Play_MUS_MainMenu" ObjectPath="\Events\Default Work Unit\Play_MUS_MainMenu" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="869888867"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{69C7FA8D-2570-9AF2-B5A3-07EEF92E8379}</FileHash>
+</SoundBanksInfo>

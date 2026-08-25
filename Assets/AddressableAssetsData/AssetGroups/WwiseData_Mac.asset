@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: WwiseData_Mac
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: WwiseData_Mac
+  m_GUID: 1b374183d68f84648b3f0016b572867b
+  m_SerializeEntries:
+  - m_GUID: 79816fa6a7946534da25c2acb50105f0
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a760b830aa00f54bb78ed3aa4b272e6
+    m_Address: Assets/WwiseData/Bank/Mac/Media/809076942.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 930668f4ece949547b708386c9a2564b
+    m_Address: Assets/WwiseData/Bank/Mac/Media/869888867.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1332c519b889ad4298609fc92a1b058
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Stop_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3c0d36162eafef4884255354fd6f436
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_Menu_Button_Hover.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 51c430c19f2a31e47a720f8bdf76379d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9da539f49e8ded84d9b71feba65322bf, type: 2}

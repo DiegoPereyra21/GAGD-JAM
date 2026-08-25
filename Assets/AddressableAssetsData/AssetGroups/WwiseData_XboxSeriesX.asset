@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: WwiseData_XboxSeriesX
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: WwiseData_XboxSeriesX
+  m_GUID: 8da1a4fee6ff0024fad7e1a3274e5a33
+  m_SerializeEntries:
+  - m_GUID: 633bf86d7116e6e4db34a9622d05a9d2
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Stop_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8acc2257455a90444a7bac3dbc2cf457
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Play_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5b8259e2b55e8443b6127dd73e4ff8d
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Play_Menu_Button_Hover.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbc9e3d878e9da74b82b882274da715d
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/869888867.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8d9af081bac2074586ea01e40bc9feb
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/809076942.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 51c430c19f2a31e47a720f8bdf76379d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0fcf64bb5d3259d41a5cbadcc2b73808, type: 2}

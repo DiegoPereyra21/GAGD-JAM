@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b584cf55800b84d866e522c4e07370, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f444e2f1a81dc54cab58569a7ca372c, type: 3}
   m_Name: AkWwiseInitializationSettings
-  m_EditorClassIdentifier: AK.Wwise.Unity.API::AkWwiseInitializationSettings
+  m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.AkWwiseAddressablesInitializationSettings
   PlatformSettingsNameList:
   - Mac
   - Web
@@ -32,7 +32,7 @@ MonoBehaviour:
     m_DefaultListenerScalingFactor: 1
     m_MaximumNumberOfPositioningPaths: 255
     m_CommandQueueSize: 262144
-    m_SamplesPerFrame: 512
+    m_SamplesPerFrame: 1024
     m_MainOutputSettings:
       m_AudioDeviceShareset: 
       m_DeviceID: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_DebugOutOfRangeCheckEnabled: 0
     m_DebugOutOfRangeLimit: 16
     m_SuspendAudioDuringFocusLoss: 1
-    m_RenderDuringFocusLoss: 0
+    m_RenderDuringFocusLoss: 1
     m_SoundBankPersistentDataPath: 
     m_UseSubFoldersForGeneratedFiles: 0
     m_MemoryPrimarySbaInitSize: 2097152

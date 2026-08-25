@@ -10,7 +10,7 @@
    "SourceFilesRoot": "../../.cache",
    "SoundBanksRoot": ".",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "."
+   "ExternalSourcesOutputRoot": "../../../Assets/GeneratedSoundBanks/Web"
   },
   "DefaultAlign": "16",
   "Settings": {
@@ -21,9 +21,9 @@
    "SourceControlGeneratedFiles": "false",
    "GenerateHeaderFile": "true",
    "GenerateContentTxtFile": "true",
-   "GenerateMetadataXML": "false",
+   "GenerateMetadataXML": "true",
    "GenerateMetadataJSON": "true",
-   "GenerateAllBanksMetadata": "false",
+   "GenerateAllBanksMetadata": "true",
    "GeneratePerBankMetadata": "true",
    "UseSoundBankNames": "true",
    "AllowExceedingMaxSize": "false",
@@ -33,6 +33,6 @@
    "PrintObjectPath": "true",
    "PrintObjectColor": "true"
   },
-  "FileHash": "{07299101-281B-3021-EC40-F6F41B1DCB4C}"
+  "FileHash": "{78324131-B847-ADB2-12DD-AF31024E878A}"
  }
 }

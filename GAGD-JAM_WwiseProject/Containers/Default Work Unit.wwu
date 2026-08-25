@@ -514,7 +514,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Menu" ID="{55FB71EC-CC87-4529-9C99-C18F9FF08817}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>

@@ -10,7 +10,7 @@
    "SourceFilesRoot": "../../.cache",
    "SoundBanksRoot": ".",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "."
+   "ExternalSourcesOutputRoot": "../../../Assets/GeneratedSoundBanks/XboxSeriesX"
   },
   "DefaultAlign": "16",
   "Settings": {
@@ -21,9 +21,9 @@
    "SourceControlGeneratedFiles": "false",
    "GenerateHeaderFile": "true",
    "GenerateContentTxtFile": "true",
-   "GenerateMetadataXML": "false",
+   "GenerateMetadataXML": "true",
    "GenerateMetadataJSON": "true",
-   "GenerateAllBanksMetadata": "false",
+   "GenerateAllBanksMetadata": "true",
    "GeneratePerBankMetadata": "true",
    "UseSoundBankNames": "true",
    "AllowExceedingMaxSize": "false",
@@ -33,6 +33,6 @@
    "PrintObjectPath": "true",
    "PrintObjectColor": "true"
   },
-  "FileHash": "{912A7FDE-BFD2-0770-9E22-51628F480D98}"
+  "FileHash": "{92833037-2587-5892-6EE7-CDAA35B9DF6D}"
  }
 }

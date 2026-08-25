@@ -3,8 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{AAF0E029-CE8A-4B08-819C-D3025243CEC8}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_SFX_Footstep" ID="{E0E7D751-21EE-4F1A-83A0-09144B18B885}"/>
-				<Event Name="Play_AMB_Forest" ID="{3F691C34-9D19-4CC2-B937-933EEBB6684C}"/>
 				<Event Name="Play_MUS_MainMenu" ID="{344BF274-586D-4BCF-A53C-82A9B8102F15}">
 					<ChildrenList>
 						<Action Name="" ID="{94CABC4D-DC18-43E3-BF5C-80BEBF65AE90}" ShortID="783092025">
