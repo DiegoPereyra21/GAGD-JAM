@@ -121,7 +121,7 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
-						<Bus Name="Menu" ID="{55FB71EC-CC87-4529-9C99-C18F9FF08817}"/>
+						<Bus Name="Menu" ID="{09CE4C09-AC23-43DB-A4AA-422EDD1F7AF0}"/>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

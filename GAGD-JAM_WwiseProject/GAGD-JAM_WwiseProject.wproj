@@ -16,6 +16,7 @@
 				<Language Name="SFX" ID="{8F3D44ED-13C1-4EC7-B47B-986B9C0C6B3C}" />
 			</LanguageList>
 			<PropertyList>
+				<Property Name="AutoSoundBankEnabled" Type="bool" Value="True" />
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Web"></Value>
@@ -27,21 +28,24 @@
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
-						<Value Platform="Web">GeneratedSoundBanks\Web\</Value>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
-						<Value Platform="XboxSeriesX">GeneratedSoundBanks\XboxSeriesX\</Value>
-						<Value Platform="XboxOne">GeneratedSoundBanks\XboxOne\</Value>
-						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Web">..\Assets\GeneratedSoundBanks\Web</Value>
+						<Value Platform="Mac">..\Assets\GeneratedSoundBanks\Mac</Value>
+						<Value Platform="XboxSeriesX">..\Assets\GeneratedSoundBanks\XboxSeriesX</Value>
+						<Value Platform="XboxOne">..\Assets\GeneratedSoundBanks\XboxOne</Value>
+						<Value Platform="Windows">..\Assets\GeneratedSoundBanks\Windows</Value>
 					</ValueList>
 				</Property>
-				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True" /><Property Name="GenerateSoundBankXML" Type="bool" Value="False" /><Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" /><Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True" /><Property Name="GenerateSoundBankJSON" Type="bool" Value="True" /><Property Name="SoundBankGeneratePrintGUID" Type="bool" Value="True" /><Property Name="SoundBankGeneratePrintPath" Type="bool" Value="True" /><Property Name="AutoSoundBankEnabled" Type="bool" Value="True" /><Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks/" />
+				<Property Name="GenerateMainSoundBank" Type="bool" Value="True" />
+				<Property Name="GenerateSoundBankXML" Type="bool" Value="True" />
+				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" />
+				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True" /><Property Name="SoundBankHeaderFilePath" Type="string" Value="..\Assets\WwiseData\Bank" />
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
-						<Value Platform="Web">GeneratedSoundBanks\Web\</Value>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
-						<Value Platform="XboxSeriesX">GeneratedSoundBanks\XboxSeriesX\</Value>
-						<Value Platform="XboxOne">GeneratedSoundBanks\XboxOne\</Value>
-						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Web">..\Assets\WwiseData\Bank\Web\</Value>
+						<Value Platform="Mac">..\Assets\WwiseData\Bank\Mac\</Value>
+						<Value Platform="XboxSeriesX">..\Assets\WwiseData\Bank\XboxSeriesX\</Value>
+						<Value Platform="XboxOne">..\Assets\WwiseData\Bank\XboxOne\</Value>
+						<Value Platform="Windows">..\Assets\WwiseData\Bank\Windows\</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
@@ -82,6 +86,10 @@
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2025.1.10|Build=9233|VersionName=v2025.1.10|Config=Release" />
 			</PropertyList>
+			<MiscSettings>
+				<MiscSettingEntry Name="Cache"><![CDATA[.cache]]></MiscSettingEntry>
+				<MiscSettingEntry Name="Originals"><![CDATA[Originals]]></MiscSettingEntry>
+			</MiscSettings>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioFileSource" PluginType="0" CompanyID="1" PluginID="0">
 					<PropertyList>
@@ -878,7 +886,7 @@
 						</Property>
 						<Property Name="ExternalSourcesOutputPath" Type="string">
 							<ValueList>
-								<Value></Value>
+								<Value>..\Assets\GeneratedSoundBanks\</Value>
 							</ValueList>
 						</Property>
 						<Property Name="FilterBehavior" Type="int16">
@@ -1018,7 +1026,7 @@
 						</Property>
 						<Property Name="SoundBankPaths" Type="string">
 							<ValueList>
-								<Value></Value>
+								<Value>..\Assets\WwiseData\Bank\</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
@@ -6816,7 +6824,7 @@
 						</Property>
 						<Property Name="ExternalSourcesOutputPath" Type="string">
 							<ValueList>
-								<Value></Value>
+								<Value>..\Assets\GeneratedSoundBanks\</Value>
 							</ValueList>
 						</Property>
 						<Property Name="ExternalSourcesOverrideInputPath" Type="bool">
@@ -6946,7 +6954,7 @@
 						</Property>
 						<Property Name="SoundBankPaths" Type="string">
 							<ValueList>
-								<Value></Value>
+								<Value>..\Assets\WwiseData\Bank\</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">

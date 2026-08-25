@@ -1,0 +1,26 @@
+{
+ "PluginInfo": {
+  "Platform": "XboxSeriesX",
+  "BasePlatform": "XboxSeriesX",
+  "PluginLibs": [
+   {
+    "LibName": "Wwise Parametric EQ",
+    "LibId": "6881283",
+    "Type": "Effect",
+    "DLL": "AkParametricEQ",
+    "StaticLib": "AkParametricEQFX"
+   },
+   {
+    "LibName": "System",
+    "LibId": "11403271",
+    "Type": "AudioDevice"
+   },
+   {
+    "LibName": "No Output",
+    "LibId": "11862023",
+    "Type": "AudioDevice"
+   }
+  ],
+  "FileHash": "{2CDA7699-1527-52EC-C3BB-F552D77BFE75}"
+ }
+}

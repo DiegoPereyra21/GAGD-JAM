@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	546793308	Play_Grass_Footsteps			\Default Work Unit\Play_Grass_Footsteps	
+
+Effect plug-ins	ID	Name	Type				Notes
+	4239446561	Dual_Filters_Narrow_Bandwidth	Wwise Parametric EQ			
+

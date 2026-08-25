@@ -1,0 +1,419 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Web",
+  "BasePlatform": "Web",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "RootPaths": {
+   "ProjectRoot": "../../../../GAGD-JAM_WwiseProject",
+   "SourceFilesRoot": "../../../../GAGD-JAM_WwiseProject/.cache",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "../../../GeneratedSoundBanks/Web"
+  },
+  "DialogueEvents": [],
+  "SoundBanks": [
+   {
+    "Id": "546793308",
+    "Type": "Event",
+    "GUID": "{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}",
+    "Language": "SFX",
+    "Hash": "{0F6253C2-3E02-6C28-CBFA-CD6E3A32EA27}",
+    "ObjectPath": "Play_Grass_Footsteps",
+    "ShortName": "Play_Grass_Footsteps",
+    "Path": "Event/Play_Grass_Footsteps.bnk",
+    "Media": [
+     {
+      "Id": "3496576",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 09_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/3496576.wem",
+      "CachePath": "24/{240A7C36-7372-C911-A02E-EFD02FE06E35}.wem"
+     },
+     {
+      "Id": "51774552",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 05_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/51774552.wem",
+      "CachePath": "B2/{B2DCC31D-56ED-C294-29D4-0099121C2C16}.wem"
+     },
+     {
+      "Id": "86574945",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 10_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/86574945.wem",
+      "CachePath": "ED/{ED84DD71-B240-3F0B-F626-E7EFC1C5E116}.wem"
+     },
+     {
+      "Id": "99849529",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 03_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/99849529.wem",
+      "CachePath": "00/{0032FA28-9559-9CBA-DB38-BFCF8C0900C0}.wem"
+     },
+     {
+      "Id": "228208572",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 04_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/228208572.wem",
+      "CachePath": "0D/{0D3E97D5-4821-784B-94ED-D7A61DBE5967}.wem"
+     },
+     {
+      "Id": "229322620",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 02_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/229322620.wem",
+      "CachePath": "A6/{A66C8F23-AA8C-5EE8-3236-E3A6DAD90926}.wem"
+     },
+     {
+      "Id": "260049539",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 01_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/260049539.wem",
+      "CachePath": "E1/{E1CC66BC-948A-F350-F7E5-1E9246909C53}.wem"
+     },
+     {
+      "Id": "277566653",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 14_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/277566653.wem",
+      "CachePath": "38/{38C7FD6B-0F08-C39B-E8FF-67448AF65BE0}.wem"
+     },
+     {
+      "Id": "354389179",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 12_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/354389179.wem",
+      "CachePath": "78/{786A904D-75F5-AD17-BD87-971831F47B57}.wem"
+     },
+     {
+      "Id": "358363011",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 11_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/358363011.wem",
+      "CachePath": "7F/{7FBAF725-246D-FD1E-B3D8-86D1F8577C39}.wem"
+     },
+     {
+      "Id": "392187951",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 13_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/392187951.wem",
+      "CachePath": "06/{065ECADE-97E9-F059-0F55-68388BAEE1FA}.wem"
+     },
+     {
+      "Id": "635418451",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 08_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/635418451.wem",
+      "CachePath": "D1/{D1F1AB11-5FE3-1009-5D34-66991A72E6C3}.wem"
+     },
+     {
+      "Id": "656645410",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 07_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/656645410.wem",
+      "CachePath": "2C/{2CE6DF8B-6308-35FE-573D-4D99F1AEF43F}.wem"
+     },
+     {
+      "Id": "749912226",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 15_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/749912226.wem",
+      "CachePath": "09/{09E82503-9A65-A0BE-4DBC-6B23C88694F8}.wem"
+     },
+     {
+      "Id": "1028783762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FEETHmn-GRASS_AUDIOELK-Fs Grass Shoes Outdoors 06_AUDIOELK_AUDIOELK.wav",
+      "Path": "Media/1028783762.wem",
+      "CachePath": "6E/{6E409FF9-37EB-8F72-76F0-C53CFDA3AC86}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "4239446561",
+       "Name": "Dual_Filters_Narrow_Bandwidth",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Band Pass Filters\\Dual_Filters_Narrow_Bandwidth",
+       "GUID": "{A24607C6-04E1-4D41-B513-28C0914D138D}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "546793308",
+      "Name": "Play_Grass_Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Grass_Footsteps",
+      "GUID": "{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0436919",
+      "DurationMax": "1.2497159",
+      "MediaRefs": [
+       {
+        "Id": "3496576"
+       },
+       {
+        "Id": "51774552"
+       },
+       {
+        "Id": "86574945"
+       },
+       {
+        "Id": "99849529"
+       },
+       {
+        "Id": "228208572"
+       },
+       {
+        "Id": "229322620"
+       },
+       {
+        "Id": "260049539"
+       },
+       {
+        "Id": "277566653"
+       },
+       {
+        "Id": "354389179"
+       },
+       {
+        "Id": "358363011"
+       },
+       {
+        "Id": "392187951"
+       },
+       {
+        "Id": "635418451"
+       },
+       {
+        "Id": "656645410"
+       },
+       {
+        "Id": "749912226"
+       },
+       {
+        "Id": "1028783762"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "4239446561"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "1043591872",
+    "Type": "Event",
+    "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
+    "Language": "SFX",
+    "Hash": "{CE01EEDE-C1CF-6F5A-9E32-6D7DFF380221}",
+    "ObjectPath": "Play_MUS_MainMenu",
+    "ShortName": "Play_MUS_MainMenu",
+    "Path": "Event/Play_MUS_MainMenu.bnk",
+    "Media": [
+     {
+      "Id": "869888867",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "idoberg-creepy-halloween-bells-loop-408748.wav",
+      "Path": "Media/869888867.wem",
+      "CachePath": "1A/{1A1AF148-38C9-1504-BEF0-F3877CB6F06D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1043591872",
+      "Name": "Play_MUS_MainMenu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_MainMenu",
+      "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "869888867"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{46424BA5-BA56-4D7C-C451-B68FF961B89A}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Devices\\Default Work Unit\\No_Output",
+       "GUID": "{E06E98B5-D0DB-481C-82B9-FF4DE2DBDF2E}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Devices\\Default Work Unit\\System",
+       "GUID": "{7A31B19A-0A0A-443C-A0C7-3398D705D606}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Ambience",
+      "GUID": "{EE578A28-B79C-4072-89A3-565B692174C9}"
+     },
+     {
+      "Id": "393239870",
+      "Name": "SFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
+      "GUID": "{878B91E9-92C2-4664-8702-7FF0AA3742AE}"
+     },
+     {
+      "Id": "2246998526",
+      "Name": "Main Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "2607556080",
+      "Name": "Menu",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Menu",
+      "GUID": "{09CE4C09-AC23-43DB-A4AA-422EDD1F7AF0}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
+      "GUID": "{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "988953028",
+      "Name": "SFXVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\SFXVolume",
+      "GUID": "{DFB3BC0A-887E-4C08-9D50-CE0433B1106E}"
+     },
+     {
+      "Id": "2346531308",
+      "Name": "MusicVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MusicVolume",
+      "GUID": "{63AE203E-86D2-4D19-A59B-BE928F65C12C}"
+     },
+     {
+      "Id": "3546521921",
+      "Name": "AmbientVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\AmbientVolume",
+      "GUID": "{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"
+     }
+    ]
+   },
+   {
+    "Id": "3305792757",
+    "Type": "Event",
+    "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
+    "Language": "SFX",
+    "Hash": "{A253A973-33E5-EF9E-3209-FB6F77AD8C13}",
+    "ObjectPath": "Play_Menu_Button_Hover",
+    "ShortName": "Play_Menu_Button_Hover",
+    "Path": "Event/Play_Menu_Button_Hover.bnk",
+    "Media": [
+     {
+      "Id": "809076942",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "p.wav",
+      "Path": "Media/809076942.wem",
+      "CachePath": "2A/{2A3D866E-717E-519C-7E80-61CD236C1F4C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3305792757",
+      "Name": "Play_Menu_Button_Hover",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Menu_Button_Hover",
+      "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.74392",
+      "DurationMax": "0.9930141",
+      "MediaRefs": [
+       {
+        "Id": "809076942"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "4243441902",
+    "Type": "Event",
+    "GUID": "{00063086-C8F5-4E31-B546-3BA30C57B3FC}",
+    "Language": "SFX",
+    "Hash": "{FDB06760-B43A-5E05-07E3-677004BC09A6}",
+    "ObjectPath": "Stop_MUS_MainMenu",
+    "ShortName": "Stop_MUS_MainMenu",
+    "Path": "Event/Stop_MUS_MainMenu.bnk",
+    "Events": [
+     {
+      "Id": "4243441902",
+      "Name": "Stop_MUS_MainMenu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_MUS_MainMenu",
+      "GUID": "{00063086-C8F5-4E31-B546-3BA30C57B3FC}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9DF8F829-5C0B-DB7B-33EB-866406941BB4}"
+ }
+}

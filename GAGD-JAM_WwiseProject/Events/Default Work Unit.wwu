@@ -3,8 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{AAF0E029-CE8A-4B08-819C-D3025243CEC8}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_SFX_Footstep" ID="{E0E7D751-21EE-4F1A-83A0-09144B18B885}"/>
-				<Event Name="Play_AMB_Forest" ID="{3F691C34-9D19-4CC2-B937-933EEBB6684C}"/>
 				<Event Name="Play_MUS_MainMenu" ID="{344BF274-586D-4BCF-A53C-82A9B8102F15}">
 					<ChildrenList>
 						<Action Name="" ID="{94CABC4D-DC18-43E3-BF5C-80BEBF65AE90}" ShortID="783092025">
@@ -36,6 +34,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="idoberg-creepy-halloween-bells-loop-408748" ID="{D71AFCDB-2857-4700-A29F-503B4C93E79F}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Grass_Footsteps" ID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}">
+					<ChildrenList>
+						<Action Name="" ID="{CED4B37B-3BE2-4AFC-AC1A-67E5D2799F9C}" ShortID="141040030">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{11E94152-5FB8-4F5D-A508-CE0AB773DA0B}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

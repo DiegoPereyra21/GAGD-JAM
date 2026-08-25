@@ -13,10 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_AMB_FOREST = 994146778U;
         static const AkUniqueID PLAY_MENU_BUTTON_HOVER = 3305792757U;
         static const AkUniqueID PLAY_MUS_MAINMENU = 1043591872U;
-        static const AkUniqueID PLAY_SFX_FOOTSTEP = 57417936U;
         static const AkUniqueID STOP_MUS_MAINMENU = 4243441902U;
     } // namespace EVENTS
 

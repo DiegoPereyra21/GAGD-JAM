@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_Menu_Button_Hover
   id: 3305792757
   guid: D41A0C01-0A22-450B-AA1C-9CAC988C1B3B
+  AutoBank: {fileID: 11400000, guid: 79469c5eabb874e4b9a6d2d94f0d7f2f, type: 2}
   IsInUserDefinedSoundBank: 0

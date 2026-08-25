@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="172">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../Assets/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{CE01EEDE-C1CF-6F5A-9E32-6D7DFF380221}">
+			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
+			<ShortName>Play_MUS_MainMenu</ShortName>
+			<Path>Event/Play_MUS_MainMenu.bnk</Path>
+			<Media>
+				<File Id="869888867" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>idoberg-creepy-halloween-bells-loop-408748.wav</ShortName>
+					<Path>Media/869888867.wem</Path>
+					<CachePath>1A/{1A1AF148-38C9-1504-BEF0-F3877CB6F06D}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1043591872" Name="Play_MUS_MainMenu" ObjectPath="\Events\Default Work Unit\Play_MUS_MainMenu" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="869888867"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{66B79C5A-403C-268E-7EBA-43B9E353E1F8}">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Devices\Default Work Unit\No_Output" GUID="{E06E98B5-D0DB-481C-82B9-FF4DE2DBDF2E}" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" ObjectPath="\Devices\Default Work Unit\System" GUID="{7A31B19A-0A0A-443C-A0C7-3398D705D606}" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="85412153" Name="Ambience" ObjectPath="\Busses\Default Work Unit\Main Audio Bus\Ambience" GUID="{EE578A28-B79C-4072-89A3-565B692174C9}"/>
+				<Bus Id="393239870" Name="SFX" ObjectPath="\Busses\Default Work Unit\Main Audio Bus\SFX" GUID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}"/>
+				<Bus Id="2246998526" Name="Main Audio Bus" ObjectPath="\Busses\Default Work Unit\Main Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Id="2607556080" Name="Menu" ObjectPath="\Busses\Default Work Unit\Main Audio Bus\Menu" GUID="{09CE4C09-AC23-43DB-A4AA-422EDD1F7AF0}"/>
+				<Bus Id="3991942870" Name="Music" ObjectPath="\Busses\Default Work Unit\Main Audio Bus\Music" GUID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume" GUID="{DFB3BC0A-887E-4C08-9D50-CE0433B1106E}"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume" GUID="{63AE203E-86D2-4D19-A59B-BE928F65C12C}"/>
+				<GameParameter Id="3546521921" Name="AmbientVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbientVolume" GUID="{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{A253A973-33E5-EF9E-3209-FB6F77AD8C13}">
+			<ObjectPath>Play_Menu_Button_Hover</ObjectPath>
+			<ShortName>Play_Menu_Button_Hover</ShortName>
+			<Path>Event/Play_Menu_Button_Hover.bnk</Path>
+			<Media>
+				<File Id="809076942" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>p.wav</ShortName>
+					<Path>Media/809076942.wem</Path>
+					<CachePath>2A/{2A3D866E-717E-519C-7E80-61CD236C1F4C}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3305792757" Name="Play_Menu_Button_Hover" ObjectPath="\Events\Default Work Unit\Play_Menu_Button_Hover" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" DurationType="OneShot" DurationMin="0.74392" DurationMax="0.9930141">
+					<MediaRefs>
+						<MediaRef Id="809076942"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="4243441902" Type="Event" GUID="{00063086-C8F5-4E31-B546-3BA30C57B3FC}" Language="SFX" Hash="{FDB06760-B43A-5E05-07E3-677004BC09A6}">
+			<ObjectPath>Stop_MUS_MainMenu</ObjectPath>
+			<ShortName>Stop_MUS_MainMenu</ShortName>
+			<Path>Event/Stop_MUS_MainMenu.bnk</Path>
+			<Events>
+				<Event Id="4243441902" Name="Stop_MUS_MainMenu" ObjectPath="\Events\Default Work Unit\Stop_MUS_MainMenu" GUID="{00063086-C8F5-4E31-B546-3BA30C57B3FC}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{8C47651B-F01B-CE22-75F1-F2DFCF855186}</FileHash>
+</SoundBanksInfo>

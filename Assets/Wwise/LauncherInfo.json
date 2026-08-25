@@ -22,19 +22,11 @@
         },
         {
             "id": "DeploymentPlatforms",
-            "valueId": "Windows"
-        },
-        {
-            "id": "DeploymentPlatforms",
             "valueId": "Emscripten"
         },
         {
             "id": "DeploymentPlatforms",
-            "valueId": "XboxOneGC"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "XboxSeriesX"
+            "valueId": "Windows"
         }
     ]
 }

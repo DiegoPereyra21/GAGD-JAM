@@ -57,7 +57,7 @@
       "Id": "2607556080",
       "Name": "Menu",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Menu",
-      "GUID": "{55FB71EC-CC87-4529-9C99-C18F9FF08817}"
+      "GUID": "{09CE4C09-AC23-43DB-A4AA-422EDD1F7AF0}"
      },
      {
       "Id": "3991942870",
@@ -88,6 +88,6 @@
     ]
    }
   ],
-  "FileHash": "{78ED5EBA-BC86-8B4D-34E9-6D90AE959EAC}"
+  "FileHash": "{C5D1810F-A70F-561C-BC75-E408D23CB2E6}"
  }
 }

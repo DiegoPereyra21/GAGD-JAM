@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.audiokinetic.wwise.addressables": {
+      "version": "https://github.com/audiokinetic/WwiseUnityAddressables.git#v25.1.10",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.addressables": "2.4.6"
+      },
+      "hash": "84391faf9596b30a090417ed43953d36b557e5f3"
+    },
     "com.unity.addressables": {
       "version": "2.9.1",
       "depth": 1,
