@@ -2,9 +2,6 @@
     <ui:VisualElement style="flex-grow: 1; position: absolute; height: 46px; top: auto; width: 358px; left: 20px; background-color: rgba(0, 0, 0, 0.929); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; right: auto; bottom: 80px;">
         <ui:Label text="TAB = ABRE INVENTARIO" style="color: rgb(255, 255, 255); font-size: 24px; -unity-font-style: bold; -unity-text-align: upper-center; white-space: normal; text-overflow: clip;"/>
     </ui:VisualElement>
-    <ui:VisualElement name="VisualElement" style="flex-grow: 1; position: absolute; height: 181px; width: 223px; background-color: rgba(226, 226, 226, 0.831); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; top: 20px; left: 20px; right: auto; bottom: auto;">
-        <ui:Label text="Label" name="InventoryLabel" style="font-size: 33px; -unity-font-style: bold; -unity-text-align: middle-center; -unity-text-outline-width: 0; -unity-text-outline-color: rgb(0, 0, 0); text-overflow: clip; color: rgb(0, 0, 0);"/>
-    </ui:VisualElement>
     <ui:VisualElement style="flex-grow: 1; position: absolute; height: 46px; top: auto; width: 834px; left: 20px; background-color: rgba(0, 0, 0, 0.929); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; right: auto; bottom: 20px;">
         <ui:Label text="E = INTERACT / Interactuar con buzon para conseguir quests" style="color: rgb(255, 255, 255); font-size: 24px; -unity-font-style: bold; -unity-text-align: upper-center; white-space: normal; text-overflow: clip;"/>
     </ui:VisualElement>
