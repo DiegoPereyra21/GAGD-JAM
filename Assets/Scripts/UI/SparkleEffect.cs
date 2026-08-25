@@ -11,15 +11,12 @@ public class SparkleEffect : MonoBehaviour
 
         var buttons = root.Query<Button>().ToList();
 
-        Debug.Log($"BOTONES ENCONTRADOS: {buttons.Count}");
-
         foreach (Button button in buttons)
         {
             VisualElement sparkles = button.Q<VisualElement>("Sparkles");
 
             if (sparkles == null)
             {
-                Debug.LogWarning($"SIN SPARKLES: {button.name}");
                 continue;
             }
 

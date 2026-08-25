@@ -19,11 +19,8 @@ public class TitleEffect : MonoBehaviour
 
         if (title == null)
         {
-            Debug.LogError("❌ TitleEffect: no encontré el Label llamado Title.");
             return;
         }
-
-        Debug.Log("✅ TitleEffect: encontré el título.");
 
         // Contenedor de sparkles
         sparkles = new VisualElement();
@@ -50,10 +47,7 @@ public class TitleEffect : MonoBehaviour
 
         time += Time.deltaTime;
 
-        // =========================================
-        // 🌙 MOVIMIENTO VERTICAL
-        // =========================================
-
+        //movimiento vertical
         float verticalMovement =
             Mathf.Sin(time * 0.65f) * 4f +
             Mathf.Sin(time * 1.17f) * 1.2f +
@@ -65,10 +59,7 @@ public class TitleEffect : MonoBehaviour
         );
 
 
-        // =========================================
-        // 🫧 RESPIRACIÓN ORGÁNICA
-        // =========================================
-
+       // respiracion
         float breathingWave =
             Mathf.Sin(time * 0.55f) +
             Mathf.Sin(time * 0.23f) * 0.35f;
@@ -81,10 +72,7 @@ public class TitleEffect : MonoBehaviour
         );
 
 
-        // =========================================
-        // ✨ SPARKLES
-        // =========================================
-
+        // sparkles
         sparkleTimer -= Time.deltaTime;
 
         if (sparkleTimer <= 0f)
