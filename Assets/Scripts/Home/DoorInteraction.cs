@@ -47,6 +47,7 @@ public class DoorInteraction : MonoBehaviour
         HomeStorage.Instance.Deposit(inventory);
         HomeStorage.Instance.Save();
         basketDisplay.ClearAll();
+        basketDisplay.SetAvailable(false);
 
         GameProgressManager.Instance.EnterHouse();
         cameraTransition.TransitionTo(houseViewAnchor);

@@ -107,4 +107,10 @@ public class GameProgressManager : MonoBehaviour
         public int day;
         public int money;
     }
+    //fix no dejaba recolectar objetos 
+    public void ResumeNight()
+    {
+        if (NightTimeRemaining > 0f)
+            IsNightActive = true;
+    }
 }

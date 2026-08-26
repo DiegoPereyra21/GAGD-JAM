@@ -8,6 +8,19 @@ public class CameraTransition : MonoBehaviour
     [SerializeField] private float blendDuration = 0.5f;
 
     private Coroutine blendRoutine;
+
+    //para que comience en la cama, como teniamosplaneada la historia
+    [SerializeField] private Transform startingAnchor;
+
+    private void Awake()
+    {
+        if (startingAnchor != null)
+        {
+            cameraFollow.enabled = false;
+            transform.position = startingAnchor.position;
+            transform.rotation = startingAnchor.rotation;
+        }
+    }
     //para q no este hardcodeado al basketViewAnchor nada mas
     public void TransitionTo(Transform anchor, Action onComplete = null)
     {

@@ -2,11 +2,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider))]
-public class BedInteraction : MonoBehaviour
+public class DoorExitInteraction : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private InteractableOutline outline;
     [SerializeField] private CameraTransition cameraTransition;
+    [SerializeField] private InteractableOutline outline;
+    //activa desactiva el canasto
+    [SerializeField] private BasketDisplay basketDisplay;
 
     private InputAction interactAction;
     private bool playerInRange;
@@ -41,6 +43,14 @@ public class BedInteraction : MonoBehaviour
     {
         if (!playerInRange) return;
 
-        GameProgressManager.Instance.Sleep();
+        if (!GameProgressManager.Instance.IsNightActive)
+        {
+            Debug.Log("[DoorExitInteraction] No podés salir sin dormir primero.");
+            return;
+        }
+
+        basketDisplay.SetAvailable(true);
+        cameraTransition.TransitionToPlayer();
     }
+
 }

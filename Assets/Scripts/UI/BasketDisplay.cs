@@ -15,6 +15,9 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private LayerMask basketItemLayer;
     //para cambiar la llamda q tenia
     [SerializeField] private Transform basketViewAnchor;
+    //para activar desactivar segun si esta dentro o fuera de la casa
+    [SerializeField] private GameObject basketRoot;
+    private bool isAvailable;
     
     private InputAction toggleAction;
     private bool isOpen;
@@ -50,6 +53,8 @@ public class BasketDisplay : MonoBehaviour
 
     private void OnToggle(InputAction.CallbackContext ctx)
     {
+        if (!isAvailable) return;
+
         isOpen = !isOpen;
         playerMovement.SetFrozen(isOpen);
 
@@ -57,6 +62,19 @@ public class BasketDisplay : MonoBehaviour
             cameraTransition.TransitionTo(basketViewAnchor);
         else
             cameraTransition.TransitionToPlayer();
+    }
+
+    public void SetAvailable(bool available)
+    {
+        isAvailable = available;
+        basketRoot?.SetActive(available);
+
+        if (!available && isOpen)
+        {
+            isOpen = false;
+            playerMovement.SetFrozen(false);
+            cameraTransition.TransitionToPlayer();
+        }
     }
     //logica de spawneo del item en el canasto
     public void Drop(CollectibleType type, GameObject visualPrefab)
