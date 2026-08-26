@@ -88,4 +88,10 @@ public class BasketDisplay : MonoBehaviour
         Gizmos.DrawWireCube(dropPoint.position + Vector3.up * spawnHeight * 0.5f,
             new Vector3(spawnHorizontalSpread * 2f, spawnHeight, spawnHorizontalSpread * 2f));
     }
+    //para que al guardar en el homestorage se borre todo lo que este en el canasto
+    public void ClearAll()
+    {
+        for (int i = dropPoint.childCount - 1; i >= 0; i--)
+            Destroy(dropPoint.GetChild(i).gameObject);
+    }
 }

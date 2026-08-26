@@ -963,8 +963,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -1715169100717861242, guid: 3754719df48d48b43bce3ce5d0bcaac6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 770487188}
+    - targetCorrespondingSourceObject: {fileID: -1715169100717861242, guid: 3754719df48d48b43bce3ce5d0bcaac6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 770487187}
   m_SourcePrefab: {fileID: 100100000, guid: 3754719df48d48b43bce3ce5d0bcaac6, type: 3}
+--- !u!1 &770487186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1715169100717861242, guid: 3754719df48d48b43bce3ce5d0bcaac6, type: 3}
+  m_PrefabInstance: {fileID: 770487185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &770487187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770487186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b72fa8eb050ee448a4e68bd0f6da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
+  playerInput: {fileID: 1456227255}
+  inventory: {fileID: 1456227257}
+  outline: {fileID: 0}
+  basketDisplay: {fileID: 263165654}
+--- !u!65 &770487188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770487186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.85793567, y: 1.2069359, z: 0.5787645}
+  m_Center: {x: -0.00000006698647, y: 0.6519295, z: 2.422124}
 --- !u!1 &812948099
 GameObject:
   m_ObjectHideFlags: 0

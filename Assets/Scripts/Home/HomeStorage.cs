@@ -1,14 +1,33 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Game.Collectibles;
 
-//Acumula los items en momeria pero no persiste, la idea es luego depositar en la casa de alguna forma con un trigger
-public static class HomeStorage
+public class HomeStorage : MonoBehaviour
 {
-    public static event Action OnStorageChanged;
-    private static readonly Dictionary<CollectibleType, int> totals = new Dictionary<CollectibleType, int>();
-    public static IReadOnlyDictionary<CollectibleType, int> Totals => totals;
-    public static void Deposit(PlayerInventory inventory)
+    private const string SaveKey = "HomeStorage_Data";
+
+    public static HomeStorage Instance { get; private set; }
+
+    public event Action OnStorageChanged;
+
+    private readonly Dictionary<CollectibleType, int> totals = new Dictionary<CollectibleType, int>();
+    public IReadOnlyDictionary<CollectibleType, int> Totals => totals;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        Load();
+    }
+
+    public void Deposit(PlayerInventory inventory)
     {
         foreach (var pair in inventory.Items)
         {
@@ -20,5 +39,70 @@ public static class HomeStorage
 
         inventory.Clear();
         OnStorageChanged?.Invoke();
+    }
+    public void Save()
+    {
+        SaveData data = new SaveData();
+        foreach (var pair in totals)
+            data.entries.Add(new SerializableEntry { type = pair.Key, count = pair.Value });
+
+        string json = JsonUtility.ToJson(data);
+        PlayerPrefs.SetString(SaveKey, json);
+        PlayerPrefs.Save();
+
+        Debug.Log($"[HomeStorage] Guardado: {json}");
+    }
+
+    public void Load()
+    {
+        totals.Clear();
+
+        if (!PlayerPrefs.HasKey(SaveKey))
+        {
+            Debug.Log("[HomeStorage] No hay datos guardados, arranca vacío.");
+            return;
+        }
+
+        string json = PlayerPrefs.GetString(SaveKey);
+        SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+        foreach (var entry in data.entries)
+            totals[entry.type] = entry.count;
+
+        OnStorageChanged?.Invoke();
+        Debug.Log($"[HomeStorage] Cargado: {json}");
+    }
+
+    [Serializable]
+    private class SerializableEntry
+    {
+        public CollectibleType type;
+        public int count;
+    }
+
+    [Serializable]
+    private class SaveData
+    {
+        public List<SerializableEntry> entries = new List<SerializableEntry>();
+    }
+
+    //PARA FURIA Y SU SISTEMA DE CRAFTEO
+
+    // Cheequea si hay suficiente cantidad de un ingrediente sin restar nada
+    public bool HasEnough(CollectibleType type, int amount)
+    {
+        return totals.TryGetValue(type, out int count) && count >= amount;
+    }
+
+
+    //saca un solo ingrediente del storage, devuelve true si habia, false si no habia 
+    public bool RemoveOne(CollectibleType type)
+    {
+        if (!totals.TryGetValue(type, out int count) || count <= 0)
+            return false;
+
+        totals[type] = count - 1;
+        OnStorageChanged?.Invoke();
+        return true;
     }
 }
