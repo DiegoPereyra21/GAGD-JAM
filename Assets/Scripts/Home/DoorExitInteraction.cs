@@ -2,14 +2,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider))]
-public class DoorInteraction : MonoBehaviour
+public class DoorExitInteraction : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private PlayerInventory inventory;
-    [SerializeField] private InteractableOutline outline;
-    [SerializeField] private BasketDisplay basketDisplay;
     [SerializeField] private CameraTransition cameraTransition;
-    [SerializeField] private Transform houseViewAnchor;
+    [SerializeField] private InteractableOutline outline;
+    //activa desactiva el canasto
+    [SerializeField] private BasketDisplay basketDisplay;
 
     //para que por ahora me tepee al otro lado de la puerta, luego agregaremos animacion de puerta y que se mueva obligadamente hacia afuera
     [SerializeField] private CharacterController playerController;
@@ -53,19 +52,22 @@ public class DoorInteraction : MonoBehaviour
         if (Time.time - lastTeleportTime < teleportCooldown) return;
         if (!playerInRange) return;
 
-        lastTeleportTime = Time.time;
+        if (!GameProgressManager.Instance.IsNightActive)
+        {
+            Debug.Log("[DoorExitInteraction] No podés salir sin dormir primero.");
+            return;
+        }
 
-        HomeStorage.Instance.Deposit(inventory);
-        HomeStorage.Instance.Save();
-        basketDisplay.ClearAll();
-        basketDisplay.SetAvailable(false);
+        lastTeleportTime = Time.time;
 
         playerController.enabled = false;
         playerController.transform.position = teleportDestination.position;
         playerController.enabled = true;
         playerInRange = false;
 
-        GameProgressManager.Instance.EnterHouse();
-        cameraTransition.TransitionTo(houseViewAnchor);
+        basketDisplay.SetAvailable(true);
+        GameProgressManager.Instance.MarkWentOutside();
+        cameraTransition.TransitionToPlayer();
     }
+
 }

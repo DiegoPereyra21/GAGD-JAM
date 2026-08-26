@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 8f;
     [SerializeField] private float rotationSpeed = 12f;
     [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private Transform cameraTransform;
     private CharacterController controller;
     private InputAction moveAction;
     private Vector3 velocity;
@@ -20,7 +21,16 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Vector2 input = IsFrozen ? Vector2.zero : moveAction.ReadValue<Vector2>();
-        Vector3 direction = new Vector3(input.x, 0f, input.y);
+
+        Vector3 camForward = cameraTransform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+
+        Vector3 camRight = cameraTransform.right;
+        camRight.y = 0f;
+        camRight.Normalize();
+
+        Vector3 direction = camForward * input.y + camRight * input.x;
 
         if (direction.sqrMagnitude > 0.0001f)
         {
