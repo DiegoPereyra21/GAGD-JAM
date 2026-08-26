@@ -36,10 +36,16 @@ public class BedInteraction : MonoBehaviour
             outline?.SetHighlighted(false);
         }
     }
-
+    //para que no pueda ir a dormir sin haber salido nunca
     private void OnInteract(InputAction.CallbackContext ctx)
     {
         if (!playerInRange) return;
+
+        if (!GameProgressManager.Instance.HasBeenOutsideThisCycle)
+        {
+            Debug.Log("[BedInteraction] Todavía no saliste a recolectar, no podés dormir.");
+            return;
+        }
 
         GameProgressManager.Instance.Sleep();
     }

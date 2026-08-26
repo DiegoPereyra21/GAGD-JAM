@@ -16,6 +16,12 @@ public class GameProgressManager : MonoBehaviour
     public int Money { get; private set; }
     public float NightTimeRemaining { get; private set; }
     public bool IsNightActive { get; private set; }
+    public bool HasBeenOutsideThisCycle { get; private set; }
+
+    public void MarkWentOutside()
+    {
+        HasBeenOutsideThisCycle = true;
+    }
 
     private void Awake()
     {
@@ -63,10 +69,10 @@ public class GameProgressManager : MonoBehaviour
     public void Sleep()
     {
         CurrentDay++;
+        HasBeenOutsideThisCycle = false;
         Save();
         StartNight();
     }
-
     public void AddMoney(int amount)
     {
         Money += amount;
