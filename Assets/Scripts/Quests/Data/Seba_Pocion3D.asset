@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: Seba_Pocion3D
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: seba_1
   villagerName: Seba
   missionName: Pocion de 3D
   objectives:

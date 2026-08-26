@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6025459582f486e4b8fd06390f52dd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
+  questDatabase: {fileID: 11400000, guid: 5679c2b30410b444aa178ae16b23f310, type: 2}
   activeQuests: []
 --- !u!4 &382290574
 Transform:
@@ -2966,6 +2967,7 @@ MonoBehaviour:
   playerInput: {fileID: 1456227255}
   outline: {fileID: 0}
   cameraTransition: {fileID: 1560979843}
+  questManager: {fileID: 382290573}
 --- !u!1 &1788240885
 GameObject:
   m_ObjectHideFlags: 0

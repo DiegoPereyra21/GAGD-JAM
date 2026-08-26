@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public event Action OnQuestsChanged;
+    private const string SaveKey = "QuestManager_Data";
 
+    [SerializeField] private QuestDatabase questDatabase;
     [SerializeField] private List<QuestData> activeQuests = new List<QuestData>();
 
+    public event Action OnQuestsChanged;
+
     public IReadOnlyList<QuestData> ActiveQuests => activeQuests;
+
+    private void Awake()
+    {
+        Load();
+    }
 
     public void AddQuest(QuestData quest)
     {
@@ -16,5 +24,48 @@ public class QuestManager : MonoBehaviour
 
         activeQuests.Add(quest);
         OnQuestsChanged?.Invoke();
+    }
+
+    public void Save()
+    {
+        SaveData data = new SaveData();
+        foreach (QuestData quest in activeQuests)
+            data.questIds.Add(quest.questId);
+
+        string json = JsonUtility.ToJson(data);
+        PlayerPrefs.SetString(SaveKey, json);
+        PlayerPrefs.Save();
+
+        Debug.Log($"[QuestManager] Guardado: {json}");
+    }
+
+    public void Load()
+    {
+        activeQuests.Clear();
+
+        if (!PlayerPrefs.HasKey(SaveKey))
+        {
+            Debug.Log("[QuestManager] No hay datos guardados, arranca sin misiones activas.");
+            return;
+        }
+
+        string json = PlayerPrefs.GetString(SaveKey);
+        SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+        foreach (string id in data.questIds)
+        {
+            QuestData quest = questDatabase.FindById(id);
+            if (quest != null)
+                activeQuests.Add(quest);
+        }
+
+        OnQuestsChanged?.Invoke();
+        Debug.Log($"[QuestManager] Cargado: {json}");
+    }
+
+    [Serializable]
+    private class SaveData
+    {
+        public List<string> questIds = new List<string>();
     }
 }

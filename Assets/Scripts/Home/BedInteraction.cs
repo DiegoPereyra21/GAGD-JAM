@@ -7,6 +7,8 @@ public class BedInteraction : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private CameraTransition cameraTransition;
+    //para q se guarden tambien las quests
+    [SerializeField] private QuestManager questManager;
 
     private InputAction interactAction;
     private bool playerInRange;
@@ -47,6 +49,7 @@ public class BedInteraction : MonoBehaviour
             return;
         }
 
+        questManager.Save();
         GameProgressManager.Instance.Sleep();
     }
 }

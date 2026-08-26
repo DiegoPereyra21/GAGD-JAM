@@ -19,11 +19,12 @@ public class QuestJournalUI : MonoBehaviour
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         scrollView = root.Q<ScrollView>("QuestScrollView");
     }
-
+    //fix para q tome tambien los objetos del homestorage para el seguimiento de las quests
     private void OnEnable()
     {
         inventory.OnInventoryChanged += Refresh;
         questManager.OnQuestsChanged += Refresh;
+        HomeStorage.Instance.OnStorageChanged += Refresh;
         Refresh();
     }
 
@@ -31,6 +32,7 @@ public class QuestJournalUI : MonoBehaviour
     {
         inventory.OnInventoryChanged -= Refresh;
         questManager.OnQuestsChanged -= Refresh;
+        HomeStorage.Instance.OnStorageChanged -= Refresh;
     }
 
     private void Refresh()
@@ -39,7 +41,7 @@ public class QuestJournalUI : MonoBehaviour
 
         var remaining = new Dictionary<CollectibleType, int>();
         foreach (CollectibleType type in System.Enum.GetValues(typeof(CollectibleType)))
-            remaining[type] = inventory.GetCount(type);
+            remaining[type] = inventory.GetCount(type) + HomeStorage.Instance.Totals.GetValueOrDefault(type);
 
         foreach (QuestData quest in questManager.ActiveQuests)
             scrollView.Add(BuildCard(quest, remaining));

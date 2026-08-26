@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: Diego_PocionDiego
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: diego_1
   villagerName: Diego
   missionName: Pocion de Diego
   objectives:
