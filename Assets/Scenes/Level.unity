@@ -773,6 +773,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
   m_PrefabInstance: {fileID: 405043814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &712829282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 712829283}
+  m_Layer: 0
+  m_Name: PointOutside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &712829283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712829282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1058219856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &770487185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -895,6 +926,8 @@ MonoBehaviour:
   basketDisplay: {fileID: 263165654}
   cameraTransition: {fileID: 1560979843}
   houseViewAnchor: {fileID: 1875586901}
+  playerController: {fileID: 0}
+  teleportDestination: {fileID: 0}
 --- !u!65 &770487188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1313,6 +1346,8 @@ MonoBehaviour:
   basketDisplay: {fileID: 263165654}
   cameraTransition: {fileID: 1560979843}
   houseViewAnchor: {fileID: 1875586901}
+  playerController: {fileID: 973368103}
+  teleportDestination: {fileID: 1864881532}
 --- !u!65 &1058219855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1346,7 +1381,8 @@ Transform:
   m_LocalPosition: {x: 1.73, y: 0, z: -3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 712829283}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -2.517, z: 0}
 --- !u!1 &1123585654 stripped
@@ -1953,6 +1989,8 @@ MonoBehaviour:
   cameraTransition: {fileID: 1560979843}
   outline: {fileID: 0}
   basketDisplay: {fileID: 263165654}
+  playerController: {fileID: 973368103}
+  teleportDestination: {fileID: 712829283}
 --- !u!65 &1416095877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1986,7 +2024,8 @@ Transform:
   m_LocalPosition: {x: 1.58, y: 0, z: 0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1864881532}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -2.517, z: 0}
 --- !u!1 &1450240727
@@ -2859,6 +2898,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1864881531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864881532}
+  m_Layer: 0
+  m_Name: PointInside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864881532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864881531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1416095878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1875586900
 GameObject:

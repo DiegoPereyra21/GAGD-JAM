@@ -11,6 +11,14 @@ public class DoorInteraction : MonoBehaviour
     [SerializeField] private CameraTransition cameraTransition;
     [SerializeField] private Transform houseViewAnchor;
 
+    //para que por ahora me tepee al otro lado de la puerta, luego agregaremos animacion de puerta y que se mueva obligadamente hacia afuera
+    [SerializeField] private CharacterController playerController;
+    [SerializeField] private Transform teleportDestination;
+    //mismo bug que en el tp de las escaleras
+    private static float lastTeleportTime = -999f;
+    private const float teleportCooldown = 0.3f;
+
+
     private InputAction interactAction;
     private bool playerInRange;
 
@@ -42,12 +50,20 @@ public class DoorInteraction : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext ctx)
     {
+        if (Time.time - lastTeleportTime < teleportCooldown) return;
         if (!playerInRange) return;
+
+        lastTeleportTime = Time.time;
 
         HomeStorage.Instance.Deposit(inventory);
         HomeStorage.Instance.Save();
         basketDisplay.ClearAll();
         basketDisplay.SetAvailable(false);
+
+        playerController.enabled = false;
+        playerController.transform.position = teleportDestination.position;
+        playerController.enabled = true;
+        playerInRange = false;
 
         GameProgressManager.Instance.EnterHouse();
         cameraTransition.TransitionTo(houseViewAnchor);
