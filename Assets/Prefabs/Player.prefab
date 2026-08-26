@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 4048491331838811606}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00045067072, y: -0.022192594, z: 0.020303082, w: 0.9995475}
-  m_LocalPosition: {x: 0.0063, y: -0.0032, z: -0.0253}
+  m_LocalPosition: {x: 0.005, y: 0.0009, z: -0.0014}
   m_LocalScale: {x: 0.008333335, y: 0.008333334, z: 0.008333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 8450418057453193184}
   - component: {fileID: 2597916423183099627}
   - component: {fileID: 3258103731965618708}
+  - component: {fileID: 2378730222198772479}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -574,6 +575,10 @@ MonoBehaviour:
   basketDisplay: {fileID: 0}
   playerMovement: {fileID: 8450418057453193184}
   freezeDuration: 0.8
+  pickupEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a5501912e42bc8e4db3d9b9af47e6029, type: 2}
 --- !u!114 &3258103731965618708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +591,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11616553ab7f084eb1f5afd18d9f76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  maxTotalItems: 10
+--- !u!114 &2378730222198772479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548705520305781567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bf8543a1e0c7469dcc09e46c07b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FootstepController
+  footstepEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8215b81a4ae40b946bcb8c3a9d5c90bc, type: 2}
+  distancePerStep: 5
 --- !u!1 &6839052426473690659
 GameObject:
   m_ObjectHideFlags: 0

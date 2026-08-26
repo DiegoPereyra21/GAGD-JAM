@@ -352,6 +352,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3fe175dbb28617047afe5d54bf67f4c4, type: 2}
   - {fileID: 11400000, guid: 0b12a81e78542af418e55b1aac7165f4, type: 2}
   - {fileID: 11400000, guid: 80594e01674d28448b42d61085b66914, type: 2}
+  outline: {fileID: 0}
 --- !u!1 &382290572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,18 +1375,6 @@ PrefabInstance:
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898257984398620434, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898257984398620434, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0009
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898257984398620434, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0014
       objectReference: {fileID: 0}
     - target: {fileID: 2597916423183099627, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: basketDisplay
