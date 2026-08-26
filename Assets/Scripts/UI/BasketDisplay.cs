@@ -13,6 +13,8 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private float settleDelay = 0.5f;
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private LayerMask basketItemLayer;
+    //para cambiar la llamda q tenia
+    [SerializeField] private Transform basketViewAnchor;
     
     private InputAction toggleAction;
     private bool isOpen;
@@ -52,7 +54,7 @@ public class BasketDisplay : MonoBehaviour
         playerMovement.SetFrozen(isOpen);
 
         if (isOpen)
-            cameraTransition.TransitionToBasket();
+            cameraTransition.TransitionTo(basketViewAnchor);
         else
             cameraTransition.TransitionToPlayer();
     }

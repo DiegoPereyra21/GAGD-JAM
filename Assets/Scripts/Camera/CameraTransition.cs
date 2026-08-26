@@ -5,15 +5,14 @@ using UnityEngine;
 public class CameraTransition : MonoBehaviour
 {
     [SerializeField] private CameraFollow cameraFollow;
-    [SerializeField] private Transform basketViewAnchor;
     [SerializeField] private float blendDuration = 0.5f;
 
     private Coroutine blendRoutine;
-
-    public void TransitionToBasket(Action onComplete = null)
+    //para q no este hardcodeado al basketViewAnchor nada mas
+    public void TransitionTo(Transform anchor, Action onComplete = null)
     {
         cameraFollow.enabled = false;
-        StartBlend(basketViewAnchor.position, basketViewAnchor.rotation, onComplete);
+        StartBlend(anchor.position, anchor.rotation, onComplete);
     }
 
     public void TransitionToPlayer(Action onComplete = null)

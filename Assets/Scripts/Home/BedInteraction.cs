@@ -2,14 +2,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider))]
-public class DoorInteraction : MonoBehaviour
+public class BedInteraction : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private PlayerInventory inventory;
     [SerializeField] private InteractableOutline outline;
-    [SerializeField] private BasketDisplay basketDisplay;
     [SerializeField] private CameraTransition cameraTransition;
-    [SerializeField] private Transform houseViewAnchor;
 
     private InputAction interactAction;
     private bool playerInRange;
@@ -44,11 +41,7 @@ public class DoorInteraction : MonoBehaviour
     {
         if (!playerInRange) return;
 
-        HomeStorage.Instance.Deposit(inventory);
-        HomeStorage.Instance.Save();
-        basketDisplay.ClearAll();
-
-        GameProgressManager.Instance.EnterHouse();
-        cameraTransition.TransitionTo(houseViewAnchor);
+        GameProgressManager.Instance.Sleep();
+        cameraTransition.TransitionToPlayer();
     }
 }
