@@ -16,11 +16,11 @@ MonoBehaviour:
   villagerName: Seba
   missionName: Pocion de 3D
   objectives:
-  - type: 2
-    targetAmount: 5
-  - type: 0
-    targetAmount: 2
-  - type: 1
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
     targetAmount: 1
+  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: 08576844228c26d4984ff65b4172dfd7, type: 2}
+    targetAmount: 2
   moneyReward: 150
-  requiredPotion: {fileID: 0}
+  requiredPotion: {fileID: 11400000, guid: e220cb35c7d1c814b9f5830d18c11b76, type: 2}

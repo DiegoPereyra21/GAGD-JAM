@@ -11,7 +11,7 @@ public class QuestJournalUI : MonoBehaviour
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private VisualTreeAsset questCardTemplate;
     [SerializeField] private VisualTreeAsset questRowTemplate;
-
+    [SerializeField] private IngredientDatabase ingredientDatabase;
     private ScrollView scrollView;
 
     private void Awake()
@@ -39,15 +39,15 @@ public class QuestJournalUI : MonoBehaviour
     {
         scrollView.Clear();
 
-        var remaining = new Dictionary<CollectibleType, int>();
-        foreach (CollectibleType type in System.Enum.GetValues(typeof(CollectibleType)))
+        var remaining = new Dictionary<IngredientType, int>();
+        foreach (IngredientType type in ingredientDatabase.AllIngredients)
             remaining[type] = inventory.GetCount(type) + HomeStorage.Instance.Totals.GetValueOrDefault(type);
 
         foreach (QuestData quest in questManager.ActiveQuests)
             scrollView.Add(BuildCard(quest, remaining));
     }
-    //arma las cartas segun hagan falta
-    private VisualElement BuildCard(QuestData quest, Dictionary<CollectibleType, int> remaining)
+
+    private VisualElement BuildCard(QuestData quest, Dictionary<IngredientType, int> remaining)
     {
         VisualElement card = questCardTemplate.Instantiate();
 
@@ -60,8 +60,8 @@ public class QuestJournalUI : MonoBehaviour
 
         return card;
     }
-    //arma los objetvios en liena tambine
-    private VisualElement BuildRow(QuestObjective objective, Dictionary<CollectibleType, int> remaining)
+
+    private VisualElement BuildRow(QuestObjective objective, Dictionary<IngredientType, int> remaining)
     {
         VisualElement row = questRowTemplate.Instantiate();
 
@@ -69,10 +69,9 @@ public class QuestJournalUI : MonoBehaviour
         int allocated = Mathf.Min(available, objective.targetAmount);
         remaining[objective.type] -= allocated;
 
-        row.Q<Label>("IngredientLabel").text = objective.type.ToString();
+        row.Q<Label>("IngredientLabel").text = objective.type.displayName;
         row.Q<Label>("ProgressLabel").text = $"{allocated}/{objective.targetAmount}";
 
-        //para q cambie de color a verde en caso de compelto
         bool isComplete = allocated >= objective.targetAmount;
         row.Q<Label>("ProgressLabel").style.color = isComplete ? Color.green : Color.red;
 

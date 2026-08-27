@@ -16,7 +16,7 @@ MonoBehaviour:
   villagerName: Diego
   missionName: Pocion de Diego
   objectives:
-  - type: 0
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
     targetAmount: 3
   moneyReward: 12
   requiredPotion: {fileID: 11400000, guid: c1daaf38e4b447140a47a71ecddd5e09, type: 2}

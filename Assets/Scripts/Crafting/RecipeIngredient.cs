@@ -4,6 +4,7 @@ using Game.Collectibles;
 [Serializable]
 public class RecipeIngredient
 {
-    public CollectibleType type;
+    public IngredientType type;
     public int amount = 1;
+
 }

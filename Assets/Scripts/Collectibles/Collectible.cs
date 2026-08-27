@@ -6,7 +6,6 @@ namespace Game.Collectibles
 {
     public class Collectible : MonoBehaviour
     {
-        [SerializeField] private CollectibleType type;
         [SerializeField] private int value = 1;
         //esta bastante bien asi, no creo q haga falta tocarlo
         [SerializeField] private float collectDuration = 0.3f;
@@ -14,11 +13,13 @@ namespace Game.Collectibles
         //para hacer el menu interactivo dentro del cesto
         [SerializeField] private GameObject basketVisualPrefab;
         public GameObject BasketVisualPrefab => basketVisualPrefab;
+
+        [SerializeField] private IngredientType type;
+        public IngredientType Type => type;
         //para el outline al acercarse
         [SerializeField] private InteractableOutline outline;
         public void SetHighlighted(bool highlighted) => outline?.SetHighlighted(highlighted);
 
-        public CollectibleType Type => type;
         public int Value => value;
         private bool collected;
         

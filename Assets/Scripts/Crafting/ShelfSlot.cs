@@ -4,11 +4,14 @@ using Game.Collectibles;
 
 public class ShelfSlot : MonoBehaviour
 {
-    [SerializeField] private CollectibleType type;
     [SerializeField] private Transform visualAnchor;
     [SerializeField] private TextMeshPro countLabel;
+    //para los objetos del mortero
+    [SerializeField] private bool isProcessable;
+    public bool IsProcessable => isProcessable;
 
-    public CollectibleType Type => type;
+    [SerializeField] private IngredientType type;
+    public IngredientType Type => type;
 
     private GameObject currentVisual;
 

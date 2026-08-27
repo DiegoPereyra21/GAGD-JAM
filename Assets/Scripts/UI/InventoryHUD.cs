@@ -6,6 +6,7 @@ using Game.Collectibles;
 public class InventoryHUD : MonoBehaviour
 {
     [SerializeField] private PlayerInventory inventory;
+    [SerializeField] private IngredientDatabase ingredientDatabase;
     private Label label;
     private void Awake()
     {
@@ -24,8 +25,8 @@ public class InventoryHUD : MonoBehaviour
     private void UpdateLabel()
     {
         var sb = new StringBuilder();
-        foreach (CollectibleType type in System.Enum.GetValues(typeof(CollectibleType)))
-            sb.AppendLine($"{type}: {inventory.GetCount(type)}");
+        foreach (IngredientType type in ingredientDatabase.AllIngredients)
+            sb.AppendLine($"{type.displayName}: {inventory.GetCount(type)}");
 
         label.text = sb.ToString();
     }

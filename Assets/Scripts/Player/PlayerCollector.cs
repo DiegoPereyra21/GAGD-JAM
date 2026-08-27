@@ -49,8 +49,7 @@ public class PlayerCollector : MonoBehaviour
 
         Collectible target = FindNearestCollectible();
         if (target == null) return;
-
-        CollectibleType type = target.Type;
+        IngredientType type = target.Type;
         int value = target.Value;
         GameObject visualPrefab = target.BasketVisualPrefab;
 

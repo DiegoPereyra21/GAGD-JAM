@@ -127,11 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e7b4ad7900a3e4fb4b54985313f464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.Collectible
-  type: 1
   value: 1
   collectDuration: 0.3
   collectRiseHeight: 1
   basketVisualPrefab: {fileID: 3707681147446501937, guid: 24a61b8c11f6a2447b62f9b47b4eab9b, type: 3}
+  type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
   outline: {fileID: -4447950719788988167}
 --- !u!114 &-4447950719788988167
 MonoBehaviour:

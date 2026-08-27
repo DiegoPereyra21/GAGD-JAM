@@ -4,6 +4,6 @@ using Game.Collectibles;
 [Serializable]
 public class QuestObjective
 {
-    public CollectibleType type;
+    public IngredientType type;
     public int targetAmount = 1;
 }

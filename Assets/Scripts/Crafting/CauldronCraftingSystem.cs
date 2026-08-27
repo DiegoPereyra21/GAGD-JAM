@@ -7,7 +7,7 @@ using Game.Collectibles;
 [Serializable]
 public class TypeVisualPrefab
 {
-    public CollectibleType type;
+    public IngredientType type;
     public GameObject prefab;
 }
 
@@ -41,8 +41,23 @@ public class CauldronCraftingSystem : MonoBehaviour
     private int zoneIndex; // 0 = izquierda, 1 = caldero, 2 = derecha
 
     private readonly List<GameObject> cauldronContents = new List<GameObject>();
-    private readonly Dictionary<CollectibleType, int> cauldronIngredients = new Dictionary<CollectibleType, int>();
-    public IReadOnlyDictionary<CollectibleType, int> CauldronIngredients => cauldronIngredients;
+    private readonly Dictionary<IngredientType, int> cauldronIngredients = new Dictionary<IngredientType, int>();
+    public IReadOnlyDictionary<IngredientType, int> CauldronIngredients => cauldronIngredients;
+
+
+    [SerializeField] private GameObject mortarClickObject;
+    [SerializeField] private List<ProcessingRecipe> processingRecipes;
+
+    private GameObject draggedVisual;
+    private IngredientType  draggedType;
+    private float dragPlaneHeight;
+
+    [Serializable]
+    public class ProcessingRecipe
+    {
+        public IngredientType rawType;
+        public IngredientType processedType;
+    }
 
     private void Awake()
     {
@@ -98,8 +113,18 @@ public class CauldronCraftingSystem : MonoBehaviour
         if (Keyboard.current.aKey.wasPressedThisFrame) MoveZone(-1);
         if (Keyboard.current.dKey.wasPressedThisFrame) MoveZone(1);
 
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-            HandleClick();
+        if (Mouse.current == null) return;
+
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+            HandlePress();
+
+        if (draggedVisual != null)
+        {
+            UpdateDragVisualPosition();
+
+            if (Mouse.current.leftButton.wasReleasedThisFrame)
+                EndDrag();
+        }
     }
 
     private void OnInteractPressed(InputAction.CallbackContext ctx)
@@ -147,7 +172,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         };
     }
 
-    private void HandleClick()
+    private void HandlePress()
     {
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (!Physics.Raycast(ray, out RaycastHit hit, 100f, craftingLayer)) return;
@@ -164,15 +189,83 @@ public class CauldronCraftingSystem : MonoBehaviour
         }
 
         if (zoneIndex != 1 && hit.collider.TryGetComponent(out ShelfSlot slot))
-            TryAddIngredient(slot.Type);
+        {
+            if (slot.IsProcessable)
+                TryBeginDrag(slot);
+            else
+                TryAddIngredient(slot.Type);
+        }
     }
 
-    private void TryAddIngredient(CollectibleType type)
+    private void TryBeginDrag(ShelfSlot slot)
     {
-        if (!HomeStorage.Instance.RemoveOne(type)) return;
+        if (!HomeStorage.Instance.Totals.TryGetValue(slot.Type, out int count) || count <= 0) return;
+
+        GameObject prefab = GetVisualPrefab(slot.Type);
+        if (prefab == null) return;
+
+        draggedType = slot.Type;
+        dragPlaneHeight = slot.transform.position.y;
+        draggedVisual = Instantiate(prefab, slot.transform.position, slot.transform.rotation);
+    }
+
+    private void UpdateDragVisualPosition()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Plane dragPlane = new Plane(Vector3.up, new Vector3(0f, dragPlaneHeight, 0f));
+
+        if (dragPlane.Raycast(ray, out float distance))
+            draggedVisual.transform.position = ray.GetPoint(distance);
+    }
+
+    private void EndDrag()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        bool hitMortar = Physics.Raycast(ray, out RaycastHit hit, 100f, craftingLayer) && hit.collider.gameObject == mortarClickObject;
+
+        Destroy(draggedVisual);
+        draggedVisual = null;
+
+        if (hitMortar)
+            ProcessAndAddToCauldron(draggedType);
+        else
+            TryAddIngredient(draggedType);
+    }
+
+    private void ProcessAndAddToCauldron(IngredientType rawType)
+    {
+        ProcessingRecipe recipe = processingRecipes.Find(r => r.rawType == rawType);
+        IngredientType  resultType = recipe != null ? recipe.processedType : rawType;
+
+        if (!HomeStorage.Instance.RemoveOne(rawType)) return;
 
         HomeStorage.Instance.Save();
+        AddIngredientToCauldron(resultType);
+    }
 
+    private void TryAddIngredient(IngredientType type)
+    {
+        if (!HomeStorage.Instance.RemoveOne(type)) return;
+        HomeStorage.Instance.Save();
+
+        GameObject prefab = GetVisualPrefab(type);
+        if (prefab == null)
+        {
+            Debug.LogWarning($"[CauldronCraftingSystem] Falta asignar el prefab visual para {type.displayName}");
+            return;
+        }
+
+        Vector3 spawnPos = cauldronDropPoint.position + new Vector3(UnityEngine.Random.Range(-0.2f, 0.2f), 0.3f, UnityEngine.Random.Range(-0.2f, 0.2f));
+        GameObject visual = Instantiate(prefab, spawnPos, UnityEngine.Random.rotation);
+        cauldronContents.Add(visual);
+
+        if (!cauldronIngredients.ContainsKey(type))
+            cauldronIngredients[type] = 0;
+        cauldronIngredients[type]++;
+    }
+
+    private void AddIngredientToCauldron(IngredientType type)
+    {
         GameObject prefab = GetVisualPrefab(type);
         if (prefab == null)
         {
@@ -189,7 +282,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         cauldronIngredients[type]++;
     }
 
-    private GameObject GetVisualPrefab(CollectibleType type)
+    private GameObject GetVisualPrefab(IngredientType type)
     {
         foreach (TypeVisualPrefab entry in visualPrefabs)
             if (entry.type == type) return entry.prefab;

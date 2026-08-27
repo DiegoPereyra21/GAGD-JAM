@@ -10,35 +10,34 @@ public class PlayerInventory : MonoBehaviour
     public bool IsFull => TotalCount >= maxTotalItems;
 
     public event Action OnInventoryChanged;
-    private readonly Dictionary<CollectibleType, int> items = new Dictionary<CollectibleType, int>();
-    public IReadOnlyDictionary<CollectibleType, int> Items => items;
-    public void AddItem(CollectibleType type, int amount = 1)
+    private readonly Dictionary<IngredientType, int> items = new Dictionary<IngredientType, int>();
+    public IReadOnlyDictionary<IngredientType, int> Items => items;
+
+    public void AddItem(IngredientType type, int amount = 1)
     {
         if (IsFull) return;
-
-        if (!items.ContainsKey(type))
-            items[type] = 0;
-
+        if (!items.ContainsKey(type)) items[type] = 0;
         items[type] += amount;
         OnInventoryChanged?.Invoke();
     }
-    public int GetCount(CollectibleType type)
+
+    public int GetCount(IngredientType type)
     {
         return items.TryGetValue(type, out int count) ? count : 0;
+    }
+
+    public void RemoveItem(IngredientType type, int amount = 1)
+    {
+        if (!items.ContainsKey(type)) return;
+        items[type] = Mathf.Max(0, items[type] - amount);
+        OnInventoryChanged?.Invoke();
     }
     public void Clear()
     {
         items.Clear();
         OnInventoryChanged?.Invoke();
     }
-    //nueva, para q al hacer click en un item este desaparezca y se reste en el inventario
-    public void RemoveItem(CollectibleType type, int amount = 1)
-    {
-        if (!items.ContainsKey(type)) return;
 
-        items[type] = Mathf.Max(0, items[type] - amount);
-        OnInventoryChanged?.Invoke();
-    }
     public int TotalCount
     {
         get

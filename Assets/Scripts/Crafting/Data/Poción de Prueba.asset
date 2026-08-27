@@ -15,5 +15,5 @@ MonoBehaviour:
   potionId: pocion_de_prueba
   potionName: "Poci\xF3n de Prueba"
   ingredients:
-  - type: 0
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
     amount: 3

@@ -4,6 +4,7 @@ namespace Game.Collectibles
     {
         Hongo,
         Baya,
-        Hada
+        Hada,
+        HadaPolvo
     }
 }

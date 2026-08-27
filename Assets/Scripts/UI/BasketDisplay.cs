@@ -77,7 +77,7 @@ public class BasketDisplay : MonoBehaviour
         }
     }
     //logica de spawneo del item en el canasto
-    public void Drop(CollectibleType type, GameObject visualPrefab)
+    public void Drop(IngredientType type, GameObject visualPrefab)
     {
         Vector3 spawnPos = dropPoint.position + new Vector3(
             Random.Range(-spawnHorizontalSpread, spawnHorizontalSpread),

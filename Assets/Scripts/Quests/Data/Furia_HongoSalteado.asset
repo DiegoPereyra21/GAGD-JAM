@@ -16,9 +16,9 @@ MonoBehaviour:
   villagerName: Furia
   missionName: Hongos Salteados
   objectives:
-  - type: 0
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
     targetAmount: 1
-  - type: 1
+  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
     targetAmount: 2
   moneyReward: 50
   requiredPotion: {fileID: 11400000, guid: ebc6cd0df3cd31142a40bbca23c2304b, type: 2}
