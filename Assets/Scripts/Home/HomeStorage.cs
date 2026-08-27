@@ -129,4 +129,14 @@ public class HomeStorage : MonoBehaviour
         craftedPotions.Add(recipe);
         OnStorageChanged?.Invoke();
     }
+    //para q reste la poti al entragarla como mision
+    public bool RemoveCraftedPotion(PotionRecipe recipe)
+    {
+        int index = craftedPotions.IndexOf(recipe);
+        if (index < 0) return false;
+
+        craftedPotions.RemoveAt(index);
+        OnStorageChanged?.Invoke();
+        return true;
+    }
 }

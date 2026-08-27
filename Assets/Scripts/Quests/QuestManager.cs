@@ -68,4 +68,9 @@ public class QuestManager : MonoBehaviour
     {
         public List<string> questIds = new List<string>();
     }
+    public void CompleteQuest(QuestData quest)
+    {
+        activeQuests.Remove(quest);
+        OnQuestsChanged?.Invoke();
+    }
 }

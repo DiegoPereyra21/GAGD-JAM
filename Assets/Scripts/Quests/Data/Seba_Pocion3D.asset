@@ -22,3 +22,5 @@ MonoBehaviour:
     targetAmount: 2
   - type: 1
     targetAmount: 1
+  moneyReward: 150
+  requiredPotion: {fileID: 0}
