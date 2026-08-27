@@ -31,6 +31,8 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private Transform cauldronDropPoint;
     [SerializeField] private List<TypeVisualPrefab> visualPrefabs;
     [SerializeField] private PotionRecipeDatabase recipeDatabase;
+
+    [SerializeField] private ShelfSlot[] allShelfSlots;
     [SerializeField] private InteractableOutline outline;
 
     private InputAction interactAction;
@@ -47,8 +49,27 @@ public class CauldronCraftingSystem : MonoBehaviour
         interactAction = playerInput.actions["Interact"];
     }
 
-    private void OnEnable() => interactAction.performed += OnInteractPressed;
-    private void OnDisable() => interactAction.performed -= OnInteractPressed;
+    private void OnEnable()
+    {
+        interactAction.performed += OnInteractPressed;
+        HomeStorage.Instance.OnStorageChanged += RefreshShelves;
+        RefreshShelves();
+    }
+
+    private void OnDisable()
+    {
+        interactAction.performed -= OnInteractPressed;
+        HomeStorage.Instance.OnStorageChanged -= RefreshShelves;
+    }
+
+    private void RefreshShelves()
+    {
+        foreach (ShelfSlot slot in allShelfSlots)
+        {
+            int count = HomeStorage.Instance.Totals.TryGetValue(slot.Type, out int c) ? c : 0;
+            slot.Refresh(GetVisualPrefab(slot.Type), count);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -58,6 +79,8 @@ public class CauldronCraftingSystem : MonoBehaviour
             outline?.SetHighlighted(true);
         }
     }
+
+
 
     private void OnTriggerExit(Collider other)
     {
