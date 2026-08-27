@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8368261a76521674681548230744a41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeStorage
+  potionDatabase: {fileID: 11400000, guid: 4e94c71289c33ec48af7307126840f98, type: 2}
 --- !u!4 &771513322
 Transform:
   m_ObjectHideFlags: 0

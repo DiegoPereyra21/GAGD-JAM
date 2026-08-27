@@ -13,6 +13,11 @@ public class HomeStorage : MonoBehaviour
 
     private readonly Dictionary<CollectibleType, int> totals = new Dictionary<CollectibleType, int>();
     public IReadOnlyDictionary<CollectibleType, int> Totals => totals;
+    //para sistema de crafteo, guardar las potis crafteadsa
+    [SerializeField] private PotionRecipeDatabase potionDatabase;
+
+    private readonly List<PotionRecipe> craftedPotions = new List<PotionRecipe>();
+    public IReadOnlyList<PotionRecipe> CraftedPotions => craftedPotions;
 
     private void Awake()
     {
@@ -43,8 +48,12 @@ public class HomeStorage : MonoBehaviour
     public void Save()
     {
         SaveData data = new SaveData();
+
         foreach (var pair in totals)
             data.entries.Add(new SerializableEntry { type = pair.Key, count = pair.Value });
+
+        foreach (PotionRecipe potion in craftedPotions)
+            data.potionIds.Add(potion.potionId);
 
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
@@ -56,6 +65,7 @@ public class HomeStorage : MonoBehaviour
     public void Load()
     {
         totals.Clear();
+        craftedPotions.Clear();
 
         if (!PlayerPrefs.HasKey(SaveKey))
         {
@@ -68,6 +78,13 @@ public class HomeStorage : MonoBehaviour
 
         foreach (var entry in data.entries)
             totals[entry.type] = entry.count;
+
+        foreach (string potionId in data.potionIds)
+        {
+            PotionRecipe recipe = potionDatabase.FindById(potionId);
+            if (recipe != null)
+                craftedPotions.Add(recipe);
+        }
 
         OnStorageChanged?.Invoke();
         Debug.Log($"[HomeStorage] Cargado: {json}");
@@ -84,6 +101,7 @@ public class HomeStorage : MonoBehaviour
     private class SaveData
     {
         public List<SerializableEntry> entries = new List<SerializableEntry>();
+        public List<string> potionIds = new List<string>();
     }
 
     //PARA FURIA Y SU SISTEMA DE CRAFTEO
@@ -104,5 +122,11 @@ public class HomeStorage : MonoBehaviour
         totals[type] = count - 1;
         OnStorageChanged?.Invoke();
         return true;
+    }
+    
+    public void AddPotion(PotionRecipe recipe)
+    {
+        craftedPotions.Add(recipe);
+        OnStorageChanged?.Invoke();
     }
 }
