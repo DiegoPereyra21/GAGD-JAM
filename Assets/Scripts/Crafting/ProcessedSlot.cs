@@ -3,17 +3,15 @@ using UnityEngine;
 using TMPro;
 using Game.Collectibles;
 
-public class ShelfSlot : MonoBehaviour
+public class ProcessedSlot : MonoBehaviour
 {
     [SerializeField] private IngredientType type;
     [SerializeField] private Transform visualAnchor;
     [SerializeField] private TextMeshPro countLabel;
-    [SerializeField] private bool isProcessable;
     [SerializeField] private int itemsPerRow = 3;
     [SerializeField] private float spacing = 0.3f;
 
     public IngredientType Type => type;
-    public bool IsProcessable => isProcessable;
 
     private readonly List<GameObject> currentVisuals = new List<GameObject>();
 

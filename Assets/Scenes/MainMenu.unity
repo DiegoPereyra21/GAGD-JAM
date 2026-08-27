@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0771c177c36fcdb47b695f2685b1ad41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameProgressManager
-  nightDuration: 60
+  nightDuration: 300
 --- !u!4 &1618223651
 Transform:
   m_ObjectHideFlags: 0
