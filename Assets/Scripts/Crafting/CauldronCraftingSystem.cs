@@ -72,7 +72,6 @@ public class CauldronCraftingSystem : MonoBehaviour
         interactAction.performed += OnInteractPressed;
         HomeStorage.Instance.OnStorageChanged += RefreshShelves;
         RefreshShelves();
-        RefreshProcessedSlots();
     }
 
     private void OnDisable()
@@ -176,22 +175,21 @@ public class CauldronCraftingSystem : MonoBehaviour
         };
     }
 
-    private void RefreshProcessedSlots()
-    {
-        foreach (ProcessedSlot slot in processedSlots)
-        {
-            int count = processedWaiting.TryGetValue(slot.Type, out int c) ? c : 0;
-            slot.Refresh(GetVisualPrefab(slot.Type), count);
-        }
-    }
-
     private void TrySendProcessedToCauldron(IngredientType type)
     {
         if (!processedWaiting.TryGetValue(type, out int count) || count <= 0) return;
 
         processedWaiting[type] = count - 1;
-        RefreshProcessedSlots();
+
+        GetProcessedSlot(type)?.RemoveOne();
         AddIngredientToCauldron(type);
+    }
+
+    private ProcessedSlot GetProcessedSlot(IngredientType type)
+    {
+        foreach (ProcessedSlot slot in processedSlots)
+            if (slot.Type == type) return slot;
+        return null;
     }
 
     private void HandlePress()
@@ -283,7 +281,7 @@ public class CauldronCraftingSystem : MonoBehaviour
             processedWaiting[resultType] = 0;
         processedWaiting[resultType]++;
 
-        RefreshProcessedSlots();
+        GetProcessedSlot(resultType)?.AddOne(GetVisualPrefab(resultType));
     }
 
     private void TryAddIngredient(IngredientType type)

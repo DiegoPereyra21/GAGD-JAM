@@ -15,25 +15,34 @@ public class ProcessedSlot : MonoBehaviour
 
     private readonly List<GameObject> currentVisuals = new List<GameObject>();
 
-    public void Refresh(GameObject visualPrefab, int count)
+    public void AddOne(GameObject visualPrefab)
     {
-        foreach (GameObject visual in currentVisuals)
-            Destroy(visual);
-        currentVisuals.Clear();
+        if (visualPrefab == null) return;
 
-        if (visualPrefab != null)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                int row = i / itemsPerRow;
-                int col = i % itemsPerRow;
+        int index = currentVisuals.Count;
+        int row = index / itemsPerRow;
+        int col = index % itemsPerRow;
 
-                Vector3 offset = visualAnchor.right * (col * spacing) + visualAnchor.forward * (row * spacing);
-                GameObject visual = Instantiate(visualPrefab, visualAnchor.position + offset, visualAnchor.rotation, visualAnchor);
-                currentVisuals.Add(visual);
-            }
-        }
+        Vector3 offset = visualAnchor.right * (col * spacing) + visualAnchor.forward * (row * spacing);
+        GameObject visual = Instantiate(visualPrefab, visualAnchor.position + offset, visualAnchor.rotation, visualAnchor);
+        currentVisuals.Add(visual);
 
-        countLabel.text = count.ToString();
+        UpdateLabel();
+    }
+
+    public void RemoveOne()
+    {
+        if (currentVisuals.Count == 0) return;
+
+        int lastIndex = currentVisuals.Count - 1;
+        Destroy(currentVisuals[lastIndex]);
+        currentVisuals.RemoveAt(lastIndex);
+
+        UpdateLabel();
+    }
+
+    private void UpdateLabel()
+    {
+        countLabel.text = currentVisuals.Count.ToString();
     }
 }
