@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
-  m_Name: Furia_HongoSalteado
+  m_Name: Diego Thunderhand
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: furia_1
-  villagerName: Furia
-  missionName: Hongos Salteados
+  questId: diego_thunderhand
+  villagerName: Diego Thunderhand
+  missionName: Pocion de Despertar para Diego
   objectives:
-  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
-    targetAmount: 1
-  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
+  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
     targetAmount: 2
-  moneyReward: 50
-  requiredPotion: {fileID: 11400000, guid: ebc6cd0df3cd31142a40bbca23c2304b, type: 2}
+  - type: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
+    targetAmount: 1
+  moneyReward: 26
+  requiredPotion: {fileID: 11400000, guid: e439844b671a2614485d2c7e8c2159a7, type: 2}

@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6a50e031ab39f4b8fd3e2deb287e31, type: 3}
   m_Name: PotionRecipeDatabase
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipeDatabase
-  recipes: []
+  recipes:
+  - {fileID: 11400000, guid: e439844b671a2614485d2c7e8c2159a7, type: 2}
+  - {fileID: 11400000, guid: c9c352ca6a4bc9f4ba6aa5225120242a, type: 2}
+  - {fileID: 11400000, guid: cafff4157321b664895f0e1f98829e33, type: 2}
+  - {fileID: 11400000, guid: 3ca334ed6139e524cae18432018275b6, type: 2}
+  - {fileID: 11400000, guid: 24915c16a263c6e448e44c4a2fb5c7ab, type: 2}
+  - {fileID: 11400000, guid: 3694c353349b7534bae6f15bfe698b63, type: 2}
+  - {fileID: 11400000, guid: 7e1245a49f2ec4742a0cecbd6acb8e46, type: 2}
+  - {fileID: 11400000, guid: be03158f518a81a49a8e30787a6a7ba2, type: 2}
+  - {fileID: 11400000, guid: f28a4ac1a0d98ef4d84313027a0e885e, type: 2}
+  - {fileID: 11400000, guid: 428cc45607c2ee64b9610d969c4ac9f0, type: 2}
+  - {fileID: 11400000, guid: 6592045b8bbd76244b1c5ea3d5b4f798, type: 2}
+  - {fileID: 11400000, guid: e5c7ea09c35f1664f91332cc452ae71e, type: 2}

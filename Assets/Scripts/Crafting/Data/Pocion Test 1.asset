@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n de Sue\xF1o"
+  m_Name: Pocion Test 1
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: "poci\xF3n_sue\xF1o"
-  potionName: "Poci\xF3n de Sue\xF1o"
+  potionId: pocion_test
+  potionName: Pocion Test
   ingredients:
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-    amount: 2
-  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     amount: 1

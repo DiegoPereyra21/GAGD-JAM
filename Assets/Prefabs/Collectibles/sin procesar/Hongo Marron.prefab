@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8743099164951596218}
   - component: {fileID: 8028137802203680965}
   - component: {fileID: 31392528943450749}
-  m_Layer: 0
+  - component: {fileID: 5654067373605775630}
+  - component: {fileID: -4515034437585899047}
+  m_Layer: 8
   m_Name: Hongo Marron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,10 +28,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8985010166073262076}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.36, y: 0.0022045758, z: -6.747427}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90,3 +92,42 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5654067373605775630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985010166073262076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.87174165, y: 0.9363011, z: 0.94428116}
+  m_Center: {x: 0.024233071, y: 0.46594536, z: -0.00025919077}
+--- !u!114 &-4515034437585899047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985010166073262076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e7b4ad7900a3e4fb4b54985313f464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.Collectible
+  value: 1
+  collectDuration: 0.3
+  collectRiseHeight: 1
+  basketVisualPrefab: {fileID: 8985010166073262076, guid: 35340e33d24034f439cb85168e920a41, type: 3}
+  type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+  outline: {fileID: 0}

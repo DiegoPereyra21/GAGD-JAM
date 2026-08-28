@@ -15,7 +15,7 @@ MonoBehaviour:
   potionId: "pocion_concentraci\xF3n"
   potionName: "Poci\xF3n de Concentraci\xF3n"
   ingredients:
-  - type: {fileID: 11400000, guid: 4f462d74b27aa604ebf1caef51072925, type: 2}
+  - type: {fileID: 11400000, guid: 8e10425daaca93d4d977a097c3249546, type: 2}
     amount: 2
   - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
     amount: 1

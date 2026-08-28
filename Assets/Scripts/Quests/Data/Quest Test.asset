@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
-  m_Name: Seba_Pocion3D
+  m_Name: Quest Test
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: seba_1
-  villagerName: Seba
-  missionName: Pocion de 3D
+  questId: pocion_test
+  villagerName: test
+  missionName: Pocion Test que ande porfavor
   objectives:
   - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
     targetAmount: 1
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-    targetAmount: 1
-  - type: {fileID: 11400000, guid: 08576844228c26d4984ff65b4172dfd7, type: 2}
-    targetAmount: 2
-  moneyReward: 150
-  requiredPotion: {fileID: 11400000, guid: e220cb35c7d1c814b9f5830d18c11b76, type: 2}
+  moneyReward: 1
+  requiredPotion: {fileID: 11400000, guid: e5c7ea09c35f1664f91332cc452ae71e, type: 2}

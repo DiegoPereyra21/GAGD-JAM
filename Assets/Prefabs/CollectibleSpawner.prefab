@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1.9334}
+  m_LocalScale: {x: 1, y: 1, z: 1.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,5 +51,5 @@ MonoBehaviour:
     amount: 30
   - prefab: {fileID: 550371918017911446, guid: c5e0dfdbb8a62a5428bd1fcd698445d3, type: 3}
     amount: 12
-  - prefab: {fileID: 3855075491024189442, guid: fdeb12c88dc077048b659bfc69e0effb, type: 3}
+  - prefab: {fileID: 8985010166073262076, guid: b2b987103017b7c4b8b961c2cabd7750, type: 3}
     amount: 50

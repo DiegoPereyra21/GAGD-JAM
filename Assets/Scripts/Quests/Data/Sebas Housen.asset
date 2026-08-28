@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
+  m_Name: Sebas Housen
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: sebas_housen
+  villagerName: Sebas Housen
+  missionName: Pocion de Fibra para Sebas
+  objectives:
+  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+    targetAmount: 3
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    targetAmount: 3
+  moneyReward: 45
+  requiredPotion: {fileID: 11400000, guid: 3ca334ed6139e524cae18432018275b6, type: 2}

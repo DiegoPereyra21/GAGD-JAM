@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
-  m_Name: Diego_PocionDiego
+  m_Name: Quest Test 1
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: diego_1
-  villagerName: Diego
-  missionName: Pocion de Diego
+  questId: pocion_test_1
+  villagerName: test 1
+  missionName: Pocion Test 1
   objectives:
-  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
-    targetAmount: 3
-  moneyReward: 12
-  requiredPotion: {fileID: 11400000, guid: c1daaf38e4b447140a47a71ecddd5e09, type: 2}
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
+    targetAmount: 1
+  moneyReward: 1
+  requiredPotion: {fileID: 11400000, guid: 6592045b8bbd76244b1c5ea3d5b4f798, type: 2}

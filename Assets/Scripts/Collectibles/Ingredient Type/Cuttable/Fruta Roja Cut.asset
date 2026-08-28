@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404e932a7b2bf014b9d702aa4902613c, type: 3}
   m_Name: Fruta Roja Cut
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
-  ingredientId: fruta_roja
-  displayName: Fruta Roja
+  ingredientId: fruta_roja_cortada
+  displayName: Fruta Roja Cortada

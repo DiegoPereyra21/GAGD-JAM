@@ -9,13 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n Dispersa"
-  m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_dispersa
-  potionName: "Poci\xF3n Dispersa"
-  ingredients:
+  m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
+  m_Name: Furia Firewrath
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: furia_firewrath
+  villagerName: Furia Firewrath
+  missionName: Pocion Dispersa para Furia
+  objectives:
   - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
-    amount: 1
+    targetAmount: 1
   - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-    amount: 1
+    targetAmount: 1
+  moneyReward: 50
+  requiredPotion: {fileID: 11400000, guid: c9c352ca6a4bc9f4ba6aa5225120242a, type: 2}
