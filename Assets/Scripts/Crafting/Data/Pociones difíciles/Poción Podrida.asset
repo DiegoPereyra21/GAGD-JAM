@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
+  m_Name: "Poci\xF3n Podrida"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
+  potionId: pocion_podrida
+  potionName: "Poci\xF3n Podrida"
+  ingredients:
+  - type: {fileID: 11400000, guid: c39b2aa72e0904b4fb7bb02d66d9dc29, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: d915aa33128898e41b1e22658441de77, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
+    amount: 2
