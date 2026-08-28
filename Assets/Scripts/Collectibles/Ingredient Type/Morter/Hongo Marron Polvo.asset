@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 404e932a7b2bf014b9d702aa4902613c, type: 3}
-  m_Name: HadaPolvo
+  m_Name: Hongo Marron Polvo
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
-  ingredientId: hada_polvo
-  displayName: Polvo de Hada
+  ingredientId: hongo_marron_polvo
+  displayName: Hongo Marron Polvo

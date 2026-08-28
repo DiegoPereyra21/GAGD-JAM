@@ -49,19 +49,22 @@ public class CauldronCraftingSystem : MonoBehaviour
 
 
     [SerializeField] private GameObject mortarClickObject;
+    [SerializeField] private GameObject cuttingBoardClickObject;
     [SerializeField] private List<ProcessingRecipe> processingRecipes;
 
     private GameObject draggedVisual;
     private IngredientType  draggedType;
     private float dragPlaneHeight;
 
+    public enum ProcessingStation { Mortar, CuttingBoard }
+
     [Serializable]
     public class ProcessingRecipe
     {
+        public ProcessingStation station;
         public IngredientType rawType;
         public IngredientType processedType;
     }
-
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
@@ -257,20 +260,23 @@ public class CauldronCraftingSystem : MonoBehaviour
     private void EndDrag()
     {
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        bool hitMortar = Physics.Raycast(ray, out RaycastHit hit, 100f, craftingLayer) && hit.collider.gameObject == mortarClickObject;
+        bool didHit = Physics.Raycast(ray, out RaycastHit hit, 100f, craftingLayer);
+        GameObject hitObject = didHit ? hit.collider.gameObject : null;
 
         Destroy(draggedVisual);
         draggedVisual = null;
 
-        if (hitMortar)
-            ProcessIngredient(draggedType);
+        if (hitObject == mortarClickObject)
+            ProcessIngredient(draggedType, ProcessingStation.Mortar);
+        else if (hitObject == cuttingBoardClickObject)
+            ProcessIngredient(draggedType, ProcessingStation.CuttingBoard);
         else
             TryAddIngredient(draggedType);
     }
 
-    private void ProcessIngredient(IngredientType rawType)
+    private void ProcessIngredient(IngredientType rawType, ProcessingStation station)
     {
-        ProcessingRecipe recipe = processingRecipes.Find(r => r.rawType == rawType);
+        ProcessingRecipe recipe = processingRecipes.Find(r => r.rawType == rawType && r.station == station);
         IngredientType resultType = recipe != null ? recipe.processedType : rawType;
 
         if (!HomeStorage.Instance.RemoveOne(rawType)) return;

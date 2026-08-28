@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
+  m_Name: "Poci\xF3n de Sue\xF1o"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
+  potionId: "poci\xF3n_sue\xF1o"
+  potionName: "Poci\xF3n de Sue\xF1o"
+  ingredients:
+  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: 4f462d74b27aa604ebf1caef51072925, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+    amount: 1
