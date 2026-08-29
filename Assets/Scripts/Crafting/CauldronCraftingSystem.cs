@@ -18,7 +18,7 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private CameraTransition cameraTransition;
 
-    [SerializeField] private Transform houseViewAnchor; // cámara fija del piso 1, a donde volvés al salir
+    [SerializeField] private Transform houseViewAnchor;
     [SerializeField] private Transform leftZoneAnchor;
     [SerializeField] private Transform cauldronViewAnchor;
     [SerializeField] private Transform rightZoneAnchor;
@@ -31,12 +31,20 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private Transform cauldronDropPoint;
     [SerializeField] private List<TypeVisualPrefab> visualPrefabs;
     [SerializeField] private PotionRecipeDatabase recipeDatabase;
-
-    [SerializeField] private ShelfSlot[] allShelfSlots;
     [SerializeField] private InteractableOutline outline;
-    //nuevo slot para los ingredientes procesado
-    [SerializeField] private ProcessedSlot[] processedSlots;
+
+    [SerializeField] private IngredientDisplayArea leftShelfDisplay;
+    [SerializeField] private IngredientDisplayArea rightShelfDisplay;
+    [SerializeField] private List<IngredientType> leftShelfTypes;
+    [SerializeField] private List<IngredientType> rightShelfTypes;
+
+    [SerializeField] private IngredientDisplayArea mortarProcessedDisplay;
+    [SerializeField] private IngredientDisplayArea cuttingBoardProcessedDisplay;
     private readonly Dictionary<IngredientType, int> processedWaiting = new Dictionary<IngredientType, int>();
+
+    [SerializeField] private GameObject mortarClickObject;
+    [SerializeField] private GameObject cuttingBoardClickObject;
+    [SerializeField] private List<ProcessingRecipe> processingRecipes;
 
     private InputAction interactAction;
     private bool playerInRange;
@@ -47,13 +55,8 @@ public class CauldronCraftingSystem : MonoBehaviour
     private readonly Dictionary<IngredientType, int> cauldronIngredients = new Dictionary<IngredientType, int>();
     public IReadOnlyDictionary<IngredientType, int> CauldronIngredients => cauldronIngredients;
 
-
-    [SerializeField] private GameObject mortarClickObject;
-    [SerializeField] private GameObject cuttingBoardClickObject;
-    [SerializeField] private List<ProcessingRecipe> processingRecipes;
-
     private GameObject draggedVisual;
-    private IngredientType  draggedType;
+    private IngredientType draggedType;
     private float dragPlaneHeight;
 
     public enum ProcessingStation { Mortar, CuttingBoard }
@@ -65,6 +68,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         public IngredientType rawType;
         public IngredientType processedType;
     }
+
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
@@ -85,10 +89,16 @@ public class CauldronCraftingSystem : MonoBehaviour
 
     private void RefreshShelves()
     {
-        foreach (ShelfSlot slot in allShelfSlots)
+        foreach (IngredientType type in leftShelfTypes)
         {
-            int count = HomeStorage.Instance.Totals.TryGetValue(slot.Type, out int c) ? c : 0;
-            slot.Refresh(GetVisualPrefab(slot.Type), count);
+            int count = HomeStorage.Instance.Totals.TryGetValue(type, out int c) ? c : 0;
+            leftShelfDisplay.SetCount(type, count, GetVisualPrefab(type));
+        }
+
+        foreach (IngredientType type in rightShelfTypes)
+        {
+            int count = HomeStorage.Instance.Totals.TryGetValue(type, out int c) ? c : 0;
+            rightShelfDisplay.SetCount(type, count, GetVisualPrefab(type));
         }
     }
 
@@ -100,8 +110,6 @@ public class CauldronCraftingSystem : MonoBehaviour
             outline?.SetHighlighted(true);
         }
     }
-
-
 
     private void OnTriggerExit(Collider other)
     {
@@ -178,29 +186,13 @@ public class CauldronCraftingSystem : MonoBehaviour
         };
     }
 
-    private void TrySendProcessedToCauldron(IngredientType type)
-    {
-        if (!processedWaiting.TryGetValue(type, out int count) || count <= 0) return;
-
-        processedWaiting[type] = count - 1;
-
-        GetProcessedSlot(type)?.RemoveOne();
-        AddIngredientToCauldron(type);
-    }
-
-    private ProcessedSlot GetProcessedSlot(IngredientType type)
-    {
-        foreach (ProcessedSlot slot in processedSlots)
-            if (slot.Type == type) return slot;
-        return null;
-    }
-
     private void HandlePress()
     {
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (!Physics.Raycast(ray, out RaycastHit hit, 100f, craftingLayer)) return;
 
         GameObject hitObject = hit.collider.gameObject;
+
         if (hitObject == leftClickZone)
         {
             MoveZone(zoneIndex == 0 ? 1 : -1);
@@ -217,37 +209,32 @@ public class CauldronCraftingSystem : MonoBehaviour
             Craft();
             return;
         }
-        
-        if (zoneIndex != 1)
-        {
-            if (hit.collider.TryGetComponent(out ProcessedSlot processedSlot))
-            {
-                TrySendProcessedToCauldron(processedSlot.Type);
-                return;
-            }
 
-            if (hit.collider.TryGetComponent(out ShelfSlot slot))
-            {
-                if (slot.IsProcessable)
-                    TryBeginDrag(slot);
-                else
-                    TryAddIngredient(slot.Type);
-            }
-        }
+        if (!hit.collider.TryGetComponent(out ProcessedItemVisual visual)) return;
+
+        IngredientDisplayArea area = hit.collider.GetComponentInParent<IngredientDisplayArea>();
+
+        if (area == mortarProcessedDisplay || area == cuttingBoardProcessedDisplay)
+            TrySendProcessedToCauldron(visual.Type, area);
+        else if (area == leftShelfDisplay || area == rightShelfDisplay)
+            TryBeginDrag(visual.Type, hitObject, area);
     }
 
-    private void TryBeginDrag(ShelfSlot slot)
+    private void TryBeginDrag(IngredientType type, GameObject clickedVisual, IngredientDisplayArea sourceArea)
     {
-        if (!HomeStorage.Instance.Totals.TryGetValue(slot.Type, out int count) || count <= 0) return;
+        if (!sourceArea.TryPickUp(type, clickedVisual)) return;
 
-        GameObject prefab = GetVisualPrefab(slot.Type);
-        if (prefab == null) return;
+        draggedType = type;
+        dragPlaneHeight = clickedVisual.transform.position.y;
+        draggedVisual = clickedVisual;
+        draggedVisual.transform.SetParent(null);
 
-        draggedType = slot.Type;
-        dragPlaneHeight = slot.transform.position.y;
-        draggedVisual = Instantiate(prefab, slot.transform.position, slot.transform.rotation);
+        if (draggedVisual.TryGetComponent(out Collider col))
+            col.enabled = false;
+
+        if (draggedVisual.TryGetComponent(out Rigidbody rb))
+            rb.isKinematic = true;
     }
-
     private void UpdateDragVisualPosition()
     {
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -287,28 +274,29 @@ public class CauldronCraftingSystem : MonoBehaviour
             processedWaiting[resultType] = 0;
         processedWaiting[resultType]++;
 
-        GetProcessedSlot(resultType)?.AddOne(GetVisualPrefab(resultType));
+        IngredientDisplayArea area = GetAreaForStation(station);
+        area.AddOne(resultType, GetVisualPrefab(resultType));
+    }
+
+    private IngredientDisplayArea GetAreaForStation(ProcessingStation station)
+    {
+        return station == ProcessingStation.Mortar ? mortarProcessedDisplay : cuttingBoardProcessedDisplay;
+    }
+
+    private void TrySendProcessedToCauldron(IngredientType type, IngredientDisplayArea area)
+    {
+        if (!processedWaiting.TryGetValue(type, out int count) || count <= 0) return;
+
+        processedWaiting[type] = count - 1;
+        area.RemoveOne(type);
+        AddIngredientToCauldron(type);
     }
 
     private void TryAddIngredient(IngredientType type)
     {
         if (!HomeStorage.Instance.RemoveOne(type)) return;
         HomeStorage.Instance.Save();
-
-        GameObject prefab = GetVisualPrefab(type);
-        if (prefab == null)
-        {
-            Debug.LogWarning($"[CauldronCraftingSystem] Falta asignar el prefab visual para {type.displayName}");
-            return;
-        }
-
-        Vector3 spawnPos = cauldronDropPoint.position + new Vector3(UnityEngine.Random.Range(-0.2f, 0.2f), 0.3f, UnityEngine.Random.Range(-0.2f, 0.2f));
-        GameObject visual = Instantiate(prefab, spawnPos, UnityEngine.Random.rotation);
-        cauldronContents.Add(visual);
-
-        if (!cauldronIngredients.ContainsKey(type))
-            cauldronIngredients[type] = 0;
-        cauldronIngredients[type]++;
+        AddIngredientToCauldron(type);
     }
 
     private void AddIngredientToCauldron(IngredientType type)
@@ -316,7 +304,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         GameObject prefab = GetVisualPrefab(type);
         if (prefab == null)
         {
-            Debug.LogWarning($"[CauldronCraftingSystem] Falta asignar el prefab visual para {type}");
+            Debug.LogWarning($"[CauldronCraftingSystem] Falta asignar el prefab visual para {type.displayName}");
             return;
         }
 
@@ -361,9 +349,7 @@ public class CauldronCraftingSystem : MonoBehaviour
     private PotionRecipe FindMatchingRecipe()
     {
         foreach (PotionRecipe recipe in recipeDatabase.Recipes)
-        {
             if (Matches(recipe)) return recipe;
-        }
 
         return null;
     }
