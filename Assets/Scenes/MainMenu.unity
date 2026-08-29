@@ -445,7 +445,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 999ce031a4ff71c4b87103c5fb816760, type: 2}
-  gameSceneName: Level
+  gameSceneName: Level 1
 --- !u!1 &973891691
 GameObject:
   m_ObjectHideFlags: 0
