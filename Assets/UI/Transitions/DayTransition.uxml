@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Transitions/DayTransition.uss?fileID=7433441132597879392&amp;guid=23f04898b18fa0c419a01653055a5cbd&amp;type=3#DayTransition"/>
+    <ui:VisualElement name="TransitionDayPanel" class="day-transition-panel" style="flex-grow: 1;">
+        <ui:Label text="Dia 1" name="DayTransitionTitle" class="day-transition-title" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 130px;"/>
+        <ui:Label text="Un nuevo dia comienza..." name="DayTransitionSubtitle" class="day-transition-subtitle" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 80px;"/>
+        <ui:VisualElement name="DetailsSection" class="details-section" style="flex-grow: 1;"/>
+    </ui:VisualElement>
+</ui:UXML>
