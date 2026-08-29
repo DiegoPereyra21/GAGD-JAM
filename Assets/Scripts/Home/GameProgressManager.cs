@@ -61,6 +61,15 @@ public class GameProgressManager : MonoBehaviour
         IsNightActive = true;
         OnNightStarted?.Invoke();
     }
+    
+    public float NightProgress
+    {
+        get
+        {
+            if (!IsNightActive) return 1f;
+            return 1f - Mathf.Clamp01(NightTimeRemaining / nightDuration);
+        }
+    }
 
     public void EnterHouse()
     {

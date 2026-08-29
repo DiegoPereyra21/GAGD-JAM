@@ -1103,6 +1103,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2092710159}
   m_LocalEulerAnglesHint: {x: 65.288, y: -43.133, z: -59.905}
+--- !u!20 &458881772 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4138654538697430699, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
+  m_PrefabInstance: {fileID: 1560979841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &523375558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,7 +2178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &984267909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3718,6 +3723,10 @@ PrefabInstance:
       propertyPath: m_Depth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4138654538697430699, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4595,6 +4604,55 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2072457498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2072457500}
+  - component: {fileID: 2072457499}
+  m_Layer: 0
+  m_Name: DayNightLighting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2072457499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072457498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0c8b7ebcd59bf46a7da8a4261913da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayNightLighting
+  targetCamera: {fileID: 458881772}
+  nightBackgroundColor: {r: 0.05, g: 0.05, b: 0.15, a: 1}
+  dayBackgroundColor: {r: 0.6, g: 0.8, b: 1, a: 1}
+  nightAmbientColor: {r: 0.05, g: 0.05, b: 0.1, a: 1}
+  dayAmbientColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+--- !u!4 &2072457500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072457498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.80392, y: 1.94275, z: 14.99914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082121636
 GameObject:
   m_ObjectHideFlags: 0
@@ -7525,6 +7583,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 973368103}
+    - target: {fileID: 3299911826462005109, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+      propertyPath: hudDocument
+      value: 
+      objectReference: {fileID: 1218138556}
+    - target: {fileID: 3299911826462005109, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+      propertyPath: questJournalDocument
+      value: 
+      objectReference: {fileID: 1810639036}
     - target: {fileID: 3571853723228608018, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
       propertyPath: playerInput
       value: 
@@ -7677,12 +7743,43 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4148446125504280094, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1747020590}
+    - targetCorrespondingSourceObject: {fileID: 3246935704102565762, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4046882000100814670}
   m_SourcePrefab: {fileID: 100100000, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
 --- !u!4 &4046882000100814668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1855331201944337584, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
   m_PrefabInstance: {fileID: 4046882000100814667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4046882000100814669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3246935704102565762, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+  m_PrefabInstance: {fileID: 4046882000100814667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4046882000100814670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046882000100814669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 9dc9748fa9dda63419363224f0ab66d1, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 3544b8983ff7f6e48965338874b765e1, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
 --- !u!23 &4111860771339186742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10767,3 +10864,4 @@ SceneRoots:
   - {fileID: 1578976083}
   - {fileID: 1600409740}
   - {fileID: 984267914}
+  - {fileID: 2072457500}

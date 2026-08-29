@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -79,36 +80,28 @@ public class DayTransition : MonoBehaviour
         hasTriggered = true;
 
         GameProgressManager progress = GameProgressManager.Instance;
+        TransitionType type = progress.IsNightActive ? TransitionType.EndOfNight : TransitionType.EndOfDay;
 
-        if (progress.IsNightActive)
-        {
-            transitionCoroutine = StartCoroutine(
-                PlayTransition(TransitionType.EndOfNight)
-            );
-        }
-        else
-        {
-            transitionCoroutine = StartCoroutine(
-                PlayTransition(TransitionType.EndOfDay)
-            );
-        }
+        Play(type);
     }
 
-    private IEnumerator PlayTransition(TransitionType type)
+    public void Play(TransitionType type, Action onComplete = null)
+    {
+        if (transitionCoroutine != null) return;
+        transitionCoroutine = StartCoroutine(PlayTransition(type, onComplete));
+    }
+
+    private IEnumerator PlayTransition(TransitionType type, Action onComplete)
     {
         PauseGame();
 
         SetValues();
 
         if (hudDocument != null)
-        {
             hudDocument.rootVisualElement.style.display = DisplayStyle.None;
-        }
 
         if (questJournalDocument != null)
-        {
             questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
-        }
 
         string language = LocalizationSettings.SelectedLocale.Identifier.Code;
 
@@ -153,19 +146,17 @@ public class DayTransition : MonoBehaviour
         StopCoroutine(breathingCoroutine);
         daySubtitle.RemoveFromClassList("breathing");
 
+        onComplete?.Invoke();
+
         yield return Fade(1f, 0f);
 
         transitionPanel.style.display = DisplayStyle.None;
 
         if (hudDocument != null)
-        {
             hudDocument.rootVisualElement.style.display = DisplayStyle.Flex;
-        }
 
         if (questJournalDocument != null)
-        {
             questJournalDocument.rootVisualElement.style.display = DisplayStyle.Flex;
-        }
 
         ResumeGame();
 
