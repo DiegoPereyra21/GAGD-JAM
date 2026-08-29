@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 31392528943450749}
   - component: {fileID: 8386237639433888738}
   - component: {fileID: 5654067373605775630}
-  m_Layer: 10
-  m_Name: HongoMarronHome
+  m_Layer: 9
+  m_Name: Hongo Marron Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.36, y: 0.0022045758, z: -6.747427}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -138,5 +138,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6707479, y: 0.8585292, z: 0.53658885}
-  m_Center: {x: 0.029605815, y: 0.4270593, z: 0.11024675}
+  m_Size: {x: 0.87174165, y: 0.9363011, z: 0.94428116}
+  m_Center: {x: 0.024233071, y: 0.46594536, z: -0.00025919077}
