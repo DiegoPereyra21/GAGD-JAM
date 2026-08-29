@@ -17,6 +17,8 @@ public class GameProgressManager : MonoBehaviour
     public float NightTimeRemaining { get; private set; }
     public bool IsNightActive { get; private set; }
     public bool HasBeenOutsideThisCycle { get; private set; }
+    public bool IsInsane { get; private set; } = true; // para el indicador de sanidad en las transiciones
+    public int InventoryCount { get; private set; } = 0; // para tener un conteo de items que se quedan en la casa
 
     public void MarkWentOutside()
     {
