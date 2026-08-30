@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -22,13 +23,15 @@ public class DayTransition : MonoBehaviour
     // manejo de menus
     [SerializeField] private UIDocument hudDocument;
     [SerializeField] private UIDocument questJournalDocument;
-
+    [SerializeField] private bool useAutomaticTrigger = true;
     private Image[] icons;
 
     private UIDocument uiDocument;
     private VisualElement transitionPanel;
     private Label dayTitle;
     private Label daySubtitle;
+
+    private VisualElement inventoryItemContainer;
 
     private Coroutine transitionCoroutine;
     private float previousTimeScale;
@@ -52,6 +55,8 @@ public class DayTransition : MonoBehaviour
         inventoryValue = root.Q<Label>("InventoryValue");
         sanityValue = root.Q<Label>("SanityValue");
 
+        inventoryItemContainer = root.Q<VisualElement>("Item2");
+
         icons = root
             .Query<Image>(className: "transition-icon")
             .ToList()
@@ -70,6 +75,8 @@ public class DayTransition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!useAutomaticTrigger) return;
+
         if (!other.CompareTag("Player"))
             return;
 
@@ -79,36 +86,28 @@ public class DayTransition : MonoBehaviour
         hasTriggered = true;
 
         GameProgressManager progress = GameProgressManager.Instance;
+        TransitionType type = progress.IsNightActive ? TransitionType.EndOfNight : TransitionType.EndOfDay;
 
-        if (progress.IsNightActive)
-        {
-            transitionCoroutine = StartCoroutine(
-                PlayTransition(TransitionType.EndOfNight)
-            );
-        }
-        else
-        {
-            transitionCoroutine = StartCoroutine(
-                PlayTransition(TransitionType.EndOfDay)
-            );
-        }
+        Play(type);
     }
 
-    private IEnumerator PlayTransition(TransitionType type)
+    public void Play(TransitionType type, Action onComplete = null)
+    {
+        if (transitionCoroutine != null) return;
+        transitionCoroutine = StartCoroutine(PlayTransition(type, onComplete));
+    }
+
+    private IEnumerator PlayTransition(TransitionType type, Action onComplete)
     {
         PauseGame();
 
         SetValues();
 
         if (hudDocument != null)
-        {
             hudDocument.rootVisualElement.style.display = DisplayStyle.None;
-        }
 
         if (questJournalDocument != null)
-        {
             questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
-        }
 
         string language = LocalizationSettings.SelectedLocale.Identifier.Code;
 
@@ -153,19 +152,17 @@ public class DayTransition : MonoBehaviour
         StopCoroutine(breathingCoroutine);
         daySubtitle.RemoveFromClassList("breathing");
 
+        onComplete?.Invoke();
+
         yield return Fade(1f, 0f);
 
         transitionPanel.style.display = DisplayStyle.None;
 
         if (hudDocument != null)
-        {
             hudDocument.rootVisualElement.style.display = DisplayStyle.Flex;
-        }
 
         if (questJournalDocument != null)
-        {
             questJournalDocument.rootVisualElement.style.display = DisplayStyle.Flex;
-        }
 
         ResumeGame();
 
@@ -188,6 +185,134 @@ public class DayTransition : MonoBehaviour
             yield return new WaitForSecondsRealtime(1.8f);
         }
     }
+
+    public void PlayDayIntro(int day, Action onComplete = null)
+    {
+        if (transitionCoroutine != null) return;
+        transitionCoroutine = StartCoroutine(PlayDayIntroRoutine(day, onComplete));
+    }
+
+    private IEnumerator PlayDayIntroRoutine(int day, Action onComplete)
+    {
+        PauseGame();
+        moneyValue.text = GameProgressManager.Instance.Money.ToString();
+        sanityValue.text = GetSanityText();
+        inventoryItemContainer.style.display = DisplayStyle.None;
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        string language = LocalizationSettings.SelectedLocale.Identifier.Code;
+
+        if (language == "es")
+        {
+            dayTitle.text = "Noche " + day;
+            daySubtitle.text = "La oscuridad comienza...";
+        }
+        else
+        {
+            dayTitle.text = "Night " + day;
+            daySubtitle.text = "Darkness falls...";
+        }
+
+        transitionPanel.style.display = DisplayStyle.Flex;
+        transitionPanel.style.opacity = 0f;
+
+        yield return Fade(0f, 1f);
+
+        Coroutine breathingCoroutine = StartCoroutine(BreatheSubtitle());
+        yield return new WaitForSecondsRealtime(textDuration);
+        StopCoroutine(breathingCoroutine);
+        daySubtitle.RemoveFromClassList("breathing");
+
+        onComplete?.Invoke();
+
+        yield return Fade(1f, 0f);
+
+        transitionPanel.style.display = DisplayStyle.None;
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        ResumeGame();
+        transitionCoroutine = null;
+    }
+
+    public void PlayEndOfNight(int itemsCollected, Action onComplete = null)
+    {
+        if (transitionCoroutine != null) return;
+        transitionCoroutine = StartCoroutine(PlayEndOfNightRoutine(itemsCollected, onComplete));
+    }
+
+    private IEnumerator PlayEndOfNightRoutine(int itemsCollected, Action onComplete)
+    {
+        PauseGame();
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        moneyValue.text = GameProgressManager.Instance.Money.ToString();
+        inventoryItemContainer.style.display = DisplayStyle.Flex;
+        inventoryValue.text = itemsCollected.ToString();
+        if (icons.Length >= 3) icons[1].style.display = DisplayStyle.Flex;
+        sanityValue.text = GetSanityText();
+
+        string language = LocalizationSettings.SelectedLocale.Identifier.Code;
+
+        if (language == "es")
+        {
+            dayTitle.text = "Fin de la noche";
+            daySubtitle.text = "Volviste a casa...";
+        }
+        else
+        {
+            dayTitle.text = "End of the night";
+            daySubtitle.text = "You returned home...";
+        }
+
+        transitionPanel.style.display = DisplayStyle.Flex;
+        transitionPanel.style.opacity = 0f;
+
+        yield return Fade(0f, 1f);
+
+        Coroutine breathing = StartCoroutine(BreatheSubtitle());
+        yield return new WaitForSecondsRealtime(textDuration);
+        StopCoroutine(breathing);
+        daySubtitle.RemoveFromClassList("breathing");
+
+        onComplete?.Invoke();
+
+        yield return Fade(1f, 0f);
+
+        transitionPanel.style.display = DisplayStyle.None;
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        ResumeGame();
+        transitionCoroutine = null;
+    }
+
+    private string GetSanityText()
+    {
+        GameProgressManager progress = GameProgressManager.Instance;
+        int sanity = !progress.IsInsane ? 100 : Mathf.Max(0, 100 - ((progress.CurrentDay - 1) * sanityLossPerDay));
+        return sanity + "%";
+    }
+
+
 
     private void PauseGame()
     {
@@ -225,21 +350,6 @@ public class DayTransition : MonoBehaviour
 
         moneyValue.text = progress.Money.ToString();
         inventoryValue.text = progress.InventoryCount.ToString();
-
-        int sanity;
-
-        if (!progress.IsInsane)
-        {
-            sanity = 100;
-        }
-        else
-        {
-            sanity = Mathf.Max(
-                0,
-                100 - ((progress.CurrentDay - 1) * sanityLossPerDay)
-            );
-        }
-
-        sanityValue.text = sanity + "%";
+        sanityValue.text = GetSanityText();
     }
 }

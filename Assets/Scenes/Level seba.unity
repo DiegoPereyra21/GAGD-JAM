@@ -8020,6 +8020,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 973368103}
+    - target: {fileID: 2532557419959105872, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3571853723228608018, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
       propertyPath: playerInput
       value: 

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8743099164951596218}
   - component: {fileID: 8028137802203680965}
   - component: {fileID: 31392528943450749}
-  - component: {fileID: -4515034437585899047}
-  - component: {fileID: 3863193719796632009}
-  m_Layer: 8
-  m_Name: Hongo Marron
+  - component: {fileID: 8386237639433888738}
+  - component: {fileID: 1232626264948969835}
+  m_Layer: 9
+  m_Name: HongoMarronVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.36, y: 0.0022045758, z: -6.747427}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,25 +92,34 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-4515034437585899047
-MonoBehaviour:
+--- !u!54 &8386237639433888738
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8985010166073262076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6e7b4ad7900a3e4fb4b54985313f464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.Collectible
-  value: 1
-  collectDuration: 0.3
-  collectRiseHeight: 1
-  basketVisualPrefab: {fileID: 8985010166073262076, guid: e8b42f63c9f5eb8468f9267843a144cd, type: 3}
-  type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
-  outline: {fileID: 0}
---- !u!64 &3863193719796632009
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &1232626264948969835
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +134,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
