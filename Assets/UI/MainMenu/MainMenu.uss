@@ -391,3 +391,15 @@
     height: 90px;
     margin: 0 20px;
 }
+
+.menu-button:disabled {
+    opacity: 0.35;
+    color: rgb(150, 140, 160);
+    -unity-text-outline-width: 0;
+}
+
+.menu-button:disabled:hover {
+    scale: 1 1;
+    background-color: rgba(61, 43, 82, 0.38);
+    border-color: rgba(190, 165, 220, 0.55);
+}

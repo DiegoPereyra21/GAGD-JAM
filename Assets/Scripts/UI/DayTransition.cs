@@ -31,6 +31,8 @@ public class DayTransition : MonoBehaviour
     private Label dayTitle;
     private Label daySubtitle;
 
+    private VisualElement inventoryItemContainer;
+
     private Coroutine transitionCoroutine;
     private float previousTimeScale;
     private bool hasTriggered;
@@ -52,6 +54,8 @@ public class DayTransition : MonoBehaviour
         moneyValue = root.Q<Label>("MoneyValue");
         inventoryValue = root.Q<Label>("InventoryValue");
         sanityValue = root.Q<Label>("SanityValue");
+
+        inventoryItemContainer = root.Q<VisualElement>("Item2");
 
         icons = root
             .Query<Image>(className: "transition-icon")
@@ -191,7 +195,9 @@ public class DayTransition : MonoBehaviour
     private IEnumerator PlayDayIntroRoutine(int day, Action onComplete)
     {
         PauseGame();
-        SetValues();
+        moneyValue.text = GameProgressManager.Instance.Money.ToString();
+        sanityValue.text = GetSanityText();
+        inventoryItemContainer.style.display = DisplayStyle.None;
 
         if (hudDocument != null)
             hudDocument.rootVisualElement.style.display = DisplayStyle.None;
@@ -255,7 +261,9 @@ public class DayTransition : MonoBehaviour
             questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
 
         moneyValue.text = GameProgressManager.Instance.Money.ToString();
+        inventoryItemContainer.style.display = DisplayStyle.Flex;
         inventoryValue.text = itemsCollected.ToString();
+        if (icons.Length >= 3) icons[1].style.display = DisplayStyle.Flex;
         sanityValue.text = GetSanityText();
 
         string language = LocalizationSettings.SelectedLocale.Identifier.Code;
