@@ -2322,12 +2322,8 @@ MonoBehaviour:
     prefab: {fileID: 8985010166073262076, guid: 780e4a246b98bca4ca3535fe53a78ec6, type: 3}
   - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
     prefab: {fileID: 3707681147446501937, guid: 19b995641eac21c4dac747925f9bec43, type: 3}
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-    prefab: {fileID: 550371918017911446, guid: 0a7672e8fca12fe46a25b66a20dd1e33, type: 3}
   - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     prefab: {fileID: 6306181808556498813, guid: 133c881e3aae1e541b499433f12bc643, type: 3}
-  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
-    prefab: {fileID: 550371918017911446, guid: 3d586ee06ec799c49beddf84aec73a3e, type: 3}
   - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
     prefab: {fileID: 3448400778578221797, guid: 48eaa9b3fad42f242b22109457d0339a, type: 3}
   - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
@@ -2348,6 +2344,10 @@ MonoBehaviour:
     prefab: {fileID: 7521555679540378837, guid: b649cda0a1df89040a7f1735e65e5d5f, type: 3}
   - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
     prefab: {fileID: 6306181808556498813, guid: 4ec71a3ebe7218849bc21a51d250d89e, type: 3}
+  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+    prefab: {fileID: 6590866449139015112, guid: 74b97f2f3ffc9a748bc262ea20850b77, type: 3}
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
+    prefab: {fileID: 6590866449139015112, guid: cabcabe6ebd6d244e8dbc9b10ed20972, type: 3}
   recipeDatabase: {fileID: 11400000, guid: 4e94c71289c33ec48af7307126840f98, type: 2}
   outline: {fileID: 0}
   leftShelfDisplay: {fileID: 765752689}
@@ -2360,7 +2360,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
   - {fileID: 11400000, guid: 5cb1cba6d569b5d4da64cc813f0ca8e1, type: 2}
   rightShelfTypes:
-  - {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
   - {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
   mortarProcessedDisplay: {fileID: 1907124619}
   cuttingBoardProcessedDisplay: {fileID: 1335448501}
@@ -3335,13 +3334,25 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: entries.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[0].amount
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: entries.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 6590866449139015112, guid: 1a8f176c79b92b84ea8607b75674c99d, type: 3}
+    - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[1].amount
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: entries.Array.data[1].prefab
+      value: 
+      objectReference: {fileID: 6590866449139015112, guid: 1a8f176c79b92b84ea8607b75674c99d, type: 3}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[2].amount
       value: 20
