@@ -2,20 +2,21 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(DayTransition))]
 public class BedInteraction : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InteractableOutline outline;
-    [SerializeField] private CameraTransition cameraTransition;
-    //para q se guarden tambien las quests
     [SerializeField] private QuestManager questManager;
 
+    private DayTransition dayTransition;
     private InputAction interactAction;
     private bool playerInRange;
 
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
+        dayTransition = GetComponent<DayTransition>();
     }
 
     private void OnEnable() => interactAction.performed += OnInteract;
@@ -51,5 +52,12 @@ public class BedInteraction : MonoBehaviour
 
         questManager.Save();
         GameProgressManager.Instance.Sleep();
+        dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
+    }
+
+    private void Start()
+    {
+        if (GameProgressManager.Instance.ConsumeWelcomeFade())
+            dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
     }
 }

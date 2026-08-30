@@ -19,12 +19,25 @@ public class GameProgressManager : MonoBehaviour
     public bool HasBeenOutsideThisCycle { get; private set; }
     public bool IsInsane { get; private set; } = true; // para el indicador de sanidad en las transiciones
     public int InventoryCount { get; private set; } = 0; // para tener un conteo de items que se quedan en la casa
-
+    public static bool HasSaveData => PlayerPrefs.HasKey(SaveKey);
     public void MarkWentOutside()
     {
         HasBeenOutsideThisCycle = true;
     }
+    //arregla lo de que no haga el fade si empiezo de 0
+    private bool pendingWelcomeFade;
 
+    public void RequestWelcomeFade()
+    {
+        pendingWelcomeFade = true;
+    }
+
+    public bool ConsumeWelcomeFade()
+    {
+        if (!pendingWelcomeFade) return false;
+        pendingWelcomeFade = false;
+        return true;
+    }
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -60,6 +73,26 @@ public class GameProgressManager : MonoBehaviour
         NightTimeRemaining = nightDuration;
         IsNightActive = true;
         OnNightStarted?.Invoke();
+    }
+    
+    public float NightProgress
+    {
+        get
+        {
+            if (!IsNightActive) return 1f;
+            return 1f - Mathf.Clamp01(NightTimeRemaining / nightDuration);
+        }
+    }
+    public void ResetForNewGame()
+    {
+        CurrentDay = 1;
+        Money = 0;
+        HasBeenOutsideThisCycle = false;
+        IsNightActive = false;
+        NightTimeRemaining = 0f;
+        RequestWelcomeFade();
+        Save();
+        StartNight();
     }
 
     public void EnterHouse()
@@ -108,6 +141,8 @@ public class GameProgressManager : MonoBehaviour
 
         Debug.Log($"[GameProgressManager] Cargado: {json}");
     }
+
+
 
     [Serializable]
     private class SaveData

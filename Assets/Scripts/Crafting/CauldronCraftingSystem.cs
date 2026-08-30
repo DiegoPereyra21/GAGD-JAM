@@ -16,6 +16,8 @@ public class CauldronCraftingSystem : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private GameObject player;
+    private Renderer[] playerRenderers;
     [SerializeField] private CameraTransition cameraTransition;
 
     [SerializeField] private Transform houseViewAnchor;
@@ -72,6 +74,7 @@ public class CauldronCraftingSystem : MonoBehaviour
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
+        playerRenderers = player.GetComponentsInChildren<Renderer>();
     }
 
     private void OnEnable()
@@ -158,6 +161,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         zoneIndex = 1;
         playerMovement.SetFrozen(true);
         cameraTransition.TransitionTo(cauldronViewAnchor);
+        SetPlayerVisible(false);
     }
 
     private void ExitToHouse()
@@ -165,6 +169,13 @@ public class CauldronCraftingSystem : MonoBehaviour
         isInside = false;
         playerMovement.SetFrozen(false);
         cameraTransition.TransitionTo(houseViewAnchor);
+        SetPlayerVisible(true);
+    }
+
+    private void SetPlayerVisible(bool visible)
+    {
+        foreach (Renderer r in playerRenderers)
+            r.enabled = visible;
     }
 
     private void MoveZone(int direction)

@@ -15,14 +15,19 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private AK.Wwise.Event buttonHoverEvent;
 
     [Header("Primer Nivel")]
-    [SerializeField] private string gameSceneName = "Game";
+    [SerializeField] private string gameSceneName = "Level 1";
 
     private VisualElement root;
-    private Button playButton;
+    private Button newGameButton;
+    private Button continueButton;
     private Button optionsButton;
     private Button backButton;
     private VisualElement optionsPanel;
     private VisualElement content;
+
+    private VisualElement confirmNewGamePanel;
+    private Button confirmNewGameButton;
+    private Button cancelNewGameButton;
 
     private void OnEnable()
     {
@@ -36,13 +41,30 @@ public class MainMenu : MonoBehaviour
         musicEvent.Post(gameObject);
 
         content = root.Q<VisualElement>("Content");
-        playButton = root.Q<Button>("PlayButton");
+        newGameButton = root.Q<Button>("NewGameButton");
+        continueButton = root.Q<Button>("ContinueButton");
         optionsButton = root.Q<Button>("OptionsButton");
         backButton = root.Q<Button>("BackButton");
         optionsPanel = root.Q<VisualElement>("OptionsPanel");
 
-        if (playButton != null)
-            playButton.clicked += PlayGame;
+        confirmNewGamePanel = root.Q<VisualElement>("ConfirmNewGamePanel");
+        confirmNewGameButton = root.Q<Button>("ConfirmNewGameButton");
+        cancelNewGameButton = root.Q<Button>("CancelNewGameButton");
+
+        if (newGameButton != null)
+            newGameButton.clicked += OpenConfirmNewGame;
+
+        if (confirmNewGameButton != null)
+            confirmNewGameButton.clicked += StartNewGame;
+
+        if (cancelNewGameButton != null)
+            cancelNewGameButton.clicked += CloseConfirmNewGame;
+
+        if (continueButton != null)
+        {
+            continueButton.clicked += ContinueGame;
+            continueButton.SetEnabled(GameProgressManager.HasSaveData);
+        }
 
         if (optionsButton != null)
             optionsButton.clicked += OpenOptions;
@@ -51,6 +73,7 @@ public class MainMenu : MonoBehaviour
             backButton.clicked += CloseOptions;
 
         optionsPanel.style.display = DisplayStyle.None;
+        confirmNewGamePanel.style.display = DisplayStyle.None;
     }
 
     private void OnDisable()
@@ -63,8 +86,17 @@ public class MainMenu : MonoBehaviour
             button.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
         });
 
-        if (playButton != null)
-            playButton.clicked -= PlayGame;
+        if (newGameButton != null)
+            newGameButton.clicked -= OpenConfirmNewGame;
+
+        if (confirmNewGameButton != null)
+            confirmNewGameButton.clicked -= StartNewGame;
+
+        if (cancelNewGameButton != null)
+            cancelNewGameButton.clicked -= CloseConfirmNewGame;
+
+        if (continueButton != null)
+            continueButton.clicked -= ContinueGame;
 
         if (optionsButton != null)
             optionsButton.clicked -= OpenOptions;
@@ -80,9 +112,33 @@ public class MainMenu : MonoBehaviour
         buttonHoverEvent.Post(gameObject);
     }
 
-    private void PlayGame()
+    private void OpenConfirmNewGame()
+    {
+        content.style.display = DisplayStyle.None;
+        confirmNewGamePanel.style.display = DisplayStyle.Flex;
+    }
+
+    private void CloseConfirmNewGame()
+    {
+        confirmNewGamePanel.style.display = DisplayStyle.None;
+        content.style.display = DisplayStyle.Flex;
+    }
+
+    private void StartNewGame()
     {
         stopMusicEvent.Post(gameObject);
+
+        PlayerPrefs.DeleteAll();
+        HomeStorage.Instance.Load();
+        GameProgressManager.Instance.ResetForNewGame();
+
+        SceneManager.LoadScene(gameSceneName);
+    }
+
+    private void ContinueGame()
+    {
+        stopMusicEvent.Post(gameObject);
+        GameProgressManager.Instance.RequestWelcomeFade();
         SceneManager.LoadScene(gameSceneName);
     }
 
