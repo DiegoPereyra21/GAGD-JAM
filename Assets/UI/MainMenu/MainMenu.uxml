@@ -45,16 +45,16 @@
             </ui:VisualElement>
             <ui:Button text="Volver" name="BackButton" class="back-button"/>
         </ui:VisualElement>
-<ui:VisualElement name="ConfirmNewGamePanel" focusable="false" class="confirm-panel" style="display: none;">
-    <ui:Label text="Se borrará tu partida actual. ¿Querés continuar?" name="ConfirmNewGameLabel" class="confirm-label" />
-    <ui:VisualElement name="ConfirmButtonsRow" class="confirm-buttons-row">
-        <ui:Button text="Confirmar" name="ConfirmNewGameButton" class="menu-button confirm-button">
-            <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;" />
-        </ui:Button>
-        <ui:Button text="Cancelar" name="CancelNewGameButton" class="menu-button confirm-button">
-            <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;" />
-        </ui:Button>
-    </ui:VisualElement>
-</ui:VisualElement>
+        <ui:VisualElement name="ConfirmNewGamePanel" focusable="false" class="confirm-panel" style="display: none;">
+            <ui:Label text="Se borrará tu partida actual. ¿Querés continuar?" name="ConfirmNewGame" class="confirm-label"/>
+            <ui:VisualElement name="ConfirmButtonsRow" class="confirm-buttons-row">
+                <ui:Button text="Confirmar" name="ConfirmNewGameButton" class="menu-button confirm-button">
+                    <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+                </ui:Button>
+                <ui:Button text="Cancelar" name="CancelNewGameButton" class="menu-button confirm-button">
+                    <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

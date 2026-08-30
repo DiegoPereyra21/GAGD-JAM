@@ -6,17 +6,17 @@
         <ui:VisualElement name="TransitionIcons" class="transition-icons" style="flex-grow: 1; top: 150px; display: flex;">
             <ui:VisualElement name="Item1" class="transition-item" style="flex-grow: 1;">
                 <ui:Image name="money" class="transition-icon"/>
-                <ui:Label text="Oro" enable-rich-text="false" emoji-fallback-support="false" name="Label" class="money-text" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 68px;"/>
+                <ui:Label text="Oro" enable-rich-text="false" emoji-fallback-support="false" name="MoneyLabel" class="money-text" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 68px;"/>
                 <ui:Label text="0" name="MoneyValue" class="item-value" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 50px;"/>
             </ui:VisualElement>
             <ui:VisualElement name="Item2" class="transition-item" style="flex-grow: 1;">
                 <ui:Image name="inventory" class="transition-icon"/>
-                <ui:Label text="Items" enable-rich-text="false" emoji-fallback-support="false" name="Label" class="money-text" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 68px;"/>
+                <ui:Label text="Items" enable-rich-text="false" emoji-fallback-support="false" name="ItemsLabel" class="money-text" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 68px;"/>
                 <ui:Label text="0" name="InventoryValue" class="inventory-text item-value" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 50px;"/>
             </ui:VisualElement>
             <ui:VisualElement name="Item3" class="transition-item" style="flex-grow: 1;">
                 <ui:Image name="sanity" class="transition-icon"/>
-                <ui:Label text="Sanidad" enable-rich-text="false" emoji-fallback-support="false" name="Label" class="money-text" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 68px;"/>
+                <ui:Label text="Sanidad" enable-rich-text="false" emoji-fallback-support="false" name="SanityLabel" class="money-text" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 68px;"/>
                 <ui:Label text="0" parse-escape-sequences="true" name="SanityValue" class="sanity-text item-value" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 50px;"/>
             </ui:VisualElement>
         </ui:VisualElement>
