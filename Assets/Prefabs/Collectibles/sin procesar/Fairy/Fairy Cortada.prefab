@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &100537102665639631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2401698631886739545}
-  m_Layer: 0
-  m_Name: fairy_qc_skeleton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2401698631886739545
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100537102665639631}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.082, y: -0.053, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2521820476708023818}
-  m_Father: {fileID: 3582745317759678541}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2164381246648914267
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2164381246648914267}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.68379647, y: 0.0000000516252, z: 6.6798475e-15, w: 0.7296728}
-  m_LocalPosition: {x: -1.06659334e-10, y: -0.0014127501, z: 0.021740591}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: 0.56328094, y: -0.06419458, z: 0.09327731, w: 0.81846994}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2521820476708023818}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 3582745317759678541}
+  m_LocalEulerAnglesHint: {x: 69.072, y: 0, z: 13.003}
 --- !u!1 &6590866449139015112
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3582745317759678541}
   m_Layer: 0
-  m_Name: Fairy
+  m_Name: Fairy Cortada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,15 +55,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6590866449139015112}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9782419, z: -0, w: 0.20746754}
-  m_LocalPosition: {x: 15.3, y: 0.95, z: -7.16}
-  m_LocalScale: {x: 5.3045, y: 5.3045, z: 5.3045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2401698631886739545}
+  - {fileID: 2149248406038317831}
+  - {fileID: 1996669366636584311}
   - {fileID: 7216009291981684590}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -156.052, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7659253952230648504
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,46 +89,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7659253952230648504}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.68379647, y: 0.0000000516252, z: 9.575495e-15, w: 0.7296728}
-  m_LocalPosition: {x: 1.06515005e-10, y: 0.0014108401, z: -0.02171128}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: -0.399287, y: -0, z: -0, w: 0.91682607}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2521820476708023818}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8864215834156827495
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2521820476708023818}
-  m_Layer: 0
-  m_Name: fairy_root
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2521820476708023818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8864215834156827495}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7067348, y: 0.022938166, z: -0.7067346, w: 0.022938171}
-  m_LocalPosition: {x: 1.16415e-12, y: 0.00001469, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2149248406038317831}
-  - {fileID: 1996669366636584311}
-  m_Father: {fileID: 2401698631886739545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 3582745317759678541}
+  m_LocalEulerAnglesHint: {x: -47.067, y: 0, z: 0}
 --- !u!1 &9162681360780309585
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,8 +121,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9162681360780309585}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -218,8 +154,6 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0d6bede003d7e50498b821ed3e682019, type: 2}
-  - {fileID: 2167099841956000774, guid: ee9296016c2752744b2c4dac3ce7ccf5, type: 3}
-  - {fileID: 2100000, guid: f4a941d22fe348f41949ce47ea484e1a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,11 +182,11 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: -4526436740169732588, guid: ee9296016c2752744b2c4dac3ce7ccf5, type: 3}
   m_Bones:
-  - {fileID: 2521820476708023818}
+  - {fileID: 0}
   - {fileID: 1996669366636584311}
   - {fileID: 2149248406038317831}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 2521820476708023818}
+  m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: -0.021187529, y: -0.011301938, z: -0.0015155673}
     m_Extent: {x: 0.07046274, y: 0.043041665, z: 0.105126545}
