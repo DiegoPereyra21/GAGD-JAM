@@ -2348,6 +2348,10 @@ MonoBehaviour:
     prefab: {fileID: 6590866449139015112, guid: 74b97f2f3ffc9a748bc262ea20850b77, type: 3}
   - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     prefab: {fileID: 6590866449139015112, guid: cabcabe6ebd6d244e8dbc9b10ed20972, type: 3}
+  - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+    prefab: {fileID: 3728834931384903748, guid: 10d567bb915ee114bb906987185c25d7, type: 3}
+  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
+    prefab: {fileID: 8303803367480725716, guid: 2c05ae43549778e4186148206a366389, type: 3}
   recipeDatabase: {fileID: 11400000, guid: 4e94c71289c33ec48af7307126840f98, type: 2}
   outline: {fileID: 0}
   leftShelfDisplay: {fileID: 765752689}
@@ -2361,6 +2365,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5cb1cba6d569b5d4da64cc813f0ca8e1, type: 2}
   rightShelfTypes:
   - {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  - {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
   mortarProcessedDisplay: {fileID: 1907124619}
   cuttingBoardProcessedDisplay: {fileID: 1335448501}
   mortarClickObject: {fileID: 363044296}
@@ -3335,7 +3340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[0].amount
@@ -3352,7 +3357,7 @@ PrefabInstance:
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[1].prefab
       value: 
-      objectReference: {fileID: 6590866449139015112, guid: 1a8f176c79b92b84ea8607b75674c99d, type: 3}
+      objectReference: {fileID: 5661915360568265830, guid: c0dd83d862a124444817f1b31e240f21, type: 3}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[2].amount
       value: 20

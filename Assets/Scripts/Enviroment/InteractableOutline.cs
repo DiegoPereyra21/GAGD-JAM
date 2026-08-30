@@ -21,4 +21,8 @@ public class InteractableOutline : MonoBehaviour
         propertyBlock.SetFloat(OutlineSizeID, highlighted ? highlightedSize : 1f);
         targetRenderer.SetPropertyBlock(propertyBlock, outlineMaterialSlot);
     }
+    public void SetTargetRenderer(Renderer renderer)
+    {
+        targetRenderer = renderer;
+    }
 }
