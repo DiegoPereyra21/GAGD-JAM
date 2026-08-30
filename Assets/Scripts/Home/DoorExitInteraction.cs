@@ -67,6 +67,7 @@ public class DoorExitInteraction : MonoBehaviour
 
         basketDisplay.SetAvailable(true);
         GameProgressManager.Instance.MarkWentOutside();
+        GameProgressManager.Instance.MarkOutside();
         cameraTransition.TransitionToPlayer();
     }
 
