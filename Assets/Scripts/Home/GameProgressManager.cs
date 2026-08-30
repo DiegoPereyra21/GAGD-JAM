@@ -19,7 +19,7 @@ public class GameProgressManager : MonoBehaviour
     public bool HasBeenOutsideThisCycle { get; private set; }
     public bool IsInsane { get; private set; } = true; // para el indicador de sanidad en las transiciones
     public int InventoryCount { get; private set; } = 0; // para tener un conteo de items que se quedan en la casa
-
+    public static bool HasSaveData => PlayerPrefs.HasKey(SaveKey);
     public void MarkWentOutside()
     {
         HasBeenOutsideThisCycle = true;
@@ -69,6 +69,16 @@ public class GameProgressManager : MonoBehaviour
             if (!IsNightActive) return 1f;
             return 1f - Mathf.Clamp01(NightTimeRemaining / nightDuration);
         }
+    }
+    public void ResetForNewGame()
+    {
+        CurrentDay = 1;
+        Money = 0;
+        HasBeenOutsideThisCycle = false;
+        IsNightActive = false;
+        NightTimeRemaining = 0f;
+        Save();
+        StartNight();
     }
 
     public void EnterHouse()

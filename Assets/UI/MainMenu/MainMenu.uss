@@ -352,3 +352,42 @@
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgba(255, 220, 160, 0.70);
 }
+
+.confirm-panel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 900px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(25, 18, 40, 0.92);
+    border-width: 1px;
+    border-color: rgba(190, 165, 220, 0.35);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.confirm-label {
+    color: rgb(235, 215, 170);
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=18f4c9b27a364ec4582c28b0363973e9&type=3#JimNightshade-Regular");
+    font-size: 42px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    margin-bottom: 40px;
+}
+
+.confirm-buttons-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-button {
+    width: 280px;
+    height: 90px;
+    margin: 0 20px;
+}
