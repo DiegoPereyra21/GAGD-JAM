@@ -24,7 +24,20 @@ public class GameProgressManager : MonoBehaviour
     {
         HasBeenOutsideThisCycle = true;
     }
+    //arregla lo de que no haga el fade si empiezo de 0
+    private bool pendingWelcomeFade;
 
+    public void RequestWelcomeFade()
+    {
+        pendingWelcomeFade = true;
+    }
+
+    public bool ConsumeWelcomeFade()
+    {
+        if (!pendingWelcomeFade) return false;
+        pendingWelcomeFade = false;
+        return true;
+    }
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -77,6 +90,7 @@ public class GameProgressManager : MonoBehaviour
         HasBeenOutsideThisCycle = false;
         IsNightActive = false;
         NightTimeRemaining = 0f;
+        RequestWelcomeFade();
         Save();
         StartNight();
     }
@@ -127,6 +141,8 @@ public class GameProgressManager : MonoBehaviour
 
         Debug.Log($"[GameProgressManager] Cargado: {json}");
     }
+
+
 
     [Serializable]
     private class SaveData

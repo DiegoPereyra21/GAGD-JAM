@@ -23,7 +23,7 @@ public class DayTransition : MonoBehaviour
     // manejo de menus
     [SerializeField] private UIDocument hudDocument;
     [SerializeField] private UIDocument questJournalDocument;
-
+    [SerializeField] private bool useAutomaticTrigger = true;
     private Image[] icons;
 
     private UIDocument uiDocument;
@@ -71,6 +71,8 @@ public class DayTransition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!useAutomaticTrigger) return;
+
         if (!other.CompareTag("Player"))
             return;
 
@@ -179,6 +181,145 @@ public class DayTransition : MonoBehaviour
             yield return new WaitForSecondsRealtime(1.8f);
         }
     }
+
+    public void PlayDayIntro(int day, Action onComplete = null)
+    {
+        if (transitionCoroutine != null) return;
+        transitionCoroutine = StartCoroutine(PlayDayIntroRoutine(day, onComplete));
+    }
+
+    private IEnumerator PlayDayIntroRoutine(int day, Action onComplete)
+    {
+        PauseGame();
+
+        SetValues();
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        string language = LocalizationSettings.SelectedLocale.Identifier.Code;
+
+        if (language == "es")
+        {
+            dayTitle.text = "Día " + day;
+            daySubtitle.text = "Un nuevo día comienza...";
+        }
+        else
+        {
+            dayTitle.text = "Day " + day;
+            daySubtitle.text = "A new day begins...";
+        }
+
+        transitionPanel.style.display = DisplayStyle.Flex;
+        transitionPanel.style.opacity = 0f;
+
+        yield return Fade(0f, 1f);
+
+        Coroutine breathingCoroutine = StartCoroutine(BreatheSubtitle());
+
+        yield return new WaitForSecondsRealtime(textDuration);
+
+        StopCoroutine(breathingCoroutine);
+        daySubtitle.RemoveFromClassList("breathing");
+
+        onComplete?.Invoke();
+
+        yield return Fade(1f, 0f);
+
+        transitionPanel.style.display = DisplayStyle.None;
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        ResumeGame();
+
+        transitionCoroutine = null;
+    }
+
+    public void PlaySleepTransition(Action onSleep)
+    {
+        if (transitionCoroutine != null) return;
+        transitionCoroutine = StartCoroutine(PlaySleepTransitionRoutine(onSleep));
+    }
+
+    private IEnumerator PlaySleepTransitionRoutine(Action onSleep)
+    {
+        PauseGame();
+        SetValues();
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        string language = LocalizationSettings.SelectedLocale.Identifier.Code;
+
+        // Fase 1: Fin del día
+        if (language == "es")
+        {
+            dayTitle.text = "Fin del día";
+            daySubtitle.text = "La noche comienza...";
+        }
+        else
+        {
+            dayTitle.text = "End of the day";
+            daySubtitle.text = "The night begins...";
+        }
+
+        transitionPanel.style.display = DisplayStyle.Flex;
+        transitionPanel.style.opacity = 0f;
+
+        yield return Fade(0f, 1f);
+
+        Coroutine breathing = StartCoroutine(BreatheSubtitle());
+        yield return new WaitForSecondsRealtime(textDuration);
+        StopCoroutine(breathing);
+        daySubtitle.RemoveFromClassList("breathing");
+
+        // Acá pasa el día de verdad, pantalla sigue totalmente cubierta
+        onSleep?.Invoke();
+
+        // Fase 2: Día nuevo, sin fade-out intermedio
+        SetValues();
+        int day = GameProgressManager.Instance.CurrentDay;
+
+        if (language == "es")
+        {
+            dayTitle.text = "Día " + day;
+            daySubtitle.text = "Un nuevo día comienza...";
+        }
+        else
+        {
+            dayTitle.text = "Day " + day;
+            daySubtitle.text = "A new day begins...";
+        }
+
+        breathing = StartCoroutine(BreatheSubtitle());
+        yield return new WaitForSecondsRealtime(textDuration);
+        StopCoroutine(breathing);
+        daySubtitle.RemoveFromClassList("breathing");
+
+        yield return Fade(1f, 0f);
+
+        transitionPanel.style.display = DisplayStyle.None;
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        ResumeGame();
+        transitionCoroutine = null;
+    }
+
 
     private void PauseGame()
     {

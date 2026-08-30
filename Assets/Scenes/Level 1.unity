@@ -2221,6 +2221,7 @@ MonoBehaviour:
   sanityLossPerDay: 15
   hudDocument: {fileID: 1218138556}
   questJournalDocument: {fileID: 1810639036}
+  useAutomaticTrigger: 1
 --- !u!65 &984267911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7587,6 +7588,10 @@ PrefabInstance:
       propertyPath: hudDocument
       value: 
       objectReference: {fileID: 1218138556}
+    - target: {fileID: 3299911826462005109, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+      propertyPath: useAutomaticTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3299911826462005109, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
       propertyPath: questJournalDocument
       value: 

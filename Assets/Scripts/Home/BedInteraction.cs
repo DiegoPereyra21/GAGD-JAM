@@ -52,9 +52,15 @@ public class BedInteraction : MonoBehaviour
 
         questManager.Save();
 
-        dayTransition.Play(DayTransition.TransitionType.EndOfDay, () =>
+        dayTransition.PlaySleepTransition(() =>
         {
             GameProgressManager.Instance.Sleep();
         });
+    }
+
+    private void Start()
+    {
+        if (GameProgressManager.Instance.ConsumeWelcomeFade())
+            dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
     }
 }

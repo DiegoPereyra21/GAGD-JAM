@@ -138,6 +138,7 @@ public class MainMenu : MonoBehaviour
     private void ContinueGame()
     {
         stopMusicEvent.Post(gameObject);
+        GameProgressManager.Instance.RequestWelcomeFade();
         SceneManager.LoadScene(gameSceneName);
     }
 
