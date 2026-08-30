@@ -7577,6 +7577,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 263165654}
     - target: {fileID: 2275712507971387170, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+      propertyPath: dayTransition
+      value: 
+      objectReference: {fileID: 4046882000100814671}
+    - target: {fileID: 2275712507971387170, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
       propertyPath: cameraTransition
       value: 
       objectReference: {fileID: 1560979843}
@@ -7624,6 +7628,10 @@ PrefabInstance:
       propertyPath: cameraTransition
       value: 
       objectReference: {fileID: 1560979843}
+    - target: {fileID: 3955727274924955422, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 973368103}
     - target: {fileID: 4373544776012305586, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
       propertyPath: m_Name
       value: House
@@ -7785,6 +7793,17 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &4046882000100814671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3299911826462005109, guid: 6789feb40b7eb594db667b2c78de9178, type: 3}
+  m_PrefabInstance: {fileID: 4046882000100814667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046882000100814669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33cda988e0a6fb42bb34aec4cbbd8f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayTransition
 --- !u!23 &4111860771339186742
 MeshRenderer:
   m_ObjectHideFlags: 0

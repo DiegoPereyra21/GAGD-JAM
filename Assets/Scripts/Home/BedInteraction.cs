@@ -51,11 +51,8 @@ public class BedInteraction : MonoBehaviour
         }
 
         questManager.Save();
-
-        dayTransition.PlaySleepTransition(() =>
-        {
-            GameProgressManager.Instance.Sleep();
-        });
+        GameProgressManager.Instance.Sleep();
+        dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
     }
 
     private void Start()

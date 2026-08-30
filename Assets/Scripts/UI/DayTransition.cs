@@ -191,7 +191,6 @@ public class DayTransition : MonoBehaviour
     private IEnumerator PlayDayIntroRoutine(int day, Action onComplete)
     {
         PauseGame();
-
         SetValues();
 
         if (hudDocument != null)
@@ -204,13 +203,13 @@ public class DayTransition : MonoBehaviour
 
         if (language == "es")
         {
-            dayTitle.text = "Día " + day;
-            daySubtitle.text = "Un nuevo día comienza...";
+            dayTitle.text = "Noche " + day;
+            daySubtitle.text = "La oscuridad comienza...";
         }
         else
         {
-            dayTitle.text = "Day " + day;
-            daySubtitle.text = "A new day begins...";
+            dayTitle.text = "Night " + day;
+            daySubtitle.text = "Darkness falls...";
         }
 
         transitionPanel.style.display = DisplayStyle.Flex;
@@ -219,9 +218,7 @@ public class DayTransition : MonoBehaviour
         yield return Fade(0f, 1f);
 
         Coroutine breathingCoroutine = StartCoroutine(BreatheSubtitle());
-
         yield return new WaitForSecondsRealtime(textDuration);
-
         StopCoroutine(breathingCoroutine);
         daySubtitle.RemoveFromClassList("breathing");
 
@@ -238,20 +235,18 @@ public class DayTransition : MonoBehaviour
             questJournalDocument.rootVisualElement.style.display = DisplayStyle.Flex;
 
         ResumeGame();
-
         transitionCoroutine = null;
     }
 
-    public void PlaySleepTransition(Action onSleep)
+    public void PlayEndOfNight(int itemsCollected, Action onComplete = null)
     {
         if (transitionCoroutine != null) return;
-        transitionCoroutine = StartCoroutine(PlaySleepTransitionRoutine(onSleep));
+        transitionCoroutine = StartCoroutine(PlayEndOfNightRoutine(itemsCollected, onComplete));
     }
 
-    private IEnumerator PlaySleepTransitionRoutine(Action onSleep)
+    private IEnumerator PlayEndOfNightRoutine(int itemsCollected, Action onComplete)
     {
         PauseGame();
-        SetValues();
 
         if (hudDocument != null)
             hudDocument.rootVisualElement.style.display = DisplayStyle.None;
@@ -259,18 +254,21 @@ public class DayTransition : MonoBehaviour
         if (questJournalDocument != null)
             questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
 
+        moneyValue.text = GameProgressManager.Instance.Money.ToString();
+        inventoryValue.text = itemsCollected.ToString();
+        sanityValue.text = GetSanityText();
+
         string language = LocalizationSettings.SelectedLocale.Identifier.Code;
 
-        // Fase 1: Fin del día
         if (language == "es")
         {
-            dayTitle.text = "Fin del día";
-            daySubtitle.text = "La noche comienza...";
+            dayTitle.text = "Fin de la noche";
+            daySubtitle.text = "Volviste a casa...";
         }
         else
         {
-            dayTitle.text = "End of the day";
-            daySubtitle.text = "The night begins...";
+            dayTitle.text = "End of the night";
+            daySubtitle.text = "You returned home...";
         }
 
         transitionPanel.style.display = DisplayStyle.Flex;
@@ -283,28 +281,7 @@ public class DayTransition : MonoBehaviour
         StopCoroutine(breathing);
         daySubtitle.RemoveFromClassList("breathing");
 
-        // Acá pasa el día de verdad, pantalla sigue totalmente cubierta
-        onSleep?.Invoke();
-
-        // Fase 2: Día nuevo, sin fade-out intermedio
-        SetValues();
-        int day = GameProgressManager.Instance.CurrentDay;
-
-        if (language == "es")
-        {
-            dayTitle.text = "Día " + day;
-            daySubtitle.text = "Un nuevo día comienza...";
-        }
-        else
-        {
-            dayTitle.text = "Day " + day;
-            daySubtitle.text = "A new day begins...";
-        }
-
-        breathing = StartCoroutine(BreatheSubtitle());
-        yield return new WaitForSecondsRealtime(textDuration);
-        StopCoroutine(breathing);
-        daySubtitle.RemoveFromClassList("breathing");
+        onComplete?.Invoke();
 
         yield return Fade(1f, 0f);
 
@@ -319,6 +296,14 @@ public class DayTransition : MonoBehaviour
         ResumeGame();
         transitionCoroutine = null;
     }
+
+    private string GetSanityText()
+    {
+        GameProgressManager progress = GameProgressManager.Instance;
+        int sanity = !progress.IsInsane ? 100 : Mathf.Max(0, 100 - ((progress.CurrentDay - 1) * sanityLossPerDay));
+        return sanity + "%";
+    }
+
 
 
     private void PauseGame()
@@ -357,21 +342,6 @@ public class DayTransition : MonoBehaviour
 
         moneyValue.text = progress.Money.ToString();
         inventoryValue.text = progress.InventoryCount.ToString();
-
-        int sanity;
-
-        if (!progress.IsInsane)
-        {
-            sanity = 100;
-        }
-        else
-        {
-            sanity = Mathf.Max(
-                0,
-                100 - ((progress.CurrentDay - 1) * sanityLossPerDay)
-            );
-        }
-
-        sanityValue.text = sanity + "%";
+        sanityValue.text = GetSanityText();
     }
 }
