@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8028137802203680965}
   - component: {fileID: 31392528943450749}
   - component: {fileID: 8386237639433888738}
-  - component: {fileID: 5654067373605775630}
+  - component: {fileID: 1939395382438697090}
   m_Layer: 10
   m_Name: HongoMarronHome
   m_TagString: Untagged
@@ -119,8 +119,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &5654067373605775630
-BoxCollider:
+--- !u!64 &1939395382438697090
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,6 +137,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.6707479, y: 0.8585292, z: 0.53658885}
-  m_Center: {x: 0.029605815, y: 0.4270593, z: 0.11024675}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2770715834684587290, guid: 9d2e48a7e6ca339499846b56160236f8, type: 3}
