@@ -330,8 +330,14 @@ public class CauldronCraftingSystem : MonoBehaviour
 
     private GameObject GetVisualPrefab(IngredientType type)
     {
+        if (type == null) return null;
+
         foreach (TypeVisualPrefab entry in visualPrefabs)
-            if (entry.type == type) return entry.prefab;
+        {
+            if (entry.type != null && entry.type.ingredientId == type.ingredientId)
+                return entry.prefab;
+        }
+
         return null;
     }
 
