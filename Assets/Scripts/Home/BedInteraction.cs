@@ -41,6 +41,7 @@ public class BedInteraction : MonoBehaviour
         }
     }
     //para que no pueda ir a dormir sin haber salido nunca
+
     private void OnInteract(InputAction.CallbackContext ctx)
     {
         if (!playerInRange) return;
@@ -51,6 +52,7 @@ public class BedInteraction : MonoBehaviour
             return;
         }
 
+        questManager.ProcessPendingDeliveries();
         questManager.Save();
         potionDisplayArea.ClearAll();
         GameProgressManager.Instance.Sleep();
@@ -59,6 +61,8 @@ public class BedInteraction : MonoBehaviour
 
     private void Start()
     {
+        if (GameProgressManager.Instance.ShouldSpawnAtDoor) return;
+
         if (GameProgressManager.Instance.ConsumeWelcomeFade())
             dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
     }

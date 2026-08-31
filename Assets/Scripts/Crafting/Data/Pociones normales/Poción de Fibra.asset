@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_fibra
   potionName: "Poci\xF3n de Fibra"
+  visualPrefab: {fileID: 5822802780961090881, guid: 087823ead39b8314dab5ecea424bb8c3, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
     amount: 1

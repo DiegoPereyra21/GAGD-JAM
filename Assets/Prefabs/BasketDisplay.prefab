@@ -48,6 +48,12 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   cameraTransition: {fileID: 0}
   dropPoint: {fileID: 0}
-  spawnHorizontalSpread: 0.22
-  spawnHeight: 0.32
+  spawnHorizontalSpread: 0.24
+  spawnHeight: 0.28
   settleDelay: 0.5
+  inventory: {fileID: 0}
+  basketItemLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  basketViewAnchor: {fileID: 0}
+  basketRoot: {fileID: 0}
