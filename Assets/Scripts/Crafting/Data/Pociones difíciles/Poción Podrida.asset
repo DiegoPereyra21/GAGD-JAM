@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_podrida
   potionName: "Poci\xF3n Podrida"
+  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: c39b2aa72e0904b4fb7bb02d66d9dc29, type: 2}
     amount: 3

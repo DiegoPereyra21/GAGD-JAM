@@ -20,6 +20,14 @@ public class GameProgressManager : MonoBehaviour
     public bool IsInsane { get; private set; } = true; // para el indicador de sanidad en las transiciones
     public int InventoryCount { get; private set; } = 0; // para tener un conteo de items que se quedan en la casa
     public static bool HasSaveData => PlayerPrefs.HasKey(SaveKey);
+
+    public bool ShouldSpawnAtDoor { get; private set; }
+
+    public void MarkEnteredHouse()
+    {
+        ShouldSpawnAtDoor = true;
+    }
+
     //para q solamente empiece el ciclo cuanod salga
     public bool IsOutside { get; private set; }
 
@@ -95,6 +103,7 @@ public class GameProgressManager : MonoBehaviour
         CurrentDay = 1;
         Money = 0;
         HasBeenOutsideThisCycle = false;
+        ShouldSpawnAtDoor = false;
         IsNightActive = false;
         NightTimeRemaining = 0f;
         RequestWelcomeFade();
@@ -113,6 +122,7 @@ public class GameProgressManager : MonoBehaviour
     {
         CurrentDay++;
         HasBeenOutsideThisCycle = false;
+        ShouldSpawnAtDoor = false;
         Save();
         StartNight();
     }
@@ -123,7 +133,7 @@ public class GameProgressManager : MonoBehaviour
 
     public void Save()
     {
-        SaveData data = new SaveData { day = CurrentDay, money = Money };
+        SaveData data = new SaveData { day = CurrentDay, money = Money, shouldSpawnAtDoor = ShouldSpawnAtDoor };
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
@@ -146,6 +156,7 @@ public class GameProgressManager : MonoBehaviour
 
         CurrentDay = data.day;
         Money = data.money;
+        ShouldSpawnAtDoor = data.shouldSpawnAtDoor;
 
         Debug.Log($"[GameProgressManager] Cargado: {json}");
     }
@@ -157,6 +168,7 @@ public class GameProgressManager : MonoBehaviour
     {
         public int day;
         public int money;
+        public bool shouldSpawnAtDoor;
     }
     //fix no dejaba recolectar objetos 
     public void ResumeNight()

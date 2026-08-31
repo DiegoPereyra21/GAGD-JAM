@@ -18,6 +18,12 @@ public class DeliveryInteraction : MonoBehaviour
         interactAction = playerInput.actions["Interact"];
     }
 
+    private void Start()
+    {
+        foreach (QuestData quest in questManager.PendingDeliveries)
+            potionDisplayArea.AddOne(quest.requiredPotion, quest.requiredPotion.visualPrefab);
+    }
+
     private void OnEnable() => interactAction.performed += OnInteract;
     private void OnDisable() => interactAction.performed -= OnInteract;
 
@@ -48,7 +54,7 @@ public class DeliveryInteraction : MonoBehaviour
 
     private void DeliverMatchingQuests()
     {
-        List<QuestData> completed = new List<QuestData>();
+        List<QuestData> delivered = new List<QuestData>();
 
         foreach (QuestData quest in questManager.ActiveQuests)
         {
@@ -56,20 +62,17 @@ public class DeliveryInteraction : MonoBehaviour
 
             if (HomeStorage.Instance.RemoveCraftedPotion(quest.requiredPotion))
             {
-                GameProgressManager.Instance.AddMoney(quest.moneyReward);
-                completed.Add(quest);
+                questManager.MarkPendingDelivery(quest);
+                delivered.Add(quest);
                 potionDisplayArea.AddOne(quest.requiredPotion, quest.requiredPotion.visualPrefab);
             }
         }
 
-        foreach (QuestData quest in completed)
-            questManager.CompleteQuest(quest);
-
-        if (completed.Count > 0)
+        if (delivered.Count > 0)
         {
             HomeStorage.Instance.Save();
             questManager.Save();
-            Debug.Log($"[DeliveryInteraction] Entregadas {completed.Count} misión(es).");
+            Debug.Log($"[DeliveryInteraction] Entregadas {delivered.Count} misión(es), pendientes de venta hasta dormir.");
         }
         else
         {
