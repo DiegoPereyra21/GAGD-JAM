@@ -9,7 +9,7 @@ public class BedInteraction : MonoBehaviour
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private QuestManager questManager;
     [SerializeField] private PotionDisplayArea potionDisplayArea;
-
+    [SerializeField] private PotionRecipe sleepPotionRecipe;
     private DayTransition dayTransition;
     private InputAction interactAction;
     private bool playerInRange;
@@ -49,6 +49,23 @@ public class BedInteraction : MonoBehaviour
         if (!GameProgressManager.Instance.HasBeenOutsideThisCycle)
         {
             Debug.Log("[BedInteraction] Todavía no saliste a recolectar, no podés dormir.");
+            return;
+        }
+
+        if (HomeStorage.Instance.RemoveCraftedPotion(sleepPotionRecipe))
+        {
+            questManager.ProcessPendingDeliveries();
+            questManager.Save();
+            HomeStorage.Instance.Save();
+            dayTransition.PlayWinEnding();
+            return;
+        }
+
+        if (GameProgressManager.Instance.CurrentDay >= 7)
+        {
+            questManager.ProcessPendingDeliveries();
+            questManager.Save();
+            dayTransition.PlayLoseEnding();
             return;
         }
 

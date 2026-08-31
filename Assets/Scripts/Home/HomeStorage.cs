@@ -140,4 +140,12 @@ public class HomeStorage : MonoBehaviour
         OnStorageChanged?.Invoke();
         return true;
     }
+    public void AddIngredient(IngredientType type, int amount = 1)
+    {
+        if (!totals.ContainsKey(type))
+            totals[type] = 0;
+
+        totals[type] += amount;
+        OnStorageChanged?.Invoke();
+    }
 }
