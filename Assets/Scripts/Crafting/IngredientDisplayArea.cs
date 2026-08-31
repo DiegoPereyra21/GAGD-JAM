@@ -72,17 +72,14 @@ public class IngredientDisplayArea : MonoBehaviour
     {
         if (visualPrefab == null) return;
 
-        int index = group.visuals.Count;
-        Vector3 offset = group.anchor.right * ((index % itemsPerRow) * itemSpacing)
-                        + group.anchor.forward * ((index / itemsPerRow) * itemSpacing);
-
-        GameObject visual = Instantiate(visualPrefab, group.anchor.position + offset, group.anchor.rotation, group.anchor);
+        GameObject visual = Instantiate(visualPrefab, group.anchor);
         visual.AddComponent<ProcessedItemVisual>().Init(group.type);
 
         if (visual.TryGetComponent(out Rigidbody rb))
             rb.isKinematic = true;
 
         group.visuals.Add(visual);
+        RepositionAll(group);
     }
 
     public bool TryPickUp(IngredientType type, GameObject visual)
@@ -90,8 +87,19 @@ public class IngredientDisplayArea : MonoBehaviour
         if (!groups.TryGetValue(type, out TypeGroup group)) return false;
         if (!group.visuals.Remove(visual)) return false;
 
+        RepositionAll(group);
         group.label.text = group.visuals.Count.ToString();
         return true;
+    }
+
+    private void RepositionAll(TypeGroup group)
+    {
+        for (int i = 0; i < group.visuals.Count; i++)
+        {
+            Vector3 localOffset = new Vector3((i % itemsPerRow) * itemSpacing, 0f, (i / itemsPerRow) * itemSpacing);
+            group.visuals[i].transform.localPosition = localOffset;
+            group.visuals[i].transform.localRotation = Quaternion.identity;
+        }
     }
 
     private TypeGroup GetOrCreateGroup(IngredientType type)

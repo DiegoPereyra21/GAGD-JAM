@@ -52,6 +52,7 @@ public class CauldronCraftingSystem : MonoBehaviour
     private bool playerInRange;
     private bool isInside;
     private int zoneIndex; // 0 = izquierda, 1 = caldero, 2 = derecha
+    private IngredientDisplayArea draggedSourceArea;
 
     private readonly List<GameObject> cauldronContents = new List<GameObject>();
     private readonly Dictionary<IngredientType, int> cauldronIngredients = new Dictionary<IngredientType, int>();
@@ -236,6 +237,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         if (!sourceArea.TryPickUp(type, clickedVisual)) return;
 
         draggedType = type;
+        draggedSourceArea = sourceArea;
         dragPlaneHeight = clickedVisual.transform.position.y;
         draggedVisual = clickedVisual;
         draggedVisual.transform.SetParent(null);
@@ -261,21 +263,40 @@ public class CauldronCraftingSystem : MonoBehaviour
         bool didHit = Physics.Raycast(ray, out RaycastHit hit, 100f, craftingLayer);
         GameObject hitObject = didHit ? hit.collider.gameObject : null;
 
+        ProcessingStation? station = null;
+        if (hitObject == mortarClickObject) station = ProcessingStation.Mortar;
+        else if (hitObject == cuttingBoardClickObject) station = ProcessingStation.CuttingBoard;
+
+        if (station.HasValue)
+        {
+            ProcessingRecipe recipe = processingRecipes.Find(r => r.rawType == draggedType && r.station == station.Value);
+
+            Destroy(draggedVisual);
+            draggedVisual = null;
+
+            if (recipe != null)
+                ProcessIngredient(draggedType, station.Value);
+            else
+                ReturnToSourceShelf();
+
+            return;
+        }
+
         Destroy(draggedVisual);
         draggedVisual = null;
+        TryAddIngredient(draggedType);
+    }
 
-        if (hitObject == mortarClickObject)
-            ProcessIngredient(draggedType, ProcessingStation.Mortar);
-        else if (hitObject == cuttingBoardClickObject)
-            ProcessIngredient(draggedType, ProcessingStation.CuttingBoard);
-        else
-            TryAddIngredient(draggedType);
+    private void ReturnToSourceShelf()
+    {
+        if (draggedSourceArea == null) return;
+        draggedSourceArea.AddOne(draggedType, GetVisualPrefab(draggedType));
     }
 
     private void ProcessIngredient(IngredientType rawType, ProcessingStation station)
     {
         ProcessingRecipe recipe = processingRecipes.Find(r => r.rawType == rawType && r.station == station);
-        IngredientType resultType = recipe != null ? recipe.processedType : rawType;
+        IngredientType resultType = recipe.processedType;
 
         if (!HomeStorage.Instance.RemoveOne(rawType)) return;
 
