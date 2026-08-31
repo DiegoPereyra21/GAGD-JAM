@@ -1,0 +1,19 @@
+# Rhino
+newmtl Nuevo material 007
+Ka 0.0000 0.0000 0.0000
+Kd 1.0000 1.0000 1.0000
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0
+map_Kd BIZCOC~1.JPG
+
+newmtl Nuevo material 008
+Ka 0.0000 0.0000 0.0000
+Kd 1.0000 1.0000 1.0000
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0
+map_Kd MADERA.jpg
+
