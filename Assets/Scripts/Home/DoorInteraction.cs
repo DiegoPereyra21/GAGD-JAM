@@ -10,6 +10,8 @@ public class DoorInteraction : MonoBehaviour
     [SerializeField] private BasketDisplay basketDisplay;
     [SerializeField] private CameraTransition cameraTransition;
     [SerializeField] private Transform houseViewAnchor;
+    [SerializeField] private QuestManager questManager;
+
 
     //para que por ahora me tepee al otro lado de la puerta, luego agregaremos animacion de puerta y que se mueva obligadamente hacia afuera
     [SerializeField] private CharacterController playerController;
@@ -61,7 +63,10 @@ public class DoorInteraction : MonoBehaviour
             itemsCollected += pair.Value;
 
         HomeStorage.Instance.Deposit(inventory);
+        GameProgressManager.Instance.MarkEnteredHouse();
         HomeStorage.Instance.Save();
+        GameProgressManager.Instance.Save();
+        questManager.Save();
         basketDisplay.ClearAll();
         basketDisplay.SetAvailable(false);
 

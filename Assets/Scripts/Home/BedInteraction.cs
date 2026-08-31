@@ -9,7 +9,7 @@ public class BedInteraction : MonoBehaviour
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private QuestManager questManager;
     [SerializeField] private PotionDisplayArea potionDisplayArea;
-
+    [SerializeField] private PotionRecipe sleepPotionRecipe;
     private DayTransition dayTransition;
     private InputAction interactAction;
     private bool playerInRange;
@@ -41,6 +41,7 @@ public class BedInteraction : MonoBehaviour
         }
     }
     //para que no pueda ir a dormir sin haber salido nunca
+
     private void OnInteract(InputAction.CallbackContext ctx)
     {
         if (!playerInRange) return;
@@ -51,6 +52,24 @@ public class BedInteraction : MonoBehaviour
             return;
         }
 
+        if (HomeStorage.Instance.RemoveCraftedPotion(sleepPotionRecipe))
+        {
+            questManager.ProcessPendingDeliveries();
+            questManager.Save();
+            HomeStorage.Instance.Save();
+            dayTransition.PlayWinEnding();
+            return;
+        }
+
+        if (GameProgressManager.Instance.CurrentDay >= 7)
+        {
+            questManager.ProcessPendingDeliveries();
+            questManager.Save();
+            dayTransition.PlayLoseEnding();
+            return;
+        }
+
+        questManager.ProcessPendingDeliveries();
         questManager.Save();
         potionDisplayArea.ClearAll();
         GameProgressManager.Instance.Sleep();
@@ -59,6 +78,8 @@ public class BedInteraction : MonoBehaviour
 
     private void Start()
     {
+        if (GameProgressManager.Instance.ShouldSpawnAtDoor) return;
+
         if (GameProgressManager.Instance.ConsumeWelcomeFade())
             dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
     }

@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.36, y: 0.0022045758, z: -6.747427}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1.4999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -131,4 +131,8 @@ MonoBehaviour:
   collectRiseHeight: 1
   basketVisualPrefab: {fileID: 8985010166073262076, guid: e8b42f63c9f5eb8468f9267843a144cd, type: 3}
   type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+  destroyOnCollect: 1
+  shakeDuration: 0.3
+  shakeStrength: 0.1
+  freezeDuration: 0.8
   outline: {fileID: 0}

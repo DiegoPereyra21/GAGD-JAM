@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
   ingredientId: hongo_marron_polvo
   displayName: Hongo Marron Polvo
+  rawSource: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}

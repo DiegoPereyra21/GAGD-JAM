@@ -18,5 +18,5 @@ MonoBehaviour:
   objectives:
   - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     targetAmount: 1
-  moneyReward: 1
+  moneyReward: 120
   requiredPotion: {fileID: 11400000, guid: 6592045b8bbd76244b1c5ea3d5b4f798, type: 2}

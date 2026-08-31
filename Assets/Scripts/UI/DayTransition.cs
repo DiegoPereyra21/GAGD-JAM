@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Localization.Settings;
 using System.Linq;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public class DayTransition : MonoBehaviour
 {
@@ -30,6 +33,8 @@ public class DayTransition : MonoBehaviour
     private VisualElement transitionPanel;
     private Label dayTitle;
     private Label daySubtitle;
+    private VisualElement winScreen;
+    private Label winLabel;
 
     private VisualElement inventoryItemContainer;
 
@@ -56,6 +61,10 @@ public class DayTransition : MonoBehaviour
         sanityValue = root.Q<Label>("SanityValue");
 
         inventoryItemContainer = root.Q<VisualElement>("Item2");
+
+        winScreen = root.Q<VisualElement>("WinScreen");
+        winLabel = root.Q<Label>("WinLabel");
+        winScreen.style.display = DisplayStyle.None;
 
         icons = root
             .Query<Image>(className: "transition-icon")
@@ -351,5 +360,96 @@ public class DayTransition : MonoBehaviour
         moneyValue.text = progress.Money.ToString();
         inventoryValue.text = progress.InventoryCount.ToString();
         sanityValue.text = GetSanityText();
+    }
+
+    public void PlayWinEnding()
+    {
+        StartCoroutine(PlayWinEndingRoutine());
+    }
+
+    private IEnumerator PlayWinEndingRoutine()
+    {
+        PauseGame();
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        winScreen.style.display = DisplayStyle.Flex;
+        winScreen.style.opacity = 0f;
+        winLabel.text = "";
+
+        yield return FadeElement(winScreen, 0f, 1f);
+
+        winLabel.text = "AL FIN PUDISTE DESCANSAR DE VERDAD";
+
+        float elapsed = 0f;
+        const float minWait = 3f;
+        while (elapsed < minWait)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        while (Keyboard.current == null || !Keyboard.current.anyKey.wasPressedThisFrame)
+            yield return null;
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private IEnumerator FadeElement(VisualElement element, float from, float to)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float t = Mathf.Clamp01(elapsed / fadeDuration);
+            element.style.opacity = Mathf.Lerp(from, to, t);
+            yield return null;
+        }
+
+        element.style.opacity = to;
+    }
+
+    public void PlayLoseEnding()
+    {
+        StartCoroutine(PlayLoseEndingRoutine());
+    }
+
+    private IEnumerator PlayLoseEndingRoutine()
+    {
+        PauseGame();
+
+        if (hudDocument != null)
+            hudDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        if (questJournalDocument != null)
+            questJournalDocument.rootVisualElement.style.display = DisplayStyle.None;
+
+        winScreen.style.display = DisplayStyle.Flex;
+        winScreen.style.opacity = 0f;
+        winLabel.text = "";
+
+        yield return FadeElement(winScreen, 0f, 1f);
+
+        winLabel.text = "LA LOCURA TE CONSUMIÓ POR NO PODER DESCANSAR...";
+
+        float elapsed = 0f;
+        const float minWait = 3f;
+        while (elapsed < minWait)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        while (Keyboard.current == null || !Keyboard.current.anyKey.wasPressedThisFrame)
+            yield return null;
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
 }
