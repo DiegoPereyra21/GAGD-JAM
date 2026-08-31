@@ -8,6 +8,8 @@ public class CameraTransition : MonoBehaviour
     [SerializeField] private float blendDuration = 0.5f;
 
     private Coroutine blendRoutine;
+    private Transform activeAnchor;
+
 
     //para que comience en la cama, como teniamosplaneada la historia
     [SerializeField] private Transform startingAnchor;
@@ -25,11 +27,19 @@ public class CameraTransition : MonoBehaviour
     public void TransitionTo(Transform anchor, Action onComplete = null)
     {
         cameraFollow.enabled = false;
-        StartBlend(anchor.position, anchor.rotation, onComplete);
+        activeAnchor = null;
+
+        StartBlend(anchor.position, anchor.rotation, () =>
+        {
+            activeAnchor = anchor;
+            onComplete?.Invoke();
+        });
     }
 
     public void TransitionToPlayer(Action onComplete = null)
     {
+        activeAnchor = null;
+
         Vector3 targetPos = cameraFollow.GetDesiredPosition();
         Quaternion targetRot = cameraFollow.FixedRotation;
 
@@ -38,6 +48,15 @@ public class CameraTransition : MonoBehaviour
             cameraFollow.enabled = true;
             onComplete?.Invoke();
         });
+    }
+
+    private void LateUpdate()
+    {
+        if (activeAnchor != null && blendRoutine == null)
+        {
+            transform.position = activeAnchor.position;
+            transform.rotation = activeAnchor.rotation;
+        }
     }
 
     private void StartBlend(Vector3 targetPos, Quaternion targetRot, Action onComplete)
@@ -63,6 +82,7 @@ public class CameraTransition : MonoBehaviour
 
         transform.position = targetPos;
         transform.rotation = targetRot;
+        blendRoutine = null;
         onComplete?.Invoke();
     }
 }
