@@ -11,7 +11,6 @@ public class PlayerCollector : MonoBehaviour
     [SerializeField] private BasketDisplay basketDisplay;
     //para avisar q tiene q pausarse el movimiento del player cuando recolecta algo, usar oninteract
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private float freezeDuration = 0.8f; //LUEGO AJUSTAR SEGUN ANIMACION Y TIEMPO HASTA Q SE HAGA KINEMATIC EL HONGO
 
     // Sonido de pickup
     [SerializeField] private AK.Wwise.Event pickupEvent;
@@ -48,16 +47,17 @@ public class PlayerCollector : MonoBehaviour
         if (inventory.IsFull) return;
 
         Collectible target = FindNearestCollectible();
-        if (target == null) return;
+        if (target == null || target.IsCollected) return;
+
         IngredientType type = target.Type;
         int value = target.Value;
         GameObject visualPrefab = target.BasketVisualPrefab;
 
-        playerMovement.FreezeMovement(freezeDuration);
-        
+        playerMovement.FreezeMovement(target.FreezeDuration);
+
         target.Collect(() =>
         {
-            pickupEvent.Post(gameObject); //emite sonido we
+            pickupEvent.Post(gameObject);
             inventory.AddItem(type, value);
             if (visualPrefab != null)
                 basketDisplay.Drop(type, visualPrefab);
