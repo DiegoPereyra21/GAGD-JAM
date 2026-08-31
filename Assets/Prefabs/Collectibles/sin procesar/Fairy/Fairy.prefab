@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2401698631886739545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fairy_qc_skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2149248406038317831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fairy_wings_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,9 +72,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3582745317759678541}
-  - component: {fileID: -7415766675193484211}
-  - component: {fileID: 6736434161259714022}
-  m_Layer: 0
+  - component: {fileID: -1822061425179548954}
+  - component: {fileID: -2571037864626751722}
+  - component: {fileID: 1007477502519200735}
+  - component: {fileID: 2487677921926301093}
+  m_Layer: 8
   m_Name: Fairy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,35 +100,30 @@ Transform:
   - {fileID: 7216009291981684590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -156.052, z: 0}
---- !u!54 &-7415766675193484211
-Rigidbody:
+--- !u!114 &-1822061425179548954
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6590866449139015112}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &6736434161259714022
-MeshCollider:
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e7b4ad7900a3e4fb4b54985313f464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.Collectible
+  value: 1
+  collectDuration: 0.3
+  collectRiseHeight: 1
+  basketVisualPrefab: {fileID: 6590866449139015112, guid: 6a7e07c39d8e0fd48bdcb3b00802fbcc, type: 3}
+  type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  destroyOnCollect: 1
+  shakeDuration: 0.3
+  shakeStrength: 0.1
+  freezeDuration: 0.8
+  outline: {fileID: 0}
+--- !u!65 &-2571037864626751722
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,10 +140,46 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.12, z: 0.1}
+  m_Center: {x: 0, y: 0.03, z: 0}
+--- !u!114 &1007477502519200735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590866449139015112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2887cd4b002e7fa49b180aa4f0179cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FairyHover
+  wanderRadius: 0.5
+  orbitSpeed: 60
+  bobHeight: 0.15
+  bobSpeed: 2
+  rotationSpeed: 40
+  rotationWobble: 15
+--- !u!114 &2487677921926301093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590866449139015112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f9875f9313ae04c86d8c1e5e97d0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomVisualVariant
+  possibleModels:
+  - fullModel: {fileID: 6590866449139015112, guid: 2abb9d1f8e6b7ca4eaddc0167e85e65b, type: 3}
+    depletedModel: {fileID: 0}
+  - fullModel: {fileID: 6590866449139015112, guid: 739301677a828e24c9d21216ff608a50, type: 3}
+    depletedModel: {fileID: 0}
+  outline: {fileID: 0}
+  randomizeRotation: 0
 --- !u!1 &7659253952230648504
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1996669366636584311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fairy_wings_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2521820476708023818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fairy_root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7216009291981684590}
   - component: {fileID: 3240645687508367975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fairy_reference_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

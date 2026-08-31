@@ -16,9 +16,26 @@ namespace Game.Collectibles
 
         [SerializeField] private IngredientType type;
         public IngredientType Type => type;
+        //para q cambie de modelo luego de recolectado, es el caso de los arboles y arbustos
+        public event Action OnCollected;
+
+        //para que al quitar un arbol, arbusto y tronco no se los "chupe", sino que los sacuda
+        [SerializeField] private bool destroyOnCollect = true;
+        [SerializeField] private float shakeDuration = 0.3f;
+        [SerializeField] private float shakeStrength = 0.1f;
+        
+        //para q no me congele al recolectar objetos q ya no puedo recolectar
+        [SerializeField] private float freezeDuration = 0.8f;
+        public float FreezeDuration => freezeDuration;
+        public bool IsCollected => collected;
+
         //para el outline al acercarse
         [SerializeField] private InteractableOutline outline;
-        public void SetHighlighted(bool highlighted) => outline?.SetHighlighted(highlighted);
+        public void SetHighlighted(bool highlighted)
+        {
+            if (collected) return;
+            outline?.SetHighlighted(highlighted);
+        }
 
         public int Value => value;
         private bool collected;
@@ -27,7 +44,12 @@ namespace Game.Collectibles
         {
             if (collected) return;
             collected = true;
-            StartCoroutine(CollectRoutine(onComplete));
+            outline?.SetHighlighted(false);
+
+            if (destroyOnCollect)
+                StartCoroutine(CollectRoutine(onComplete));
+            else
+                StartCoroutine(ShakeRoutine(onComplete));
         }
 
         private IEnumerator CollectRoutine(Action onComplete)
@@ -46,7 +68,27 @@ namespace Game.Collectibles
             }
 
             onComplete?.Invoke();
+            OnCollected?.Invoke();
             Destroy(gameObject);
+        }
+
+        private IEnumerator ShakeRoutine(Action onComplete)
+        {
+            Vector3 originalPos = transform.position;
+            float t = 0f;
+
+            while (t < shakeDuration)
+            {
+                t += Time.deltaTime;
+                float offsetX = UnityEngine.Random.Range(-shakeStrength, shakeStrength);
+                float offsetZ = UnityEngine.Random.Range(-shakeStrength, shakeStrength);
+                transform.position = originalPos + new Vector3(offsetX, 0f, offsetZ);
+                yield return null;
+            }
+
+            transform.position = originalPos;
+            onComplete?.Invoke();
+            OnCollected?.Invoke();
         }
     }
 }

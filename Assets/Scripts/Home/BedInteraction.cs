@@ -8,6 +8,7 @@ public class BedInteraction : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private QuestManager questManager;
+    [SerializeField] private PotionDisplayArea potionDisplayArea;
 
     private DayTransition dayTransition;
     private InputAction interactAction;
@@ -51,6 +52,7 @@ public class BedInteraction : MonoBehaviour
         }
 
         questManager.Save();
+        potionDisplayArea.ClearAll();
         GameProgressManager.Instance.Sleep();
         dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
     }

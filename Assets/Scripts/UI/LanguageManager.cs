@@ -130,7 +130,7 @@ public class LanguageManager : MonoBehaviour
 
         VisualElement root = uiDocument.rootVisualElement;
 
-        ApplyText(root, "PlayButton", "menu.play");
+        ApplyText(root, "NewGameButton", "menu.play");
         ApplyText(root, "ContinueButton", "menu.continue");
         ApplyText(root, "OptionsButton", "menu.options");
         ApplyText(root, "ExitButton", "menu.exit");
@@ -144,6 +144,10 @@ public class LanguageManager : MonoBehaviour
         ApplyText(root, "AmbientLabel", "options.ambience");
 
         ApplyText(root, "BackButton", "options.back");
+
+        ApplyText(root, "ConfirmNewGame", "menu.confirm.text");
+        ApplyText(root, "ConfirmNewGameButton", "menu.confirm.yes");
+        ApplyText(root, "CancelNewGameButton", "menu.confirm.no");
 
         UpdateLanguageToggles();
     }

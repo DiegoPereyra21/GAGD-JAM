@@ -7,6 +7,7 @@ public class DeliveryInteraction : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private QuestManager questManager;
+    [SerializeField] private PotionDisplayArea potionDisplayArea;
     [SerializeField] private InteractableOutline outline;
 
     private InputAction interactAction;
@@ -57,6 +58,7 @@ public class DeliveryInteraction : MonoBehaviour
             {
                 GameProgressManager.Instance.AddMoney(quest.moneyReward);
                 completed.Add(quest);
+                potionDisplayArea.AddOne(quest.requiredPotion, quest.requiredPotion.visualPrefab);
             }
         }
 

@@ -12,6 +12,10 @@ public class IngredientDisplayArea : MonoBehaviour
     [SerializeField] private float itemSpacing = 0.3f;
     [SerializeField] private float labelHeight = 0.5f;
 
+
+    [Header("Preview (solo editor, no afecta el juego)")]//para previsualizar donde quedaran los items
+    [SerializeField] private int previewGroupCount = 4;
+    [SerializeField] private int previewItemsPerGroup = 3;
     private class TypeGroup
     {
         public IngredientType type;
@@ -131,5 +135,43 @@ public class IngredientDisplayArea : MonoBehaviour
 
             groupOrder[i].anchor.localPosition = new Vector3((col + 0.5f) * cellWidth, 0f, (row + 0.5f) * cellDepth);
         }
+    }
+
+
+
+
+    private void OnDrawGizmosSelected()
+    {
+        if (areaOrigin == null) return;
+
+        int columns = Mathf.CeilToInt(Mathf.Sqrt(previewGroupCount));
+        int rows = Mathf.CeilToInt(previewGroupCount / (float)columns);
+
+        float cellWidth = areaWidth / columns;
+        float cellDepth = areaDepth / rows;
+
+        Gizmos.matrix = areaOrigin.localToWorldMatrix;
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(new Vector3(areaWidth * 0.5f, 0f, areaDepth * 0.5f), new Vector3(areaWidth, 0.05f, areaDepth));
+
+        for (int g = 0; g < previewGroupCount; g++)
+        {
+            int col = g % columns;
+            int row = g / columns;
+            Vector3 groupCenter = new Vector3((col + 0.5f) * cellWidth, 0f, (row + 0.5f) * cellDepth);
+
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireCube(groupCenter, new Vector3(cellWidth * 0.9f, 0.05f, cellDepth * 0.9f));
+
+            for (int i = 0; i < previewItemsPerGroup; i++)
+            {
+                Vector3 itemOffset = new Vector3((i % itemsPerRow) * itemSpacing, 0.1f, (i / itemsPerRow) * itemSpacing);
+                Gizmos.color = Color.red;
+                Gizmos.DrawSphere(groupCenter + itemOffset, 0.05f);
+            }
+        }
+
+        Gizmos.matrix = Matrix4x4.identity;
     }
 }

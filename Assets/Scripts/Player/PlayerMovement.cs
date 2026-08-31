@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed = 12f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private Transform cameraTransform;
+    private Animator animator;
     private CharacterController controller;
     private InputAction moveAction;
     private Vector3 velocity;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         moveAction = GetComponent<PlayerInput>().actions["Move"];
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -32,7 +34,10 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 direction = camForward * input.y + camRight * input.x;
 
-        if (direction.sqrMagnitude > 0.0001f)
+        bool isMoving = direction.sqrMagnitude > 0.0001f;
+        animator.SetBool("IsWalking", isMoving);
+
+        if (isMoving)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
