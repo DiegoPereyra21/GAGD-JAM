@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
   ingredientId: fruta_naranja_cortada
   displayName: Fruta Naranja Cortada
+  rawSource: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}

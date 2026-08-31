@@ -7,5 +7,6 @@ namespace Game.Collectibles
     {
         public string ingredientId;
         public string displayName;
+        public IngredientType rawSource;
     }
 }
