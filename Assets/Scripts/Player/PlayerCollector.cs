@@ -11,6 +11,7 @@ public class PlayerCollector : MonoBehaviour
     [SerializeField] private BasketDisplay basketDisplay;
     //para avisar q tiene q pausarse el movimiento del player cuando recolecta algo, usar oninteract
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Animator animator;
 
     // Sonido de pickup
     [SerializeField] private AK.Wwise.Event pickupEvent;
@@ -54,6 +55,7 @@ public class PlayerCollector : MonoBehaviour
         GameObject visualPrefab = target.BasketVisualPrefab;
 
         playerMovement.FreezeMovement(target.FreezeDuration);
+        animator.SetTrigger("Interact");
 
         target.Collect(() =>
         {
