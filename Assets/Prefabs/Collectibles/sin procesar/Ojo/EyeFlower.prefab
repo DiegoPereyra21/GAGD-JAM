@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4967104405311570142}
   - component: {fileID: 3633367403780002621}
-  m_Layer: 0
+  - component: {fileID: 7861617396117849679}
+  - component: {fileID: 5825502968529124409}
+  m_Layer: 8
   m_Name: EyeFlower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.506, y: -0.034, z: -7.89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4198995015408329896}
   - {fileID: 2108109335896688451}
@@ -50,7 +52,50 @@ MonoBehaviour:
   - fullModel: {fileID: 1482708285040637306, guid: 569291663c3230d46a63524a144acce2, type: 3}
     depletedModel: {fileID: 6211644063226813845, guid: 6c91c57396e82124bb487df19804b45f, type: 3}
   outline: {fileID: 0}
-  randomizeRotation: 0
+  randomizeRotation: 1
+--- !u!114 &7861617396117849679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482708285040637306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e7b4ad7900a3e4fb4b54985313f464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.Collectible
+  value: 1
+  collectDuration: 0.3
+  collectRiseHeight: 1
+  basketVisualPrefab: {fileID: 3135222020907653588, guid: 89b653eaad6e6da4a9aff6c2f4cc1998, type: 3}
+  type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
+  destroyOnCollect: 1
+  shakeDuration: 0.3
+  shakeStrength: 0.1
+  freezeDuration: 0.8
+  outline: {fileID: 0}
+--- !u!65 &5825502968529124409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482708285040637306}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.8374386, y: 1.5392768, z: 5.9372973}
+  m_Center: {x: 0.16155529, y: 1.1157593, z: -0.08302283}
 --- !u!1 &5856800552170400011
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +107,7 @@ GameObject:
   - component: {fileID: 2108109335896688451}
   - component: {fileID: 8947671082126825486}
   - component: {fileID: 5798008245493155861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +144,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5856800552170400011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -152,7 +197,7 @@ GameObject:
   - component: {fileID: 4198995015408329896}
   - component: {fileID: 4131239415806921599}
   - component: {fileID: 5876995736555523841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icosphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +234,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6861426904641921779}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
