@@ -947,13 +947,25 @@ PrefabInstance:
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
-      propertyPath: entries.Array.data[0].amount
-      value: 50
+      propertyPath: entries.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
-      propertyPath: entries.Array.data[1].amount
-      value: 25
+      propertyPath: entries.Array.data[0].amount
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: entries.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 208671729453974855, guid: f304ba522e844104c8d98cfc0733f31d, type: 3}
+    - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: entries.Array.data[1].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: entries.Array.data[1].prefab
+      value: 
+      objectReference: {fileID: 208671729453974855, guid: f304ba522e844104c8d98cfc0733f31d, type: 3}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[2].amount
       value: 70
@@ -2321,7 +2333,7 @@ MonoBehaviour:
   - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
     prefab: {fileID: 8985010166073262076, guid: 780e4a246b98bca4ca3535fe53a78ec6, type: 3}
   - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
-    prefab: {fileID: 3707681147446501937, guid: 19b995641eac21c4dac747925f9bec43, type: 3}
+    prefab: {fileID: 8083948910245881578, guid: 5944f500c1acb8c44b90e84e71b84710, type: 3}
   - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     prefab: {fileID: 6306181808556498813, guid: 133c881e3aae1e541b499433f12bc643, type: 3}
   - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
@@ -2352,6 +2364,8 @@ MonoBehaviour:
     prefab: {fileID: 3728834931384903748, guid: 10d567bb915ee114bb906987185c25d7, type: 3}
   - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
     prefab: {fileID: 8303803367480725716, guid: 2c05ae43549778e4186148206a366389, type: 3}
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+    prefab: {fileID: 4584401948836683489, guid: 623356aab28cf4e49b8e7a2cbde7f27b, type: 3}
   recipeDatabase: {fileID: 11400000, guid: 4e94c71289c33ec48af7307126840f98, type: 2}
   outline: {fileID: 0}
   leftShelfDisplay: {fileID: 765752689}
@@ -2366,6 +2380,7 @@ MonoBehaviour:
   rightShelfTypes:
   - {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
   - {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+  - {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
   mortarProcessedDisplay: {fileID: 1907124619}
   cuttingBoardProcessedDisplay: {fileID: 1335448501}
   mortarClickObject: {fileID: 363044296}
@@ -3340,7 +3355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[0].amount
@@ -3362,6 +3377,10 @@ PrefabInstance:
       propertyPath: entries.Array.data[2].amount
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
+      propertyPath: entries.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 208671729453974855, guid: f304ba522e844104c8d98cfc0733f31d, type: 3}
     - target: {fileID: 6021663385955750840, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: m_Name
       value: Spot2

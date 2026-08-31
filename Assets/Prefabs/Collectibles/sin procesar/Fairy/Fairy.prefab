@@ -117,6 +117,10 @@ MonoBehaviour:
   collectRiseHeight: 1
   basketVisualPrefab: {fileID: 6590866449139015112, guid: 6a7e07c39d8e0fd48bdcb3b00802fbcc, type: 3}
   type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  destroyOnCollect: 1
+  shakeDuration: 0.3
+  shakeStrength: 0.1
+  freezeDuration: 0.8
   outline: {fileID: 0}
 --- !u!65 &-2571037864626751722
 BoxCollider:
@@ -170,9 +174,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomVisualVariant
   possibleModels:
-  - {fileID: 6590866449139015112, guid: 2abb9d1f8e6b7ca4eaddc0167e85e65b, type: 3}
-  - {fileID: 6590866449139015112, guid: 739301677a828e24c9d21216ff608a50, type: 3}
+  - fullModel: {fileID: 6590866449139015112, guid: 2abb9d1f8e6b7ca4eaddc0167e85e65b, type: 3}
+    depletedModel: {fileID: 0}
+  - fullModel: {fileID: 6590866449139015112, guid: 739301677a828e24c9d21216ff608a50, type: 3}
+    depletedModel: {fileID: 0}
   outline: {fileID: 0}
+  randomizeRotation: 0
 --- !u!1 &7659253952230648504
 GameObject:
   m_ObjectHideFlags: 0

@@ -111,6 +111,10 @@ MonoBehaviour:
   collectRiseHeight: 1
   basketVisualPrefab: {fileID: 3728834931384903748, guid: 93d3e5a1797fb9f409b71c9c98b751a9, type: 3}
   type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+  destroyOnCollect: 0
+  shakeDuration: 0.3
+  shakeStrength: 0.1
+  freezeDuration: 0.8
   outline: {fileID: 0}
 --- !u!65 &-7739105053591781077
 BoxCollider:
@@ -167,8 +171,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomVisualVariant
   possibleModels:
-  - {fileID: 7562084387941143965, guid: 015b906780a6c0b4cb3dd6e40782e21e, type: 3}
-  - {fileID: 6745057141309437941, guid: e002d80933b803a4aa4b26abb4c1a20f, type: 3}
-  - {fileID: 5661915360568265830, guid: 3ced08870a9e20648831f6aeb04d943e, type: 3}
+  - fullModel: {fileID: 6745057141309437941, guid: e002d80933b803a4aa4b26abb4c1a20f, type: 3}
+    depletedModel: {fileID: 0}
+  - fullModel: {fileID: 5661915360568265830, guid: 3ced08870a9e20648831f6aeb04d943e, type: 3}
+    depletedModel: {fileID: 0}
+  - fullModel: {fileID: 7562084387941143965, guid: 015b906780a6c0b4cb3dd6e40782e21e, type: 3}
+    depletedModel: {fileID: 0}
   outline: {fileID: 0}
   randomizeRotation: 1
