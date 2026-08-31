@@ -522,7 +522,7 @@ PrefabInstance:
     - target: {fileID: 6441380400695140205, guid: c9b9ad43b22e5644bb5afca64d1b08e7, type: 3}
       propertyPath: basketViewAnchor
       value: 
-      objectReference: {fileID: 538813416}
+      objectReference: {fileID: 0}
     - target: {fileID: 6441380400695140205, guid: c9b9ad43b22e5644bb5afca64d1b08e7, type: 3}
       propertyPath: cameraTransition
       value: 
@@ -642,6 +642,8 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.3
   labelHeight: 0.5
+  previewGroupCount: 4
+  previewItemsPerGroup: 3
 --- !u!1 &279508777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,11 +1218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &538813416 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 587820493664100799, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
-  m_PrefabInstance: {fileID: 1456227253}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &618501102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
@@ -1277,6 +1274,8 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.4
   labelHeight: 0.5
+  previewGroupCount: 4
+  previewItemsPerGroup: 3
 --- !u!1 &772793946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeliveryInteraction
   playerInput: {fileID: 1456227255}
   questManager: {fileID: 382290573}
+  potionDisplayArea: {fileID: 0}
   outline: {fileID: 0}
 --- !u!4 &1024315043 stripped
 Transform:
@@ -3524,6 +3524,8 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.5
   labelHeight: 0.5
+  previewGroupCount: 4
+  previewItemsPerGroup: 3
 --- !u!1 &1362061630
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,7 +4128,7 @@ PrefabInstance:
     - target: {fileID: 2958465881943343924, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: basketViewAnchor
       value: 
-      objectReference: {fileID: 538813416}
+      objectReference: {fileID: 0}
     - target: {fileID: 4138654538697430699, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_Depth
       value: 1
@@ -5056,6 +5058,8 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.5
   labelHeight: 0.5
+  previewGroupCount: 4
+  previewItemsPerGroup: 3
 --- !u!4 &1928327697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
@@ -10302,6 +10306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7025704660850386921}
+  - component: {fileID: 7695386804383087956}
   m_Layer: 0
   m_Name: CauldronPack
   m_TagString: Untagged
@@ -10309,6 +10314,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &7695386804383087956
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695386804383087955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b48a3c882c174b045ab344593a82d294, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7750626826424457329
 PrefabInstance:
   m_ObjectHideFlags: 0
