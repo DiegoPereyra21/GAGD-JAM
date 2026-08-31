@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_test
   potionName: Pocion Test
+  visualPrefab: {fileID: 8447261873446564785, guid: 93b4047deade6f54a83285370a436189, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     amount: 1

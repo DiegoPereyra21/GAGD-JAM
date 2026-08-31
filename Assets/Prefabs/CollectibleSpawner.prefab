@@ -46,10 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.CollectibleSpawner
   areaSize: {x: 170, y: 170}
   minSpacing: 2
-  entries:
-  - prefab: {fileID: 7600067778302569439, guid: 13b40dc24f9651c4eb5091dbbf8ebfba, type: 3}
-    amount: 30
-  - prefab: {fileID: 550371918017911446, guid: c5e0dfdbb8a62a5428bd1fcd698445d3, type: 3}
-    amount: 12
-  - prefab: {fileID: 8985010166073262076, guid: b2b987103017b7c4b8b961c2cabd7750, type: 3}
-    amount: 50
+  entries: []

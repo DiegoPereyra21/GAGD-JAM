@@ -1981,13 +1981,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 931298443}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 931298444}
   m_SourcePrefab: {fileID: 100100000, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
 --- !u!4 &931298441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
   m_PrefabInstance: {fileID: 931298440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &931298442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
+  m_PrefabInstance: {fileID: 931298440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &931298443
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931298442}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9cae56e64cd67134e95e4589adff8e1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &931298444
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931298442}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 1411930977181827821, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
+  - {fileID: -8660422827799191413, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
+  - {fileID: 8212986520380545036, guid: 10818113cf16a9c448ad647b72130a24, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &935031164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CauldronCraftingSystem
   playerInput: {fileID: 1456227255}
   playerMovement: {fileID: 1456227254}
+  player: {fileID: 0}
   cameraTransition: {fileID: 1560979843}
   houseViewAnchor: {fileID: 4046882000100814668}
   leftZoneAnchor: {fileID: 2122621367}
@@ -3839,7 +3892,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 149341459}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9177139962196022817, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       insertIndex: 0
@@ -3932,6 +3986,7 @@ MonoBehaviour:
   sanityLossPerDay: 15
   hudDocument: {fileID: 1218138556}
   questJournalDocument: {fileID: 1810639036}
+  useAutomaticTrigger: 1
 --- !u!65 &1514822411
 BoxCollider:
   m_ObjectHideFlags: 0
