@@ -403,3 +403,8 @@
     background-color: rgba(61, 43, 82, 0.38);
     border-color: rgba(190, 165, 220, 0.55);
 }
+
+#PauseMenuRoot .menu-container {
+    padding-top: 5%;
+    margin-top: 0;
+}

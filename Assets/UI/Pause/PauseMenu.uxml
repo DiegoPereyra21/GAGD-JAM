@@ -1,0 +1,47 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=865973c54da277340a801261590baf2b&amp;type=3#MainMenu"/>
+    <ui:VisualElement name="PauseMenuRoot" class="main-menu" style="flex-grow: 1; display: none;">
+        <ui:VisualElement name="Overlay" style="flex-grow: 1; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.65);"/>
+        <ui:VisualElement name="Content" class="content" style="flex-grow: 1;">
+            <ui:Label text="Pausa" name="Title" class="title"/>
+            <ui:VisualElement name="MenuContainer" class="menu-container">
+                <ui:Button text="Reanudar" name="ResumeButton" class="menu-button">
+                    <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+                </ui:Button>
+                <ui:Button text="Opciones" name="OptionsButton" class="menu-button">
+                    <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+                </ui:Button>
+                <ui:Button text="Menú Principal" name="MainMenuButton" class="menu-button">
+                    <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+                </ui:Button>
+                <ui:Button text="Salir" name="ExitButton" class="menu-button">
+                    <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="OptionsPanel" focusable="false" class="options-panel" style="display: none;">
+            <ui:Label text="Opciones" name="OptionsTitle"/>
+            <ui:VisualElement name="LanguageSection" class="language-section">
+                <ui:Label text="Idioma" name="LanguageLabel"/>
+                <ui:Toggle label="Espanhol" name="SpanishToggle" class="spanish-toggle" style="height: 70px; width: 250px;"/>
+                <ui:Toggle label="Ingles" name="EnglishToggle" toggle-on-label-click="true" class="english-toggle" style="height: 70px; width: 250px;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="AudioSection" class="audio-section">
+                <ui:Label text="Sonido" name="AudioLabel"/>
+                <ui:VisualElement name="MusicRow">
+                    <ui:Label text="Musica" name="MusicLabel"/>
+                    <ui:Slider label="MusicSlider" high-value="100" name="MusicSlider"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="AmbientRow">
+                    <ui:Label text="Ambiente" name="AmbientLabel"/>
+                    <ui:Slider label="AmbientSlider" high-value="100" name="AmbientSlider"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="SFXRow">
+                    <ui:Label text="SFX" name="SFXLabel"/>
+                    <ui:Slider label="SFXSlider" high-value="100" name="SFXSlider"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button text="Volver" name="BackButton" class="back-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
