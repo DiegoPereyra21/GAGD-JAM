@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
   ingredientId: flor_blanca_polvo
   displayName: Flor Blanca Polvo
+  rawSource: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}

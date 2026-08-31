@@ -2706,6 +2706,10 @@ MonoBehaviour:
     prefab: {fileID: 6088912655057974279, guid: c1417a60a1c06dc45b928f93a4a6f810, type: 3}
   - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
     prefab: {fileID: 7122769619803019215, guid: 43c96ee7fb80ddc428176af6eaa503d3, type: 3}
+  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+    prefab: {fileID: 2354549108154012539, guid: d344fc4055031334a8ef3d959fa05cc7, type: 3}
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
+    prefab: {fileID: 1529832154013381966, guid: 7716751b6fe802741800c53eace40329, type: 3}
   recipeDatabase: {fileID: 11400000, guid: 4e94c71289c33ec48af7307126840f98, type: 2}
   outline: {fileID: 0}
   leftShelfDisplay: {fileID: 765752689}
@@ -2723,6 +2727,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
   - {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
   - {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
+  - {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
   mortarProcessedDisplay: {fileID: 1907124619}
   cuttingBoardProcessedDisplay: {fileID: 1335448501}
   mortarClickObject: {fileID: 363044296}
@@ -3750,7 +3755,7 @@ PrefabInstance:
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[4].prefab
       value: 
-      objectReference: {fileID: 208671729453974855, guid: f304ba522e844104c8d98cfc0733f31d, type: 3}
+      objectReference: {fileID: 2108334796219246617, guid: 782ee8c90b8475b44bc636e6004df2e0, type: 3}
     - target: {fileID: 2248942204062010057, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
       propertyPath: entries.Array.data[0].groundOffset
       value: 2
@@ -4389,14 +4394,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499184477}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.010993733, y: -0.060098507, z: 0.003072508, w: 0.99812716}
-  m_LocalPosition: {x: 5.65, y: 2.82, z: 3.21}
+  m_LocalRotation: {x: 0.010641621, y: 0.037544634, z: 0.004130177, w: 0.9992298}
+  m_LocalPosition: {x: 6, y: 2.83, z: 2.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 250249035}
   m_Father: {fileID: 1701112955}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.201, y: 4.309, z: 0.519}
 --- !u!114 &1499184479
 MonoBehaviour:
   m_ObjectHideFlags: 0
