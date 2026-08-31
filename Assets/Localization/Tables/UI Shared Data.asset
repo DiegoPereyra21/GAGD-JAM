@@ -59,6 +59,30 @@ MonoBehaviour:
     m_Key: options.back
     m_Metadata:
       m_Items: []
+  - m_Id: 2417675389804544
+    m_Key: menu.confirm.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2417679449890816
+    m_Key: menu.confirm.yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2417744386105344
+    m_Key: menu.confirm.no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2419725624320000
+    m_Key: money
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2419728480641024
+    m_Key: items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2419736474984448
+    m_Key: sanity
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

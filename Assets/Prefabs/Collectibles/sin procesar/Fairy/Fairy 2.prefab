@@ -72,12 +72,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3582745317759678541}
-  - component: {fileID: -1822061425179548954}
   - component: {fileID: -2571037864626751722}
-  - component: {fileID: 1007477502519200735}
-  - component: {fileID: 2487677921926301093}
   m_Layer: 8
-  m_Name: Fairy
+  m_Name: Fairy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,31 +90,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.97824186, z: 0, w: 0.20746785}
   m_LocalPosition: {x: 15.3, y: 0.95, z: -7.16}
-  m_LocalScale: {x: 3.7, y: 3.7, z: 3.7}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2401698631886739545}
   - {fileID: 7216009291981684590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -156.052, z: 0}
---- !u!114 &-1822061425179548954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6590866449139015112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6e7b4ad7900a3e4fb4b54985313f464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.Collectible
-  value: 1
-  collectDuration: 0.3
-  collectRiseHeight: 1
-  basketVisualPrefab: {fileID: 6590866449139015112, guid: 6a7e07c39d8e0fd48bdcb3b00802fbcc, type: 3}
-  type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-  outline: {fileID: 0}
 --- !u!65 &-2571037864626751722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -139,40 +118,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.12, z: 0.1}
   m_Center: {x: 0, y: 0.03, z: 0}
---- !u!114 &1007477502519200735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6590866449139015112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2887cd4b002e7fa49b180aa4f0179cae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FairyHover
-  wanderRadius: 0.5
-  orbitSpeed: 60
-  bobHeight: 0.15
-  bobSpeed: 2
-  rotationSpeed: 40
-  rotationWobble: 15
---- !u!114 &2487677921926301093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6590866449139015112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f9875f9313ae04c86d8c1e5e97d0c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomVisualVariant
-  possibleModels:
-  - {fileID: 6590866449139015112, guid: 2abb9d1f8e6b7ca4eaddc0167e85e65b, type: 3}
-  - {fileID: 6590866449139015112, guid: 739301677a828e24c9d21216ff608a50, type: 3}
-  outline: {fileID: 0}
 --- !u!1 &7659253952230648504
 GameObject:
   m_ObjectHideFlags: 0
