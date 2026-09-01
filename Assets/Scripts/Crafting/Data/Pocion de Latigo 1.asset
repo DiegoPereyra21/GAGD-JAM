@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n Del Sue\xF1o Pesado"
+  m_Name: Pocion de Latigo 1
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_descanso
-  potionName: "Pocion de Sue\xF1o Profundo"
-  visualPrefab: {fileID: 0}
+  potionId: pocion_de_latigo 1
+  potionName: Pocion de Latigo 1
+  visualPrefab: {fileID: 8447261873446564785, guid: 93b4047deade6f54a83285370a436189, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}
-    amount: 1
-  description: "Poci\xF3n que permite a una persona dormir sin interrupciones por
-    un largo tiempo, dependiendo de la dosis; tu \xFAnica forma de dormir ahora."
+  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    amount: 2
+  description: 

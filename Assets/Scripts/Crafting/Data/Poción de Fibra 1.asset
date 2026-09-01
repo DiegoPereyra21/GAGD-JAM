@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n Del Sue\xF1o Pesado"
+  m_Name: "Poci\xF3n de Fibra 1"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_descanso
-  potionName: "Pocion de Sue\xF1o Profundo"
+  potionId: pocion_fibra
+  potionName: "Poci\xF3n de Fibra"
   visualPrefab: {fileID: 0}
   ingredients:
-  - type: {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}
-    amount: 1
-  description: "Poci\xF3n que permite a una persona dormir sin interrupciones por
-    un largo tiempo, dependiendo de la dosis; tu \xFAnica forma de dormir ahora."
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    amount: 2
+  description: "Se usa para esos d\xEDas que necesitas una peque\xF1a ayuda en lugar
+    de tener que hacer fuerza, si los del anti-dopping preguntan \xA1No estamos!"

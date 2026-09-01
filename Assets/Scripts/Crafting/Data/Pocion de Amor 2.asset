@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n Del Sue\xF1o Pesado"
+  m_Name: Pocion de Amor 2
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_descanso
-  potionName: "Pocion de Sue\xF1o Profundo"
+  potionId: 
+  potionName: 
   visualPrefab: {fileID: 0}
   ingredients:
-  - type: {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}
-    amount: 1
-  description: "Poci\xF3n que permite a una persona dormir sin interrupciones por
-    un largo tiempo, dependiendo de la dosis; tu \xFAnica forma de dormir ahora."
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
+    amount: 2
+  description: 
