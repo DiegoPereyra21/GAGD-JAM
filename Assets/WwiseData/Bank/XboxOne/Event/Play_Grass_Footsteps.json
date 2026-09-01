@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}",
     "Language": "SFX",
-    "Hash": "{0F6253C2-3E02-6C28-CBFA-CD6E3A32EA27}",
+    "Hash": "{2AD0AF54-7508-CC18-977E-9733433A0A11}",
     "ObjectPath": "Play_Grass_Footsteps",
     "ShortName": "Play_Grass_Footsteps",
     "Path": "Event/Play_Grass_Footsteps.bnk",
@@ -230,6 +230,6 @@
     ]
    }
   ],
-  "FileHash": "{BD67A5E7-BA7B-3118-7D2F-FF9C44ED3B80}"
+  "FileHash": "{585999AC-5C95-C18C-841C-9F7C5B623481}"
  }
 }

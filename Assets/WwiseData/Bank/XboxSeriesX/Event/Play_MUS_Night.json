@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "XboxSeriesX",
+  "BasePlatform": "XboxSeriesX",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1001167992",
+    "Type": "Event",
+    "GUID": "{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}",
+    "Language": "SFX",
+    "Hash": "{A2708F8B-DBFC-9FAC-56F8-17846C331996}",
+    "ObjectPath": "Play_MUS_Night",
+    "ShortName": "Play_MUS_Night",
+    "Path": "Event/Play_MUS_Night.bnk",
+    "Media": [
+     {
+      "Id": "1000971565",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Full mix.wav",
+      "Path": "Media/1000971565.wem",
+      "CachePath": "1B/{1BBB2DA3-FF4E-A842-40D6-105E4968CB90}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1001167992",
+      "Name": "Play_MUS_Night",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_Night",
+      "GUID": "{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1000971565"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EEB96D9D-7ACC-8C87-19C7-1DE28A35544F}"
+ }
+}

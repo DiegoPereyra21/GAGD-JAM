@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class BookController : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] private PotionRecipeDatabase recipeDatabase;
+
+    [Header("Input")]
+    [SerializeField] private InputActionReference openBookAction;
 
     private UIDocument uiDocument;
     private VisualElement root;
@@ -55,12 +59,30 @@ public class BookController : MonoBehaviour
         FindElements();
         RegisterCallbacks();
 
-        ShowSection(BookSection.Recipes);
+        // El libro empieza cerrado visualmente
+        root.style.display = DisplayStyle.None;
+
+        // Activar la acción de abrir/cerrar
+        if (openBookAction != null)
+        {
+            openBookAction.action.Enable();
+            openBookAction.action.performed += OnOpenBookPerformed;
+        }
+        else
+        {
+            Debug.LogError("BookController: Open Book Action no está asignada.");
+        }
     }
 
     private void OnDisable()
     {
         UnregisterCallbacks();
+
+        if (openBookAction != null)
+        {
+            openBookAction.action.performed -= OnOpenBookPerformed;
+            openBookAction.action.Disable();
+        }
     }
 
     private void FindElements()
@@ -110,6 +132,21 @@ public class BookController : MonoBehaviour
         nextButton?.UnregisterCallback<ClickEvent>(OnNextClicked);
     }
 
+    private void OnOpenBookPerformed(InputAction.CallbackContext context)
+    {
+        if (root == null)
+            return;
+
+        if (root.resolvedStyle.display == DisplayStyle.None)
+        {
+            OpenBook();
+        }
+        else
+        {
+            CloseBook();
+        }
+    }
+
     private void OnRecipesClicked(ClickEvent evt)
     {
         currentRecipeIndex = 0;
@@ -118,15 +155,11 @@ public class BookController : MonoBehaviour
 
     private void OnCompendiumClicked(ClickEvent evt)
     {
-        Debug.Log("CLICK COMPENDIO");
-
         ShowSection(BookSection.Compendium);
     }
 
     private void OnObjectivesClicked(ClickEvent evt)
     {
-        Debug.Log("CLICK OBJETIVOS");
-
         ShowSection(BookSection.Objectives);
     }
 
@@ -221,46 +254,46 @@ public class BookController : MonoBehaviour
     }
 
     private void DisplayCurrentRecipe()
-{
-    PotionRecipe recipe = recipeDatabase.Recipes[currentRecipeIndex];
-
-    if (recipe == null)
     {
-        ShowEmptyRecipePage("Receta no disponible.");
-        return;
-    }
+        PotionRecipe recipe = recipeDatabase.Recipes[currentRecipeIndex];
 
-    if (recipeTitle != null)
-        recipeTitle.text = recipe.potionName;
-
-    if (recipeDescription != null)
-    {
-        recipeDescription.text = recipe.description;
-        recipeDescription.style.display = DisplayStyle.Flex;
-    }
-
-    if (ingredientsTitle != null)
-        ingredientsTitle.text = "Ingredientes";
-
-    ClearIngredients();
-
-    if (recipe.ingredients != null)
-    {
-        foreach (RecipeIngredient ingredient in recipe.ingredients)
+        if (recipe == null)
         {
-            if (ingredient == null || ingredient.type == null)
-                continue;
-
-            AddIngredientLine(
-                ingredient.type.displayName,
-                ingredient.amount
-            );
+            ShowEmptyRecipePage("Receta no disponible.");
+            return;
         }
-    }
 
-    UpdatePageNumber();
-    UpdateNavigationButtons();
-}
+        if (recipeTitle != null)
+            recipeTitle.text = recipe.potionName;
+
+        if (recipeDescription != null)
+        {
+            recipeDescription.text = recipe.description;
+            recipeDescription.style.display = DisplayStyle.Flex;
+        }
+
+        if (ingredientsTitle != null)
+            ingredientsTitle.text = "Ingredientes";
+
+        ClearIngredients();
+
+        if (recipe.ingredients != null)
+        {
+            foreach (RecipeIngredient ingredient in recipe.ingredients)
+            {
+                if (ingredient == null || ingredient.type == null)
+                    continue;
+
+                AddIngredientLine(
+                    ingredient.type.displayName,
+                    ingredient.amount
+                );
+            }
+        }
+
+        UpdatePageNumber();
+        UpdateNavigationButtons();
+    }
 
     private void AddIngredientLine(string ingredientName, int amount)
     {
@@ -343,8 +376,6 @@ public class BookController : MonoBehaviour
 
     private void ShowCompendium()
     {
-        Debug.Log("MOSTRANDO COMPENDIO");
-
         if (recipeTitle != null)
             recipeTitle.text = "Compendio";
 
@@ -371,8 +402,6 @@ public class BookController : MonoBehaviour
 
     private void ShowObjectives()
     {
-        Debug.Log("MOSTRANDO OBJETIVOS");
-
         if (recipeTitle != null)
             recipeTitle.text = "Objetivos";
 
@@ -405,6 +434,7 @@ public class BookController : MonoBehaviour
         root.style.display = DisplayStyle.Flex;
 
         currentRecipeIndex = 0;
+
         ShowSection(BookSection.Recipes);
     }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="XboxSeriesX" BasePlatform="XboxSeriesX" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{A253A973-33E5-EF9E-3209-FB6F77AD8C13}">
+		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{3D902457-A797-ECFB-E34F-E98AA41EAE62}">
 			<ObjectPath>Play_Menu_Button_Hover</ObjectPath>
 			<ShortName>Play_Menu_Button_Hover</ShortName>
 			<Path>Event/Play_Menu_Button_Hover.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EDDC8720-AA46-A543-3F33-AA76BAE5B830}</FileHash>
+	<FileHash>{BC767A56-3A6B-85E2-91A5-3254D4874909}</FileHash>
 </SoundBanksInfo>

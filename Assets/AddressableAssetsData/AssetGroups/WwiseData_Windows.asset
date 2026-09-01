@@ -30,11 +30,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0f863494fbb0293499298c1ba511fbe3
-    m_Address: Assets/WwiseData/Bank/Windows/Media/71216937.wem
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 17e2aa626fe47f94fbab2afbf2008323
     m_Address: Assets/WwiseData/Bank/Windows/Media/99849529.wem
     m_ReadOnly: 0
@@ -45,23 +40,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 28d4c2b8aa93e184ab72898eb4dc5a7a
-    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Cut.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2a1ab245360c83a4c8d8950bd29b9b65
-    m_Address: Assets/WwiseData/Bank/Windows/Media/78077000.wem
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 342a6f9f4ecb9964a995870cd8f006c8
     m_Address: Assets/WwiseData/Bank/Windows/Media/229322620.wem
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 366a8832eb1387f4f9fc68c390e0f9fc
-    m_Address: Assets/WwiseData/Bank/Windows/Media/504329888.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -70,8 +50,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44d8a841455e986428484db2f46c4be6
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Clock.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4f9ae805b4e381f4b8aac64813c8aa8f
     m_Address: Assets/WwiseData/Bank/Windows/Media/3496576.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ff9e43c40febf74e9a23da5f475c930
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Cut.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -80,18 +70,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 701779bea18e58540a81984f2043bee1
-    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Mortar.bnk
+  - m_GUID: 73498f32bf6d6f249a7f87957981c075
+    m_Address: Assets/WwiseData/Bank/Windows/Media/340777126.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7700635c47c2f604da96731981a3bda5
     m_Address: Assets/WwiseData/Bank/Windows/Media/809076942.wem
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7e4d583fc72efd94d877e1a1a3ad3548
-    m_Address: Assets/WwiseData/Bank/Windows/Media/665275161.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -120,6 +105,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 995cd0a2e2065b24195ef3bd2d23af1b
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Mortar.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a56e6f1712d40646b347a60fce4ff2c
     m_Address: Assets/WwiseData/Bank/Windows/Media/392187951.wem
     m_ReadOnly: 0
@@ -135,6 +125,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad1dc561c3abbca4891e973a06d543dc
+    m_Address: Assets/WwiseData/Bank/Windows/Media/71216937.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: add6f3cc9ad950d4c803bbf54e7112ec
+    m_Address: Assets/WwiseData/Bank/Windows/Media/504329888.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae83d4e64c29f7f43b85b977a54d58ae
     m_Address: Assets/WwiseData/Bank/Windows/Media/86574945.wem
     m_ReadOnly: 0
@@ -145,13 +145,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cc3c4f7bd347de34aaa540dad89144e8
-    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Clock.bnk
+  - m_GUID: ccd92c87b0c73ba408d2b17e2b3c67fb
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_Night.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ccd92c87b0c73ba408d2b17e2b3c67fb
-    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_Night.bnk
+  - m_GUID: d74c5a88c825e78428d31b4946e0fe11
+    m_Address: Assets/WwiseData/Bank/Windows/Event/STOP_STG_Clock.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -177,6 +177,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f119b4b42a9e7ef45a4471a7796a7688
     m_Address: Assets/WwiseData/Bank/Windows/Event/Stop_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdc53cd863cc88b4e81693a17dc7483a
+    m_Address: Assets/WwiseData/Bank/Windows/Media/665275161.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

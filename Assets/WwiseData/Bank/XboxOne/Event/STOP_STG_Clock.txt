@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3389563599	STOP_STG_Clock			\Default Work Unit\STOP_STG_Clock	
+
