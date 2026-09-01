@@ -12,4 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41ad6b667358a9468a27a4b8dc6f2c4, type: 3}
   m_Name: QuestDatabase
   m_EditorClassIdentifier: Assembly-CSharp::QuestDatabase
-  allQuests: []
+  allQuests:
+  - {fileID: 11400000, guid: 947c2e35210c6f940980f4d2e29b2014, type: 2}
+  - {fileID: 11400000, guid: 05bfef3644c17d44bbcb5ee5ff6cd434, type: 2}
+  - {fileID: 11400000, guid: 846faea7123151e42bcffa8dfcfbe694, type: 2}
+  - {fileID: 11400000, guid: 73ff4a40966b9354fa683c7a50a55f80, type: 2}
+  - {fileID: 11400000, guid: 9be422bf151c73445a777c533883f1c1, type: 2}
+  - {fileID: 11400000, guid: bbdb916a7befbc542b553043d26a3a07, type: 2}
+  - {fileID: 11400000, guid: 3eea154db5b8ab74bab66c10010d6dea, type: 2}
+  - {fileID: 11400000, guid: 40a67ecc406a2254ea0bc4113310f248, type: 2}
+  - {fileID: 11400000, guid: 729f4c65406427d4e855bc946da59f44, type: 2}
+  - {fileID: 11400000, guid: 3fe175dbb28617047afe5d54bf67f4c4, type: 2}
+  - {fileID: 11400000, guid: f30c6048e59a27345ac920028091bb82, type: 2}
+  - {fileID: 11400000, guid: 29d41f028b89b0b48b7ef2a764725475, type: 2}
+  - {fileID: 11400000, guid: 0b12a81e78542af418e55b1aac7165f4, type: 2}
+  - {fileID: 11400000, guid: 21123d2ab80c7f945a4c3acff552ec69, type: 2}
+  - {fileID: 11400000, guid: 35f21086275a9344bbd19eb497208fcc, type: 2}
+  - {fileID: 11400000, guid: 9b48d5d056e8401498f3f9597c8ad04e, type: 2}
+  - {fileID: 11400000, guid: 9e4227067786de647b42cedfeaafeb36, type: 2}
+  - {fileID: 11400000, guid: 1f8f157788ed36d4ba88a229b0df5125, type: 2}
+  - {fileID: 11400000, guid: bbb3263b3e9ab184abbe41504f31471b, type: 2}
+  - {fileID: 11400000, guid: de3ca851c7897b244830955c48b76e1f, type: 2}

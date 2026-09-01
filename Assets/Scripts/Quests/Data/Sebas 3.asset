@@ -15,7 +15,11 @@ MonoBehaviour:
   questId: sebas_housen
   villagerName: Sebas Housen
   missionName: Pocion de Fibra para Sebas
-  objectives: []
+  objectives:
+  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+    targetAmount: 3
+  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+    targetAmount: 2
   moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: c9c352ca6a4bc9f4ba6aa5225120242a, type: 2}
   availableDay: 3

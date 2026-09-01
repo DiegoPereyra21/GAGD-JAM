@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: Cruijs
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: 
-  villagerName: 
-  missionName: 
-  objectives: []
+  questId: cruijs_0
+  villagerName: Cruijs
+  missionName: Para seguir viciando Brotato
+  objectives:
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
+    targetAmount: 3
+  - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
+    targetAmount: 2
   moneyReward: 7
   requiredPotion: {fileID: 11400000, guid: 02b7a25fe908bd54e9c509001e8b34f1, type: 2}
   availableDay: 4

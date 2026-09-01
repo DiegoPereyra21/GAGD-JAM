@@ -15,7 +15,11 @@ MonoBehaviour:
   questId: furia_firewrath
   villagerName: Furia Firewrath
   missionName: Pocion Dispersa para Furia
-  objectives: []
+  objectives:
+  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+    targetAmount: 3
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    targetAmount: 2
   moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: 993692acc983b8a49803ca05b94d3d7e, type: 2}
   availableDay: 3

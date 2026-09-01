@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: Cafecito 1
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: 
-  villagerName: 
-  missionName: 
-  objectives: []
+  questId: cafecito_0
+  villagerName: Cafecito
+  missionName: Espanta tiburones
+  objectives:
+  - type: {fileID: 11400000, guid: d915aa33128898e41b1e22658441de77, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
+    targetAmount: 3
   moneyReward: 8
   requiredPotion: {fileID: 11400000, guid: a4d0bcd6a55d9564fb43f1e5e7f8291d, type: 2}
   availableDay: 5

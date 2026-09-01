@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: BloodyKey
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: 
-  villagerName: 
-  missionName: 
-  objectives: []
+  questId: bloodyley_0
+  villagerName: BloodyKey
+  missionName: Repartir Amor
+  objectives:
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+    targetAmount: 3
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
+    targetAmount: 2
   moneyReward: 7
   requiredPotion: {fileID: 11400000, guid: 04c44acfa683ece4f9f199f10e7e513a, type: 2}
   availableDay: 4

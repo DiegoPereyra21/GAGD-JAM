@@ -70,6 +70,7 @@ public class BedInteraction : MonoBehaviour
         }
 
         questManager.ProcessPendingDeliveries();
+        questManager.ClearAllActiveQuests();
         questManager.Save();
         potionDisplayArea.ClearAll();
         GameProgressManager.Instance.Sleep();

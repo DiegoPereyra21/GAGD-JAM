@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: BloodyKey 2
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: 
-  villagerName: 
-  missionName: 
-  objectives: []
+  questId: bloodykey_2
+  villagerName: BloodyKey
+  missionName: Para terminar todo a ultimo momento
+  objectives:
+  - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
+    targetAmount: 3
+  - type: {fileID: 11400000, guid: 8e10425daaca93d4d977a097c3249546, type: 2}
+    targetAmount: 2
   moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: 882ed834e1f19ea4e836054a70af727b, type: 2}
   availableDay: 6

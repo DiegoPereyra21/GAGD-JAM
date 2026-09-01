@@ -107,4 +107,11 @@ public class QuestManager : MonoBehaviour
         public List<string> questIds = new List<string>();
         public List<string> pendingDeliveryIds = new List<string>();
     }
+
+    public void ClearAllActiveQuests()
+    {
+        if (activeQuests.Count == 0) return;
+        activeQuests.Clear();
+        OnQuestsChanged?.Invoke();
+    }
 }

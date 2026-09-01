@@ -15,7 +15,15 @@ MonoBehaviour:
   questId: mari_quest
   villagerName: Mari Juana de Arco
   missionName: Nice try dude
-  objectives: []
+  objectives:
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+    targetAmount: 2
   moneyReward: 18
   requiredPotion: {fileID: 11400000, guid: 7e1245a49f2ec4742a0cecbd6acb8e46, type: 2}
   availableDay: 7

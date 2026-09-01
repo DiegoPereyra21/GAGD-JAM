@@ -22,7 +22,7 @@ MonoBehaviour:
     amount: 2
   - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
     amount: 2
-  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
     amount: 2
   description: "Lo usan solo  las personas t\xEDmidas que quieren resolver los problemas
     pensando primero."

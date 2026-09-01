@@ -15,7 +15,11 @@ MonoBehaviour:
   questId: diego_thunderhand
   villagerName: Diego Thunderhand
   missionName: Pocion de Despertar para Diego
-  objectives: []
+  objectives:
+  - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+    targetAmount: 3
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+    targetAmount: 2
   moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: f28a4ac1a0d98ef4d84313027a0e885e, type: 2}
   availableDay: 3

@@ -22,11 +22,10 @@ public class MailboxIndicatorTMP : MonoBehaviour
 
         if (remaining <= 0)
         {
-            label.gameObject.SetActive(false);
+            label.text = "";
             return;
         }
 
-        label.gameObject.SetActive(true);
         label.text = $"{remaining} cartas";
     }
 }
