@@ -1,0 +1,36 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/HUD/Book.uss?fileID=7433441132597879392&amp;guid=a48867d9880de0c4ab751e72f0952b33&amp;type=3#Book"/>
+    <ui:VisualElement name="BookContainer" style="flex-grow: 1;">
+        <ui:VisualElement name="Header" style="flex-grow: 1;">
+            <ui:VisualElement name="CloseArea" style="flex-grow: 1;">
+                <ui:Button text="Cerrar" name="CloseButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 32px;"/>
+            </ui:VisualElement>
+            <ui:Label text="Cuaderno" name="Title" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 50px; -unity-font-style: normal;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="BookContent" style="flex-grow: 1;">
+            <ui:VisualElement name="Tabs" style="flex-grow: 1;">
+                <ui:Button text="Recetas" name="RecipesTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 32px;"/>
+                <ui:Button text="Compendio" name="CompendiumTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 30px;"/>
+                <ui:Button text="Objetivos" name="ObjectivesTab" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;);"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="PageArea" style="flex-grow: 1;">
+                <ui:VisualElement name="Page" style="flex-grow: 1;">
+                    <ui:Label text="Label" name="RecipeTitle" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 85px;"/>
+                    <ui:VisualElement name="RecipeBody" style="flex-grow: 1;">
+                        <ui:VisualElement name="RecipeInfo" style="flex-grow: 1;">
+                            <ui:Label text="Label" name="IngredientsTitle" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 65px; -unity-font-style: bold;"/>
+                            <ui:VisualElement name="Ingredients" style="flex-grow: 1; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 25px;"/>
+                            <ui:Label text="Label" name="RecipeDescription" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 45px;"/>
+                            <ui:Image name="RecipeImage" style="display: none;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="PageNavigation" style="flex-grow: 1; bottom: 2px; right: -1px; left: 2px;">
+                    <ui:Button text="‹" name="PreviousButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 100px;"/>
+                    <ui:Label text="Label" name="PageNumber" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 35px;"/>
+                    <ui:Button text="›" name="NextButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 100px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

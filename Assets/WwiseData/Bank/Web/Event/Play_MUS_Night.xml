@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Web" BasePlatform="Web" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="1001167992" Type="Event" GUID="{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}" Language="SFX" Hash="{2BA19977-EB3E-2A15-AB0E-5BB8BAA504A3}">
+			<ObjectPath>Play_MUS_Night</ObjectPath>
+			<ShortName>Play_MUS_Night</ShortName>
+			<Path>Event/Play_MUS_Night.bnk</Path>
+			<Media>
+				<File Id="1000971565" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Full mix.wav</ShortName>
+					<Path>Media/1000971565.wem</Path>
+					<CachePath>3C/{3C340335-4F4A-28CD-B87C-B13516AAB758}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1001167992" Name="Play_MUS_Night" ObjectPath="\Events\Default Work Unit\Play_MUS_Night" GUID="{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}" DurationType="OneShot" DurationMin="93.333336" DurationMax="93.333336">
+					<MediaRefs>
+						<MediaRef Id="1000971565"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{D226A44A-5092-24FD-B763-2D96DB1DF1C2}</FileHash>
+</SoundBanksInfo>

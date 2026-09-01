@@ -10,19 +10,19 @@
     "Type": "Event",
     "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
     "Language": "SFX",
-    "Hash": "{CE3205EF-2AA4-D54C-C54D-25BCF51D9CF8}",
+    "Hash": "{7E904AA5-60A1-016D-3E64-C8D18C47C9E4}",
     "ObjectPath": "Play_STG_Pickup",
     "ShortName": "Play_STG_Pickup",
     "Path": "Event/Play_STG_Pickup.bnk",
     "Media": [
      {
-      "Id": "10179816",
+      "Id": "78077000",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "a.wav",
-      "Path": "Media/10179816.wem",
-      "CachePath": "E1/{E136A2D0-604C-A290-CBAA-A7BA9F911C80}.wem"
+      "ShortName": "dragon-studio-slow-cinematic-clock-ticking-405471.wav",
+      "Path": "Media/78077000.wem",
+      "CachePath": "BF/{BFF25931-079F-CE64-3447-D288C35BF173}.wem"
      }
     ],
     "Plugins": {
@@ -44,11 +44,11 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_STG_Pickup",
       "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
       "DurationType": "OneShot",
-      "DurationMin": "0.26110864",
-      "DurationMax": "0.26110864",
+      "DurationMin": "7.143962",
+      "DurationMax": "7.143962",
       "MediaRefs": [
        {
-        "Id": "10179816"
+        "Id": "78077000"
        }
       ],
       "PluginRefs": {
@@ -62,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{5F3EAB75-B83A-33B6-3DD2-F380DCFE68C4}"
+  "FileHash": "{3FCCA430-42A7-E488-6CAE-28DD4FA3EB74}"
  }
 }

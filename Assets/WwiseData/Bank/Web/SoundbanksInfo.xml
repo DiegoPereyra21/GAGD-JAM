@@ -9,7 +9,45 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{0F6253C2-3E02-6C28-CBFA-CD6E3A32EA27}">
+		<SoundBank Id="176225071" Type="Event" GUID="{3988C77F-BCBF-402F-9B7C-54086E13365D}" Language="SFX" Hash="{A3E0C7D7-CD90-F43E-0FD9-677A5E828C3D}">
+			<ObjectPath>Play_STG_Cut</ObjectPath>
+			<ShortName>Play_STG_Cut</ShortName>
+			<Path>Event/Play_STG_Cut.bnk</Path>
+			<Media>
+				<File Id="504329888" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>jam.wav</ShortName>
+					<Path>Media/504329888.wem</Path>
+					<CachePath>9E/{9E0A26D9-3216-7B39-849A-803F9DD63EE4}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="176225071" Name="Play_STG_Cut" ObjectPath="\Events\Default Work Unit\Play_STG_Cut" GUID="{3988C77F-BCBF-402F-9B7C-54086E13365D}" DurationType="OneShot" DurationMin="1.0754195" DurationMax="1.0754195">
+					<MediaRefs>
+						<MediaRef Id="504329888"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{F44C8551-68AC-0CA4-1732-1D2FE1151EB0}">
+			<ObjectPath>Play_STG_Mortar</ObjectPath>
+			<ShortName>Play_STG_Mortar</ShortName>
+			<Path>Event/Play_STG_Mortar.bnk</Path>
+			<Media>
+				<File Id="71216937" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893.wav</ShortName>
+					<Path>Media/71216937.wem</Path>
+					<CachePath>55/{5577D46B-C86F-A85B-C773-BA5A31FFFEB6}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="358402734" Name="Play_STG_Mortar" ObjectPath="\Events\Default Work Unit\Play_STG_Mortar" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" DurationType="OneShot" DurationMin="2.02158" DurationMax="2.02158">
+					<MediaRefs>
+						<MediaRef Id="71216937"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{4344B22C-4B3C-54F5-D68B-5302187B1D93}">
 			<ObjectPath>Play_Grass_Footsteps</ObjectPath>
 			<ShortName>Play_Grass_Footsteps</ShortName>
 			<Path>Event/Play_Grass_Footsteps.bnk</Path>
@@ -122,6 +160,25 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="1001167992" Type="Event" GUID="{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}" Language="SFX" Hash="{2BA19977-EB3E-2A15-AB0E-5BB8BAA504A3}">
+			<ObjectPath>Play_MUS_Night</ObjectPath>
+			<ShortName>Play_MUS_Night</ShortName>
+			<Path>Event/Play_MUS_Night.bnk</Path>
+			<Media>
+				<File Id="1000971565" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Full mix.wav</ShortName>
+					<Path>Media/1000971565.wem</Path>
+					<CachePath>3C/{3C340335-4F4A-28CD-B87C-B13516AAB758}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1001167992" Name="Play_MUS_Night" ObjectPath="\Events\Default Work Unit\Play_MUS_Night" GUID="{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}" DurationType="OneShot" DurationMin="93.333336" DurationMax="93.333336">
+					<MediaRefs>
+						<MediaRef Id="1000971565"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{CE01EEDE-C1CF-6F5A-9E32-6D7DFF380221}">
 			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
 			<ShortName>Play_MUS_MainMenu</ShortName>
@@ -164,15 +221,15 @@
 				<GameParameter Id="3546521921" Name="AmbientVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbientVolume" GUID="{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{CE3205EF-2AA4-D54C-C54D-25BCF51D9CF8}">
+		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{7E904AA5-60A1-016D-3E64-C8D18C47C9E4}">
 			<ObjectPath>Play_STG_Pickup</ObjectPath>
 			<ShortName>Play_STG_Pickup</ShortName>
 			<Path>Event/Play_STG_Pickup.bnk</Path>
 			<Media>
-				<File Id="10179816" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>a.wav</ShortName>
-					<Path>Media/10179816.wem</Path>
-					<CachePath>E1/{E136A2D0-604C-A290-CBAA-A7BA9F911C80}.wem</CachePath>
+				<File Id="78077000" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>dragon-studio-slow-cinematic-clock-ticking-405471.wav</ShortName>
+					<Path>Media/78077000.wem</Path>
+					<CachePath>BF/{BFF25931-079F-CE64-3447-D288C35BF173}.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -181,15 +238,34 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="0.26110864" DurationMax="0.26110864">
+				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="7.143962" DurationMax="7.143962">
 					<MediaRefs>
-						<MediaRef Id="10179816"/>
+						<MediaRef Id="78077000"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="213844949"/>
 						</Custom>
 					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3069328145" Type="Event" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" Language="SFX" Hash="{B797559A-04DD-7C48-8C4C-A953DF03F6AF}">
+			<ObjectPath>Play_STG_Clock</ObjectPath>
+			<ShortName>Play_STG_Clock</ShortName>
+			<Path>Event/Play_STG_Clock.bnk</Path>
+			<Media>
+				<File Id="665275161" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>dragon-studio-slow-cinematic-clock-ticking-405471.wav</ShortName>
+					<Path>Media/665275161.wem</Path>
+					<CachePath>F5/{F5E59E60-4C4B-450B-98EE-92DE1A8B8A04}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3069328145" Name="Play_STG_Clock" ObjectPath="\Events\Default Work Unit\Play_STG_Clock" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" DurationType="OneShot" DurationMin="8.112" DurationMax="8.112">
+					<MediaRefs>
+						<MediaRef Id="665275161"/>
+					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -212,6 +288,25 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="4100501596" Type="Event" GUID="{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}" Language="SFX" Hash="{456776CB-6C46-327B-0420-D02920BFE653}">
+			<ObjectPath>Play_MUS_Day</ObjectPath>
+			<ShortName>Play_MUS_Day</ShortName>
+			<Path>Event/Play_MUS_Day.bnk</Path>
+			<Media>
+				<File Id="501813684" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Minimal mix.wav</ShortName>
+					<Path>Media/501813684.wem</Path>
+					<CachePath>DD/{DD2F7CE5-D0F3-8158-6FDF-68CED28234B3}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4100501596" Name="Play_MUS_Day" ObjectPath="\Events\Default Work Unit\Play_MUS_Day" GUID="{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}" DurationType="OneShot" DurationMin="93.333336" DurationMax="93.333336">
+					<MediaRefs>
+						<MediaRef Id="501813684"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="4243441902" Type="Event" GUID="{00063086-C8F5-4E31-B546-3BA30C57B3FC}" Language="SFX" Hash="{FDB06760-B43A-5E05-07E3-677004BC09A6}">
 			<ObjectPath>Stop_MUS_MainMenu</ObjectPath>
 			<ShortName>Stop_MUS_MainMenu</ShortName>
@@ -221,5 +316,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D9EBDD6F-FD73-7597-23DA-F3C39E5797BF}</FileHash>
+	<FileHash>{C6FED926-AAE1-3330-E9EF-F2F3C42FD51E}</FileHash>
 </SoundBanksInfo>

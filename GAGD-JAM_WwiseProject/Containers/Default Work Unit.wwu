@@ -925,6 +925,13 @@
 														<MediaID ID="10179816"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="dragon-studio-slow-cinematic-clock-ticking-405471" ID="{06CC1955-9252-4F09-AEF9-AD276E4261B8}">
+													<Language>SFX</Language>
+													<AudioFile>dragon-studio-slow-cinematic-clock-ticking-405471.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="78077000"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Effects">
@@ -949,7 +956,7 @@
 												</ObjectList>
 											</ObjectLists>
 											<ActiveSourceList>
-												<ActiveSource Name="a" ID="{7FB66FD9-8D42-47C5-B315-9F8BBEE738EE}" Platform="Linked"/>
+												<ActiveSource Name="dragon-studio-slow-cinematic-clock-ticking-405471" ID="{06CC1955-9252-4F09-AEF9-AD276E4261B8}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="t" ID="{8202A460-E7CA-415C-BA1B-BCEAE80F01C0}" ShortID="123732542">
@@ -1065,6 +1072,20 @@
 														<MediaID ID="947700057"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="dragon-studio-slow-cinematic-clock-ticking-405471" ID="{AADB6BCE-C604-4393-8B5A-8E5C9D746479}">
+													<Language>SFX</Language>
+													<AudioFile>dragon-studio-slow-cinematic-clock-ticking-405471.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="78077000"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893" ID="{62C4F0BA-5A77-4002-9304-0FD47E795594}">
+													<Language>SFX</Language>
+													<AudioFile>fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="647833182"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Effects">
@@ -1089,7 +1110,7 @@
 												</ObjectList>
 											</ObjectLists>
 											<ActiveSourceList>
-												<ActiveSource Name="freesound_community-scale-f6-106128" ID="{DDD96387-EC8D-44D6-8F14-D7CE700EF071}" Platform="Linked"/>
+												<ActiveSource Name="fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893" ID="{62C4F0BA-5A77-4002-9304-0FD47E795594}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="freesound_community-tomar-un-objeto-46562" ID="{3B8D6929-7327-40C7-8C85-0A0564EE23DD}" ShortID="51891761">
@@ -1163,6 +1184,79 @@
 											</ObjectLists>
 											<ActiveSourceList>
 												<ActiveSource Name="freesound_community-tomar-un-objeto-46562" ID="{8F5542F4-FEFD-4F2A-90FF-9E798F9D7EF4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="dragon-studio-slow-cinematic-clock-ticking-405471" ID="{B82BE47B-5613-40D9-AA96-9D9C480BD00B}" ShortID="182211873">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>40</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dragon-studio-slow-cinematic-clock-ticking-405471" ID="{71446524-4760-496A-BE12-A5C325802E72}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.17068"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>dragon-studio-slow-cinematic-clock-ticking-405471.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="665275161"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dragon-studio-slow-cinematic-clock-ticking-405471" ID="{71446524-4760-496A-BE12-A5C325802E72}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893" ID="{1D855CAA-B1C5-410B-9040-4D8CABBC89ED}" ShortID="882670264">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>31</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893" ID="{17FDD73D-C004-4593-B682-486B70A0521F}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.42252"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.7092"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.02158"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="71216937"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893" ID="{17FDD73D-C004-4593-B682-486B70A0521F}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1249,7 +1343,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+											<ObjectRef Name="Music" ID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1273,6 +1367,50 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="HauntedLullabiesofJapan_EdoLullaby3" ID="{73F13452-1217-4A85-A4DB-43D9A4229FDA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Full mix" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}" ShortID="856002338">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Full mix" ID="{8D82894A-B204-4462-85BD-149154BAA907}">
+											<Language>SFX</Language>
+											<AudioFile>Full mix.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1000971565"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Full mix" ID="{8D82894A-B204-4462-85BD-149154BAA907}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Minimal mix" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}" ShortID="372458432">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Minimal mix" ID="{21C247CF-B53C-4A98-A249-A933DC8B90CD}">
+											<Language>SFX</Language>
+											<AudioFile>Minimal mix.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="501813684"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Minimal mix" ID="{21C247CF-B53C-4A98-A249-A933DC8B90CD}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
