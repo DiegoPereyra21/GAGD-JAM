@@ -8,5 +8,7 @@ namespace Game.Collectibles
         public string ingredientId;
         public string displayName;
         public IngredientType rawSource;
+        [TextArea(2, 4)]
+        public string locationDescription;
     }
 }

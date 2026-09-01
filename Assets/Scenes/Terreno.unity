@@ -1960,8 +1960,7 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.3
   labelHeight: 0.5
-  previewGroupCount: 4
-  previewItemsPerGroup: 3
+  maxVisualsPerGroup: 6
 --- !u!1 &275124846
 GameObject:
   m_ObjectHideFlags: 0
@@ -6517,8 +6516,7 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.4
   labelHeight: 0.5
-  previewGroupCount: 4
-  previewItemsPerGroup: 3
+  maxVisualsPerGroup: 6
 --- !u!1 &766526596
 GameObject:
   m_ObjectHideFlags: 0
@@ -13168,8 +13166,7 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.5
   labelHeight: 0.5
-  previewGroupCount: 4
-  previewItemsPerGroup: 3
+  maxVisualsPerGroup: 6
 --- !u!1 &1356069696
 GameObject:
   m_ObjectHideFlags: 0
@@ -15269,8 +15266,7 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.3
   labelHeight: 0.5
-  previewGroupCount: 4
-  previewItemsPerGroup: 3
+  maxVisualsPerGroup: 6
 --- !u!4 &1500143547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1981777297809270317, guid: cc9ae118ef8dacb478f9680be9e31605, type: 3}
@@ -20521,8 +20517,7 @@ MonoBehaviour:
   itemsPerRow: 3
   itemSpacing: 0.5
   labelHeight: 0.5
-  previewGroupCount: 4
-  previewItemsPerGroup: 3
+  maxVisualsPerGroup: 6
 --- !u!1 &1908038175
 GameObject:
   m_ObjectHideFlags: 0
@@ -24056,6 +24051,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   questManager: {fileID: 382290573}
   potionDisplayArea: {fileID: 0}
+  sleepPotionRecipe: {fileID: 0}
 --- !u!33 &700599078467179513
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26348,6 +26344,7 @@ MonoBehaviour:
   basketDisplay: {fileID: 263165654}
   cameraTransition: {fileID: 1560979843}
   houseViewAnchor: {fileID: 0}
+  questManager: {fileID: 0}
   playerController: {fileID: 973368103}
   teleportDestination: {fileID: 2246326223860669308}
   dayTransition: {fileID: 1577049242987313214}
@@ -30971,6 +30968,7 @@ MonoBehaviour:
   basketDisplay: {fileID: 263165654}
   cameraTransition: {fileID: 1560979843}
   houseViewAnchor: {fileID: 0}
+  questManager: {fileID: 0}
   playerController: {fileID: 973368103}
   teleportDestination: {fileID: 0}
   dayTransition: {fileID: 0}
