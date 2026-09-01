@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
+  m_Name: "Poci\xF3n cool"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
+  potionId: pocion_cool
+  potionName: "Poci\xF3n cool"
+  visualPrefab: {fileID: 0}
+  ingredients:
+  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
+    amount: 1
+  description: "Lo usan solo las personas geniales, de buena onda y extrovertidos
+    que se amigan con todo el mundo. \xA1No apta para los amargos!"

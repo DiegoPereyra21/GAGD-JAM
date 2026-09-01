@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Web" BasePlatform="Web" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="176225071" Type="Event" GUID="{3988C77F-BCBF-402F-9B7C-54086E13365D}" Language="SFX" Hash="{A3E0C7D7-CD90-F43E-0FD9-677A5E828C3D}">
+			<ObjectPath>Play_STG_Cut</ObjectPath>
+			<ShortName>Play_STG_Cut</ShortName>
+			<Path>Event/Play_STG_Cut.bnk</Path>
+			<Media>
+				<File Id="504329888" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>jam.wav</ShortName>
+					<Path>Media/504329888.wem</Path>
+					<CachePath>9E/{9E0A26D9-3216-7B39-849A-803F9DD63EE4}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="176225071" Name="Play_STG_Cut" ObjectPath="\Events\Default Work Unit\Play_STG_Cut" GUID="{3988C77F-BCBF-402F-9B7C-54086E13365D}" DurationType="OneShot" DurationMin="1.0754195" DurationMax="1.0754195">
+					<MediaRefs>
+						<MediaRef Id="504329888"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{27A5B799-B1CE-B237-1580-2F008C73E98D}</FileHash>
+</SoundBanksInfo>

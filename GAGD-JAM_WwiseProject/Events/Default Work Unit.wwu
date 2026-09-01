@@ -64,6 +64,59 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MUS_Day" ID="{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}">
+					<ChildrenList>
+						<Action Name="" ID="{1F48132A-69B5-452C-BC01-32B673504093}" ShortID="86191471">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Minimal mix" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8B6512A5-853E-4776-9659-FE1E08C5C604}" ShortID="232199653">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Minimal mix" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MUS_Night" ID="{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}">
+					<ChildrenList>
+						<Action Name="" ID="{B2D8FF2D-657C-4439-9A06-0087C069E8E3}" ShortID="482672369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Full mix" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B98C7269-3569-4EBB-8368-AFAE34F4F311}" ShortID="501898963">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Full mix" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_STG_Clock" ID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}">
+					<ChildrenList>
+						<Action Name="" ID="{9F179C2B-DB6E-49D9-83A2-0D45ED34D58E}" ShortID="111860686">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="dragon-studio-slow-cinematic-clock-ticking-405471" ID="{B82BE47B-5613-40D9-AA96-9D9C480BD00B}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

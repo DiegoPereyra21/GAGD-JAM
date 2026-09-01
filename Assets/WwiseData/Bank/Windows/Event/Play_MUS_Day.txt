@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4100501596	Play_MUS_Day			\Default Work Unit\Play_MUS_Day	
+

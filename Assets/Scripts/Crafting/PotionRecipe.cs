@@ -8,4 +8,5 @@ public class PotionRecipe : ScriptableObject
     public string potionName;
     public GameObject visualPrefab;
     public List<RecipeIngredient> ingredients;
+    public string description;
 }
