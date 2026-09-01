@@ -22860,8 +22860,8 @@ MonoBehaviour:
   playerInput: {fileID: 1456227255}
   questManager: {fileID: 382290573}
   pendingLetters:
-  - {fileID: 11400000, guid: 17eb4b60233a8134c83d56e61818fe8e, type: 2}
-  - {fileID: 11400000, guid: 6baff2c6becc8a64ca6c25650775a492, type: 2}
+  - {fileID: 11400000, guid: 3fe175dbb28617047afe5d54bf67f4c4, type: 2}
+  - {fileID: 0}
   outline: {fileID: 2118675956}
 --- !u!114 &2118675956
 MonoBehaviour:

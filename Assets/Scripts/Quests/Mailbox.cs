@@ -9,7 +9,6 @@ public class Mailbox : MonoBehaviour
     [SerializeField] private QuestManager questManager;
     [SerializeField] private List<QuestData> pendingLetters = new List<QuestData>();
     [SerializeField] private InteractableOutline outline;
-    public int RemainingCount => pendingLetters.Count;
 
     private InputAction interactAction;
     private bool playerInRange;
@@ -19,8 +18,23 @@ public class Mailbox : MonoBehaviour
         interactAction = playerInput.actions["Interact"];
     }
 
-    private void OnEnable() => interactAction.performed += OnInteract;
-    private void OnDisable() => interactAction.performed -= OnInteract;
+    private void OnEnable()
+    {
+        interactAction.performed += OnInteract;
+        GameProgressManager.Instance.OnNightStarted += DiscardExpiredLetters;
+    }
+
+    private void OnDisable()
+    {
+        interactAction.performed -= OnInteract;
+        GameProgressManager.Instance.OnNightStarted -= DiscardExpiredLetters;
+    }
+
+    private void DiscardExpiredLetters()
+    {
+        int currentDay = GameProgressManager.Instance.CurrentDay;
+        pendingLetters.RemoveAll(letter => letter.availableDay < currentDay);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -31,21 +45,28 @@ public class Mailbox : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public int RemainingCount
     {
-        if (other.CompareTag("Player"))
+        get
         {
-            playerInRange = false;
-            outline?.SetHighlighted(false);
+            int currentDay = GameProgressManager.Instance.CurrentDay;
+            int count = 0;
+            foreach (QuestData letter in pendingLetters)
+                if (letter.availableDay <= currentDay) count++;
+            return count;
         }
     }
 
     private void OnInteract(InputAction.CallbackContext ctx)
     {
-        if (!playerInRange || pendingLetters.Count == 0) return;
+        if (!playerInRange) return;
 
-        QuestData letter = pendingLetters[0];
-        pendingLetters.RemoveAt(0);
+        int currentDay = GameProgressManager.Instance.CurrentDay;
+        QuestData letter = pendingLetters.Find(q => q.availableDay <= currentDay);
+        if (letter == null) return;
+
+        pendingLetters.Remove(letter);
         questManager.AddQuest(letter);
     }
+
 }

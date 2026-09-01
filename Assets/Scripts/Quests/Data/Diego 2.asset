@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
+  m_Name: Diego 2
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: diego_thunderhand
+  villagerName: Diego Thunderhand
+  missionName: Pocion de Despertar para Diego
+  objectives: []
+  moneyReward: 8
+  requiredPotion: {fileID: 11400000, guid: 24915c16a263c6e448e44c4a2fb5c7ab, type: 2}
+  availableDay: 2

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
+  m_Name: Pocion de Latigo 2
+  m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
+  potionId: pocion_de_latigo_2
+  potionName: Pocion de Latigo 2
+  visualPrefab: {fileID: 0}
+  ingredients:
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
+    amount: 2
+  description: 

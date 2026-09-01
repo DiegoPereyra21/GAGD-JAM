@@ -10,4 +10,5 @@ public class QuestData : ScriptableObject
     public List<QuestObjective> objectives;
     public int moneyReward;
     public PotionRecipe requiredPotion;
+    public int availableDay = 1;
 }

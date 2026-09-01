@@ -14,15 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_cool
   potionName: "Poci\xF3n cool"
-  visualPrefab: {fileID: 0}
+  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
     amount: 2
   - type: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
-    amount: 1
+    amount: 2
   - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
     amount: 2
-  - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
-    amount: 1
   description: "Lo usan solo las personas geniales, de buena onda y extrovertidos
     que se amigan con todo el mundo. \xA1No apta para los amargos!"

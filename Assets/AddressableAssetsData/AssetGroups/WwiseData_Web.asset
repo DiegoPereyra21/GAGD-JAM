@@ -65,6 +65,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61e002597a978114c98b57e7af9f6a42
+    m_Address: Assets/WwiseData/Bank/Web/Media/504329888.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 67035f208b875d34186f92517d2fd6ae
     m_Address: Assets/WwiseData/Bank/Web/Event/Play_MUS_Night.bnk
     m_ReadOnly: 0
@@ -72,6 +77,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6a55018fa3ff3654787fe5e7fda2f5f6
     m_Address: Assets/WwiseData/Bank/Web/Media/260049539.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d852ecff79bc9b4cacd30d21b7c3866
+    m_Address: Assets/WwiseData/Bank/Web/Event/Play_STG_Mortar.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -97,6 +107,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 87896c11e88f0c441844c5f22b8307b8
     m_Address: Assets/WwiseData/Bank/Web/Event/Play_MUS_MainMenu.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e41682f0f9824d4589fec5756770af4
+    m_Address: Assets/WwiseData/Bank/Web/Media/71216937.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -142,6 +157,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5d7ff07ffee8c64eb07fff376b663a6
     m_Address: Assets/WwiseData/Bank/Web/Media/635418451.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6d96531671d1b442ae23207d11a8466
+    m_Address: Assets/WwiseData/Bank/Web/Event/Play_STG_Cut.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
