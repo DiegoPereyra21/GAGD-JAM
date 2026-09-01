@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Web" BasePlatform="Web" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{4344B22C-4B3C-54F5-D68B-5302187B1D93}">
+		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{2AD0AF54-7508-CC18-977E-9733433A0A11}">
 			<ObjectPath>Play_Grass_Footsteps</ObjectPath>
 			<ShortName>Play_Grass_Footsteps</ShortName>
 			<Path>Event/Play_Grass_Footsteps.bnk</Path>
@@ -115,5 +115,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A4E9E12C-FC9E-4C98-3D35-951E4FA90E77}</FileHash>
+	<FileHash>{934CE80A-01BD-620E-00E1-83C0CAD093AF}</FileHash>
 </SoundBanksInfo>

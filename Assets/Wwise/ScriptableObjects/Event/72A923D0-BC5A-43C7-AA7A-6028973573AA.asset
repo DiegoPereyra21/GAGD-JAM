@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0828636031cd441bbd4acc3d7f374e, type: 3}
+  m_Name: 72A923D0-BC5A-43C7-AA7A-6028973573AA
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: STOP_STG_Clock
+  id: 3389563599
+  guid: 72A923D0-BC5A-43C7-AA7A-6028973573AA
+  AutoBank: {fileID: 11400000, guid: 8e6f72a01fc17404e912f4f919ed6995, type: 2}
+  IsInUserDefinedSoundBank: 0

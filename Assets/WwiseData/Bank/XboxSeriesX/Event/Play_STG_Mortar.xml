@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="XboxSeriesX" BasePlatform="XboxSeriesX" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{2581D953-5227-43A8-70C9-82A7CFEC134F}">
+			<ObjectPath>Play_STG_Mortar</ObjectPath>
+			<ShortName>Play_STG_Mortar</ShortName>
+			<Path>Event/Play_STG_Mortar.bnk</Path>
+			<Media>
+				<File Id="71216937" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893.wav</ShortName>
+					<Path>Media/71216937.wem</Path>
+					<CachePath>A9/{A9311BDA-8271-0E5D-B868-D24DBD1356A3}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="358402734" Name="Play_STG_Mortar" ObjectPath="\Events\Default Work Unit\Play_STG_Mortar" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" DurationType="OneShot" DurationMin="1.0995879" DurationMax="1.0995879">
+					<MediaRefs>
+						<MediaRef Id="71216937"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{880CC7B2-E702-2155-0463-698CDFB9D4DA}</FileHash>
+</SoundBanksInfo>

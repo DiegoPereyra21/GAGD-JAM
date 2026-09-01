@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "XboxOne",
+  "BasePlatform": "XboxOne",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "176225071",
+    "Type": "Event",
+    "GUID": "{3988C77F-BCBF-402F-9B7C-54086E13365D}",
+    "Language": "SFX",
+    "Hash": "{22747D65-13DC-9D49-D270-9357C748941C}",
+    "ObjectPath": "Play_STG_Cut",
+    "ShortName": "Play_STG_Cut",
+    "Path": "Event/Play_STG_Cut.bnk",
+    "Media": [
+     {
+      "Id": "504329888",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "jam.wav",
+      "Path": "Media/504329888.wem",
+      "CachePath": "8D/{8D8C3892-B17A-15E5-4D55-F5576A814CB9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "176225071",
+      "Name": "Play_STG_Cut",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_STG_Cut",
+      "GUID": "{3988C77F-BCBF-402F-9B7C-54086E13365D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.68864375",
+      "DurationMax": "0.68864375",
+      "MediaRefs": [
+       {
+        "Id": "504329888"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{814DD042-2D37-B4C5-C3F2-2AEB7317288E}"
+ }
+}

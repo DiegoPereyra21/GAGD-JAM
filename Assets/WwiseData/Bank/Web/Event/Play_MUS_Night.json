@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}",
     "Language": "SFX",
-    "Hash": "{2BA19977-EB3E-2A15-AB0E-5BB8BAA504A3}",
+    "Hash": "{A2708F8B-DBFC-9FAC-56F8-17846C331996}",
     "ObjectPath": "Play_MUS_Night",
     "ShortName": "Play_MUS_Night",
     "Path": "Event/Play_MUS_Night.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Full mix.wav",
       "Path": "Media/1000971565.wem",
-      "CachePath": "3C/{3C340335-4F4A-28CD-B87C-B13516AAB758}.wem"
+      "CachePath": "1B/{1BBB2DA3-FF4E-A842-40D6-105E4968CB90}.wem"
      }
     ],
     "Events": [
@@ -31,9 +31,7 @@
       "Name": "Play_MUS_Night",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_Night",
       "GUID": "{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}",
-      "DurationType": "OneShot",
-      "DurationMin": "93.333336",
-      "DurationMax": "93.333336",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "1000971565"
@@ -43,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{AB1B8999-877C-41BB-6247-DD50D7CD5F67}"
+  "FileHash": "{A4DD27ED-CE36-6B9E-6521-7D00A3F2636F}"
  }
 }

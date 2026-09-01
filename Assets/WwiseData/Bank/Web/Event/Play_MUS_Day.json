@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}",
     "Language": "SFX",
-    "Hash": "{456776CB-6C46-327B-0420-D02920BFE653}",
+    "Hash": "{30BB5405-7C24-9D4A-EBEE-85A1E4555A64}",
     "ObjectPath": "Play_MUS_Day",
     "ShortName": "Play_MUS_Day",
     "Path": "Event/Play_MUS_Day.bnk",
@@ -18,11 +18,11 @@
      {
       "Id": "501813684",
       "Language": "SFX",
-      "Streaming": "false",
+      "Streaming": "true",
       "Location": "Loose",
       "ShortName": "Minimal mix.wav",
       "Path": "Media/501813684.wem",
-      "CachePath": "DD/{DD2F7CE5-D0F3-8158-6FDF-68CED28234B3}.wem"
+      "CachePath": "7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem"
      }
     ],
     "Events": [
@@ -31,9 +31,7 @@
       "Name": "Play_MUS_Day",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_Day",
       "GUID": "{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}",
-      "DurationType": "OneShot",
-      "DurationMin": "93.333336",
-      "DurationMax": "93.333336",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "501813684"
@@ -43,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{EF2CC6EB-91C3-F2FC-17DB-074D8A7921A1}"
+  "FileHash": "{640DB5D3-613E-2035-9B7C-C256717998AD}"
  }
 }

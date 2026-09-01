@@ -72,6 +72,10 @@ public class CauldronCraftingSystem : MonoBehaviour
         public IngredientType processedType;
     }
 
+    [Header("Sonidos de crafting")]
+    [SerializeField] private AK.Wwise.Event playSTGCut;
+    [SerializeField] private AK.Wwise.Event playSTGMort;
+
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
@@ -295,6 +299,16 @@ public class CauldronCraftingSystem : MonoBehaviour
 
     private void ProcessIngredient(IngredientType rawType, ProcessingStation station)
     {
+        //AkUnitySoundEngine.PostEvent("Play_STG_Cut", gameObject);
+        if (station == ProcessingStation.CuttingBoard)
+        {
+            playSTGCut.Post(gameObject);
+        } else
+        {
+            playSTGMort.Post(gameObject);
+        }
+
+
         ProcessingRecipe recipe = processingRecipes.Find(r => r.rawType == rawType && r.station == station);
         IngredientType resultType = recipe.processedType;
 

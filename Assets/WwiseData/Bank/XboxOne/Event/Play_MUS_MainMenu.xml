@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="XboxOne" BasePlatform="XboxOne" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{CE01EEDE-C1CF-6F5A-9E32-6D7DFF380221}">
+		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{5FF2E4B6-D27A-F827-138D-323A32550481}">
 			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
 			<ShortName>Play_MUS_MainMenu</ShortName>
 			<Path>Event/Play_MUS_MainMenu.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{817B7BA3-F9BB-E984-7052-7C178294866B}</FileHash>
+	<FileHash>{BB486A84-3393-A788-35A8-7B13125CE2B5}</FileHash>
 </SoundBanksInfo>
