@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3069328145",
+    "Type": "Event",
+    "GUID": "{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}",
+    "Language": "SFX",
+    "Hash": "{B797559A-04DD-7C48-8C4C-A953DF03F6AF}",
+    "ObjectPath": "Play_STG_Clock",
+    "ShortName": "Play_STG_Clock",
+    "Path": "Event/Play_STG_Clock.bnk",
+    "Media": [
+     {
+      "Id": "665275161",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "dragon-studio-slow-cinematic-clock-ticking-405471.wav",
+      "Path": "Media/665275161.wem",
+      "CachePath": "F5/{F5E59E60-4C4B-450B-98EE-92DE1A8B8A04}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3069328145",
+      "Name": "Play_STG_Clock",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_STG_Clock",
+      "GUID": "{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.112",
+      "DurationMax": "8.112",
+      "MediaRefs": [
+       {
+        "Id": "665275161"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{567A2573-6730-7269-5338-C5C58018E14C}"
+ }
+}

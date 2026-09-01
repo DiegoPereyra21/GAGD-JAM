@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a6d7054fb1d65b448b50cb775a50c44
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_MUS_Night.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 24354f6a08972a945bc5e9bd64d40dee
     m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_Menu_Button_Hover.bnk
     m_ReadOnly: 0
@@ -40,6 +45,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 331bd41e4f59ad348b11001f49b9ed61
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/665275161.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33fd2d2b146d23b42b8285faa00c56e2
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_STG_Cut.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 343f3ce8d0fbfd341b62d9138608298d
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/51774552.wem
     m_ReadOnly: 0
@@ -55,18 +70,43 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c6080bd3919c98458b311c21217e4db
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/71216937.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c970c58c6b0e294c8494eef2d995d67
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/501813684.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a6c6fe12b9baea4ebae311ce3e9b8d4
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/STOP_STG_Clock.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c5bb76e2a130cf4a883e2f4fe09b3e8
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/354389179.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7083c9a8ac0198e4d95b984c1650763d
-    m_Address: Assets/WwiseData/Bank/XboxOne/Media/669185545.wem
+  - m_GUID: 747e7163240f29945b2c7c50164b439e
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_STG_Mortar.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84a8507783f8d4a48a06e56213604023
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/1000971565.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8cdf5a1c4bfd4294fab87155990f90a6
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/277566653.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d3f08358c886ac4b899ef36424c38a0
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -117,6 +157,21 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da2a754cae7120d4b95282b14a29470d
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/260049539.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db699bdd2fc9eeb43aadaae3ddb8ed85
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/504329888.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eea43f46b6c38554183af33fd588ba07
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_STG_Clock.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f988a101b912dde47a7a7fc201f374fb
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/340777126.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

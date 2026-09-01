@@ -21,13 +21,18 @@
 										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>10</Value>
+												<Value>15</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>700</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -409,6 +414,11 @@
 									</ValueList>
 								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1054,7 +1064,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+													<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1136,7 +1146,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+													<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1231,21 +1241,31 @@
 														<Value>31</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>530</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+													<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893" ID="{17FDD73D-C004-4593-B682-486B70A0521F}">
 													<PropertyList>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.42252"/>
-														<Property Name="LoopBegin" Type="Real64" Value="0.7092"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.52815"/>
 														<Property Name="TrimEnd" Type="Real64" Value="2.02158"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -1257,6 +1277,40 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="fronbondi_skegs-sfx-unsettling-grinding-of-ceramic-tiles-sound-effects-243893" ID="{17FDD73D-C004-4593-B682-486B70A0521F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="jam" ID="{2459E1B1-1896-400C-AF8B-B7A58487B4D4}" ShortID="937842491">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>520</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="jam" ID="{24F37682-3F46-4B16-A8AD-BE6AB3C04281}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.22019"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.92991"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>jam.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="504329888"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="jam" ID="{24F37682-3F46-4B16-A8AD-BE6AB3C04281}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1275,6 +1329,11 @@
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>60</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1370,6 +1429,9 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Full mix" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}" ShortID="856002338">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
@@ -1392,6 +1454,14 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Minimal mix" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}" ShortID="372458432">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>

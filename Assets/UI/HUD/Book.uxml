@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/HUD/Book.uss?fileID=7433441132597879392&amp;guid=a48867d9880de0c4ab751e72f0952b33&amp;type=3#Book"/>
-    <ui:VisualElement name="BookContainer" style="flex-grow: 1;">
+    <ui:VisualElement name="BookContainer" style="flex-grow: 1; display: flex;">
         <ui:VisualElement name="Header" style="flex-grow: 1;">
             <ui:VisualElement name="CloseArea" style="flex-grow: 1;">
                 <ui:Button text="Cerrar" name="CloseButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 32px;"/>

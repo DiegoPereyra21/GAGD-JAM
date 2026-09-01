@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0828636031cd441bbd4acc3d7f374e, type: 3}
+  m_Name: 74918F02-B781-4BB8-959D-34AF096650FF
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: Play_STG_Mortar
+  id: 358402734
+  guid: 74918F02-B781-4BB8-959D-34AF096650FF
+  AutoBank: {fileID: 11400000, guid: 8ababd84e6b95724dba481c72c1b34c8, type: 2}
+  IsInUserDefinedSoundBank: 0

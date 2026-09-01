@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: WwiseData_Mac
   m_GUID: 1b374183d68f84648b3f0016b572867b
   m_SerializeEntries:
+  - m_GUID: 12464604aeb10fc4e9c116eb0d9159d9
+    m_Address: Assets/WwiseData/Bank/Mac/Media/71216937.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 141f5e335a5cedc4fa832dbac685ce66
+    m_Address: Assets/WwiseData/Bank/Mac/Event/STOP_STG_Clock.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1d40f85bcdcff9440a4ab39409baadab
     m_Address: Assets/WwiseData/Bank/Mac/Media/260049539.wem
     m_ReadOnly: 0
@@ -30,8 +40,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33e712bf5583d0c45910724fcc17e980
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_MUS_Day.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3594f2542b8b4ff4c85d15bafd836159
     m_Address: Assets/WwiseData/Bank/Mac/Media/228208572.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f6afef28cafddb4c9994231fceab727
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_STG_Cut.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -55,13 +75,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f2a7875b4f070444877b344a644c2b3
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_STG_Clock.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5fcf446b65ce72d438ab2d081aa958f5
     m_Address: Assets/WwiseData/Bank/Mac/Media/749912226.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65190ad11857d6a468bf6177e145055e
+    m_Address: Assets/WwiseData/Bank/Mac/Media/1000971565.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 670426239974db74899aebf2e3c7f3d5
+    m_Address: Assets/WwiseData/Bank/Mac/Media/504329888.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 697243350a9a2d44b8c3870a9300553e
     m_Address: Assets/WwiseData/Bank/Mac/Media/635418451.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75944d32aeb0ff64d9ba529da6bc9355
+    m_Address: Assets/WwiseData/Bank/Mac/Media/665275161.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -87,6 +127,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa4659421d2266347824dd183b9c0321
     m_Address: Assets/WwiseData/Bank/Mac/Event/Play_Grass_Footsteps.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b03fe9165a4def7419d32460c1d3ffa3
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_MUS_Night.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -120,8 +165,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d3c36b006c98d4943b5a4709c00f0935
-    m_Address: Assets/WwiseData/Bank/Mac/Media/669185545.wem
+  - m_GUID: dc62fe30f0b1a214cad8b9b6eec3e1c1
+    m_Address: Assets/WwiseData/Bank/Mac/Media/340777126.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1a65df04cb6f6d4dad190743fcef6a7
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_STG_Mortar.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec30f8cbdde7ea94f8d768ce8dc35713
+    m_Address: Assets/WwiseData/Bank/Mac/Media/501813684.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

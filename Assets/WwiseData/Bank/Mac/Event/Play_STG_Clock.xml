@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="3069328145" Type="Event" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" Language="SFX" Hash="{B797559A-04DD-7C48-8C4C-A953DF03F6AF}">
+			<ObjectPath>Play_STG_Clock</ObjectPath>
+			<ShortName>Play_STG_Clock</ShortName>
+			<Path>Event/Play_STG_Clock.bnk</Path>
+			<Media>
+				<File Id="665275161" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>dragon-studio-slow-cinematic-clock-ticking-405471.wav</ShortName>
+					<Path>Media/665275161.wem</Path>
+					<CachePath>F5/{F5E59E60-4C4B-450B-98EE-92DE1A8B8A04}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3069328145" Name="Play_STG_Clock" ObjectPath="\Events\Default Work Unit\Play_STG_Clock" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" DurationType="OneShot" DurationMin="8.112" DurationMax="8.112">
+					<MediaRefs>
+						<MediaRef Id="665275161"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{92CA5BA5-BACD-EC69-BCF5-646D661852B0}</FileHash>
+</SoundBanksInfo>

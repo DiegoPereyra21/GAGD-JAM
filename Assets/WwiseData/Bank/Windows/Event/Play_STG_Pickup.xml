@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{7E904AA5-60A1-016D-3E64-C8D18C47C9E4}">
+		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{AEE6803C-883E-E43F-D191-6A548B17C673}">
 			<ObjectPath>Play_STG_Pickup</ObjectPath>
 			<ShortName>Play_STG_Pickup</ShortName>
 			<Path>Event/Play_STG_Pickup.bnk</Path>
 			<Media>
-				<File Id="78077000" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>dragon-studio-slow-cinematic-clock-ticking-405471.wav</ShortName>
-					<Path>Media/78077000.wem</Path>
-					<CachePath>BF/{BFF25931-079F-CE64-3447-D288C35BF173}.wem</CachePath>
+				<File Id="340777126" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>t.wav</ShortName>
+					<Path>Media/340777126.wem</Path>
+					<CachePath>35/{35C9DD52-5A68-EFD2-8ECB-8A9AE0361F90}.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="213844949" Name="Parametric EQ (Custom)" ObjectPath="\Containers\Default Work Unit\SFX\Stingers\UI\a\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{73A24686-4B8F-481A-BFE8-C85120C75762}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="711212608" Name="Parametric EQ (Custom)" ObjectPath="\Containers\Default Work Unit\SFX\Stingers\UI\t\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{F3568267-B056-4640-8BF3-F7C0D156F0AD}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="7.143962" DurationMax="7.143962">
+				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="0.3906876" DurationMax="0.3906876">
 					<MediaRefs>
-						<MediaRef Id="78077000"/>
+						<MediaRef Id="340777126"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="213844949"/>
+							<PluginRef Id="711212608"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9274DE34-1CD4-20BC-7718-0330C9D0A2E1}</FileHash>
+	<FileHash>{BF2879ED-F6BE-36BE-614E-54ED4BEA4C3D}</FileHash>
 </SoundBanksInfo>

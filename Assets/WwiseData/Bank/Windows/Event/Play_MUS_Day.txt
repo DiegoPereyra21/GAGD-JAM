@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	4100501596	Play_MUS_Day			\Default Work Unit\Play_MUS_Day	
 
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	501813684	Minimal mix	.cache\7B\{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem	501813684.wem	\Containers\Default Work Unit\Music\Tracks\Minimal mix	
+
