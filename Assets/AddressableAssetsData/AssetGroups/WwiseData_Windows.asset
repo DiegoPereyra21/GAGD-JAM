@@ -40,8 +40,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a1ab245360c83a4c8d8950bd29b9b65
+    m_Address: Assets/WwiseData/Bank/Windows/Media/78077000.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 342a6f9f4ecb9964a995870cd8f006c8
     m_Address: Assets/WwiseData/Bank/Windows/Media/229322620.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 367dbf113c5d2d249bbebf579f370af3
+    m_Address: Assets/WwiseData/Bank/Windows/Media/1000971565.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -57,6 +67,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7700635c47c2f604da96731981a3bda5
     m_Address: Assets/WwiseData/Bank/Windows/Media/809076942.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e4d583fc72efd94d877e1a1a3ad3548
+    m_Address: Assets/WwiseData/Bank/Windows/Media/665275161.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -105,8 +120,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c3817266f9028a144a2d4ae8d923d2e7
-    m_Address: Assets/WwiseData/Bank/Windows/Media/10179816.wem
+  - m_GUID: b8e96337f84a42140ae5f9f24260d265
+    m_Address: Assets/WwiseData/Bank/Windows/Media/501813684.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc3c4f7bd347de34aaa540dad89144e8
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Clock.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccd92c87b0c73ba408d2b17e2b3c67fb
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_Night.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1b2fae01ef148846a8168d675fa86c7
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

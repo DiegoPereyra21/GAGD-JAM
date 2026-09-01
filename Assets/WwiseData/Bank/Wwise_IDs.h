@@ -15,7 +15,12 @@ namespace AK
     {
         static const AkUniqueID PLAY_GRASS_FOOTSTEPS = 546793308U;
         static const AkUniqueID PLAY_MENU_BUTTON_HOVER = 3305792757U;
+        static const AkUniqueID PLAY_MUS_DAY = 4100501596U;
         static const AkUniqueID PLAY_MUS_MAINMENU = 1043591872U;
+        static const AkUniqueID PLAY_MUS_NIGHT = 1001167992U;
+        static const AkUniqueID PLAY_STG_CLOCK = 3069328145U;
+        static const AkUniqueID PLAY_STG_CUT = 176225071U;
+        static const AkUniqueID PLAY_STG_MORTAR = 358402734U;
         static const AkUniqueID PLAY_STG_PICKUP = 1532146285U;
         static const AkUniqueID STOP_MUS_MAINMENU = 4243441902U;
     } // namespace EVENTS

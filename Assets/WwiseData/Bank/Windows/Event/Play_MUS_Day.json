@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4100501596",
+    "Type": "Event",
+    "GUID": "{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}",
+    "Language": "SFX",
+    "Hash": "{456776CB-6C46-327B-0420-D02920BFE653}",
+    "ObjectPath": "Play_MUS_Day",
+    "ShortName": "Play_MUS_Day",
+    "Path": "Event/Play_MUS_Day.bnk",
+    "Media": [
+     {
+      "Id": "501813684",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Minimal mix.wav",
+      "Path": "Media/501813684.wem",
+      "CachePath": "DD/{DD2F7CE5-D0F3-8158-6FDF-68CED28234B3}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4100501596",
+      "Name": "Play_MUS_Day",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_Day",
+      "GUID": "{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}",
+      "DurationType": "OneShot",
+      "DurationMin": "93.333336",
+      "DurationMax": "93.333336",
+      "MediaRefs": [
+       {
+        "Id": "501813684"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7D541DE5-F040-BB8B-5E9A-EA6C75AE7EC0}"
+ }
+}

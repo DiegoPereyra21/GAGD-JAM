@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1001167992",
+    "Type": "Event",
+    "GUID": "{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}",
+    "Language": "SFX",
+    "Hash": "{2BA19977-EB3E-2A15-AB0E-5BB8BAA504A3}",
+    "ObjectPath": "Play_MUS_Night",
+    "ShortName": "Play_MUS_Night",
+    "Path": "Event/Play_MUS_Night.bnk",
+    "Media": [
+     {
+      "Id": "1000971565",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Full mix.wav",
+      "Path": "Media/1000971565.wem",
+      "CachePath": "3C/{3C340335-4F4A-28CD-B87C-B13516AAB758}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1001167992",
+      "Name": "Play_MUS_Night",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_Night",
+      "GUID": "{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}",
+      "DurationType": "OneShot",
+      "DurationMin": "93.333336",
+      "DurationMax": "93.333336",
+      "MediaRefs": [
+       {
+        "Id": "1000971565"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C1309214-52D8-A854-9240-2D1CC0D85191}"
+ }
+}
