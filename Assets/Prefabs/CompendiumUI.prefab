@@ -69,3 +69,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BookController
   recipeDatabase: {fileID: 11400000, guid: 4e94c71289c33ec48af7307126840f98, type: 2}
+  openBookAction: {fileID: -2689522614556992845, guid: 052faaac586de48259a63d0c4782560b, type: 3}
