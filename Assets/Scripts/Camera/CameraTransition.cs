@@ -1,33 +1,35 @@
 using System;
 using System.Collections;
 using UnityEngine;
-//blend muuuuy lindo, sin necesidad de cinemachine
+using Unity.Cinemachine;
+
 public class CameraTransition : MonoBehaviour
 {
-    [SerializeField] private CameraFollow cameraFollow;
+    [SerializeField] private CinemachineBrain cinemachineBrain;
+    [SerializeField] private Transform cinemachineCameraTransform;
     [SerializeField] private float blendDuration = 0.5f;
+    [SerializeField] private Transform startingAnchor;
 
     private Coroutine blendRoutine;
     private Transform activeAnchor;
-
-
-    //para que comience en la cama, como teniamosplaneada la historia
-    [SerializeField] private Transform startingAnchor;
 
     private void Awake()
     {
         if (startingAnchor != null)
         {
-            cameraFollow.enabled = false;
+            cinemachineBrain.enabled = false;
             transform.position = startingAnchor.position;
             transform.rotation = startingAnchor.rotation;
         }
     }
-    //para q no este hardcodeado al basketViewAnchor nada mas
+
     public void TransitionTo(Transform anchor, Action onComplete = null)
     {
-        cameraFollow.enabled = false;
+        cinemachineBrain.enabled = false;
         activeAnchor = null;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         StartBlend(anchor.position, anchor.rotation, () =>
         {
@@ -40,12 +42,14 @@ public class CameraTransition : MonoBehaviour
     {
         activeAnchor = null;
 
-        Vector3 targetPos = cameraFollow.GetDesiredPosition();
-        Quaternion targetRot = cameraFollow.FixedRotation;
+        Vector3 targetPos = cinemachineCameraTransform.position;
+        Quaternion targetRot = cinemachineCameraTransform.rotation;
 
         StartBlend(targetPos, targetRot, () =>
         {
-            cameraFollow.enabled = true;
+            cinemachineBrain.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             onComplete?.Invoke();
         });
     }
@@ -85,4 +89,5 @@ public class CameraTransition : MonoBehaviour
         blendRoutine = null;
         onComplete?.Invoke();
     }
+
 }
