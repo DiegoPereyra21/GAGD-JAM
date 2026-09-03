@@ -2,12 +2,14 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using Unity.Cinemachine;
 
 [RequireComponent(typeof(UIDocument))]
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
+    [SerializeField] private CinemachineBrain cinemachineBrain;
 
     private VisualElement root;
     private VisualElement content;
@@ -45,12 +47,15 @@ public class PauseMenu : MonoBehaviour
         if (isPaused) Resume();
         else Pause();
     }
-
+    
     private void Pause()
     {
         isPaused = true;
         previousTimeScale = Time.timeScale;
         Time.timeScale = 0f;
+
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
 
         root.style.display = DisplayStyle.Flex;
         content.style.display = DisplayStyle.Flex;
@@ -62,6 +67,12 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         Time.timeScale = previousTimeScale;
         root.style.display = DisplayStyle.None;
+
+        if (cinemachineBrain != null && cinemachineBrain.enabled)
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+            UnityEngine.Cursor.visible = false;
+        }
     }
 
     private void OpenOptions()
