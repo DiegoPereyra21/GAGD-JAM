@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float outdoorSpeed = 11f;
+    [SerializeField] private float indoorSpeed = 7f;
     [SerializeField] private float rotationSpeed = 12f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private Transform cameraTransform;
@@ -43,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
 
-        controller.Move(direction * moveSpeed * Time.deltaTime);
+        float currentSpeed = GameProgressManager.Instance.IsOutside ? outdoorSpeed : indoorSpeed;
+        controller.Move(direction * currentSpeed * Time.deltaTime);
 
         if (controller.isGrounded && velocity.y < 0f)
             velocity.y = -2f;

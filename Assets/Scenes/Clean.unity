@@ -886,6 +886,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: indoorSpeed
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: outdoorSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1860014185}
