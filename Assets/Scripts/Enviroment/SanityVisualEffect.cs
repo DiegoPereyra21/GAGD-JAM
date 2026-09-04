@@ -42,7 +42,7 @@ public class SanityVisualEffect : MonoBehaviour
     private void Refresh()
     {
         int day = GameProgressManager.Instance.CurrentDay;
-        float t = Mathf.Clamp01((day - 1) / (float)(maxDay - 1));
+        float t = Mathf.Clamp01(day / (float)maxDay);
 
         if (vignette != null)
         {
