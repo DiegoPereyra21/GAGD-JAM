@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}",
     "Language": "SFX",
-    "Hash": "{30BB5405-7C24-9D4A-EBEE-85A1E4555A64}",
+    "Hash": "{813ABF48-F5AE-6316-BF43-6F44F6B3E091}",
     "ObjectPath": "Play_MUS_Day",
     "ShortName": "Play_MUS_Day",
     "Path": "Event/Play_MUS_Day.bnk",
@@ -38,9 +38,31 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3729505769",
+      "Name": "TimeOfDay",
+      "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay",
+      "GUID": "{23F89E85-B734-4984-91E6-411EE61C94F0}",
+      "Switches": [
+       {
+        "Id": "311764537",
+        "Name": "Day",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Day",
+        "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+       },
+       {
+        "Id": "1011622525",
+        "Name": "Night",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Night",
+        "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{640DB5D3-613E-2035-9B7C-C256717998AD}"
+  "FileHash": "{790FF4CA-DC0A-C798-B3BE-0A43EFB5D0D8}"
  }
 }

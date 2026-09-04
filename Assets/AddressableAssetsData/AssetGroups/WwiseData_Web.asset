@@ -50,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4934f5e9ad2b7454791c94e8d50dbf04
+    m_Address: Assets/WwiseData/Bank/Web/Event/Play_MUS_TimeOfDay.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4ae035b32b678564694b3eb76d463fd2
     m_Address: Assets/WwiseData/Bank/Web/Media/669185545.wem
     m_ReadOnly: 0
@@ -92,6 +97,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7daed1dd3435fbd46b205c4850e0e3d3
     m_Address: Assets/WwiseData/Bank/Web/Media/749912226.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e93380835cf6b3419963989da31c9e6
+    m_Address: Assets/WwiseData/Bank/Web/Event/Stop_MUS_Night.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -172,6 +182,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e14dcd1d351eb0d45afb95726d450a4a
     m_Address: Assets/WwiseData/Bank/Web/Media/229322620.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea059d6d17025b64a8df5a7986aeb019
+    m_Address: Assets/WwiseData/Bank/Web/Event/Stop_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

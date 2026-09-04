@@ -50,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a9411cb6330d2c49b029e0e641b8e82
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Play_MUS_TimeOfDay.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3ceaee696b1cbbc43addb64a32151f81
     m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/71216937.wem
     m_ReadOnly: 0
@@ -92,6 +97,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6bad3864af9e92d43892d0bbc0b3869d
     m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Play_STG_Pickup.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ebc5b1a048a8e848ba131fddc1bcc90
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Stop_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -157,6 +167,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a5b8259e2b55e8443b6127dd73e4ff8d
     m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Play_Menu_Button_Hover.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0c4e55f06f18dd409c5fc33386f4c6c
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Stop_MUS_Night.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

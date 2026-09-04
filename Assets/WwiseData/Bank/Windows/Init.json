@@ -91,9 +91,31 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\AmbientVolume",
       "GUID": "{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3729505769",
+      "Name": "TimeOfDay",
+      "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay",
+      "GUID": "{23F89E85-B734-4984-91E6-411EE61C94F0}",
+      "Switches": [
+       {
+        "Id": "311764537",
+        "Name": "Day",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Day",
+        "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+       },
+       {
+        "Id": "1011622525",
+        "Name": "Night",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Night",
+        "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{913B11E8-D397-282E-BD4F-6D82FDD1B401}"
+  "FileHash": "{044ED509-385A-11B5-CC4D-E1EB847928BA}"
  }
 }

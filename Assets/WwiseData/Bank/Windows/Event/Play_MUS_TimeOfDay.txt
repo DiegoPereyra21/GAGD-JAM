@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1108381680	Play_MUS_TimeOfDay			\Default Work Unit\Play_MUS_TimeOfDay	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3729505769	TimeOfDay			\Default Work Unit\TimeOfDay	
+
+Switch	ID	Name	Switch Group			Notes
+	311764537	Day	TimeOfDay			
+	1011622525	Night	TimeOfDay			
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	501813684	Day	.cache\7B\{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem	501813684.wem	\Containers\Default Work Unit\Music\MUS_TimeOfDay\Day	
+

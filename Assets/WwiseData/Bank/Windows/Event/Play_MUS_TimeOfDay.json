@@ -1,0 +1,101 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1108381680",
+    "Type": "Event",
+    "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
+    "Language": "SFX",
+    "Hash": "{187CF944-89B7-C8C7-DBFA-6BA800BE1AF7}",
+    "ObjectPath": "Play_MUS_TimeOfDay",
+    "ShortName": "Play_MUS_TimeOfDay",
+    "Path": "Event/Play_MUS_TimeOfDay.bnk",
+    "Media": [
+     {
+      "Id": "501813684",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Minimal mix.wav",
+      "Path": "Media/501813684.wem",
+      "CachePath": "7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem"
+     },
+     {
+      "Id": "1000971565",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Full mix.wav",
+      "Path": "Media/1000971565.wem",
+      "CachePath": "1B/{1BBB2DA3-FF4E-A842-40D6-105E4968CB90}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1108381680",
+      "Name": "Play_MUS_TimeOfDay",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_TimeOfDay",
+      "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3729505769",
+         "Id": "1011622525",
+         "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1000971565"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3729505769",
+         "Id": "311764537",
+         "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "501813684"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3729505769",
+      "Name": "TimeOfDay",
+      "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay",
+      "GUID": "{23F89E85-B734-4984-91E6-411EE61C94F0}",
+      "Switches": [
+       {
+        "Id": "311764537",
+        "Name": "Day",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Day",
+        "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+       },
+       {
+        "Id": "1011622525",
+        "Name": "Night",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Night",
+        "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C4DE0F3E-63A4-812F-A856-29D74BCEF639}"
+ }
+}
