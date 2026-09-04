@@ -28,10 +28,7 @@ public class CameraTransition : MonoBehaviour
         cinemachineBrain.enabled = false;
         activeAnchor = null;
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
-        StartBlend(anchor.position, anchor.rotation, () =>
+        StartBlend(anchor, () =>
         {
             activeAnchor = anchor;
             onComplete?.Invoke();
@@ -42,14 +39,9 @@ public class CameraTransition : MonoBehaviour
     {
         activeAnchor = null;
 
-        Vector3 targetPos = cinemachineCameraTransform.position;
-        Quaternion targetRot = cinemachineCameraTransform.rotation;
-
-        StartBlend(targetPos, targetRot, () =>
+        StartBlend(cinemachineCameraTransform, () =>
         {
             cinemachineBrain.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
             onComplete?.Invoke();
         });
     }
@@ -63,13 +55,13 @@ public class CameraTransition : MonoBehaviour
         }
     }
 
-    private void StartBlend(Vector3 targetPos, Quaternion targetRot, Action onComplete)
+    private void StartBlend(Transform liveTarget, Action onComplete)
     {
         if (blendRoutine != null) StopCoroutine(blendRoutine);
-        blendRoutine = StartCoroutine(BlendRoutine(targetPos, targetRot, onComplete));
+        blendRoutine = StartCoroutine(BlendRoutine(liveTarget, onComplete));
     }
 
-    private IEnumerator BlendRoutine(Vector3 targetPos, Quaternion targetRot, Action onComplete)
+    private IEnumerator BlendRoutine(Transform liveTarget, Action onComplete)
     {
         Vector3 startPos = transform.position;
         Quaternion startRot = transform.rotation;
@@ -79,15 +71,14 @@ public class CameraTransition : MonoBehaviour
         {
             t += Time.deltaTime;
             float p = Mathf.SmoothStep(0f, 1f, t / blendDuration);
-            transform.position = Vector3.Lerp(startPos, targetPos, p);
-            transform.rotation = Quaternion.Slerp(startRot, targetRot, p);
+            transform.position = Vector3.Lerp(startPos, liveTarget.position, p);
+            transform.rotation = Quaternion.Slerp(startRot, liveTarget.rotation, p);
             yield return null;
         }
 
-        transform.position = targetPos;
-        transform.rotation = targetRot;
+        transform.position = liveTarget.position;
+        transform.rotation = liveTarget.rotation;
         blendRoutine = null;
         onComplete?.Invoke();
     }
-
 }
