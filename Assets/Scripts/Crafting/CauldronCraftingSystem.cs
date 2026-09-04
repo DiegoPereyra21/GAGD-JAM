@@ -48,6 +48,10 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private GameObject cuttingBoardClickObject;
     [SerializeField] private List<ProcessingRecipe> processingRecipes;
 
+    //para detectar bien el click y drag
+    private Vector2 dragStartScreenPos;
+    [SerializeField] private float clickMovementThreshold = 15f;
+
     private InputAction interactAction;
     private bool playerInRange;
     private bool isInside;
@@ -220,20 +224,65 @@ public class CauldronCraftingSystem : MonoBehaviour
             return;
         }
 
-        if (zoneIndex == 1 && hitObject == cauldronClickObject)
+        if (zoneIndex == 1)
         {
-            Craft();
-            return;
+            if (hitObject == cauldronClickObject)
+            {
+                Craft();
+                return;
+            }
+
+            if (hit.collider.TryGetComponent(out CauldronItemVisual cauldronItem))
+            {
+                RemoveFromCauldron(cauldronItem);
+                return;
+            }
         }
 
         if (!hit.collider.TryGetComponent(out ProcessedItemVisual visual)) return;
 
         IngredientDisplayArea area = hit.collider.GetComponentInParent<IngredientDisplayArea>();
 
-        if (area == mortarProcessedDisplay || area == cuttingBoardProcessedDisplay)
-            TrySendProcessedToCauldron(visual.Type, area);
-        else if (area == leftShelfDisplay || area == rightShelfDisplay)
+        if (area == mortarProcessedDisplay || area == cuttingBoardProcessedDisplay
+            || area == leftShelfDisplay || area == rightShelfDisplay)
             TryBeginDrag(visual.Type, hitObject, area);
+    }
+
+    private void RemoveFromCauldron(CauldronItemVisual cauldronItem)
+    {
+        IngredientType type = cauldronItem.Type;
+
+        if (!cauldronIngredients.TryGetValue(type, out int count) || count <= 0) return;
+
+        cauldronIngredients[type] = count - 1;
+        if (cauldronIngredients[type] <= 0)
+            cauldronIngredients.Remove(type);
+
+        cauldronContents.Remove(cauldronItem.gameObject);
+        Destroy(cauldronItem.gameObject);
+
+        ReturnIngredientToOrigin(type);
+    }
+
+    private void ReturnIngredientToOrigin(IngredientType type)
+    {
+        if (leftShelfTypes.Contains(type) || rightShelfTypes.Contains(type))
+        {
+            HomeStorage.Instance.AddIngredient(type);
+            HomeStorage.Instance.Save();
+            return;
+        }
+
+        ProcessingRecipe recipe = processingRecipes.Find(r => r.processedType == type);
+        if (recipe != null)
+        {
+            if (!processedWaiting.ContainsKey(type))
+                processedWaiting[type] = 0;
+            processedWaiting[type]++;
+
+            IngredientDisplayArea area = GetAreaForStation(recipe.station);
+            area.AddOne(type, GetVisualPrefab(type));
+        }
     }
 
     private void TryBeginDrag(IngredientType type, GameObject clickedVisual, IngredientDisplayArea sourceArea)
@@ -245,6 +294,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         dragPlaneHeight = clickedVisual.transform.position.y;
         draggedVisual = clickedVisual;
         draggedVisual.transform.SetParent(null);
+        dragStartScreenPos = Mouse.current.position.ReadValue();
 
         if (draggedVisual.TryGetComponent(out Collider col))
             col.enabled = false;
@@ -267,16 +317,21 @@ public class CauldronCraftingSystem : MonoBehaviour
         bool didHit = Physics.Raycast(ray, out RaycastHit hit, 100f, craftingLayer);
         GameObject hitObject = didHit ? hit.collider.gameObject : null;
 
+        bool isProcessedItem = draggedSourceArea == mortarProcessedDisplay || draggedSourceArea == cuttingBoardProcessedDisplay;
+
         ProcessingStation? station = null;
         if (hitObject == mortarClickObject) station = ProcessingStation.Mortar;
         else if (hitObject == cuttingBoardClickObject) station = ProcessingStation.CuttingBoard;
 
-        if (station.HasValue)
+        float movedDistance = Vector2.Distance(Mouse.current.position.ReadValue(), dragStartScreenPos);
+        bool wasClick = movedDistance < clickMovementThreshold;
+
+        Destroy(draggedVisual);
+        draggedVisual = null;
+
+        if (station.HasValue && !isProcessedItem)
         {
             ProcessingRecipe recipe = processingRecipes.Find(r => r.rawType == draggedType && r.station == station.Value);
-
-            Destroy(draggedVisual);
-            draggedVisual = null;
 
             if (recipe != null)
                 ProcessIngredient(draggedType, station.Value);
@@ -286,9 +341,25 @@ public class CauldronCraftingSystem : MonoBehaviour
             return;
         }
 
-        Destroy(draggedVisual);
-        draggedVisual = null;
-        TryAddIngredient(draggedType);
+        if (wasClick)
+        {
+            if (isProcessedItem)
+                ConsumeProcessedForCauldron(draggedType);
+            else
+                TryAddIngredient(draggedType);
+        }
+        else
+        {
+            ReturnToSourceShelf();
+        }
+    }
+
+    private void ConsumeProcessedForCauldron(IngredientType type)
+    {
+        if (processedWaiting.TryGetValue(type, out int count) && count > 0)
+            processedWaiting[type] = count - 1;
+
+        AddIngredientToCauldron(type);
     }
 
     private void ReturnToSourceShelf()
@@ -329,15 +400,6 @@ public class CauldronCraftingSystem : MonoBehaviour
         return station == ProcessingStation.Mortar ? mortarProcessedDisplay : cuttingBoardProcessedDisplay;
     }
 
-    private void TrySendProcessedToCauldron(IngredientType type, IngredientDisplayArea area)
-    {
-        if (!processedWaiting.TryGetValue(type, out int count) || count <= 0) return;
-
-        processedWaiting[type] = count - 1;
-        area.RemoveOne(type);
-        AddIngredientToCauldron(type);
-    }
-
     private void TryAddIngredient(IngredientType type)
     {
         if (!HomeStorage.Instance.RemoveOne(type)) return;
@@ -356,6 +418,7 @@ public class CauldronCraftingSystem : MonoBehaviour
 
         Vector3 spawnPos = cauldronDropPoint.position + new Vector3(UnityEngine.Random.Range(-0.2f, 0.2f), 0.3f, UnityEngine.Random.Range(-0.2f, 0.2f));
         GameObject visual = Instantiate(prefab, spawnPos, UnityEngine.Random.rotation);
+        visual.AddComponent<CauldronItemVisual>().Init(type);
         cauldronContents.Add(visual);
 
         if (!cauldronIngredients.ContainsKey(type))

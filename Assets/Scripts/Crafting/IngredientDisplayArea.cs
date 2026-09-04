@@ -101,6 +101,7 @@ public class IngredientDisplayArea : MonoBehaviour
         if (!groups.TryGetValue(type, out TypeGroup group)) return false;
         if (!group.visuals.Remove(visual)) return false;
 
+        group.trueCount = Mathf.Max(0, group.trueCount - 1);
         RepositionAll(group);
         group.label.text = group.trueCount.ToString();
         return true;
