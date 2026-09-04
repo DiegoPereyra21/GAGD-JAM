@@ -171,14 +171,16 @@ public class CauldronCraftingSystem : MonoBehaviour
         playerMovement.SetFrozen(true);
         cameraTransition.TransitionTo(cauldronViewAnchor);
         SetPlayerVisible(false);
+        outline?.SetHighlighted(false);
     }
-
     private void ExitToHouse()
     {
         isInside = false;
         playerMovement.SetFrozen(false);
         cameraTransition.TransitionTo(houseViewAnchor);
         SetPlayerVisible(true);
+        if (playerInRange)
+            outline?.SetHighlighted(true);
     }
 
     private void SetPlayerVisible(bool visible)
