@@ -22,13 +22,14 @@ namespace AK
         static const AkUniqueID PLAY_STG_CUT = 176225071U;
         static const AkUniqueID PLAY_STG_MORTAR = 358402734U;
         static const AkUniqueID PLAY_STG_PICKUP = 1532146285U;
+        static const AkUniqueID PLAY_STG_PICKWOOD = 3595425793U;
         static const AkUniqueID STOP_MUS_MAINMENU = 4243441902U;
-        static const AkUniqueID STOP_STG_CLOCK = 3389563599U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID AMBIENTVOLUME = 3546521921U;
+        static const AkUniqueID MENUVOLUME = 1786260118U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS

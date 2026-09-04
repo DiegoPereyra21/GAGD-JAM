@@ -28,7 +28,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{2581D953-5227-43A8-70C9-82A7CFEC134F}">
+		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{1DB80FAB-AAA9-CAB6-3FED-1092ADB4E37B}">
 			<ObjectPath>Play_STG_Mortar</ObjectPath>
 			<ShortName>Play_STG_Mortar</ShortName>
 			<Path>Event/Play_STG_Mortar.bnk</Path>
@@ -179,7 +179,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{5FF2E4B6-D27A-F827-138D-323A32550481}">
+		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{E8C51CE8-B916-3CA1-29A5-31E9CBFEE5BF}">
 			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
 			<ShortName>Play_MUS_MainMenu</ShortName>
 			<Path>Event/Play_MUS_MainMenu.bnk</Path>
@@ -198,7 +198,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{69095727-ED3B-866A-5791-ABA2E0880D1F}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{1A238F24-3600-66AC-0A0E-8DF39752E75B}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -217,40 +217,41 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume" GUID="{DFB3BC0A-887E-4C08-9D50-CE0433B1106E}"/>
+				<GameParameter Id="1786260118" Name="MenuVolume" ObjectPath="\Game Parameters\Default Work Unit\MenuVolume" GUID="{E3388098-B798-4C09-B900-93DCECD91828}"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume" GUID="{63AE203E-86D2-4D19-A59B-BE928F65C12C}"/>
 				<GameParameter Id="3546521921" Name="AmbientVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbientVolume" GUID="{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{AEE6803C-883E-E43F-D191-6A548B17C673}">
+		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{0B3DFB20-1703-AF55-244B-177C8CD6D256}">
 			<ObjectPath>Play_STG_Pickup</ObjectPath>
 			<ShortName>Play_STG_Pickup</ShortName>
 			<Path>Event/Play_STG_Pickup.bnk</Path>
 			<Media>
-				<File Id="340777126" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>t.wav</ShortName>
-					<Path>Media/340777126.wem</Path>
-					<CachePath>35/{35C9DD52-5A68-EFD2-8ECB-8A9AE0361F90}.wem</CachePath>
+				<File Id="10179816" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>a.wav</ShortName>
+					<Path>Media/10179816.wem</Path>
+					<CachePath>E1/{E136A2D0-604C-A290-CBAA-A7BA9F911C80}.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="711212608" Name="Parametric EQ (Custom)" ObjectPath="\Containers\Default Work Unit\SFX\Stingers\UI\t\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{F3568267-B056-4640-8BF3-F7C0D156F0AD}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="213844949" Name="Parametric EQ (Custom)" ObjectPath="\Containers\Default Work Unit\SFX\Stingers\UI\a\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{73A24686-4B8F-481A-BFE8-C85120C75762}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="0.3906876" DurationMax="0.3906876">
+				<Event Id="1532146285" Name="Play_STG_Pickup" ObjectPath="\Events\Default Work Unit\Play_STG_Pickup" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" DurationType="OneShot" DurationMin="0.26110864" DurationMax="0.26110864">
 					<MediaRefs>
-						<MediaRef Id="340777126"/>
+						<MediaRef Id="10179816"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="711212608"/>
+							<PluginRef Id="213844949"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3069328145" Type="Event" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" Language="SFX" Hash="{B797559A-04DD-7C48-8C4C-A953DF03F6AF}">
+		<SoundBank Id="3069328145" Type="Event" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" Language="SFX" Hash="{5AC71150-A724-D15C-613D-46BEDD9BDD48}">
 			<ObjectPath>Play_STG_Clock</ObjectPath>
 			<ShortName>Play_STG_Clock</ShortName>
 			<Path>Event/Play_STG_Clock.bnk</Path>
@@ -269,7 +270,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{3D902457-A797-ECFB-E34F-E98AA41EAE62}">
+		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{50FC4275-423D-972F-1D29-5219D065A05A}">
 			<ObjectPath>Play_Menu_Button_Hover</ObjectPath>
 			<ShortName>Play_Menu_Button_Hover</ShortName>
 			<Path>Event/Play_Menu_Button_Hover.bnk</Path>
@@ -288,12 +289,23 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3389563599" Type="Event" GUID="{72A923D0-BC5A-43C7-AA7A-6028973573AA}" Language="SFX" Hash="{C51C9592-8013-AE6C-4E93-E37F3E221105}">
-			<ObjectPath>STOP_STG_Clock</ObjectPath>
-			<ShortName>STOP_STG_Clock</ShortName>
-			<Path>Event/STOP_STG_Clock.bnk</Path>
+		<SoundBank Id="3595425793" Type="Event" GUID="{4D88A7F9-FA1B-4C1A-8047-30FE86D158B6}" Language="SFX" Hash="{24E55EDD-26F3-95D6-B02C-E73819ADF7EA}">
+			<ObjectPath>Play_STG_PickWood</ObjectPath>
+			<ShortName>Play_STG_PickWood</ShortName>
+			<Path>Event/Play_STG_PickWood.bnk</Path>
+			<Media>
+				<File Id="669185545" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>freesound_community-tomar-un-objeto-46562.wav</ShortName>
+					<Path>Media/669185545.wem</Path>
+					<CachePath>74/{74A824FF-55CF-8E38-E71A-A9C4504AD640}.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3389563599" Name="STOP_STG_Clock" ObjectPath="\Events\Default Work Unit\STOP_STG_Clock" GUID="{72A923D0-BC5A-43C7-AA7A-6028973573AA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3595425793" Name="Play_STG_PickWood" ObjectPath="\Events\Default Work Unit\Play_STG_PickWood" GUID="{4D88A7F9-FA1B-4C1A-8047-30FE86D158B6}" DurationType="OneShot" DurationMin="0.36288" DurationMax="0.36288">
+					<MediaRefs>
+						<MediaRef Id="669185545"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="4100501596" Type="Event" GUID="{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}" Language="SFX" Hash="{30BB5405-7C24-9D4A-EBEE-85A1E4555A64}">
@@ -324,5 +336,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B031A33D-78E9-7FAD-8734-6602A1D1CC31}</FileHash>
+	<FileHash>{71CA2DD5-52A8-C234-346F-435838081E83}</FileHash>
 </SoundBanksInfo>

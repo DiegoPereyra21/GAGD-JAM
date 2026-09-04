@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}",
     "Language": "SFX",
-    "Hash": "{B797559A-04DD-7C48-8C4C-A953DF03F6AF}",
+    "Hash": "{5AC71150-A724-D15C-613D-46BEDD9BDD48}",
     "ObjectPath": "Play_STG_Clock",
     "ShortName": "Play_STG_Clock",
     "Path": "Event/Play_STG_Clock.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{B6FD3F6E-C920-2EFE-7939-E11D0F8E3C63}"
+  "FileHash": "{4C0B449D-680A-8AC6-60C5-4825A67B929F}"
  }
 }

@@ -11,6 +11,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Ambience" ID="{EE578A28-B79C-4072-89A3-565B692174C9}">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<RTPC Name="" ID="{D74ABC55-83D2-445F-88AF-2364F156D8A7}" ShortID="353270747">
@@ -48,6 +55,13 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="SFX" ID="{878B91E9-92C2-4664-8702-7FF0AA3742AE}">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<RTPC Name="" ID="{D2543F52-16FB-497D-9DBA-8A612451B32D}" ShortID="319070678">
@@ -85,6 +99,13 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="Music" ID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<RTPC Name="" ID="{55109BD6-7441-4F3D-AD92-E17151563C5E}" ShortID="577604650">
@@ -121,7 +142,50 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
-						<Bus Name="Menu" ID="{09CE4C09-AC23-43DB-A4AA-422EDD1F7AF0}"/>
+						<Bus Name="Menu" ID="{09CE4C09-AC23-43DB-A4AA-422EDD1F7AF0}">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{896869BE-E5F6-4D6E-AC68-00655400A201}" ShortID="167827684">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="MenuVolume" ID="{E3388098-B798-4C09-B900-93DCECD91828}" WorkUnitID="{332E842D-EE74-49A0-947E-EE71291C1731}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{4FC1A35F-D3B3-4DDA-A0C3-8EA5ED264B7B}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

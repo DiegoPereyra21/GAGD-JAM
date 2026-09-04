@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{2581D953-5227-43A8-70C9-82A7CFEC134F}">
+		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{1DB80FAB-AAA9-CAB6-3FED-1092ADB4E37B}">
 			<ObjectPath>Play_STG_Mortar</ObjectPath>
 			<ShortName>Play_STG_Mortar</ShortName>
 			<Path>Event/Play_STG_Mortar.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7C50CCAF-AFC1-50A6-7110-227480DB572C}</FileHash>
+	<FileHash>{D25F8032-0913-C03C-CA3E-B5B7E4CAE162}</FileHash>
 </SoundBanksInfo>

@@ -10,28 +10,28 @@
     "Type": "Event",
     "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
     "Language": "SFX",
-    "Hash": "{AEE6803C-883E-E43F-D191-6A548B17C673}",
+    "Hash": "{0B3DFB20-1703-AF55-244B-177C8CD6D256}",
     "ObjectPath": "Play_STG_Pickup",
     "ShortName": "Play_STG_Pickup",
     "Path": "Event/Play_STG_Pickup.bnk",
     "Media": [
      {
-      "Id": "340777126",
+      "Id": "10179816",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "t.wav",
-      "Path": "Media/340777126.wem",
-      "CachePath": "35/{35C9DD52-5A68-EFD2-8ECB-8A9AE0361F90}.wem"
+      "ShortName": "a.wav",
+      "Path": "Media/10179816.wem",
+      "CachePath": "E1/{E136A2D0-604C-A290-CBAA-A7BA9F911C80}.wem"
      }
     ],
     "Plugins": {
      "Custom": [
       {
-       "Id": "711212608",
+       "Id": "213844949",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Containers\\Default Work Unit\\SFX\\Stingers\\UI\\t\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
-       "GUID": "{F3568267-B056-4640-8BF3-F7C0D156F0AD}",
+       "ObjectPath": "\\Containers\\Default Work Unit\\SFX\\Stingers\\UI\\a\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{73A24686-4B8F-481A-BFE8-C85120C75762}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
       }
@@ -44,17 +44,17 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_STG_Pickup",
       "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
       "DurationType": "OneShot",
-      "DurationMin": "0.3906876",
-      "DurationMax": "0.3906876",
+      "DurationMin": "0.26110864",
+      "DurationMax": "0.26110864",
       "MediaRefs": [
        {
-        "Id": "340777126"
+        "Id": "10179816"
        }
       ],
       "PluginRefs": {
        "Custom": [
         {
-         "Id": "711212608"
+         "Id": "213844949"
         }
        ]
       }
@@ -62,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{65408233-766D-1B2F-8D95-C27C22C0C425}"
+  "FileHash": "{C5422BF6-0837-ACB7-D388-0F7D13AC75FD}"
  }
 }

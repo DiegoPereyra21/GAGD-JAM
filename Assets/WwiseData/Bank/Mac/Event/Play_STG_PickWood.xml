@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="3595425793" Type="Event" GUID="{4D88A7F9-FA1B-4C1A-8047-30FE86D158B6}" Language="SFX" Hash="{24E55EDD-26F3-95D6-B02C-E73819ADF7EA}">
+			<ObjectPath>Play_STG_PickWood</ObjectPath>
+			<ShortName>Play_STG_PickWood</ShortName>
+			<Path>Event/Play_STG_PickWood.bnk</Path>
+			<Media>
+				<File Id="669185545" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>freesound_community-tomar-un-objeto-46562.wav</ShortName>
+					<Path>Media/669185545.wem</Path>
+					<CachePath>74/{74A824FF-55CF-8E38-E71A-A9C4504AD640}.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3595425793" Name="Play_STG_PickWood" ObjectPath="\Events\Default Work Unit\Play_STG_PickWood" GUID="{4D88A7F9-FA1B-4C1A-8047-30FE86D158B6}" DurationType="OneShot" DurationMin="0.36288" DurationMax="0.36288">
+					<MediaRefs>
+						<MediaRef Id="669185545"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{E58B7CCF-D991-C632-1559-AE8D27F929CD}</FileHash>
+</SoundBanksInfo>

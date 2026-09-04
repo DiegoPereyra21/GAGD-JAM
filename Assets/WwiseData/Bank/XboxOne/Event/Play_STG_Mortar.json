@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{74918F02-B781-4BB8-959D-34AF096650FF}",
     "Language": "SFX",
-    "Hash": "{2581D953-5227-43A8-70C9-82A7CFEC134F}",
+    "Hash": "{1DB80FAB-AAA9-CAB6-3FED-1092ADB4E37B}",
     "ObjectPath": "Play_STG_Mortar",
     "ShortName": "Play_STG_Mortar",
     "Path": "Event/Play_STG_Mortar.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{AB9933A9-EEF5-61A2-C163-A2C2FBCF6C94}"
+  "FileHash": "{B829D663-CB8E-0D3B-F02E-10C21F4B2DF4}"
  }
 }

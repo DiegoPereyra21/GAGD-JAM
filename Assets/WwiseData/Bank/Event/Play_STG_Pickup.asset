@@ -27,12 +27,12 @@ MonoBehaviour:
     LocalizedStreamingMediaValues:
       localizedMediaList:
       - media:
-        - m_AssetGUID: 73498f32bf6d6f249a7f87957981c075
+        - m_AssetGUID: 3983c92445cfdfd4b9886d4f3ad33c36
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
-          id: 340777126
+          id: 10179816
   - WwisePlatform: Web
     LocalizedBankKeys:
     - SFX
@@ -47,12 +47,12 @@ MonoBehaviour:
     LocalizedStreamingMediaValues:
       localizedMediaList:
       - media:
-        - m_AssetGUID: f65bb30134e48cd4381155dc334c4b3d
+        - m_AssetGUID: f279d445530beac4cbb6309a8b046266
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
-          id: 340777126
+          id: 10179816
   - WwisePlatform: Mac
     LocalizedBankKeys:
     - SFX
@@ -67,12 +67,12 @@ MonoBehaviour:
     LocalizedStreamingMediaValues:
       localizedMediaList:
       - media:
-        - m_AssetGUID: dc62fe30f0b1a214cad8b9b6eec3e1c1
+        - m_AssetGUID: 3db40e36d537f384f873c1c3a4e151e0
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
-          id: 340777126
+          id: 10179816
   - WwisePlatform: XboxOne
     LocalizedBankKeys:
     - SFX
@@ -87,12 +87,12 @@ MonoBehaviour:
     LocalizedStreamingMediaValues:
       localizedMediaList:
       - media:
-        - m_AssetGUID: f988a101b912dde47a7a7fc201f374fb
+        - m_AssetGUID: 977d084d5ca6ee746b3dac6a36de2f27
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
-          id: 340777126
+          id: 10179816
   - WwisePlatform: XboxSeriesX
     LocalizedBankKeys:
     - SFX
@@ -107,12 +107,12 @@ MonoBehaviour:
     LocalizedStreamingMediaValues:
       localizedMediaList:
       - media:
-        - m_AssetGUID: a951d3de17ca05b48bf4f8fb814167a6
+        - m_AssetGUID: ddf36dd974ee7f54ab518c83068088a5
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
-          id: 340777126
+          id: 10179816
   currentPlatformAssets:
     WwisePlatform: Web
     LocalizedBankKeys:
@@ -128,9 +128,9 @@ MonoBehaviour:
     LocalizedStreamingMediaValues:
       localizedMediaList:
       - media:
-        - m_AssetGUID: f65bb30134e48cd4381155dc334c4b3d
+        - m_AssetGUID: f279d445530beac4cbb6309a8b046266
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
-          id: 340777126
+          id: 10179816

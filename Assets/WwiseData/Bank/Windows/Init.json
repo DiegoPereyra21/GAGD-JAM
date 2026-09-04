@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{075F7BF4-1A38-A7D9-263F-1DB46310DCA3}",
+    "Hash": "{6FB523FB-E443-07F4-5C96-8AA9C5C7F472}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -74,6 +74,12 @@
       "GUID": "{DFB3BC0A-887E-4C08-9D50-CE0433B1106E}"
      },
      {
+      "Id": "1786260118",
+      "Name": "MenuVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MenuVolume",
+      "GUID": "{E3388098-B798-4C09-B900-93DCECD91828}"
+     },
+     {
       "Id": "2346531308",
       "Name": "MusicVolume",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\MusicVolume",
@@ -88,6 +94,6 @@
     ]
    }
   ],
-  "FileHash": "{B79ADFF5-7044-4145-E5BA-E4285EB615A8}"
+  "FileHash": "{913B11E8-D397-282E-BD4F-6D82FDD1B401}"
  }
 }
