@@ -4,12 +4,8 @@ using UnityEngine;
 public class PotionDisplayArea : MonoBehaviour
 {
     [SerializeField] private Transform areaOrigin;
-    [SerializeField] private float areaWidth = 3f;
-    [SerializeField] private float areaDepth = 2f;
-    [SerializeField] private int itemsPerRow = 3;
     [SerializeField] private float itemSpacing = 0.3f;
-
-
+    [SerializeField] private float groupSpacing = 0.5f;
 
     [Header("Preview (solo editor, no afecta el juego)")]
     [SerializeField] private int previewGroupCount = 4;
@@ -45,8 +41,7 @@ public class PotionDisplayArea : MonoBehaviour
         if (visualPrefab == null) return;
 
         int index = group.visuals.Count;
-        Vector3 offset = group.anchor.right * ((index % itemsPerRow) * itemSpacing)
-                        + group.anchor.forward * ((index / itemsPerRow) * itemSpacing);
+        Vector3 offset = group.anchor.right * (index * itemSpacing);
 
         GameObject visual = Instantiate(visualPrefab, group.anchor.position + offset, group.anchor.rotation, group.anchor);
         group.visuals.Add(visual);
@@ -70,51 +65,28 @@ public class PotionDisplayArea : MonoBehaviour
 
     private void RelayoutGroups()
     {
-        int total = groupOrder.Count;
-        int columns = Mathf.CeilToInt(Mathf.Sqrt(total));
-        int rows = Mathf.CeilToInt(total / (float)columns);
-
-        float cellWidth = areaWidth / columns;
-        float cellDepth = areaDepth / rows;
-
         for (int i = 0; i < groupOrder.Count; i++)
-        {
-            int col = i % columns;
-            int row = i / columns;
-            groupOrder[i].anchor.localPosition = new Vector3((col + 0.5f) * cellWidth, 0f, (row + 0.5f) * cellDepth);
-        }
+            groupOrder[i].anchor.localPosition = new Vector3(i * groupSpacing, 0f, 0f);
     }
-
 
     private void OnDrawGizmosSelected()
     {
         if (areaOrigin == null) return;
 
-        int columns = Mathf.CeilToInt(Mathf.Sqrt(previewGroupCount));
-        int rows = Mathf.CeilToInt(previewGroupCount / (float)columns);
-
-        float cellWidth = areaWidth / columns;
-        float cellDepth = areaDepth / rows;
-
         Gizmos.matrix = areaOrigin.localToWorldMatrix;
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(new Vector3(areaWidth * 0.5f, 0f, areaDepth * 0.5f), new Vector3(areaWidth, 0.05f, areaDepth));
 
         for (int g = 0; g < previewGroupCount; g++)
         {
-            int col = g % columns;
-            int row = g / columns;
-            Vector3 groupCenter = new Vector3((col + 0.5f) * cellWidth, 0f, (row + 0.5f) * cellDepth);
+            Vector3 groupStart = new Vector3(g * groupSpacing, 0f, 0f);
 
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube(groupCenter, new Vector3(cellWidth * 0.9f, 0.05f, cellDepth * 0.9f));
+            Gizmos.DrawWireCube(groupStart, new Vector3(groupSpacing * 0.9f, 0.05f, 0.1f));
 
             for (int i = 0; i < previewItemsPerGroup; i++)
             {
-                Vector3 itemOffset = new Vector3((i % itemsPerRow) * itemSpacing, 0.1f, (i / itemsPerRow) * itemSpacing);
+                Vector3 itemPos = groupStart + Vector3.right * (i * itemSpacing);
                 Gizmos.color = Color.red;
-                Gizmos.DrawSphere(groupCenter + itemOffset, 0.05f);
+                Gizmos.DrawSphere(itemPos, 0.05f);
             }
         }
 

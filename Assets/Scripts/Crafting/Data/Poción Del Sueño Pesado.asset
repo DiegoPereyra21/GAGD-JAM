@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_descanso
   potionName: "Pocion de Sue\xF1o Profundo"
-  visualPrefab: {fileID: 0}
+  visualPrefab: {fileID: 7520948132050687777, guid: d341ab4a3ec277443b6eab93f66fcbae, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}
     amount: 1
