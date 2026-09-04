@@ -1251,6 +1251,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 90721714354395004, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e8c0dfa11195e0b4d92a20cb4c169f66, type: 2}
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.532391
@@ -1295,6 +1299,10 @@ PrefabInstance:
       propertyPath: cameraTransition
       value: 
       objectReference: {fileID: 1560979842}
+    - target: {fileID: 1504220876889864111, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e8c0dfa11195e0b4d92a20cb4c169f66, type: 2}
     - target: {fileID: 2284559751954648029, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: questManager
       value: 
@@ -1303,6 +1311,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5314877014981436098, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e8c0dfa11195e0b4d92a20cb4c169f66, type: 2}
     - target: {fileID: 5548705520305781567, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1783,31 +1795,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.532391
+      value: 6.5321813
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.406353
+      value: 23.726896
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.7055063
+      value: 5.0914297
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9768757
+      value: 0.98043364
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.21380815
+      value: 0.19685008
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017992928
+      value: 0.000010085935
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000039381
+      value: -0.0000020250395
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2295,8 +2307,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144195155}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21380812, y: 0.000000017992923, z: -0.0000000039380987, w: 0.9768757}
-  m_LocalPosition: {x: 0, y: 5.406353, z: -8.583452}
+  m_LocalRotation: {x: 0.19685002, y: 0.000010085877, z: -0.0000020250275, w: 0.98043364}
+  m_LocalPosition: {x: 0, y: 6.4888935, z: -12.016833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2345,8 +2357,8 @@ MonoBehaviour:
       Owner: {fileID: 2144195164}
       Enabled: 1
       Input:
-        InputAction: {fileID: 0}
-        Gain: 1
+        InputAction: {fileID: -8767035352637188818, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        Gain: -10
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -2437,9 +2449,9 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   RadialAxis:
-    Value: 1
-    Center: 1
-    Range: {x: 1, y: 1}
+    Value: 1.4
+    Center: 1.4
+    Range: {x: 0.6, y: 1.8}
     Wrap: 0
     Recentering:
       Enabled: 0
