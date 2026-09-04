@@ -45,6 +45,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f98adefb14bfcc4cbf9d950158d079b
+    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_STG_PickWood.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 331bd41e4f59ad348b11001f49b9ed61
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/665275161.wem
     m_ReadOnly: 0
@@ -80,11 +85,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5a6c6fe12b9baea4ebae311ce3e9b8d4
-    m_Address: Assets/WwiseData/Bank/XboxOne/Event/STOP_STG_Clock.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c5bb76e2a130cf4a883e2f4fe09b3e8
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/354389179.wem
     m_ReadOnly: 0
@@ -102,6 +102,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8cdf5a1c4bfd4294fab87155990f90a6
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/277566653.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 977d084d5ca6ee746b3dac6a36de2f27
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/10179816.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -127,6 +132,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b0d9a8c2f94ade744a95362d794e50c3
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/99849529.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b17244cf8579e4244bc01415b927e928
+    m_Address: Assets/WwiseData/Bank/XboxOne/Media/669185545.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -167,11 +177,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eea43f46b6c38554183af33fd588ba07
     m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_STG_Clock.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f988a101b912dde47a7a7fc201f374fb
-    m_Address: Assets/WwiseData/Bank/XboxOne/Media/340777126.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

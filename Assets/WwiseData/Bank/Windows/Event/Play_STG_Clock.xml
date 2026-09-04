@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="3069328145" Type="Event" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" Language="SFX" Hash="{B797559A-04DD-7C48-8C4C-A953DF03F6AF}">
+		<SoundBank Id="3069328145" Type="Event" GUID="{8F0ABEC4-8BFE-4EF0-978D-9BAE7533E3A0}" Language="SFX" Hash="{5AC71150-A724-D15C-613D-46BEDD9BDD48}">
 			<ObjectPath>Play_STG_Clock</ObjectPath>
 			<ShortName>Play_STG_Clock</ShortName>
 			<Path>Event/Play_STG_Clock.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EB9A826B-AEC1-B3F3-88ED-611A46B06AB1}</FileHash>
+	<FileHash>{62EB00FB-05F6-FD5A-6C77-105EDB32876B}</FileHash>
 </SoundBanksInfo>

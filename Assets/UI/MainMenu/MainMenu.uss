@@ -154,6 +154,13 @@
     border-bottom-color: rgba(190, 165, 220, 0.25);
 }
 
+#LanguageButtonContainer {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+#AudioLabel,
 #LanguageLabel {
     color: rgb(235, 215, 170);
     -unity-font-definition: url("project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=18f4c9b27a364ec4582c28b0363973e9&type=3#JimNightshade-Regular");
@@ -171,6 +178,7 @@
     margin-bottom: 10px;
     padding-left: 25px;
     padding-right: 20px;
+    margin-right: 30px;
     background-color: rgba(61, 43, 82, 0.45);
     border-width: 1px;
     border-color: rgba(190, 165, 220, 0.35);
@@ -245,24 +253,16 @@
     align-items: flex-start;
     padding-left: 80px;
     padding-right: 80px;
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 25px;
 }
 
-#AudioLabel {
-    color: rgb(235, 215, 170);
-    -unity-font-definition: url("project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&guid=18f4c9b27a364ec4582c28b0363973e9&type=3#JimNightshade-Regular");
-    font-size: 42px;
-    margin-bottom: 25px;
-    -unity-text-outline-width: 1px;
-    -unity-text-outline-color: rgba(220, 180, 90, 0.35);
-}
-
+#MenuRow,
 #MusicRow,
 #SFXRow,
 #AmbientRow {
-    width: 850px;
-    height: 55px;
+    width: 90%;
+    height: 20px;
     flex-grow: 0;
     flex-shrink: 0;
     flex-direction: row;
@@ -270,6 +270,7 @@
     margin-bottom: 10px;
 }
 
+#MenuLabel,
 #MusicLabel,
 #SFXLabel,
 #AmbientLabel {
@@ -283,16 +284,18 @@
     -unity-text-align: middle-left;
 }
 
+#MenuSlider,
 #MusicSlider,
 #SFXSlider,
 #AmbientSlider {
-    width: 600px;
+    width: 80%;
     height: 45px;
     flex-grow: 0;
     flex-shrink: 0;
     margin: 0;
 }
 
+#MenuSlider .unity-base-slider__tracker,
 #MusicSlider .unity-base-slider__tracker,
 #SFXSlider .unity-base-slider__tracker,
 #AmbientSlider .unity-base-slider__tracker {
@@ -301,6 +304,7 @@
     border-radius: 3px;
 }
 
+#MenuSlider .unity-base-slider__dragger,
 #MusicSlider .unity-base-slider__dragger,
 #SFXSlider .unity-base-slider__dragger,
 #AmbientSlider .unity-base-slider__dragger {
@@ -312,6 +316,7 @@
     border-radius: 50%;
 }
 
+#MenuSlider:hover .unity-base-slider__dragger,
 #MusicSlider:hover .unity-base-slider__dragger,
 #SFXSlider:hover .unity-base-slider__dragger,
 #AmbientSlider:hover .unity-base-slider__dragger {
@@ -320,6 +325,7 @@
     scale: 1.15 1.15;
 }
 
+#ResetOptionsButton,
 #BackButton {
     position: absolute;
     right: 35px;
@@ -344,6 +350,7 @@
     transition-timing-function: ease-out;
 }
 
+#ResetOptionsButton,
 #BackButton:hover {
     scale: 1.05 1.05;
     color: rgb(255, 241, 190);

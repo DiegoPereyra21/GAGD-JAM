@@ -14,75 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.WwiseAddressableSoundBank
   m_dataPerPlatformList:
   - WwisePlatform: XboxOne
-    LocalizedBankKeys:
-    - SFX
-    LocalizedBanksValues:
-    - m_AssetGUID: 5a6c6fe12b9baea4ebae311ce3e9b8d4
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    LocalizedBankKeys: []
+    LocalizedBanksValues: []
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
   - WwisePlatform: XboxSeriesX
-    LocalizedBankKeys:
-    - SFX
-    LocalizedBanksValues:
-    - m_AssetGUID: 395d557bc664d82428da2722a0252bf8
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    LocalizedBankKeys: []
+    LocalizedBanksValues: []
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
   - WwisePlatform: Mac
-    LocalizedBankKeys:
-    - SFX
-    LocalizedBanksValues:
-    - m_AssetGUID: 141f5e335a5cedc4fa832dbac685ce66
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    LocalizedBankKeys: []
+    LocalizedBanksValues: []
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
   - WwisePlatform: Web
-    LocalizedBankKeys:
-    - SFX
-    LocalizedBanksValues:
-    - m_AssetGUID: 0e6bcff46334b914cace2c775f49ed80
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    LocalizedBankKeys: []
+    LocalizedBanksValues: []
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
   - WwisePlatform: Windows
-    LocalizedBankKeys:
-    - SFX
-    LocalizedBanksValues:
-    - m_AssetGUID: d74c5a88c825e78428d31b4946e0fe11
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    LocalizedBankKeys: []
+    LocalizedBanksValues: []
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
   currentPlatformAssets:
-    WwisePlatform: Windows
-    LocalizedBankKeys:
-    - SFX
-    LocalizedBanksValues:
-    - m_AssetGUID: d74c5a88c825e78428d31b4946e0fe11
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    WwisePlatform: Web
+    LocalizedBankKeys: []
+    LocalizedBanksValues: []
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []

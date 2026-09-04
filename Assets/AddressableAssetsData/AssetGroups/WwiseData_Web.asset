@@ -30,11 +30,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0e6bcff46334b914cace2c775f49ed80
-    m_Address: Assets/WwiseData/Bank/Web/Event/STOP_STG_Clock.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 13b41d96919f53c44a3ebade0032099e
     m_Address: Assets/WwiseData/Bank/Web/Media/501813684.wem
     m_ReadOnly: 0
@@ -55,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ae035b32b678564694b3eb76d463fd2
+    m_Address: Assets/WwiseData/Bank/Web/Media/669185545.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4d2933616c1135c45abb6007603b0b5e
     m_Address: Assets/WwiseData/Bank/Web/Media/3496576.wem
     m_ReadOnly: 0
@@ -62,6 +62,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 54213b4422144344b99107b04eba9a01
     m_Address: Assets/WwiseData/Bank/Web/Media/656645410.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63b800d0fe21a0041a68ecf9e3c37ffa
+    m_Address: Assets/WwiseData/Bank/Web/Event/Play_STG_PickWood.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -170,8 +175,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f65bb30134e48cd4381155dc334c4b3d
-    m_Address: Assets/WwiseData/Bank/Web/Media/340777126.wem
+  - m_GUID: f279d445530beac4cbb6309a8b046266
+    m_Address: Assets/WwiseData/Bank/Web/Media/10179816.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

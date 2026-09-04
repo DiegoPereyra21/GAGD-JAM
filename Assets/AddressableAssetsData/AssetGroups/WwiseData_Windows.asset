@@ -50,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3983c92445cfdfd4b9886d4f3ad33c36
+    m_Address: Assets/WwiseData/Bank/Windows/Media/10179816.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 44d8a841455e986428484db2f46c4be6
     m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Clock.bnk
     m_ReadOnly: 0
@@ -70,13 +75,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 73498f32bf6d6f249a7f87957981c075
-    m_Address: Assets/WwiseData/Bank/Windows/Media/340777126.wem
+  - m_GUID: 716c7f26d1a0cec4491a45ff95583ff7
+    m_Address: Assets/WwiseData/Bank/Windows/Media/669185545.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7700635c47c2f604da96731981a3bda5
     m_Address: Assets/WwiseData/Bank/Windows/Media/809076942.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a58d22a015c3d14da15f5a9720644b0
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_PickWood.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -147,11 +157,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ccd92c87b0c73ba408d2b17e2b3c67fb
     m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_Night.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d74c5a88c825e78428d31b4946e0fe11
-    m_Address: Assets/WwiseData/Bank/Windows/Event/STOP_STG_Clock.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

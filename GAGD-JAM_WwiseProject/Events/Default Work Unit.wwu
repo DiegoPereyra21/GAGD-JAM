@@ -139,6 +139,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_STG_PickWood" ID="{4D88A7F9-FA1B-4C1A-8047-30FE86D158B6}">
+					<ChildrenList>
+						<Action Name="" ID="{9CD242FB-FC90-49D9-8D4A-8800FCA53DE9}" ShortID="492527297">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="freesound_community-tomar-un-objeto-46562" ID="{3B8D6929-7327-40C7-8C85-0A0564EE23DD}" WorkUnitID="{129C928C-6633-4E7A-A9C1-A240A4FE716E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

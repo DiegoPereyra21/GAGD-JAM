@@ -17,11 +17,18 @@ public class MainMenu : MonoBehaviour
     [Header("Primer Nivel")]
     [SerializeField] private string gameSceneName = "Level 1";
 
+    [Header("Manager de Audio")]
+    [SerializeField] private AudioSettingsUI audioSettingsUI;
+
+    //[Header("Manager de Idioma")]
+    //[SerializeField] private LanguageSettingsUI languageSettingsUI;
+
     private VisualElement root;
     private Button newGameButton;
     private Button continueButton;
     private Button optionsButton;
     private Button backButton;
+    private Button resetOptionsButton;
     private VisualElement optionsPanel;
     private VisualElement content;
 
@@ -45,6 +52,7 @@ public class MainMenu : MonoBehaviour
         continueButton = root.Q<Button>("ContinueButton");
         optionsButton = root.Q<Button>("OptionsButton");
         backButton = root.Q<Button>("BackButton");
+        resetOptionsButton = root.Q<Button>("ResetOptionsButton");
         optionsPanel = root.Q<VisualElement>("OptionsPanel");
 
         confirmNewGamePanel = root.Q<VisualElement>("ConfirmNewGamePanel");
@@ -71,6 +79,9 @@ public class MainMenu : MonoBehaviour
 
         if (backButton != null)
             backButton.clicked += CloseOptions;
+
+        if (resetOptionsButton != null)
+            resetOptionsButton.clicked += ResetOptions;
 
         optionsPanel.style.display = DisplayStyle.None;
         confirmNewGamePanel.style.display = DisplayStyle.None;
@@ -103,6 +114,9 @@ public class MainMenu : MonoBehaviour
 
         if (backButton != null)
             backButton.clicked -= CloseOptions;
+
+        if (resetOptionsButton != null)
+            resetOptionsButton.clicked -= ResetOptions;
 
         stopMusicEvent.Post(gameObject);
     }
@@ -156,5 +170,12 @@ public class MainMenu : MonoBehaviour
     {
         optionsPanel.style.display = DisplayStyle.None;
         content.style.display = DisplayStyle.Flex;
+    }
+
+    private void ResetOptions()
+    {
+        //languageSettings.ResetToDefault();
+
+        audioSettingsUI.ResetToDefaults();
     }
 }

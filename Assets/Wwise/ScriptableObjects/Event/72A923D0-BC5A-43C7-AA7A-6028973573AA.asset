@@ -15,5 +15,5 @@ MonoBehaviour:
   objectName: STOP_STG_Clock
   id: 3389563599
   guid: 72A923D0-BC5A-43C7-AA7A-6028973573AA
-  AutoBank: {fileID: 11400000, guid: 8e6f72a01fc17404e912f4f919ed6995, type: 2}
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

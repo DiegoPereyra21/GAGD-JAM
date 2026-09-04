@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="XboxSeriesX" BasePlatform="XboxSeriesX" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{2581D953-5227-43A8-70C9-82A7CFEC134F}">
+		<SoundBank Id="358402734" Type="Event" GUID="{74918F02-B781-4BB8-959D-34AF096650FF}" Language="SFX" Hash="{1DB80FAB-AAA9-CAB6-3FED-1092ADB4E37B}">
 			<ObjectPath>Play_STG_Mortar</ObjectPath>
 			<ShortName>Play_STG_Mortar</ShortName>
 			<Path>Event/Play_STG_Mortar.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{880CC7B2-E702-2155-0463-698CDFB9D4DA}</FileHash>
+	<FileHash>{E215CFB2-41E0-87B4-D9C8-E65420DF8083}</FileHash>
 </SoundBanksInfo>

@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	1532146285	Play_STG_Pickup			\Default Work Unit\Play_STG_Pickup	
 
 Effect plug-ins	ID	Name	Type				Notes
-	711212608	Parametric EQ (Custom)	Wwise Parametric EQ			
+	213844949	Parametric EQ (Custom)	Wwise Parametric EQ			
 
