@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Unity.Cinemachine;
 
+
 public class CameraTransition : MonoBehaviour
 {
     [SerializeField] private CinemachineBrain cinemachineBrain;
@@ -28,6 +29,9 @@ public class CameraTransition : MonoBehaviour
         cinemachineBrain.enabled = false;
         activeAnchor = null;
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         StartBlend(anchor, () =>
         {
             activeAnchor = anchor;
@@ -42,6 +46,8 @@ public class CameraTransition : MonoBehaviour
         StartBlend(cinemachineCameraTransform, () =>
         {
             cinemachineBrain.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             onComplete?.Invoke();
         });
     }

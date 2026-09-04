@@ -1,16 +1,19 @@
 using UnityEngine;
-//a lo que le ponga esto se va a crear un outline fachero que se ilumina al estar cerca
+
 public class InteractableOutline : MonoBehaviour
 {
     [SerializeField] private Renderer targetRenderer;
     [SerializeField] private int outlineMaterialSlot = 1;
-    [SerializeField] private float highlightedSize = 1.1f;
+    [SerializeField] private string outlineProperty = "_Outline_Size";
+    [SerializeField] private float normalValue = 1f;
+    [SerializeField] private float highlightedValue = 1.1f;
 
-    private static readonly int OutlineSizeID = Shader.PropertyToID("_Outline_Size");
+    private int outlinePropertyID;
     private MaterialPropertyBlock propertyBlock;
 
     private void Awake()
     {
+        outlinePropertyID = Shader.PropertyToID(outlineProperty);
         propertyBlock = new MaterialPropertyBlock();
         SetHighlighted(false);
     }
@@ -18,9 +21,10 @@ public class InteractableOutline : MonoBehaviour
     public void SetHighlighted(bool highlighted)
     {
         targetRenderer.GetPropertyBlock(propertyBlock, outlineMaterialSlot);
-        propertyBlock.SetFloat(OutlineSizeID, highlighted ? highlightedSize : 1f);
+        propertyBlock.SetFloat(outlinePropertyID, highlighted ? highlightedValue : normalValue);
         targetRenderer.SetPropertyBlock(propertyBlock, outlineMaterialSlot);
     }
+
     public void SetTargetRenderer(Renderer renderer)
     {
         targetRenderer = renderer;
