@@ -8,6 +8,8 @@ public class GameProgressManager : MonoBehaviour
     public static GameProgressManager Instance { get; private set; }
 
     [SerializeField] private float nightDuration = 300f;
+    //para que sea mas entendible la noche y el dia con el nuevo skybox
+    [SerializeField] private float dawnFraction = 0.25f;
 
     public event Action OnNightStarted;
     public event Action OnDayStarted;
@@ -120,7 +122,9 @@ public class GameProgressManager : MonoBehaviour
         get
         {
             if (!IsNightActive) return 1f;
-            return 1f - Mathf.Clamp01(NightTimeRemaining / nightDuration);
+
+            float rawProgress = 1f - Mathf.Clamp01(NightTimeRemaining / nightDuration);
+            return Mathf.Clamp01((rawProgress - (1f - dawnFraction)) / dawnFraction);
         }
     }
     public void ResetForNewGame()

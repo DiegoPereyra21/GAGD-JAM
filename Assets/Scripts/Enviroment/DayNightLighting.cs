@@ -8,11 +8,16 @@ public class DayNightLighting : MonoBehaviour
     [SerializeField] private Color nightAmbientColor = new Color(0.05f, 0.05f, 0.1f);
     [SerializeField] private Color dayAmbientColor = new Color(0.8f, 0.8f, 0.8f);
 
+    //para el skybox
+    private static readonly int CubemapTransitionID = Shader.PropertyToID("_CubemapTransition");
+
     private void Update()
     {
         float t = GameProgressManager.Instance.NightProgress;
 
-        targetCamera.backgroundColor = Color.Lerp(nightBackgroundColor, dayBackgroundColor, t);
         RenderSettings.ambientLight = Color.Lerp(nightAmbientColor, dayAmbientColor, t);
+
+        if (RenderSettings.skybox != null)
+            RenderSettings.skybox.SetFloat(CubemapTransitionID, 1f - t);
     }
 }
