@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Web",
+  "BasePlatform": "Web",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4024054474",
+    "Type": "Event",
+    "GUID": "{72B7F994-EB1E-4480-87CC-AC2043D08D32}",
+    "Language": "SFX",
+    "Hash": "{84E67B38-AA5F-734C-7FF9-4FE3FE246A22}",
+    "ObjectPath": "Stop_MUS_Night",
+    "ShortName": "Stop_MUS_Night",
+    "Path": "Event/Stop_MUS_Night.bnk",
+    "Events": [
+     {
+      "Id": "4024054474",
+      "Name": "Stop_MUS_Night",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_MUS_Night",
+      "GUID": "{72B7F994-EB1E-4480-87CC-AC2043D08D32}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{157F3ACA-C1FE-6038-F81D-1A783C87A63B}"
+ }
+}

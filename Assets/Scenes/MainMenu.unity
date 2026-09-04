@@ -522,6 +522,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 999ce031a4ff71c4b87103c5fb816760, type: 2}
   gameSceneName: Clean
+  audioSettingsUI: {fileID: 330484797}
 --- !u!1001 &921349492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1114,6 +1115,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameProgressManager
   nightDuration: 120
   dawnFraction: 0.25
+  dayMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c18a441a4a1ef8141bdcfdfe8210f697, type: 2}
+  nightMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 87d1445e0476f884fb67cfb804796b75, type: 2}
 --- !u!4 &1618223651
 Transform:
   m_ObjectHideFlags: 0

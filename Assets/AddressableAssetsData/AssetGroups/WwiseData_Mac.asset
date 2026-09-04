@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17211d529c369dd42af46709fbd1065a
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Stop_MUS_Night.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1d40f85bcdcff9440a4ab39409baadab
     m_Address: Assets/WwiseData/Bank/Mac/Media/260049539.wem
     m_ReadOnly: 0
@@ -57,6 +62,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4220066d51d4cf043be8d69a0744429e
     m_Address: Assets/WwiseData/Bank/Mac/Media/229322620.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4578a75ea178e49459f60eb5371ac161
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_MUS_TimeOfDay.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4720e13a9a7ade04b824e2022155e050
+    m_Address: Assets/WwiseData/Bank/Mac/Event/Stop_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

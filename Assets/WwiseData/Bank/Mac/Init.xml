@@ -24,7 +24,15 @@
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume" GUID="{63AE203E-86D2-4D19-A59B-BE928F65C12C}"/>
 				<GameParameter Id="3546521921" Name="AmbientVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbientVolume" GUID="{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="3729505769" Name="TimeOfDay" ObjectPath="\Switches\Default Work Unit\TimeOfDay" GUID="{23F89E85-B734-4984-91E6-411EE61C94F0}">
+					<Switches>
+						<Switch Id="311764537" Name="Day" ObjectPath="\Switches\Default Work Unit\TimeOfDay\Day" GUID="{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"/>
+						<Switch Id="1011622525" Name="Night" ObjectPath="\Switches\Default Work Unit\TimeOfDay\Night" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{94586C98-4954-6D74-6D2D-3E78B769FF28}</FileHash>
+	<FileHash>{20E77F13-B0CB-6604-A38F-093A3CC04E46}</FileHash>
 </SoundBanksInfo>

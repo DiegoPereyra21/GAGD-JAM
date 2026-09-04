@@ -55,6 +55,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c6fa7acb48b89645bcc459252011969
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Play_MUS_TimeOfDay.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 44d8a841455e986428484db2f46c4be6
     m_Address: Assets/WwiseData/Bank/Windows/Event/Play_STG_Clock.bnk
     m_ReadOnly: 0
@@ -135,6 +140,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a23926cb7b0a82a42b70343dceef8b8b
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Stop_MUS_Night.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad1dc561c3abbca4891e973a06d543dc
     m_Address: Assets/WwiseData/Bank/Windows/Media/71216937.wem
     m_ReadOnly: 0
@@ -152,6 +162,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b8e96337f84a42140ae5f9f24260d265
     m_Address: Assets/WwiseData/Bank/Windows/Media/501813684.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1031f1a3f1fa984bbb3efaee02e3fcb
+    m_Address: Assets/WwiseData/Bank/Windows/Event/Stop_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

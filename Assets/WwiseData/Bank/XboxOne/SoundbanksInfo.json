@@ -316,7 +316,7 @@
     "Type": "Event",
     "GUID": "{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}",
     "Language": "SFX",
-    "Hash": "{A2708F8B-DBFC-9FAC-56F8-17846C331996}",
+    "Hash": "{D18E84B1-31F3-73A1-F1F0-EE7CEF25CA87}",
     "ObjectPath": "Play_MUS_Night",
     "ShortName": "Play_MUS_Night",
     "Path": "Event/Play_MUS_Night.bnk",
@@ -341,6 +341,28 @@
       "MediaRefs": [
        {
         "Id": "1000971565"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3729505769",
+      "Name": "TimeOfDay",
+      "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay",
+      "GUID": "{23F89E85-B734-4984-91E6-411EE61C94F0}",
+      "Switches": [
+       {
+        "Id": "311764537",
+        "Name": "Day",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Day",
+        "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+       },
+       {
+        "Id": "1011622525",
+        "Name": "Night",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Night",
+        "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
        }
       ]
      }
@@ -376,6 +398,96 @@
       "MediaRefs": [
        {
         "Id": "869888867"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1108381680",
+    "Type": "Event",
+    "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
+    "Language": "SFX",
+    "Hash": "{187CF944-89B7-C8C7-DBFA-6BA800BE1AF7}",
+    "ObjectPath": "Play_MUS_TimeOfDay",
+    "ShortName": "Play_MUS_TimeOfDay",
+    "Path": "Event/Play_MUS_TimeOfDay.bnk",
+    "Media": [
+     {
+      "Id": "501813684",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Minimal mix.wav",
+      "Path": "Media/501813684.wem",
+      "CachePath": "7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem"
+     },
+     {
+      "Id": "1000971565",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Full mix.wav",
+      "Path": "Media/1000971565.wem",
+      "CachePath": "1B/{1BBB2DA3-FF4E-A842-40D6-105E4968CB90}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1108381680",
+      "Name": "Play_MUS_TimeOfDay",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_TimeOfDay",
+      "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3729505769",
+         "Id": "1011622525",
+         "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1000971565"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3729505769",
+         "Id": "311764537",
+         "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "501813684"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3729505769",
+      "Name": "TimeOfDay",
+      "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay",
+      "GUID": "{23F89E85-B734-4984-91E6-411EE61C94F0}",
+      "Switches": [
+       {
+        "Id": "311764537",
+        "Name": "Day",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Day",
+        "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+       },
+       {
+        "Id": "1011622525",
+        "Name": "Night",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Night",
+        "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
        }
       ]
      }
@@ -466,6 +578,28 @@
       "Name": "AmbientVolume",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\AmbientVolume",
       "GUID": "{8163CA6C-8E10-4D16-A6F4-CFBA9F5472BA}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3729505769",
+      "Name": "TimeOfDay",
+      "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay",
+      "GUID": "{23F89E85-B734-4984-91E6-411EE61C94F0}",
+      "Switches": [
+       {
+        "Id": "311764537",
+        "Name": "Day",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Day",
+        "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+       },
+       {
+        "Id": "1011622525",
+        "Name": "Night",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Night",
+        "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
+       }
+      ]
      }
     ]
    },
@@ -600,6 +734,28 @@
     ]
    },
    {
+    "Id": "3498583222",
+    "Type": "Event",
+    "GUID": "{AD0CA021-ABF7-4686-9596-784711EA907E}",
+    "Language": "SFX",
+    "Hash": "{E22DCE36-7B56-C3EF-B64B-7B3BE9AC9545}",
+    "ObjectPath": "Stop_MUS_Day",
+    "ShortName": "Stop_MUS_Day",
+    "Path": "Event/Stop_MUS_Day.bnk",
+    "Events": [
+     {
+      "Id": "3498583222",
+      "Name": "Stop_MUS_Day",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_MUS_Day",
+      "GUID": "{AD0CA021-ABF7-4686-9596-784711EA907E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "3595425793",
     "Type": "Event",
     "GUID": "{4D88A7F9-FA1B-4C1A-8047-30FE86D158B6}",
@@ -637,11 +793,33 @@
     ]
    },
    {
+    "Id": "4024054474",
+    "Type": "Event",
+    "GUID": "{72B7F994-EB1E-4480-87CC-AC2043D08D32}",
+    "Language": "SFX",
+    "Hash": "{84E67B38-AA5F-734C-7FF9-4FE3FE246A22}",
+    "ObjectPath": "Stop_MUS_Night",
+    "ShortName": "Stop_MUS_Night",
+    "Path": "Event/Stop_MUS_Night.bnk",
+    "Events": [
+     {
+      "Id": "4024054474",
+      "Name": "Stop_MUS_Night",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_MUS_Night",
+      "GUID": "{72B7F994-EB1E-4480-87CC-AC2043D08D32}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "4100501596",
     "Type": "Event",
     "GUID": "{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}",
     "Language": "SFX",
-    "Hash": "{30BB5405-7C24-9D4A-EBEE-85A1E4555A64}",
+    "Hash": "{813ABF48-F5AE-6316-BF43-6F44F6B3E091}",
     "ObjectPath": "Play_MUS_Day",
     "ShortName": "Play_MUS_Day",
     "Path": "Event/Play_MUS_Day.bnk",
@@ -666,6 +844,28 @@
       "MediaRefs": [
        {
         "Id": "501813684"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3729505769",
+      "Name": "TimeOfDay",
+      "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay",
+      "GUID": "{23F89E85-B734-4984-91E6-411EE61C94F0}",
+      "Switches": [
+       {
+        "Id": "311764537",
+        "Name": "Day",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Day",
+        "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+       },
+       {
+        "Id": "1011622525",
+        "Name": "Night",
+        "ObjectPath": "\\Switches\\Default Work Unit\\TimeOfDay\\Night",
+        "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
        }
       ]
      }
@@ -694,6 +894,6 @@
     ]
    }
   ],
-  "FileHash": "{E0943A0F-86B0-C2E8-CB07-9A9D90DA7A21}"
+  "FileHash": "{6FCD9808-3912-E8CB-7796-1C9B8E498179}"
  }
 }

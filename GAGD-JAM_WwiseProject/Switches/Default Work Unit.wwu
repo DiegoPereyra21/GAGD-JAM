@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{21EDF66E-EF82-4B3E-A6F2-0C1E404518BA}" SchemaVersion="133">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{21EDF66E-EF82-4B3E-A6F2-0C1E404518BA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{21EDF66E-EF82-4B3E-A6F2-0C1E404518BA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="TimeOfDay" ID="{23F89E85-B734-4984-91E6-411EE61C94F0}">
+					<ChildrenList>
+						<Switch Name="Day" ID="{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"/>
+						<Switch Name="Night" ID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

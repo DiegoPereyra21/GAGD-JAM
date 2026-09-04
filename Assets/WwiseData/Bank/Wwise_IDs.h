@@ -18,13 +18,31 @@ namespace AK
         static const AkUniqueID PLAY_MUS_DAY = 4100501596U;
         static const AkUniqueID PLAY_MUS_MAINMENU = 1043591872U;
         static const AkUniqueID PLAY_MUS_NIGHT = 1001167992U;
+        static const AkUniqueID PLAY_MUS_TIMEOFDAY = 1108381680U;
         static const AkUniqueID PLAY_STG_CLOCK = 3069328145U;
         static const AkUniqueID PLAY_STG_CUT = 176225071U;
         static const AkUniqueID PLAY_STG_MORTAR = 358402734U;
         static const AkUniqueID PLAY_STG_PICKUP = 1532146285U;
         static const AkUniqueID PLAY_STG_PICKWOOD = 3595425793U;
+        static const AkUniqueID STOP_MUS_DAY = 3498583222U;
         static const AkUniqueID STOP_MUS_MAINMENU = 4243441902U;
+        static const AkUniqueID STOP_MUS_NIGHT = 4024054474U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace TIMEOFDAY
+        {
+            static const AkUniqueID GROUP = 3729505769U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID DAY = 311764537U;
+                static const AkUniqueID NIGHT = 1011622525U;
+            } // namespace SWITCH
+        } // namespace TIMEOFDAY
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

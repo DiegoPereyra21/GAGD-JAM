@@ -1446,32 +1446,25 @@
 										<ActiveSource Name="HauntedLullabiesofJapan_EdoLullaby3" ID="{73F13452-1217-4A85-A4DB-43D9A4229FDA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Full mix" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}" ShortID="856002338">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Music" ID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Full mix" ID="{8D82894A-B204-4462-85BD-149154BAA907}">
-											<Language>SFX</Language>
-											<AudioFile>Full mix.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1000971565"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Full mix" ID="{8D82894A-B204-4462-85BD-149154BAA907}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Minimal mix" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}" ShortID="372458432">
+							</ChildrenList>
+						</Folder>
+						<SwitchContainer Name="MUS_TimeOfDay" ID="{A455520E-8DD9-4F46-AAB2-5351A65A2BDD}" ShortID="958115667">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Night" ID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}" WorkUnitID="{21EDF66E-EF82-4B3E-A6F2-0C1E404518BA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music" ID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="TimeOfDay" ID="{23F89E85-B734-4984-91E6-411EE61C94F0}" WorkUnitID="{21EDF66E-EF82-4B3E-A6F2-0C1E404518BA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Day" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}" ShortID="372458432">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="IsStreamingEnabled" Type="bool">
@@ -1501,8 +1494,57 @@
 										<ActiveSource Name="Minimal mix" ID="{21C247CF-B53C-4A98-A249-A933DC8B90CD}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Night" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}" ShortID="856002338">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCBCA676-99A1-4299-B5E2-ED3A662B07BC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Full mix" ID="{8D82894A-B204-4462-85BD-149154BAA907}">
+											<Language>SFX</Language>
+											<AudioFile>Full mix.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1000971565"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Full mix" ID="{8D82894A-B204-4462-85BD-149154BAA907}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-						</Folder>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Night" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Day" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Night" ID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
+										<ItemList>
+											<ItemRef Name="Night" ID="{FBC09913-4F9A-4C97-8C74-10FB101F19F2}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Day" ID="{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"/>
+										<ItemList>
+											<ItemRef Name="Day" ID="{B3E0716F-546A-4A15-AFA9-8BDEAA0B8B06}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{B0A163DB-030C-4741-971F-7DF8B7ECF201}" ShortID="71701263"/>

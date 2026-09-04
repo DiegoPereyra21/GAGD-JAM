@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="XboxSeriesX" BasePlatform="XboxSeriesX" SchemaVersion="16" SoundBankVersion="172">
+	<SoundBanks>
+		<SoundBank Id="3498583222" Type="Event" GUID="{AD0CA021-ABF7-4686-9596-784711EA907E}" Language="SFX" Hash="{E22DCE36-7B56-C3EF-B64B-7B3BE9AC9545}">
+			<ObjectPath>Stop_MUS_Day</ObjectPath>
+			<ShortName>Stop_MUS_Day</ShortName>
+			<Path>Event/Stop_MUS_Day.bnk</Path>
+			<Events>
+				<Event Id="3498583222" Name="Stop_MUS_Day" ObjectPath="\Events\Default Work Unit\Stop_MUS_Day" GUID="{AD0CA021-ABF7-4686-9596-784711EA907E}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{CDB774CA-4A49-1236-8D50-E9F6A68E8D3E}</FileHash>
+</SoundBanksInfo>
