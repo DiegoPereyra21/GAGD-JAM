@@ -21,7 +21,7 @@
                 </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="OptionsPanel" focusable="false" enabled="true" class="options-panel" style="flex-grow: 1; background-size: 1800% 920%; -unity-background-scale-mode: stretch-to-fill; display: none;">
+        <ui:VisualElement name="OptionsPanel" focusable="false" enabled="true" class="options-panel" style="flex-grow: 1; background-size: 1800% 920%; -unity-background-scale-mode: stretch-to-fill; display: flex;">
             <ui:Label text="Opciones" name="OptionsTitle" emoji-fallback-support="true"/>
             <ui:VisualElement name="LanguageSection" class="language-section" style="flex-grow: 1; min-height: 24px; max-height: 30%; padding-top: 0;">
                 <ui:Label text="Idioma" name="LanguageLabel"/>
@@ -29,18 +29,18 @@
                 <ui:Toggle label="Ingles" name="EnglishToggle" toggle-on-label-click="true" class="english-toggle" style="height: 70px; width: 250px;"/>
             </ui:VisualElement>
             <ui:VisualElement name="AudioSection" class="audio-section" style="flex-grow: 1;">
-                <ui:Label text="Sonido" double-click-selects-word="true" name="AudioLabel" style="margin-bottom: 0;"/>
+                <ui:Label text="" double-click-selects-word="true" name="AudioLabel" style="margin-bottom: 0;"/>
                 <ui:VisualElement name="MusicRow" style="flex-grow: 1;">
                     <ui:Label text="Musica" name="MusicLabel"/>
-                    <ui:Slider label="MusicSlider" value="42" high-value="100" name="MusicSlider"/>
+                    <ui:Slider label="" value="42" high-value="100" name="MusicSlider"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="AmbientRow" style="flex-grow: 1;">
                     <ui:Label text="Ambiente" name="AmbientLabel"/>
-                    <ui:Slider label="AmbientSlider" value="42" high-value="100" name="AmbientSlider" class="ambient-slider"/>
+                    <ui:Slider label="" value="42" high-value="100" name="AmbientSlider" class="ambient-slider"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="SFXRow" style="flex-grow: 1;">
                     <ui:Label text="SFX" name="SFXLabel"/>
-                    <ui:Slider label="SFXSlider" value="42" high-value="100" name="SFXSlider"/>
+                    <ui:Slider label="" value="42" high-value="100" name="SFXSlider"/>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:Button text="Volver" name="BackButton" class="back-button"/>
