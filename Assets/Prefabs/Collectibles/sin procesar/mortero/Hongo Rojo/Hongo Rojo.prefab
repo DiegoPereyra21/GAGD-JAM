@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5535930555706530981}
   - component: {fileID: -3281913056171711633}
   - component: {fileID: 4894685338703811008}
+  - component: {fileID: 1608406175643808536}
   m_Layer: 8
   m_Name: Hongo Rojo
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5128585774460825056}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.3464587, y: 0.0017726099, z: -6.747427}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
@@ -69,6 +70,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b43eea1b58ccc094f95ad58234a3a788, type: 2}
+  - {fileID: 2100000, guid: 00faba55d72a8094e86aa2cd310a32af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,4 +137,21 @@ MonoBehaviour:
   shakeDuration: 0.3
   shakeStrength: 0.1
   freezeDuration: 0.8
-  outline: {fileID: 0}
+  outline: {fileID: 1608406175643808536}
+--- !u!114 &1608406175643808536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5128585774460825056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  targetRenderer: {fileID: 5535930555706530981}
+  outlineMaterialSlot: 1
+  outlineProperty: _Offset
+  normalValue: 0
+  highlightedValue: 0.74

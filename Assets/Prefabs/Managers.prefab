@@ -90,6 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3986167006153977968}
   - component: {fileID: 9093134655466383893}
+  - component: {fileID: 7099401525845739767}
   m_Layer: 0
   m_Name: DayNightLighting
   m_TagString: Untagged
@@ -129,6 +130,18 @@ MonoBehaviour:
   dayBackgroundColor: {r: 0.6, g: 0.8, b: 1, a: 1}
   nightAmbientColor: {r: 0.05, g: 0.05, b: 0.1, a: 1}
   dayAmbientColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+--- !u!114 &7099401525845739767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4368601345032853577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8ed10e4fab08c49a2985421c1992e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndoorFogDisabler
 --- !u!1001 &6085023250288014147
 PrefabInstance:
   m_ObjectHideFlags: 0

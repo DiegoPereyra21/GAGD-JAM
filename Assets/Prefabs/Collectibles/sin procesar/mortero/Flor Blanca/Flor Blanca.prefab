@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7800842665649912432}
   - component: {fileID: -8864741573520640649}
   - component: {fileID: 3020560798203952450}
+  - component: {fileID: 3991733701014861030}
   m_Layer: 8
   m_Name: Flor Blanca
   m_TagString: Untagged
@@ -28,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7255502035055602732}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.13, y: 0.0063743833, z: -6.68}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.86, y: 1.86, z: 1.86}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,6 +70,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b43eea1b58ccc094f95ad58234a3a788, type: 2}
+  - {fileID: 2100000, guid: 00faba55d72a8094e86aa2cd310a32af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,4 +136,21 @@ MonoBehaviour:
   shakeDuration: 0.3
   shakeStrength: 0.1
   freezeDuration: 0.8
-  outline: {fileID: 0}
+  outline: {fileID: 3991733701014861030}
+--- !u!114 &3991733701014861030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255502035055602732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  targetRenderer: {fileID: 7800842665649912432}
+  outlineMaterialSlot: 1
+  outlineProperty: _Offset
+  normalValue: 0
+  highlightedValue: 1.29

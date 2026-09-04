@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1618847066428523769}
   - component: {fileID: -552512271856669258}
   - component: {fileID: -8645002735461733993}
+  - component: {fileID: 8299068508091276956}
   m_Layer: 8
   m_Name: Baya
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208671729453974855}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.894563, y: 0.016573537, z: -7.427962}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
@@ -136,7 +137,7 @@ MonoBehaviour:
   shakeDuration: 0.3
   shakeStrength: 0.1
   freezeDuration: 0.8
-  outline: {fileID: 0}
+  outline: {fileID: 8299068508091276956}
 --- !u!135 &-552512271856669258
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -175,5 +176,22 @@ MonoBehaviour:
     depletedModel: {fileID: 4465718168198936348, guid: 4db2c84d3d20dc3468d1e077d6883235, type: 3}
   - fullModel: {fileID: 208671729453974855, guid: c572f1170e5d9d545bbb9ddfa9e4a15e, type: 3}
     depletedModel: {fileID: 8030008945717385381, guid: 83eb4dc59e209f149adf7c7e9429fa65, type: 3}
-  outline: {fileID: 0}
+  outline: {fileID: 8299068508091276956}
   randomizeRotation: 1
+--- !u!114 &8299068508091276956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208671729453974855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  targetRenderer: {fileID: 3458572707724667850}
+  outlineMaterialSlot: 1
+  outlineProperty: _Offset
+  normalValue: 0
+  highlightedValue: 2.1

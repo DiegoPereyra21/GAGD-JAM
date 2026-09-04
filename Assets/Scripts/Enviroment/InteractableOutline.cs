@@ -4,9 +4,9 @@ public class InteractableOutline : MonoBehaviour
 {
     [SerializeField] private Renderer targetRenderer;
     [SerializeField] private int outlineMaterialSlot = 1;
-    [SerializeField] private string outlineProperty = "_Outline_Size";
-    [SerializeField] private float normalValue = 1f;
-    [SerializeField] private float highlightedValue = 1.1f;
+    [SerializeField] private string outlineProperty = "_Offset";
+    [SerializeField] private float normalValue = 0f;
+    [SerializeField] private float highlightedValue = 0.5f;
 
     private int outlinePropertyID;
     private MaterialPropertyBlock propertyBlock;
