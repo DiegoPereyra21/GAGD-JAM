@@ -179,7 +179,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{B558C080-C14B-477A-0AC8-C31B1DCAF48C}">
+		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{2D05EE15-9CC1-80E9-E519-6EC93C8DAF86}">
 			<ObjectPath>Play_MUS_TimeOfDay</ObjectPath>
 			<ShortName>Play_MUS_TimeOfDay</ShortName>
 			<Path>Event/Play_MUS_TimeOfDay.bnk</Path>
@@ -189,12 +189,17 @@
 					<Path>Media/501813684.wem</Path>
 					<CachePath>7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem</CachePath>
 				</File>
-				<File Id="1000971565" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Full mix.wav</ShortName>
-					<Path>Media/1000971565.wem</Path>
-					<CachePath>1B/{1BBB2DA3-FF4E-A842-40D6-105E4968CB90}.wem</CachePath>
+				<File Id="742675129" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Full Mix Low.wav</ShortName>
+					<Path>Media/742675129.wem</Path>
+					<CachePath>B8/{B841B54B-FEC5-8DCA-12AB-2F29A70F6E35}.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1291433344" Name="Bass" ObjectPath="\Effects\Factory Effects\Flanger\Flanging\Bass" GUID="{AB3CE4D4-B0DD-4FC2-AC1D-30EB749C5911}" LibName="Wwise Flanger" LibId="8192003"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1108381680" Name="Play_MUS_TimeOfDay" ObjectPath="\Events\Default Work Unit\Play_MUS_TimeOfDay" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" DurationType="Infinite">
 					<SwitchContainers>
@@ -207,8 +212,13 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3729505769" Id="1011622525" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
 							<MediaRefs>
-								<MediaRef Id="1000971565"/>
+								<MediaRef Id="742675129"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1291433344"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -222,7 +232,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{6FB523FB-E443-07F4-5C96-8AA9C5C7F472}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{6E86F804-28B9-77E1-C356-2597E3A7A2AF}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -349,5 +359,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1CB453D6-9F4E-ADE7-7616-F63679738BF8}</FileHash>
+	<FileHash>{2D3C8086-C6DC-1E54-C69C-9E1D362490DC}</FileHash>
 </SoundBanksInfo>

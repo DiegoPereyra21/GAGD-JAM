@@ -8,3 +8,6 @@ Switch	ID	Name	Switch Group			Notes
 	311764537	Day	TimeOfDay			
 	1011622525	Night	TimeOfDay			
 
+Effect plug-ins	ID	Name	Type				Notes
+	1291433344	Bass	Wwise Flanger			
+

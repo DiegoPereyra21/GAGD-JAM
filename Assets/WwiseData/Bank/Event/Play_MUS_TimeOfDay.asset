@@ -22,9 +22,23 @@ MonoBehaviour:
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
-    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaKeys:
+    - SFX
     LocalizedStreamingMediaValues:
-      localizedMediaList: []
+      localizedMediaList:
+      - media:
+        - m_AssetGUID: 13b41d96919f53c44a3ebade0032099e
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 501813684
+        - m_AssetGUID: 07e33fafbaa5bf840b072cea3da8050c
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 742675129
   - WwisePlatform: XboxSeriesX
     LocalizedBankKeys:
     - SFX
@@ -34,9 +48,23 @@ MonoBehaviour:
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
-    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaKeys:
+    - SFX
     LocalizedStreamingMediaValues:
-      localizedMediaList: []
+      localizedMediaList:
+      - media:
+        - m_AssetGUID: 7a4ae662cd658f14dbbf08707e2a8479
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 501813684
+        - m_AssetGUID: df2c3c792c6facb4c82b53e0342ae02a
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 742675129
   - WwisePlatform: XboxOne
     LocalizedBankKeys:
     - SFX
@@ -46,9 +74,23 @@ MonoBehaviour:
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
-    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaKeys:
+    - SFX
     LocalizedStreamingMediaValues:
-      localizedMediaList: []
+      localizedMediaList:
+      - media:
+        - m_AssetGUID: 4c970c58c6b0e294c8494eef2d995d67
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 501813684
+        - m_AssetGUID: f15011579888df44882d06d779257fac
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 742675129
   - WwisePlatform: Windows
     LocalizedBankKeys:
     - SFX
@@ -58,9 +100,23 @@ MonoBehaviour:
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
-    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaKeys:
+    - SFX
     LocalizedStreamingMediaValues:
-      localizedMediaList: []
+      localizedMediaList:
+      - media:
+        - m_AssetGUID: b8e96337f84a42140ae5f9f24260d265
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 501813684
+        - m_AssetGUID: 6d2f7fcc855ccfe4cb5ed011bba273a2
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 742675129
   - WwisePlatform: Mac
     LocalizedBankKeys:
     - SFX
@@ -70,9 +126,23 @@ MonoBehaviour:
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
-    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaKeys:
+    - SFX
     LocalizedStreamingMediaValues:
-      localizedMediaList: []
+      localizedMediaList:
+      - media:
+        - m_AssetGUID: ec30f8cbdde7ea94f8d768ce8dc35713
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 501813684
+        - m_AssetGUID: 4a56a91d8bd2550408ea4ddbd9162b00
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 742675129
   currentPlatformAssets:
     WwisePlatform: Web
     LocalizedBankKeys:
@@ -83,6 +153,20 @@ MonoBehaviour:
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
-    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaKeys:
+    - SFX
     LocalizedStreamingMediaValues:
-      localizedMediaList: []
+      localizedMediaList:
+      - media:
+        - m_AssetGUID: 13b41d96919f53c44a3ebade0032099e
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 501813684
+        - m_AssetGUID: 07e33fafbaa5bf840b072cea3da8050c
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_SubObjectGUID: 
+          m_EditorAssetChanged: 0
+          id: 742675129

@@ -15,11 +15,6 @@ MonoBehaviour:
   m_GroupName: WwiseData_XboxSeriesX
   m_GUID: 8da1a4fee6ff0024fad7e1a3274e5a33
   m_SerializeEntries:
-  - m_GUID: 0317e44402df4504eb9141341611a735
-    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/1000971565.wem
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 032aa315471769f4a96db469bda6056a
     m_Address: Assets/WwiseData/Bank/XboxSeriesX/Event/Play_Grass_Footsteps.bnk
     m_ReadOnly: 0
@@ -192,6 +187,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ddf36dd974ee7f54ab518c83068088a5
     m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/10179816.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df2c3c792c6facb4c82b53e0342ae02a
+    m_Address: Assets/WwiseData/Bank/XboxSeriesX/Media/742675129.wem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

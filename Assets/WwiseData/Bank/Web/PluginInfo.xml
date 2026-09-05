@@ -2,8 +2,9 @@
 <PluginInfo Platform="Web" BasePlatform="Web">
 	<PluginLibs>
 		<PluginLib LibName="Wwise Parametric EQ" LibId="6881283" Type="Effect" DLL="AkParametricEQ" StaticLib="AkParametricEQFX"/>
+		<PluginLib LibName="Wwise Flanger" LibId="8192003" Type="Effect" DLL="AkFlanger" StaticLib="AkFlangerFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{45DE49F4-3E8F-533D-788E-F94343E48A47}</FileHash>
+	<FileHash>{1F45CF9D-F062-6D67-15E5-EE4A8E0867EF}</FileHash>
 </PluginInfo>

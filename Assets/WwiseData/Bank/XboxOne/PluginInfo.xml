@@ -2,8 +2,9 @@
 <PluginInfo Platform="XboxOne" BasePlatform="XboxOne">
 	<PluginLibs>
 		<PluginLib LibName="Wwise Parametric EQ" LibId="6881283" Type="Effect" DLL="AkParametricEQ" StaticLib="AkParametricEQFX"/>
+		<PluginLib LibName="Wwise Flanger" LibId="8192003" Type="Effect" DLL="AkFlanger" StaticLib="AkFlangerFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{ABC3F823-5D54-ADA5-2FBB-D6D19418729F}</FileHash>
+	<FileHash>{573B40F2-0CA6-0CE2-1F4E-D08685964770}</FileHash>
 </PluginInfo>

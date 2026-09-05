@@ -351,7 +351,7 @@
     "Type": "Event",
     "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
     "Language": "SFX",
-    "Hash": "{B558C080-C14B-477A-0AC8-C31B1DCAF48C}",
+    "Hash": "{2D05EE15-9CC1-80E9-E519-6EC93C8DAF86}",
     "ObjectPath": "Play_MUS_TimeOfDay",
     "ShortName": "Play_MUS_TimeOfDay",
     "Path": "Event/Play_MUS_TimeOfDay.bnk",
@@ -366,15 +366,27 @@
       "CachePath": "7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem"
      },
      {
-      "Id": "1000971565",
+      "Id": "742675129",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Full mix.wav",
-      "Path": "Media/1000971565.wem",
-      "CachePath": "1B/{1BBB2DA3-FF4E-A842-40D6-105E4968CB90}.wem"
+      "ShortName": "Full Mix Low.wav",
+      "Path": "Media/742675129.wem",
+      "CachePath": "B8/{B841B54B-FEC5-8DCA-12AB-2F29A70F6E35}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1291433344",
+       "Name": "Bass",
+       "ObjectPath": "\\Effects\\Factory Effects\\Flanger\\Flanging\\Bass",
+       "GUID": "{AB3CE4D4-B0DD-4FC2-AC1D-30EB749C5911}",
+       "LibName": "Wwise Flanger",
+       "LibId": "8192003"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1108381680",
@@ -405,9 +417,16 @@
         },
         "MediaRefs": [
          {
-          "Id": "1000971565"
+          "Id": "742675129"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1291433344"
+          }
+         ]
+        }
        }
       ]
      }
@@ -440,7 +459,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{EDD6177E-6B3E-85AC-81E0-A3F4AC02C3B8}",
+    "Hash": "{94AFE0BC-B482-F6AD-5F78-F9D2FD9C426C}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -735,6 +754,6 @@
     ]
    }
   ],
-  "FileHash": "{8D170C88-7680-3C7B-8862-CF3D47AA82AA}"
+  "FileHash": "{461A5938-2CF6-1419-CFD1-4A01DB41E897}"
  }
 }
