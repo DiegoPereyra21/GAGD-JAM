@@ -72,11 +72,11 @@ public class DeliveryInteraction : MonoBehaviour
         {
             HomeStorage.Instance.Save();
             questManager.Save();
-            Debug.Log($"[DeliveryInteraction] Entregadas {delivered.Count} misión(es), pendientes de venta hasta dormir.");
+            DialogueUI.Instance.ShowMessage("Ofelia", $"Entregadas {delivered.Count} misión(es), pendientes de venta hasta dormir.");
         }
         else
         {
-            Debug.Log("[DeliveryInteraction] No hay pociones que coincidan con ninguna misión activa.");
+            DialogueUI.Instance.ShowMessage("Ofelia", "No tengo ninguna poción que coincida con un pedido.");
         }
     }
 }

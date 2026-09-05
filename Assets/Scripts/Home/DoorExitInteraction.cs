@@ -54,7 +54,7 @@ public class DoorExitInteraction : MonoBehaviour
 
         if (!GameProgressManager.Instance.IsNightActive)
         {
-            Debug.Log("[DoorExitInteraction] No podés salir sin dormir primero.");
+            DialogueUI.Instance.ShowMessage("Ofelia", "No puedo salir sin dormir primero.");
             return;
         }
 

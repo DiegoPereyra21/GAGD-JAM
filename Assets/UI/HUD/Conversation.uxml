@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; bottom: 5px; position: absolute; height: 214px; width: 1842px; background-color: rgba(31, 28, 30, 0.851); border-top-left-radius: 700px; border-bottom-left-radius: 700px; border-top-right-radius: 700px; border-bottom-right-radius: 700px; left: 40px;">
+        <ui:Label text="Ofelia" name="ConversationName" style="color: rgb(255, 255, 255); font-size: 53px; justify-content: center; -unity-text-align: upper-center; margin-left: 500px; -unity-font-style: bold; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 0; margin-right: 500px; background-color: rgba(0, 0, 0, 0);"/>
+        <ui:Label text="No puedo acostarme ahora, tengo que recolectar" name="Conversation" style="-unity-text-align: middle-center; bottom: 9px; right: 0; top: 0; left: 0; position: absolute; align-content: flex-start; font-size: 48px; color: rgb(236, 217, 226); -unity-font-style: bold-and-italic; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 0; margin-top: 46px;"/>
+    </ui:VisualElement>
+</ui:UXML>

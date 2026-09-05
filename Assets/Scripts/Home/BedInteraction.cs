@@ -48,7 +48,7 @@ public class BedInteraction : MonoBehaviour
 
         if (!GameProgressManager.Instance.HasBeenOutsideThisCycle)
         {
-            Debug.Log("[BedInteraction] Todavía no saliste a recolectar, no podés dormir.");
+            DialogueUI.Instance.ShowMessage("Ofelia", "No puedo acostarme ahora, tengo que recolectar.");
             return;
         }
 

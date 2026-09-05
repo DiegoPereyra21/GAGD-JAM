@@ -449,11 +449,11 @@ public class CauldronCraftingSystem : MonoBehaviour
         {
             HomeStorage.Instance.AddPotion(matchedRecipe);
             HomeStorage.Instance.Save();
-            Debug.Log($"[CauldronCraftingSystem] ¡Receta encontrada! Creaste: {matchedRecipe.potionName}");
+            DialogueUI.Instance.ShowMessage("Ofelia", $"[CauldronCraftingSystem] ¡Receta encontrada! Creaste: {matchedRecipe.potionName}");
         }
         else
         {
-            Debug.Log("[CauldronCraftingSystem] Ninguna receta coincide con esta combinación.");
+            DialogueUI.Instance.ShowMessage("Ofelia", "Ninguna receta coincide con esta combinación.");
         }
 
         foreach (GameObject item in cauldronContents)
