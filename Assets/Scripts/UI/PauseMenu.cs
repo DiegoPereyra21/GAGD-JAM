@@ -37,6 +37,13 @@ public class PauseMenu : MonoBehaviour
 
         root.style.display = DisplayStyle.None;
         optionsPanel.style.display = DisplayStyle.None;
+        //para q quite el boton de salir del game en caso de q este en itchio
+        Button exitButton = uiRoot.Q<Button>("ExitButton");
+        exitButton.clicked += ExitGame;
+
+        #if UNITY_WEBGL && !UNITY_EDITOR
+                exitButton.SetEnabled(false);
+        #endif
     }
 
     private void OnEnable() => pauseAction.performed += OnPausePressed;

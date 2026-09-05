@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
     private Button optionsButton;
     private Button backButton;
     private Button resetOptionsButton;
+    private Button exitButton;
     private VisualElement optionsPanel;
     private VisualElement content;
 
@@ -53,6 +54,7 @@ public class MainMenu : MonoBehaviour
         optionsButton = root.Q<Button>("OptionsButton");
         backButton = root.Q<Button>("BackButton");
         resetOptionsButton = root.Q<Button>("ResetOptionsButton");
+        exitButton = root.Q<Button>("ExitButton");
         optionsPanel = root.Q<VisualElement>("OptionsPanel");
 
         confirmNewGamePanel = root.Q<VisualElement>("ConfirmNewGamePanel");
@@ -72,6 +74,15 @@ public class MainMenu : MonoBehaviour
         {
             continueButton.clicked += ContinueGame;
             continueButton.SetEnabled(GameProgressManager.HasSaveData);
+        }
+
+        if (exitButton != null)
+        {
+            exitButton.clicked += ExitGame;
+
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                        exitButton.SetEnabled(false);
+            #endif
         }
 
         if (optionsButton != null)
@@ -118,6 +129,9 @@ public class MainMenu : MonoBehaviour
         if (resetOptionsButton != null)
             resetOptionsButton.clicked -= ResetOptions;
 
+        if (exitButton != null)
+            exitButton.clicked -= ExitGame;
+
         stopMusicEvent.Post(gameObject);
     }
 
@@ -128,6 +142,12 @@ public class MainMenu : MonoBehaviour
 
     private void OpenConfirmNewGame()
     {
+        if (!GameProgressManager.HasSaveData)
+        {
+            StartNewGame();
+            return;
+        }
+
         content.style.display = DisplayStyle.None;
         confirmNewGamePanel.style.display = DisplayStyle.Flex;
     }
@@ -177,5 +197,10 @@ public class MainMenu : MonoBehaviour
         //languageSettings.ResetToDefault();
 
         audioSettingsUI.ResetToDefaults();
+    }
+    private void ExitGame()
+    {
+        stopMusicEvent.Post(gameObject);
+        Application.Quit();
     }
 }
