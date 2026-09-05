@@ -29,6 +29,7 @@ public class GameProgressManager : MonoBehaviour
     public static bool HasSaveData => PlayerPrefs.HasKey(SaveKey);
 
     public event Action OnWentOutside;
+    public event Action OnNightTimeExpired;
 
     public bool ShouldSpawnAtDoor { get; private set; }
 
@@ -135,8 +136,10 @@ public class GameProgressManager : MonoBehaviour
         {
             NightTimeRemaining = 0f;
             IsNightActive = false;
+            OnNightTimeExpired?.Invoke();
         }
     }
+    
     public void StartNight()
     {
         NightTimeRemaining = nightDuration;

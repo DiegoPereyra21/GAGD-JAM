@@ -1846,6 +1846,7 @@ GameObject:
   - component: {fileID: 1595960365}
   - component: {fileID: 1595960367}
   - component: {fileID: 1595960366}
+  - component: {fileID: 1595960368}
   m_Layer: 6
   m_Name: DialogueUI
   m_TagString: Untagged
@@ -1905,6 +1906,21 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &1595960368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595960364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61e203fbd8c4da4d9938a99918984cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayWarningNotifier
+  speakerName: Ofelia
+  message: "Se hizo de d\xEDa... tengo que volver a casa"
+  displayDuration: 4
 --- !u!1001 &1771466862
 PrefabInstance:
   m_ObjectHideFlags: 0
