@@ -257,6 +257,7 @@
     padding-bottom: 25px;
 }
 
+#GeneralRow,
 #MenuRow,
 #MusicRow,
 #SFXRow,
@@ -270,6 +271,7 @@
     margin-bottom: 10px;
 }
 
+#GeneralLabel,
 #MenuLabel,
 #MusicLabel,
 #SFXLabel,
@@ -284,6 +286,7 @@
     -unity-text-align: middle-left;
 }
 
+#GeneralSlider,
 #MenuSlider,
 #MusicSlider,
 #SFXSlider,
@@ -295,6 +298,7 @@
     margin: 0;
 }
 
+#GeneralSlider .unity-base-slider__tracker,
 #MenuSlider .unity-base-slider__tracker,
 #MusicSlider .unity-base-slider__tracker,
 #SFXSlider .unity-base-slider__tracker,
@@ -304,6 +308,7 @@
     border-radius: 3px;
 }
 
+#GeneralSlider .unity-base-slider__dragger,
 #MenuSlider .unity-base-slider__dragger,
 #MusicSlider .unity-base-slider__dragger,
 #SFXSlider .unity-base-slider__dragger,
@@ -316,6 +321,7 @@
     border-radius: 50%;
 }
 
+#GeneralSlider:hover .unity-base-slider__dragger,
 #MenuSlider:hover .unity-base-slider__dragger,
 #MusicSlider:hover .unity-base-slider__dragger,
 #SFXSlider:hover .unity-base-slider__dragger,

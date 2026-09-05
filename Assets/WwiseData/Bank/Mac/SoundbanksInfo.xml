@@ -232,7 +232,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0D3F6143-B7FC-71A3-59FC-5014D593A1CE}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{8EA96B0E-4CCD-C8EB-5427-4005716A0D25}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -250,6 +250,7 @@
 				<Bus Id="3991942870" Name="Music" ObjectPath="\Busses\Default Work Unit\Main Audio Bus\Music" GUID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="421429125" Name="GeneralVolume" ObjectPath="\Game Parameters\Default Work Unit\GeneralVolume" GUID="{CE83A0A2-18A9-473F-B22F-D508DE388C9C}"/>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume" GUID="{DFB3BC0A-887E-4C08-9D50-CE0433B1106E}"/>
 				<GameParameter Id="1786260118" Name="MenuVolume" ObjectPath="\Game Parameters\Default Work Unit\MenuVolume" GUID="{E3388098-B798-4C09-B900-93DCECD91828}"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume" GUID="{63AE203E-86D2-4D19-A59B-BE928F65C12C}"/>
@@ -359,5 +360,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F320E66F-1291-F27C-D6AD-D869669800A7}</FileHash>
+	<FileHash>{EB3216E3-9771-2D3E-B360-CA66E2544DBB}</FileHash>
 </SoundBanksInfo>

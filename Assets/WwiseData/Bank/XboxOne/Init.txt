@@ -1,4 +1,5 @@
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	421429125	GeneralVolume			\Default Work Unit\GeneralVolume	
 	988953028	SFXVolume			\Default Work Unit\SFXVolume	
 	1786260118	MenuVolume			\Default Work Unit\MenuVolume	
 	2346531308	MusicVolume			\Default Work Unit\MusicVolume	
