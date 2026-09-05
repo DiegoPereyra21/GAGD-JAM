@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Web" BasePlatform="Web" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{187CF944-89B7-C8C7-DBFA-6BA800BE1AF7}">
+		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{B558C080-C14B-477A-0AC8-C31B1DCAF48C}">
 			<ObjectPath>Play_MUS_TimeOfDay</ObjectPath>
 			<ShortName>Play_MUS_TimeOfDay</ShortName>
 			<Path>Event/Play_MUS_TimeOfDay.bnk</Path>
 			<Media>
-				<File Id="501813684" Language="SFX" Streaming="true" Location="Loose">
+				<File Id="501813684" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Minimal mix.wav</ShortName>
 					<Path>Media/501813684.wem</Path>
 					<CachePath>7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem</CachePath>
@@ -21,15 +21,15 @@
 				<Event Id="1108381680" Name="Play_MUS_TimeOfDay" ObjectPath="\Events\Default Work Unit\Play_MUS_TimeOfDay" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3729505769" Id="1011622525" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="1000971565"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3729505769" Id="311764537" GUID="{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"/>
 							<MediaRefs>
 								<MediaRef Id="501813684"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3729505769" Id="1011622525" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
+							<MediaRefs>
+								<MediaRef Id="1000971565"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -45,5 +45,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{27096135-147B-2A80-8A25-AAA154C3C00C}</FileHash>
+	<FileHash>{133DB1BF-BC10-EB1D-89FC-AE1D4650A346}</FileHash>
 </SoundBanksInfo>

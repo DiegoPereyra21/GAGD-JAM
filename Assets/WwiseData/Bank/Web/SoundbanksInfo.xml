@@ -160,33 +160,6 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1001167992" Type="Event" GUID="{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}" Language="SFX" Hash="{D18E84B1-31F3-73A1-F1F0-EE7CEF25CA87}">
-			<ObjectPath>Play_MUS_Night</ObjectPath>
-			<ShortName>Play_MUS_Night</ShortName>
-			<Path>Event/Play_MUS_Night.bnk</Path>
-			<Media>
-				<File Id="1000971565" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Full mix.wav</ShortName>
-					<Path>Media/1000971565.wem</Path>
-					<CachePath>1B/{1BBB2DA3-FF4E-A842-40D6-105E4968CB90}.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="1001167992" Name="Play_MUS_Night" ObjectPath="\Events\Default Work Unit\Play_MUS_Night" GUID="{7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE}" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="1000971565"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-			<SwitchGroups>
-				<SwitchGroup Id="3729505769" Name="TimeOfDay" ObjectPath="\Switches\Default Work Unit\TimeOfDay" GUID="{23F89E85-B734-4984-91E6-411EE61C94F0}">
-					<Switches>
-						<Switch Id="311764537" Name="Day" ObjectPath="\Switches\Default Work Unit\TimeOfDay\Day" GUID="{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"/>
-						<Switch Id="1011622525" Name="Night" ObjectPath="\Switches\Default Work Unit\TimeOfDay\Night" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
-		</SoundBank>
 		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{E8C51CE8-B916-3CA1-29A5-31E9CBFEE5BF}">
 			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
 			<ShortName>Play_MUS_MainMenu</ShortName>
@@ -206,12 +179,12 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{187CF944-89B7-C8C7-DBFA-6BA800BE1AF7}">
+		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{B558C080-C14B-477A-0AC8-C31B1DCAF48C}">
 			<ObjectPath>Play_MUS_TimeOfDay</ObjectPath>
 			<ShortName>Play_MUS_TimeOfDay</ShortName>
 			<Path>Event/Play_MUS_TimeOfDay.bnk</Path>
 			<Media>
-				<File Id="501813684" Language="SFX" Streaming="true" Location="Loose">
+				<File Id="501813684" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Minimal mix.wav</ShortName>
 					<Path>Media/501813684.wem</Path>
 					<CachePath>7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem</CachePath>
@@ -226,15 +199,15 @@
 				<Event Id="1108381680" Name="Play_MUS_TimeOfDay" ObjectPath="\Events\Default Work Unit\Play_MUS_TimeOfDay" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3729505769" Id="1011622525" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="1000971565"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3729505769" Id="311764537" GUID="{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"/>
 							<MediaRefs>
 								<MediaRef Id="501813684"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3729505769" Id="1011622525" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
+							<MediaRefs>
+								<MediaRef Id="1000971565"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -348,14 +321,6 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3498583222" Type="Event" GUID="{AD0CA021-ABF7-4686-9596-784711EA907E}" Language="SFX" Hash="{E22DCE36-7B56-C3EF-B64B-7B3BE9AC9545}">
-			<ObjectPath>Stop_MUS_Day</ObjectPath>
-			<ShortName>Stop_MUS_Day</ShortName>
-			<Path>Event/Stop_MUS_Day.bnk</Path>
-			<Events>
-				<Event Id="3498583222" Name="Stop_MUS_Day" ObjectPath="\Events\Default Work Unit\Stop_MUS_Day" GUID="{AD0CA021-ABF7-4686-9596-784711EA907E}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
 		<SoundBank Id="3595425793" Type="Event" GUID="{4D88A7F9-FA1B-4C1A-8047-30FE86D158B6}" Language="SFX" Hash="{24E55EDD-26F3-95D6-B02C-E73819ADF7EA}">
 			<ObjectPath>Play_STG_PickWood</ObjectPath>
 			<ShortName>Play_STG_PickWood</ShortName>
@@ -375,41 +340,6 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4024054474" Type="Event" GUID="{72B7F994-EB1E-4480-87CC-AC2043D08D32}" Language="SFX" Hash="{84E67B38-AA5F-734C-7FF9-4FE3FE246A22}">
-			<ObjectPath>Stop_MUS_Night</ObjectPath>
-			<ShortName>Stop_MUS_Night</ShortName>
-			<Path>Event/Stop_MUS_Night.bnk</Path>
-			<Events>
-				<Event Id="4024054474" Name="Stop_MUS_Night" ObjectPath="\Events\Default Work Unit\Stop_MUS_Night" GUID="{72B7F994-EB1E-4480-87CC-AC2043D08D32}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="4100501596" Type="Event" GUID="{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}" Language="SFX" Hash="{813ABF48-F5AE-6316-BF43-6F44F6B3E091}">
-			<ObjectPath>Play_MUS_Day</ObjectPath>
-			<ShortName>Play_MUS_Day</ShortName>
-			<Path>Event/Play_MUS_Day.bnk</Path>
-			<Media>
-				<File Id="501813684" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>Minimal mix.wav</ShortName>
-					<Path>Media/501813684.wem</Path>
-					<CachePath>7B/{7B36CC42-A5BE-4F7A-9094-C57264D839B3}.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="4100501596" Name="Play_MUS_Day" ObjectPath="\Events\Default Work Unit\Play_MUS_Day" GUID="{63BCEB9F-33D0-4A1E-8351-B8D81DFBA493}" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="501813684"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-			<SwitchGroups>
-				<SwitchGroup Id="3729505769" Name="TimeOfDay" ObjectPath="\Switches\Default Work Unit\TimeOfDay" GUID="{23F89E85-B734-4984-91E6-411EE61C94F0}">
-					<Switches>
-						<Switch Id="311764537" Name="Day" ObjectPath="\Switches\Default Work Unit\TimeOfDay\Day" GUID="{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"/>
-						<Switch Id="1011622525" Name="Night" ObjectPath="\Switches\Default Work Unit\TimeOfDay\Night" GUID="{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
-		</SoundBank>
 		<SoundBank Id="4243441902" Type="Event" GUID="{00063086-C8F5-4E31-B546-3BA30C57B3FC}" Language="SFX" Hash="{FDB06760-B43A-5E05-07E3-677004BC09A6}">
 			<ObjectPath>Stop_MUS_MainMenu</ObjectPath>
 			<ShortName>Stop_MUS_MainMenu</ShortName>
@@ -419,5 +349,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3C162FD3-05FF-F284-4BD4-652CA9E9B99C}</FileHash>
+	<FileHash>{F6375CE5-EC6B-0A38-62D7-E4D3AB0DCFBC}</FileHash>
 </SoundBanksInfo>
