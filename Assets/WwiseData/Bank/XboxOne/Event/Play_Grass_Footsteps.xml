@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="XboxOne" BasePlatform="XboxOne" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{2AD0AF54-7508-CC18-977E-9733433A0A11}">
+		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{288DCFA5-38AA-ACE6-E803-4803C825C403}">
 			<ObjectPath>Play_Grass_Footsteps</ObjectPath>
 			<ShortName>Play_Grass_Footsteps</ShortName>
 			<Path>Event/Play_Grass_Footsteps.bnk</Path>
@@ -115,5 +115,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5C53BB55-F0BB-3C28-FAB3-26781A28FADC}</FileHash>
+	<FileHash>{2D68BAC5-69AC-CC95-9615-116354181D89}</FileHash>
 </SoundBanksInfo>
