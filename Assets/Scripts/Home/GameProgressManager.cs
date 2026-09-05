@@ -28,6 +28,8 @@ public class GameProgressManager : MonoBehaviour
     public int InventoryCount { get; private set; } = 0; // para tener un conteo de items que se quedan en la casa
     public static bool HasSaveData => PlayerPrefs.HasKey(SaveKey);
 
+    public event Action OnWentOutside;
+
     public bool ShouldSpawnAtDoor { get; private set; }
 
     public void MarkEnteredHouse()
@@ -66,6 +68,7 @@ public class GameProgressManager : MonoBehaviour
     public void MarkOutside()
     {
         IsOutside = true;
+        OnWentOutside?.Invoke();
     }
     public void MarkWentOutside()
     {

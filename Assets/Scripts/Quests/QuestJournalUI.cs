@@ -18,7 +18,6 @@ public class QuestJournalUI : MonoBehaviour
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         scrollView = root.Q<ScrollView>("QuestScrollView");
     }
-
     private void OnEnable()
     {
         inventory.OnInventoryChanged += Refresh;
@@ -26,6 +25,7 @@ public class QuestJournalUI : MonoBehaviour
         HomeStorage.Instance.OnStorageChanged += Refresh;
         GameProgressManager.Instance.OnDayStarted += Refresh;
         GameProgressManager.Instance.OnNightStarted += Refresh;
+        GameProgressManager.Instance.OnWentOutside += Refresh;
         Refresh();
     }
 
@@ -36,6 +36,7 @@ public class QuestJournalUI : MonoBehaviour
         HomeStorage.Instance.OnStorageChanged -= Refresh;
         GameProgressManager.Instance.OnDayStarted -= Refresh;
         GameProgressManager.Instance.OnNightStarted -= Refresh;
+        GameProgressManager.Instance.OnWentOutside -= Refresh;
     }
 
     private void Refresh()

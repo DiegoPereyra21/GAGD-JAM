@@ -15,18 +15,22 @@ public class QuestManager : MonoBehaviour
 
     private readonly List<QuestData> pendingDeliveries = new List<QuestData>();
     public IReadOnlyList<QuestData> PendingDeliveries => pendingDeliveries;
+    private const int MaxActiveQuests = 6;
 
     private void Awake()
     {
         Load();
     }
 
-    public void AddQuest(QuestData quest)
+
+    public bool AddQuest(QuestData quest)
     {
-        if (activeQuests.Contains(quest)) return;
+        if (activeQuests.Contains(quest)) return false;
+        if (activeQuests.Count >= MaxActiveQuests) return false;
 
         activeQuests.Add(quest);
         OnQuestsChanged?.Invoke();
+        return true;
     }
 
     public void MarkPendingDelivery(QuestData quest)

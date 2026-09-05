@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="QuestJournalRoot" style="position: absolute; right: 35px; top: 35px; width: 300px; color: rgb(209, 209, 209); font-size: 19px; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: rgba(0, 0, 0, 0.843);">
-        <ui:Label name="JournalTitle" text="Diario de objetivos" style="-unity-text-align: upper-center; font-size: 22px;"/>
-        <ui:ScrollView name="QuestScrollView"/>
-    </ui:VisualElement>
+<ui:VisualElement name="QuestJournalRoot" style="position: absolute; right: 35px; top: 35px; width: 300px; max-height: 85%; color: rgb(209, 209, 209); font-size: 19px; background-color: rgba(0, 0, 0, 0.843);">
+    <ui:Label name="JournalTitle" text="Diario de objetivos" style="-unity-text-align: upper-center; font-size: 22px;"/>
+    <ui:ScrollView name="QuestScrollView" style="flex-grow: 1;"/>
+</ui:VisualElement>
 </ui:UXML>

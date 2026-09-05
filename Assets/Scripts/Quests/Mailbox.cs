@@ -63,9 +63,16 @@ public class Mailbox : MonoBehaviour
 
         int currentDay = GameProgressManager.Instance.CurrentDay;
         QuestData letter = pendingLetters.Find(q => q.availableDay <= currentDay);
-        if (letter == null) return;
 
-        pendingLetters.Remove(letter);
-        questManager.AddQuest(letter);
+        if (letter == null)
+        {
+            DialogueUI.Instance.ShowMessage("Ofelia", "No tengo más cartas por ahora.");
+            return;
+        }
+
+        if (questManager.AddQuest(letter))
+            pendingLetters.Remove(letter);
+        else
+            DialogueUI.Instance.ShowMessage("Ofelia", "Ya tengo demasiados pedidos, no puedo aceptar más por ahora.");
     }
 }
