@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
     "Language": "SFX",
-    "Hash": "{0B3DFB20-1703-AF55-244B-177C8CD6D256}",
+    "Hash": "{80D55AE7-F30B-0001-49D6-1457324A6F81}",
     "ObjectPath": "Play_STG_Pickup",
     "ShortName": "Play_STG_Pickup",
     "Path": "Event/Play_STG_Pickup.bnk",
@@ -62,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{0995683A-ABF9-4843-7AFC-477909B89DF4}"
+  "FileHash": "{AE5ED807-CB8B-CB80-3DC2-FDE778254CE9}"
  }
 }

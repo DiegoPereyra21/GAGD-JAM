@@ -351,7 +351,7 @@
     "Type": "Event",
     "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
     "Language": "SFX",
-    "Hash": "{2D05EE15-9CC1-80E9-E519-6EC93C8DAF86}",
+    "Hash": "{4AE42391-608F-9828-3000-8280BAAE25A6}",
     "ObjectPath": "Play_MUS_TimeOfDay",
     "ShortName": "Play_MUS_TimeOfDay",
     "Path": "Event/Play_MUS_TimeOfDay.bnk",
@@ -569,7 +569,7 @@
     "Type": "Event",
     "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
     "Language": "SFX",
-    "Hash": "{0B3DFB20-1703-AF55-244B-177C8CD6D256}",
+    "Hash": "{80D55AE7-F30B-0001-49D6-1457324A6F81}",
     "ObjectPath": "Play_STG_Pickup",
     "ShortName": "Play_STG_Pickup",
     "Path": "Event/Play_STG_Pickup.bnk",
@@ -754,6 +754,6 @@
     ]
    }
   ],
-  "FileHash": "{690E1385-5E85-380B-97BD-48C473780D53}"
+  "FileHash": "{09A2E74B-DCB2-91D2-6AB0-66F48991AE49}"
  }
 }
