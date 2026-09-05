@@ -20,11 +20,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 17211d529c369dd42af46709fbd1065a
-    m_Address: Assets/WwiseData/Bank/Mac/Event/Stop_MUS_Night.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1d40f85bcdcff9440a4ab39409baadab
     m_Address: Assets/WwiseData/Bank/Mac/Media/260049539.wem
     m_ReadOnly: 0
@@ -37,11 +32,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 28c535d87a8cbf146802ea5c886232f5
     m_Address: Assets/WwiseData/Bank/Mac/Media/656645410.wem
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 33e712bf5583d0c45910724fcc17e980
-    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -67,11 +57,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4578a75ea178e49459f60eb5371ac161
     m_Address: Assets/WwiseData/Bank/Mac/Event/Play_MUS_TimeOfDay.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4720e13a9a7ade04b824e2022155e050
-    m_Address: Assets/WwiseData/Bank/Mac/Event/Stop_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -152,11 +137,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa4659421d2266347824dd183b9c0321
     m_Address: Assets/WwiseData/Bank/Mac/Event/Play_Grass_Footsteps.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b03fe9165a4def7419d32460c1d3ffa3
-    m_Address: Assets/WwiseData/Bank/Mac/Event/Play_MUS_Night.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -20,11 +20,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1a6d7054fb1d65b448b50cb775a50c44
-    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_MUS_Night.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 24354f6a08972a945bc5e9bd64d40dee
     m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_Menu_Button_Hover.bnk
     m_ReadOnly: 0
@@ -85,11 +80,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 52e7303e38dea8d428abe93ecd728f3d
-    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Stop_MUS_Night.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c5bb76e2a130cf4a883e2f4fe09b3e8
     m_Address: Assets/WwiseData/Bank/XboxOne/Media/354389179.wem
     m_ReadOnly: 0
@@ -110,18 +100,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9d3f08358c886ac4b899ef36424c38a0
-    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_MUS_Day.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a3e483a87389e1c498c3187f90ffdc9e
     m_Address: Assets/WwiseData/Bank/XboxOne/Event/Play_MUS_MainMenu.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a7b3595eda6860d4ba4ad26fc77a26e4
-    m_Address: Assets/WwiseData/Bank/XboxOne/Event/Stop_MUS_Day.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
