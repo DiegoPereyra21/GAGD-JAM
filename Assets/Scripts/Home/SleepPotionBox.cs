@@ -1,7 +1,5 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 using Game.Collectibles;
 
 [RequireComponent(typeof(Collider))]
@@ -9,23 +7,18 @@ public class SleepPotionBox : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InteractableOutline outline;
-    [SerializeField] private TextMeshPro label;
-    [SerializeField] private Camera billboardCamera;
     [SerializeField] private int potionCost = 100;
     [SerializeField] private IngredientType specialIngredient;
     [SerializeField] private GameObject basketVisualPrefab;
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private BasketDisplay basketDisplay;
-    [SerializeField] private float confirmationDuration = 2f;
 
     private InputAction interactAction;
     private bool playerInRange;
-    private bool showingConfirmation;
 
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
-        label.gameObject.SetActive(true);
     }
 
     private void OnEnable() => interactAction.performed += OnInteract;
@@ -49,38 +42,9 @@ public class SleepPotionBox : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
-    {
-        if (!showingConfirmation)
-            RefreshLabel();
-
-        if (billboardCamera != null)
-            label.transform.rotation = Quaternion.LookRotation(label.transform.position - billboardCamera.transform.position);
-    }
-
     private bool CanDeliverToday(GameProgressManager progress)
     {
         return progress.SleepIngredientPurchased && progress.CurrentDay > progress.SleepIngredientPurchaseDay;
-    }
-
-    private void RefreshLabel()
-    {
-        GameProgressManager progress = GameProgressManager.Instance;
-
-        if (progress.SleepIngredientObtained)
-        {
-            label.text = "";
-            return;
-        }
-
-        if (progress.SleepIngredientPurchased)
-        {
-            label.text = CanDeliverToday(progress) ? "ENTREGA DE INGREDIENTE ESPECIAL" : "VUELVE MAÑANA";
-            return;
-        }
-
-        int missing = Mathf.Max(0, potionCost - progress.Money);
-        label.text = $"Faltan {missing} de oro";
     }
 
     private void OnInteract(InputAction.CallbackContext ctx)
@@ -93,29 +57,39 @@ public class SleepPotionBox : MonoBehaviour
 
         if (progress.SleepIngredientPurchased)
         {
-            if (!CanDeliverToday(progress)) return;
-            if (inventory.IsFull) return;
+            if (!CanDeliverToday(progress))
+            {
+                DialogueUI.Instance.ShowMessage("Ofelia", "Todavía no llegó, tengo que volver mañana");
+                return;
+            }
+
+            if (inventory.IsFull)
+            {
+                DialogueUI.Instance.ShowMessage("Ofelia", "No tengo lugar en el canasto para el ingrediente especial");
+                return;
+            }
 
             inventory.AddItem(specialIngredient, 1);
             basketDisplay.Drop(specialIngredient, basketVisualPrefab);
 
             progress.MarkSleepIngredientObtained();
             progress.Save();
+
+            DialogueUI.Instance.ShowMessage("Ofelia", "¡Llegó el ingrediente especial!");
             return;
         }
 
-        if (progress.Money < potionCost) return;
+        if (progress.Money < potionCost)
+        {
+            int missing = potionCost - progress.Money;
+            DialogueUI.Instance.ShowMessage("Ofelia", $"Todavía me faltan {missing} monedas para el ingrediente especial");
+            return;
+        }
 
         progress.TrySpendMoney(potionCost);
         progress.MarkSleepIngredientPurchased();
         progress.Save();
-    }
 
-    private IEnumerator ShowConfirmation(string message)
-    {
-        showingConfirmation = true;
-        label.text = message;
-        yield return new WaitForSeconds(confirmationDuration);
-        showingConfirmation = false;
+        DialogueUI.Instance.ShowMessage("Ofelia", "Ya pagué. Tengo que volver mañana a buscarlo");
     }
 }
