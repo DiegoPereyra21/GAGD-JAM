@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3498583222	Stop_MUS_Day			\Default Work Unit\Stop_MUS_Day	
-

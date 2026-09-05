@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
     "Language": "SFX",
-    "Hash": "{187CF944-89B7-C8C7-DBFA-6BA800BE1AF7}",
+    "Hash": "{B558C080-C14B-477A-0AC8-C31B1DCAF48C}",
     "ObjectPath": "Play_MUS_TimeOfDay",
     "ShortName": "Play_MUS_TimeOfDay",
     "Path": "Event/Play_MUS_TimeOfDay.bnk",
@@ -18,7 +18,7 @@
      {
       "Id": "501813684",
       "Language": "SFX",
-      "Streaming": "true",
+      "Streaming": "false",
       "Location": "Loose",
       "ShortName": "Minimal mix.wav",
       "Path": "Media/501813684.wem",
@@ -46,13 +46,12 @@
         "SwitchValue": {
          "GroupType": "Switch",
          "GroupId": "3729505769",
-         "Id": "1011622525",
-         "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}",
-         "Default": "true"
+         "Id": "311764537",
+         "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
         },
         "MediaRefs": [
          {
-          "Id": "1000971565"
+          "Id": "501813684"
          }
         ]
        },
@@ -60,12 +59,12 @@
         "SwitchValue": {
          "GroupType": "Switch",
          "GroupId": "3729505769",
-         "Id": "311764537",
-         "GUID": "{C3B147E2-D0A6-4A6A-9E38-D8D44780DB4B}"
+         "Id": "1011622525",
+         "GUID": "{AE25609F-89C9-4A93-B8BD-70C54D44AF40}"
         },
         "MediaRefs": [
          {
-          "Id": "501813684"
+          "Id": "1000971565"
          }
         ]
        }
@@ -96,6 +95,6 @@
     ]
    }
   ],
-  "FileHash": "{124C1C2D-9F7A-8358-5E81-7865D4F2EEB7}"
+  "FileHash": "{38820511-6C00-8C08-D098-E4A3839ABC4A}"
  }
 }

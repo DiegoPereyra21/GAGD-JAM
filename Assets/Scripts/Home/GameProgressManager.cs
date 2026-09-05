@@ -15,6 +15,9 @@ public class GameProgressManager : MonoBehaviour
     public event Action OnNightStarted;
     public event Action OnDayStarted;
 
+    [Header("Audio")]
+    [SerializeField] private AK.Wwise.Event timeOfDayMusic;
+
     public int CurrentDay { get; private set; } = 1;
     public int Money { get; private set; }
     public float NightTimeRemaining { get; private set; }
@@ -203,6 +206,17 @@ public class GameProgressManager : MonoBehaviour
         SleepIngredientPurchaseDay = data.sleepIngredientPurchaseDay;
 
         Debug.Log($"[GameProgressManager] Cargado: {json}");
+    }
+
+    // funciones para cambiar musica con wwise
+    private void SetDayMusic()
+    {
+        AkSoundEngine.SetSwitch("TimeOfDay", "Day", gameObject);
+    }
+
+    private void SetNightMusic()
+    {
+        AkSoundEngine.SetSwitch("TimeOfDay", "Night", gameObject);
     }
 
 
