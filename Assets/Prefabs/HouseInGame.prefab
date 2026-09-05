@@ -5440,7 +5440,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de3ca851c7897b244830955c48b76e1f, type: 2}
   - {fileID: 11400000, guid: 1f8f157788ed36d4ba88a229b0df5125, type: 2}
   - {fileID: 11400000, guid: bbb3263b3e9ab184abbe41504f31471b, type: 2}
-  outline: {fileID: 0}
+  outline: {fileID: 858244236734341608}
   interactRadius: 2.3
 --- !u!65 &5218211404306532790
 BoxCollider:
@@ -8897,6 +8897,8 @@ MonoBehaviour:
   - station: 1
     rawType: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
     processedType: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
+  playerTransform: {fileID: 0}
+  interactRadius: 2
   clickMovementThreshold: 15
   playSTGCut:
     idInternal: 0
@@ -9469,16 +9471,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7636367829590179206}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.015}
-  m_LocalScale: {x: 0.058372077, y: 0.058372084, z: 0.058372065}
+  m_LocalRotation: {x: -0, y: 0.99945235, z: -0, w: 0.03309068}
+  m_LocalPosition: {x: 0, y: 0, z: 0.085}
+  m_LocalScale: {x: 0.058372084, y: 0.05837208, z: 0.05837206}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4800694626331794911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.044, y: 1.7321355}
+  m_AnchoredPosition: {x: 0.018, y: 1.7321352}
   m_SizeDelta: {x: 30, y: 8}
   m_Pivot: {x: 0.25, y: 0}
 --- !u!23 &4059411151513172782
@@ -17665,19 +17667,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5982585
+      value: -4.617
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05528579
+      value: -0.055285808
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.7553263
+      value: 2.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.10134952
+      value: 0.9976598
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -17685,7 +17687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9948509
+      value: -0.068373725
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -17697,7 +17699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -7.841
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -17707,6 +17709,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mailbox
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 20156bb201b47e642bbcb8bfcbc690a0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -17716,11 +17726,55 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9084078014516150890}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6324240423935976452, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 858244236734341608}
+    - targetCorrespondingSourceObject: {fileID: 6324240423935976452, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1108885794681816770}
   m_SourcePrefab: {fileID: 100100000, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
+--- !u!1 &1356128872143380016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6324240423935976452, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
+  m_PrefabInstance: {fileID: 4978103966381341236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &858244236734341608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356128872143380016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: 1108885794681816770}
+--- !u!114 &1108885794681816770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356128872143380016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 4852434829833634073}
 --- !u!4 &4800694626331794911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
+  m_PrefabInstance: {fileID: 4978103966381341236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4852434829833634073 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 451073451779226413, guid: 39bf5d267dbca3a4c888fdae84a8048f, type: 3}
   m_PrefabInstance: {fileID: 4978103966381341236}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4985301495043602166
@@ -18517,11 +18571,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4118032464696096002}
   m_SourcePrefab: {fileID: 100100000, guid: 148927b5e70125240a515533d703f05b, type: 3}
---- !u!23 &5094955642870051600 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 148927b5e70125240a515533d703f05b, type: 3}
-  m_PrefabInstance: {fileID: 5869736813622898580}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6268949061869226111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 148927b5e70125240a515533d703f05b, type: 3}
@@ -18566,11 +18615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  targetRenderer: {fileID: 5094955642870051600}
-  outlineMaterialSlot: 1
-  outlineProperty: _Offset
-  normalValue: 0
-  highlightedValue: 0.04
+  outlineRenderer: {fileID: 0}
 --- !u!1001 &5875760276597409521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19043,11 +19088,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8847429989974313482}
   m_SourcePrefab: {fileID: 100100000, guid: 9a0e3f755689f7943ab7d8948a481db3, type: 3}
---- !u!23 &5676045410824347799 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9a0e3f755689f7943ab7d8948a481db3, type: 3}
-  m_PrefabInstance: {fileID: 6414472340474264595}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6180523404438028610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a0e3f755689f7943ab7d8948a481db3, type: 3}
@@ -19087,11 +19127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  targetRenderer: {fileID: 5676045410824347799}
-  outlineMaterialSlot: 1
-  outlineProperty: _Offset
-  normalValue: 0
-  highlightedValue: 0.07
+  outlineRenderer: {fileID: 0}
 --- !u!114 &8847429989974313482
 MonoBehaviour:
   m_ObjectHideFlags: 0

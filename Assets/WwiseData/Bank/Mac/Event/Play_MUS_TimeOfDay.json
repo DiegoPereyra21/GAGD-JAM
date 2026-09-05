@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
     "Language": "SFX",
-    "Hash": "{2D05EE15-9CC1-80E9-E519-6EC93C8DAF86}",
+    "Hash": "{25B569EB-C3FE-186C-7599-84FD5FC2C725}",
     "ObjectPath": "Play_MUS_TimeOfDay",
     "ShortName": "Play_MUS_TimeOfDay",
     "Path": "Event/Play_MUS_TimeOfDay.bnk",
@@ -114,6 +114,6 @@
     ]
    }
   ],
-  "FileHash": "{E996BF14-596C-364F-6703-006E07504406}"
+  "FileHash": "{FEFAC84F-4E66-B1F4-776E-356771518E2F}"
  }
 }

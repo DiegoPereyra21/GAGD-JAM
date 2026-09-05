@@ -92,7 +92,7 @@
     "Type": "Event",
     "GUID": "{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}",
     "Language": "SFX",
-    "Hash": "{2AD0AF54-7508-CC18-977E-9733433A0A11}",
+    "Hash": "{288DCFA5-38AA-ACE6-E803-4803C825C403}",
     "ObjectPath": "Play_Grass_Footsteps",
     "ShortName": "Play_Grass_Footsteps",
     "Path": "Event/Play_Grass_Footsteps.bnk",
@@ -316,7 +316,7 @@
     "Type": "Event",
     "GUID": "{344BF274-586D-4BCF-A53C-82A9B8102F15}",
     "Language": "SFX",
-    "Hash": "{E8C51CE8-B916-3CA1-29A5-31E9CBFEE5BF}",
+    "Hash": "{92761509-4161-01D5-0C4A-5BFC35B89525}",
     "ObjectPath": "Play_MUS_MainMenu",
     "ShortName": "Play_MUS_MainMenu",
     "Path": "Event/Play_MUS_MainMenu.bnk",
@@ -351,7 +351,7 @@
     "Type": "Event",
     "GUID": "{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}",
     "Language": "SFX",
-    "Hash": "{2D05EE15-9CC1-80E9-E519-6EC93C8DAF86}",
+    "Hash": "{25B569EB-C3FE-186C-7599-84FD5FC2C725}",
     "ObjectPath": "Play_MUS_TimeOfDay",
     "ShortName": "Play_MUS_TimeOfDay",
     "Path": "Event/Play_MUS_TimeOfDay.bnk",
@@ -459,7 +459,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{99D0B816-A2F7-D8C4-CBBD-A56A943905A0}",
+    "Hash": "{474D6C47-B811-743E-9A9E-36A874F26C65}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -517,6 +517,12 @@
     ],
     "GameParameters": [
      {
+      "Id": "421429125",
+      "Name": "GeneralVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GeneralVolume",
+      "GUID": "{CE83A0A2-18A9-473F-B22F-D508DE388C9C}"
+     },
+     {
       "Id": "988953028",
       "Name": "SFXVolume",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\SFXVolume",
@@ -569,7 +575,7 @@
     "Type": "Event",
     "GUID": "{413F87E7-B318-4C26-9D8C-522516E4F81A}",
     "Language": "SFX",
-    "Hash": "{0B3DFB20-1703-AF55-244B-177C8CD6D256}",
+    "Hash": "{80D55AE7-F30B-0001-49D6-1457324A6F81}",
     "ObjectPath": "Play_STG_Pickup",
     "ShortName": "Play_STG_Pickup",
     "Path": "Event/Play_STG_Pickup.bnk",
@@ -662,7 +668,7 @@
     "Type": "Event",
     "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
     "Language": "SFX",
-    "Hash": "{50FC4275-423D-972F-1D29-5219D065A05A}",
+    "Hash": "{3C0628A9-1C71-BD95-5DAC-AC123DBFC1D1}",
     "ObjectPath": "Play_Menu_Button_Hover",
     "ShortName": "Play_Menu_Button_Hover",
     "Path": "Event/Play_Menu_Button_Hover.bnk",
@@ -754,6 +760,6 @@
     ]
    }
   ],
-  "FileHash": "{690E1385-5E85-380B-97BD-48C473780D53}"
+  "FileHash": "{7DF0802E-4D89-1A22-B0E3-16D84F4CD1CB}"
  }
 }

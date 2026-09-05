@@ -47,7 +47,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{2AD0AF54-7508-CC18-977E-9733433A0A11}">
+		<SoundBank Id="546793308" Type="Event" GUID="{2B3B6BF4-26D2-43DC-A20A-057242F7AE98}" Language="SFX" Hash="{288DCFA5-38AA-ACE6-E803-4803C825C403}">
 			<ObjectPath>Play_Grass_Footsteps</ObjectPath>
 			<ShortName>Play_Grass_Footsteps</ShortName>
 			<Path>Event/Play_Grass_Footsteps.bnk</Path>
@@ -160,7 +160,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{E8C51CE8-B916-3CA1-29A5-31E9CBFEE5BF}">
+		<SoundBank Id="1043591872" Type="Event" GUID="{344BF274-586D-4BCF-A53C-82A9B8102F15}" Language="SFX" Hash="{92761509-4161-01D5-0C4A-5BFC35B89525}">
 			<ObjectPath>Play_MUS_MainMenu</ObjectPath>
 			<ShortName>Play_MUS_MainMenu</ShortName>
 			<Path>Event/Play_MUS_MainMenu.bnk</Path>
@@ -179,7 +179,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{2D05EE15-9CC1-80E9-E519-6EC93C8DAF86}">
+		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{25B569EB-C3FE-186C-7599-84FD5FC2C725}">
 			<ObjectPath>Play_MUS_TimeOfDay</ObjectPath>
 			<ShortName>Play_MUS_TimeOfDay</ShortName>
 			<Path>Event/Play_MUS_TimeOfDay.bnk</Path>
@@ -232,7 +232,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{6E86F804-28B9-77E1-C356-2597E3A7A2AF}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{2C35A696-9D5F-A94E-8A54-8CADD60C94CD}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -250,6 +250,7 @@
 				<Bus Id="3991942870" Name="Music" ObjectPath="\Busses\Default Work Unit\Main Audio Bus\Music" GUID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="421429125" Name="GeneralVolume" ObjectPath="\Game Parameters\Default Work Unit\GeneralVolume" GUID="{CE83A0A2-18A9-473F-B22F-D508DE388C9C}"/>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume" GUID="{DFB3BC0A-887E-4C08-9D50-CE0433B1106E}"/>
 				<GameParameter Id="1786260118" Name="MenuVolume" ObjectPath="\Game Parameters\Default Work Unit\MenuVolume" GUID="{E3388098-B798-4C09-B900-93DCECD91828}"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume" GUID="{63AE203E-86D2-4D19-A59B-BE928F65C12C}"/>
@@ -264,7 +265,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{0B3DFB20-1703-AF55-244B-177C8CD6D256}">
+		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{80D55AE7-F30B-0001-49D6-1457324A6F81}">
 			<ObjectPath>Play_STG_Pickup</ObjectPath>
 			<ShortName>Play_STG_Pickup</ShortName>
 			<Path>Event/Play_STG_Pickup.bnk</Path>
@@ -312,7 +313,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{50FC4275-423D-972F-1D29-5219D065A05A}">
+		<SoundBank Id="3305792757" Type="Event" GUID="{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}" Language="SFX" Hash="{3C0628A9-1C71-BD95-5DAC-AC123DBFC1D1}">
 			<ObjectPath>Play_Menu_Button_Hover</ObjectPath>
 			<ShortName>Play_Menu_Button_Hover</ShortName>
 			<Path>Event/Play_Menu_Button_Hover.bnk</Path>
@@ -359,5 +360,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2D3C8086-C6DC-1E54-C69C-9E1D362490DC}</FileHash>
+	<FileHash>{736F40CC-375F-D585-6D2B-8A0D9F3DBC9F}</FileHash>
 </SoundBanksInfo>

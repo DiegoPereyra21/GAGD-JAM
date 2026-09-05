@@ -30,8 +30,8 @@
                     <ui:Toggle label="Ingles" name="EnglishToggle" toggle-on-label-click="true" class="english-toggle" style="height: 70px; width: 250px;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="AudioSection" class="audio-section" style="flex-grow: 1;">
-                <ui:Label text="" double-click-selects-word="true" name="AudioLabel" style="margin-bottom: 0;"/>
+            <ui:VisualElement name="AudioSection" class="audio-section" style="flex-grow: 1; display: flex;">
+                <ui:Label text="" double-click-selects-word="true" name="AudioLabel" style="margin-bottom: 0; margin-top: 30px;"/>
                 <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
                     <ui:VisualElement name="FirstColumn" style="flex-grow: 1;">
                         <ui:VisualElement name="MusicRow" style="flex-grow: 1; flex-direction: column;">
@@ -48,9 +48,16 @@
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="SecondColumn" style="flex-grow: 1;">
+                        <ui:VisualElement name="GeneralRow" style="flex-grow: 1; flex-direction: column;">
+                            <ui:Label text="General" name="GeneralLabel"/>
+                            <ui:Slider label="" value="42" high-value="100" name="GeneralSlider"/>
+                        </ui:VisualElement>
                         <ui:VisualElement name="MenuRow" style="flex-grow: 1; flex-direction: column;">
                             <ui:Label text="Menu" name="MenuLabel"/>
                             <ui:Slider label="" value="42" high-value="100" name="MenuSlider"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="MenuRow" style="flex-grow: 1; flex-direction: column; display: flex;">
+                            <ui:Label text="" name="MenuLabel" emoji-fallback-support="false"/>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>

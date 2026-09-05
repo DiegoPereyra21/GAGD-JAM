@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="XboxOne" BasePlatform="XboxOne" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{94AFE0BC-B482-F6AD-5F78-F9D2FD9C426C}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D9EE86C3-BEC9-B2AE-0366-C67FC82602A7}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,6 +19,7 @@
 				<Bus Id="3991942870" Name="Music" ObjectPath="\Busses\Default Work Unit\Main Audio Bus\Music" GUID="{1F6F3D9C-C5A2-433F-99C3-110E0EC47994}"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="421429125" Name="GeneralVolume" ObjectPath="\Game Parameters\Default Work Unit\GeneralVolume" GUID="{CE83A0A2-18A9-473F-B22F-D508DE388C9C}"/>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume" GUID="{DFB3BC0A-887E-4C08-9D50-CE0433B1106E}"/>
 				<GameParameter Id="1786260118" Name="MenuVolume" ObjectPath="\Game Parameters\Default Work Unit\MenuVolume" GUID="{E3388098-B798-4C09-B900-93DCECD91828}"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume" GUID="{63AE203E-86D2-4D19-A59B-BE928F65C12C}"/>
@@ -34,5 +35,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3746F59D-E80C-740B-6594-73C28C4F33BD}</FileHash>
+	<FileHash>{7E38C197-B20B-D63A-1C5A-57B2941E3883}</FileHash>
 </SoundBanksInfo>

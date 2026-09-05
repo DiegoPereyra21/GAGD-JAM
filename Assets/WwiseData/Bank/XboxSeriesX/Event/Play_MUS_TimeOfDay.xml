@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="XboxSeriesX" BasePlatform="XboxSeriesX" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{2D05EE15-9CC1-80E9-E519-6EC93C8DAF86}">
+		<SoundBank Id="1108381680" Type="Event" GUID="{F02C81DF-6990-4FB5-A1AF-9DB27C5C8916}" Language="SFX" Hash="{25B569EB-C3FE-186C-7599-84FD5FC2C725}">
 			<ObjectPath>Play_MUS_TimeOfDay</ObjectPath>
 			<ShortName>Play_MUS_TimeOfDay</ShortName>
 			<Path>Event/Play_MUS_TimeOfDay.bnk</Path>
@@ -55,5 +55,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{29A79518-11F7-F0CD-07FC-A092603DA575}</FileHash>
+	<FileHash>{55DD0F8E-1D25-1E19-B5EF-18F6F6F20CD5}</FileHash>
 </SoundBanksInfo>

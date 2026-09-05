@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="XboxSeriesX" BasePlatform="XboxSeriesX" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{0B3DFB20-1703-AF55-244B-177C8CD6D256}">
+		<SoundBank Id="1532146285" Type="Event" GUID="{413F87E7-B318-4C26-9D8C-522516E4F81A}" Language="SFX" Hash="{80D55AE7-F30B-0001-49D6-1457324A6F81}">
 			<ObjectPath>Play_STG_Pickup</ObjectPath>
 			<ShortName>Play_STG_Pickup</ShortName>
 			<Path>Event/Play_STG_Pickup.bnk</Path>
@@ -31,5 +31,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E9B93368-12AB-F651-E667-72657BDA1100}</FileHash>
+	<FileHash>{FCCFDCB8-3663-1DC4-FD8C-72524E520B9B}</FileHash>
 </SoundBanksInfo>
