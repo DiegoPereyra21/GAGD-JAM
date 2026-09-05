@@ -61,10 +61,10 @@ public class AudioSettingsUI : MonoBehaviour
         float sfxVolume = PlayerPrefs.GetFloat(SFXKey, DefaultVolume);
         float ambientVolume = PlayerPrefs.GetFloat(AmbientKey, DefaultVolume);
 
-        menuSlider.value = menuVolume;
-        musicSlider.value = musicVolume;
-        sfxSlider.value = sfxVolume;
-        ambientSlider.value = ambientVolume;
+        if (menuSlider != null) menuSlider.value = menuVolume;
+        if (musicSlider != null) musicSlider.value = musicVolume;
+        if (sfxSlider != null) sfxSlider.value = sfxVolume;
+        if (ambientSlider != null) ambientSlider.value = ambientVolume;
 
         AkSoundEngine.SetRTPCValue(MenuRTPC, menuVolume);
         AkSoundEngine.SetRTPCValue(MusicRTPC, musicVolume);

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e0828636031cd441bbd4acc3d7f374e, type: 3}
-  m_Name: 63BCEB9F-33D0-4A1E-8351-B8D81DFBA493
+  m_Name: F02C81DF-6990-4FB5-A1AF-9DB27C5C8916
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
-  objectName: Play_MUS_Day
-  id: 4100501596
-  guid: 63BCEB9F-33D0-4A1E-8351-B8D81DFBA493
-  AutoBank: {fileID: 0}
-  IsInUserDefinedSoundBank: 1
+  objectName: Play_MUS_TimeOfDay
+  id: 1108381680
+  guid: F02C81DF-6990-4FB5-A1AF-9DB27C5C8916
+  AutoBank: {fileID: 11400000, guid: 049c59e50ca97d84785f9b10ff08bb87, type: 2}
+  IsInUserDefinedSoundBank: 0

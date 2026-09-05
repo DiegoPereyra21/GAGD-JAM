@@ -15,5 +15,5 @@ MonoBehaviour:
   objectName: Play_MUS_Night
   id: 1001167992
   guid: 7FE9FC55-FF19-4E3F-A70C-D8EF22E171FE
-  AutoBank: {fileID: 11400000, guid: 15b1872c3c4ebf64db8a7547659b1c9f, type: 2}
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

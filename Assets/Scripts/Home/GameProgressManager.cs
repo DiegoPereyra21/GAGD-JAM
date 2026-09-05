@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameProgressManager : MonoBehaviour
 {
     private const string SaveKey = "GameProgress_Data";
@@ -95,6 +96,26 @@ public class GameProgressManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         Load();
+        OnDayStarted += SetDayMusic;
+        OnNightStarted += SetNightMusic;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenu") return;
+
+        AkSoundEngine.SetSwitch("TimeOfDay", IsNightActive ? "Night" : "Day", gameObject);
+        timeOfDayMusic.Post(gameObject);
     }
 
     private void Start()
@@ -211,11 +232,13 @@ public class GameProgressManager : MonoBehaviour
     // funciones para cambiar musica con wwise
     private void SetDayMusic()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenu") return;
         AkSoundEngine.SetSwitch("TimeOfDay", "Day", gameObject);
     }
 
     private void SetNightMusic()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenu") return;
         AkSoundEngine.SetSwitch("TimeOfDay", "Night", gameObject);
     }
 

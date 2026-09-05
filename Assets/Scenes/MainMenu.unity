@@ -1115,14 +1115,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameProgressManager
   nightDuration: 120
   dawnFraction: 0.25
-  dayMusic:
+  timeOfDayMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c18a441a4a1ef8141bdcfdfe8210f697, type: 2}
-  nightMusic:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 87d1445e0476f884fb67cfb804796b75, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: cd58abe050ced1346b1fb936ac39fedf, type: 2}
 --- !u!4 &1618223651
 Transform:
   m_ObjectHideFlags: 0
