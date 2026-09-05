@@ -76,6 +76,8 @@ GameObject:
   - component: {fileID: -2571037864626751722}
   - component: {fileID: 1007477502519200735}
   - component: {fileID: 2487677921926301093}
+  - component: {fileID: -951765807065174721}
+  - component: {fileID: -2363224864388466610}
   m_Layer: 8
   m_Name: Fairy
   m_TagString: Untagged
@@ -121,7 +123,7 @@ MonoBehaviour:
   shakeDuration: 0.3
   shakeStrength: 0.1
   freezeDuration: 0.8
-  outline: {fileID: 0}
+  outline: {fileID: -2363224864388466610}
 --- !u!65 &-2571037864626751722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -178,8 +180,36 @@ MonoBehaviour:
     depletedModel: {fileID: 0}
   - fullModel: {fileID: 6590866449139015112, guid: 739301677a828e24c9d21216ff608a50, type: 3}
     depletedModel: {fileID: 0}
-  outline: {fileID: 0}
+  outlineRenderer: {fileID: -951765807065174721}
   randomizeRotation: 0
+--- !u!114 &-951765807065174721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590866449139015112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 3240645687508367975}
+--- !u!114 &-2363224864388466610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590866449139015112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -951765807065174721}
 --- !u!1 &7659253952230648504
 GameObject:
   m_ObjectHideFlags: 0

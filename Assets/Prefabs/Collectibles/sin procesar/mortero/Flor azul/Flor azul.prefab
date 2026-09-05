@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3653125112318021704}
   - component: {fileID: -4244100863097763404}
   - component: {fileID: 1660889895108453155}
+  - component: {fileID: -5400194088079426262}
   m_Layer: 8
   m_Name: Flor azul
   m_TagString: Untagged
@@ -70,7 +71,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b43eea1b58ccc094f95ad58234a3a788, type: 2}
-  - {fileID: 2100000, guid: 00faba55d72a8094e86aa2cd310a32af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -149,8 +149,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  targetRenderer: {fileID: 5930495861738519881}
-  outlineMaterialSlot: 1
-  outlineProperty: _Offset
-  normalValue: 0
-  highlightedValue: 1.2
+  outlineRenderer: {fileID: -5400194088079426262}
+--- !u!114 &-5400194088079426262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7521555679540378837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 5930495861738519881}

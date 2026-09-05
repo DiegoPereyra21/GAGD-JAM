@@ -86,6 +86,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c3cfd3596cafe043845634c144f49e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4718770199915187686}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c3cfd3596cafe043845634c144f49e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2230973835548351663}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c3cfd3596cafe043845634c144f49e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8197220652371701752}
   m_SourcePrefab: {fileID: 100100000, guid: 4c3cfd3596cafe043845634c144f49e2, type: 3}
 --- !u!1 &7246741904705499738 stripped
 GameObject:
@@ -113,7 +119,7 @@ MonoBehaviour:
   shakeDuration: 0.3
   shakeStrength: 0.1
   freezeDuration: 0.8
-  outline: {fileID: 0}
+  outline: {fileID: 2230973835548351663}
 --- !u!65 &4718770199915187686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135,3 +141,36 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5242.835, y: 5886.2812, z: 3612.4307}
   m_Center: {x: 28.217237, y: -128.03918, z: 1246.5641}
+--- !u!114 &2230973835548351663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7246741904705499738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -8197220652371701752}
+--- !u!114 &-8197220652371701752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7246741904705499738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 9192239563324986255}
+--- !u!23 &9192239563324986255 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 4c3cfd3596cafe043845634c144f49e2, type: 3}
+  m_PrefabInstance: {fileID: 7516772279161032459}
+  m_PrefabAsset: {fileID: 0}

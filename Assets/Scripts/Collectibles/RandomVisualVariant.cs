@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using Game.Collectibles;
 using UnityEngine;
+using UnityURP.Outline;
 
 [Serializable]
 public class VisualVariant
@@ -12,7 +14,7 @@ public class VisualVariant
 public class RandomVisualVariant : MonoBehaviour
 {
     [SerializeField] private VisualVariant[] possibleModels;
-    [SerializeField] private InteractableOutline outline;
+    [SerializeField] private OutlineRenderer outlineRenderer;
     [SerializeField] private bool randomizeRotation;
 
     private GameObject currentInstance;
@@ -53,7 +55,17 @@ public class RandomVisualVariant : MonoBehaviour
 
         currentInstance = Instantiate(model, transform.position, transform.rotation, transform);
 
-        if (outline != null && currentInstance.TryGetComponent(out Renderer renderer))
-            outline.SetTargetRenderer(renderer);
+        if (outlineRenderer != null && currentInstance.TryGetComponent(out Renderer renderer))
+        {
+            bool wasEnabled = outlineRenderer.enabled;
+
+            outlineRenderer.UpdateRenderers(new List<Renderer> { renderer });
+
+            if (!wasEnabled)
+            {
+                outlineRenderer.enabled = true;
+                outlineRenderer.enabled = false;
+            }
+        }
     }
 }

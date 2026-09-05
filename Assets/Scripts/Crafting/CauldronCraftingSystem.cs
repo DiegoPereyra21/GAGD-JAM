@@ -47,6 +47,8 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private GameObject mortarClickObject;
     [SerializeField] private GameObject cuttingBoardClickObject;
     [SerializeField] private List<ProcessingRecipe> processingRecipes;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private float interactRadius = 2f;
 
     //para detectar bien el click y drag
     private Vector2 dragStartScreenPos;
@@ -114,26 +116,15 @@ public class CauldronCraftingSystem : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-            outline?.SetHighlighted(true);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-            outline?.SetHighlighted(false);
-        }
-    }
 
     private void Update()
     {
+        if (!isInside)
+        {
+            playerInRange = Vector3.Distance(transform.position, playerTransform.position) <= interactRadius;
+            outline?.SetHighlighted(playerInRange);
+        }
+
         if (!isInside) return;
 
         if (Keyboard.current.aKey.wasPressedThisFrame) MoveZone(-1);

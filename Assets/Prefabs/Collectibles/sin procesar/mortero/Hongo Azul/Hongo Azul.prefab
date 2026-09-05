@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5604396217694495602}
   - component: {fileID: 5676456637514313575}
   - component: {fileID: 8669400666810783549}
+  - component: {fileID: 218494684876621691}
   m_Layer: 8
   m_Name: Hongo Azul
   m_TagString: Untagged
@@ -70,7 +71,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 22d1c407cd028084b913888fa7ece978, type: 2}
-  - {fileID: 2100000, guid: 00faba55d72a8094e86aa2cd310a32af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,8 +150,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  targetRenderer: {fileID: 6912143761297065888}
-  outlineMaterialSlot: 1
-  outlineProperty: _Offset
-  normalValue: 0
-  highlightedValue: 0.85
+  outlineRenderer: {fileID: 218494684876621691}
+--- !u!114 &218494684876621691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7389265873749790332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 6912143761297065888}

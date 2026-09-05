@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3633367403780002621}
   - component: {fileID: 7861617396117849679}
   - component: {fileID: 5825502968529124409}
+  - component: {fileID: 4647403338757886164}
+  - component: {fileID: -7438723859888463435}
   m_Layer: 8
   m_Name: EyeFlower
   m_TagString: Untagged
@@ -29,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.506, y: -0.034, z: -7.89}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4198995015408329896}
@@ -51,7 +53,7 @@ MonoBehaviour:
   possibleModels:
   - fullModel: {fileID: 1482708285040637306, guid: 569291663c3230d46a63524a144acce2, type: 3}
     depletedModel: {fileID: 6211644063226813845, guid: 6c91c57396e82124bb487df19804b45f, type: 3}
-  outline: {fileID: 0}
+  outlineRenderer: {fileID: -7438723859888463435}
   randomizeRotation: 1
 --- !u!114 &7861617396117849679
 MonoBehaviour:
@@ -74,7 +76,7 @@ MonoBehaviour:
   shakeDuration: 0.3
   shakeStrength: 0.1
   freezeDuration: 0.8
-  outline: {fileID: 0}
+  outline: {fileID: 4647403338757886164}
 --- !u!65 &5825502968529124409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96,6 +98,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.8374386, y: 1.5392768, z: 5.9372973}
   m_Center: {x: 0.16155529, y: 1.1157593, z: -0.08302283}
+--- !u!114 &4647403338757886164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482708285040637306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -7438723859888463435}
+--- !u!114 &-7438723859888463435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482708285040637306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 5876995736555523841}
+  - {fileID: 5798008245493155861}
 --- !u!1 &5856800552170400011
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -552512271856669258}
   - component: {fileID: -8645002735461733993}
   - component: {fileID: 8299068508091276956}
+  - component: {fileID: -1572336303396590555}
   m_Layer: 8
   m_Name: Baya
   m_TagString: Untagged
@@ -176,7 +177,7 @@ MonoBehaviour:
     depletedModel: {fileID: 4465718168198936348, guid: 4db2c84d3d20dc3468d1e077d6883235, type: 3}
   - fullModel: {fileID: 208671729453974855, guid: c572f1170e5d9d545bbb9ddfa9e4a15e, type: 3}
     depletedModel: {fileID: 8030008945717385381, guid: 83eb4dc59e209f149adf7c7e9429fa65, type: 3}
-  outline: {fileID: 8299068508091276956}
+  outlineRenderer: {fileID: -1572336303396590555}
   randomizeRotation: 1
 --- !u!114 &8299068508091276956
 MonoBehaviour:
@@ -190,8 +191,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  targetRenderer: {fileID: 3458572707724667850}
-  outlineMaterialSlot: 1
-  outlineProperty: _Offset
-  normalValue: 0
-  highlightedValue: 2.1
+  outlineRenderer: {fileID: -1572336303396590555}
+--- !u!114 &-1572336303396590555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208671729453974855}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 2873914599471405442, guid: 7167c4b4ea07a1a4baa77aa437fed98e, type: 3}
+  - {fileID: 3458572707724667850, guid: c572f1170e5d9d545bbb9ddfa9e4a15e, type: 3}
