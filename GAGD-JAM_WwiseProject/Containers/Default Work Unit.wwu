@@ -21,7 +21,7 @@
 										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>15</Value>
+												<Value>18</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -32,7 +32,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -415,13 +415,13 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1351,7 +1351,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>5</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1608,6 +1608,11 @@
 										<MusicSegment Name="Day" ID="{D7C2B311-5B99-4382-AABF-CA0257AD6E67}" ShortID="468624580">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="112024.083700153"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1619,6 +1624,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicTrack Name="DayTrack" ID="{A119841F-04A6-4471-AE99-6578790DA0EF}" ShortID="777238006">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D4988CC-50FC-46F7-93B2-E22DE65877D4}"/>
@@ -1727,6 +1739,11 @@
 										<MusicSegment Name="Night" ID="{A09B8193-EBF9-4CD8-8E9F-BCDF7BB8180F}" ShortID="624417301">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="99283.8295081217"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1740,6 +1757,11 @@
 												<MusicTrack Name="NightTrack" ID="{B70CAC5F-A232-4100-B2DC-725A9E957DC1}" ShortID="869238393">
 													<PropertyList>
 														<Property Name="OverrideEffect" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-5</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">

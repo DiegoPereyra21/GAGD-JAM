@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D41A0C01-0A22-450B-AA1C-9CAC988C1B3B}",
     "Language": "SFX",
-    "Hash": "{50FC4275-423D-972F-1D29-5219D065A05A}",
+    "Hash": "{3C0628A9-1C71-BD95-5DAC-AC123DBFC1D1}",
     "ObjectPath": "Play_Menu_Button_Hover",
     "ShortName": "Play_Menu_Button_Hover",
     "Path": "Event/Play_Menu_Button_Hover.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{6B9877D6-B407-6B9C-75D2-351C67BD249C}"
+  "FileHash": "{D5C800A4-12EB-1807-0D66-074224CD8E67}"
  }
 }

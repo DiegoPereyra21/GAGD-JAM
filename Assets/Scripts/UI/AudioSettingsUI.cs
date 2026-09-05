@@ -20,7 +20,7 @@ public class AudioSettingsUI : MonoBehaviour
     private const string SFXRTPC = "SFXVolume";
     private const string AmbientRTPC = "AmbientVolume";
 
-    private const float DefaultVolume = 75f;
+    private const float DefaultVolume = 50f;
 
     private void OnEnable()
     {
