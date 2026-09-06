@@ -82,6 +82,12 @@ public class QuestManager : MonoBehaviour
         activeQuests.Clear();
         pendingDeliveries.Clear();
 
+        if (TutorialModeFlag.IsActive)
+        {
+            Debug.Log("[QuestManager] Modo tutorial: arranca sin misiones guardadas.");
+            return;
+        }
+
         if (!PlayerPrefs.HasKey(SaveKey))
         {
             Debug.Log("[QuestManager] No hay datos guardados, arranca sin misiones activas.");

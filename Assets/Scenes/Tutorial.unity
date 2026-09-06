@@ -386,6 +386,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efae9cbcaa8cf7646bd34a1f94016a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StairInteraction
+--- !u!114 &15915736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b107a5c5ee988d542997e1b15346d402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeliveryInteraction
+--- !u!114 &15915737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81aeb3c58b2d3e4a8406cbe10ee1aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CauldronCraftingSystem
 --- !u!1 &30009878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,8 +1630,11 @@ MonoBehaviour:
   downstairs: {fileID: 15915735}
   doorExit: {fileID: 15915734}
   questManager: {fileID: 1952524287}
+  cauldronCraftingSystem: {fileID: 15915737}
+  deliveryInteraction: {fileID: 15915736}
   questsNeededForNextStep: 3
   mainMenuSceneName: MainMenu
+  finalMessageDuration: 4
 --- !u!4 &1452695667
 Transform:
   m_ObjectHideFlags: 0

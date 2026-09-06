@@ -68,6 +68,9 @@ public class CauldronCraftingSystem : MonoBehaviour
     private IngredientType draggedType;
     private float dragPlaneHeight;
 
+    public event System.Action OnEnteredCrafting;
+    public event System.Action OnPotionCrafted;
+
     public enum ProcessingStation { Mortar, CuttingBoard }
 
     [Serializable]
@@ -163,7 +166,9 @@ public class CauldronCraftingSystem : MonoBehaviour
         cameraTransition.TransitionTo(cauldronViewAnchor);
         SetPlayerVisible(false);
         outline?.SetHighlighted(false);
+        OnEnteredCrafting?.Invoke();
     }
+
     private void ExitToHouse()
     {
         isInside = false;
@@ -441,6 +446,7 @@ public class CauldronCraftingSystem : MonoBehaviour
             HomeStorage.Instance.AddPotion(matchedRecipe);
             HomeStorage.Instance.Save();
             DialogueUI.Instance.ShowMessage("Ofelia", $"Creaste: {matchedRecipe.potionName}");
+            OnPotionCrafted?.Invoke();
         }
         else
         {

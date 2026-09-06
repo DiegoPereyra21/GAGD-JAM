@@ -13,6 +13,8 @@ public class DeliveryInteraction : MonoBehaviour
     private InputAction interactAction;
     private bool playerInRange;
 
+    public event System.Action OnInteracted;
+
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
@@ -50,6 +52,7 @@ public class DeliveryInteraction : MonoBehaviour
         if (!playerInRange) return;
 
         DeliverMatchingQuests();
+        OnInteracted?.Invoke();
     }
 
     private void DeliverMatchingQuests()
