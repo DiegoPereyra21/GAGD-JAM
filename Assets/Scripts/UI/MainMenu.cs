@@ -30,6 +30,8 @@ public class MainMenu : MonoBehaviour
     private Button backButton;
     private Button resetOptionsButton;
     private Button exitButton;
+    private Button tutorialButton;
+    [SerializeField] private string tutorialSceneName = "Tutorial";
     private VisualElement optionsPanel;
     private VisualElement content;
 
@@ -39,6 +41,9 @@ public class MainMenu : MonoBehaviour
 
     private void OnEnable()
     {
+        TutorialModeFlag.IsActive = false;
+        TutorialModeFlag.IsActive = false;
+        Time.timeScale = 1f;
         root = GetComponent<UIDocument>().rootVisualElement;
 
         root.Query<Button>().ForEach(button =>
@@ -56,6 +61,7 @@ public class MainMenu : MonoBehaviour
         resetOptionsButton = root.Q<Button>("ResetOptionsButton");
         exitButton = root.Q<Button>("ExitButton");
         optionsPanel = root.Q<VisualElement>("OptionsPanel");
+        tutorialButton = root.Q<Button>("TutorialButton");
 
         confirmNewGamePanel = root.Q<VisualElement>("ConfirmNewGamePanel");
         confirmNewGameButton = root.Q<Button>("ConfirmNewGameButton");
@@ -93,6 +99,10 @@ public class MainMenu : MonoBehaviour
 
         if (resetOptionsButton != null)
             resetOptionsButton.clicked += ResetOptions;
+
+
+        if (tutorialButton != null)
+            tutorialButton.clicked += StartTutorial;
 
         optionsPanel.style.display = DisplayStyle.None;
         confirmNewGamePanel.style.display = DisplayStyle.None;
@@ -132,6 +142,9 @@ public class MainMenu : MonoBehaviour
         if (exitButton != null)
             exitButton.clicked -= ExitGame;
 
+        if (tutorialButton != null)
+            tutorialButton.clicked -= StartTutorial;
+
         stopMusicEvent.Post(gameObject);
     }
 
@@ -140,6 +153,12 @@ public class MainMenu : MonoBehaviour
         buttonHoverEvent.Post(gameObject);
     }
 
+    private void StartTutorial()
+    {
+        stopMusicEvent.Post(gameObject);
+        SceneManager.LoadScene(tutorialSceneName);
+    }
+    
     private void OpenConfirmNewGame()
     {
         if (!GameProgressManager.HasSaveData)
@@ -175,6 +194,7 @@ public class MainMenu : MonoBehaviour
 
         HomeStorage.Instance.Load();
         GameProgressManager.Instance.Load();
+        GameProgressManager.Instance.StartNight();
         GameProgressManager.Instance.RequestWelcomeFade();
 
         SceneManager.LoadScene(gameSceneName);

@@ -61,6 +61,9 @@ public class Mailbox : MonoBehaviour
     {
         if (!IsPlayerInRange()) return;
 
+        // Cartas que ya están activas (tomadas en una sesión anterior) no tienen que seguir bloqueando la lista
+        pendingLetters.RemoveAll(q => questManager.IsQuestActive(q));
+
         int currentDay = GameProgressManager.Instance.CurrentDay;
         QuestData letter = pendingLetters.Find(q => q.availableDay <= currentDay);
 

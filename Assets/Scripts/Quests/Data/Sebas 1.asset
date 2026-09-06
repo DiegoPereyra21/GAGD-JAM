@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: Sebas 1
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: sebas_housen
+  questId: sebas_1
   villagerName: Sebas Housen
   missionName: Pocion de Fibra para Sebas
   objectives:

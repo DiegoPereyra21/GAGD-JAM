@@ -17,6 +17,7 @@ public class DoorExitInteraction : MonoBehaviour
     private static float lastTeleportTime = -999f;
     private const float teleportCooldown = 0.3f;
 
+    public event System.Action OnUsed;
 
     private InputAction interactAction;
     private bool playerInRange;
@@ -69,6 +70,6 @@ public class DoorExitInteraction : MonoBehaviour
         GameProgressManager.Instance.MarkWentOutside();
         GameProgressManager.Instance.MarkOutside();
         cameraTransition.TransitionToPlayer();
+        OnUsed?.Invoke();
     }
-
 }

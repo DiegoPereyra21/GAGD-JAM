@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
   m_Name: "Poci\xF3n Despertar 2"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_despertar
-  potionName: "Poci\xF3n Despertar"
+  potionId: pocion_despertar_2
+  potionName: "Poci\xF3n Despertar 2"
   visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}

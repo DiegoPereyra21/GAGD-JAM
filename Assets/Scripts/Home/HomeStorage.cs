@@ -49,6 +49,8 @@ public class HomeStorage : MonoBehaviour
 
     public void Save()
     {
+        if (TutorialModeFlag.IsActive) return;
+
         SaveData data = new SaveData();
 
         foreach (var pair in totals)
@@ -62,6 +64,13 @@ public class HomeStorage : MonoBehaviour
         PlayerPrefs.Save();
 
         Debug.Log($"[HomeStorage] Guardado: {json}");
+    }
+    
+    public void ResetInMemory()
+    {
+        totals.Clear();
+        craftedPotions.Clear();
+        OnStorageChanged?.Invoke();
     }
 
     public void Load()

@@ -17,6 +17,8 @@ public class QuestManager : MonoBehaviour
     public IReadOnlyList<QuestData> PendingDeliveries => pendingDeliveries;
     private const int MaxActiveQuests = 6;
 
+    public bool IsQuestActive(QuestData quest) => activeQuests.Contains(quest);
+    public bool IsAtCapacity() => activeQuests.Count >= MaxActiveQuests;
     private void Awake()
     {
         Load();
@@ -58,6 +60,8 @@ public class QuestManager : MonoBehaviour
 
     public void Save()
     {
+        if (TutorialModeFlag.IsActive) return;
+
         SaveData data = new SaveData();
 
         foreach (QuestData quest in activeQuests)

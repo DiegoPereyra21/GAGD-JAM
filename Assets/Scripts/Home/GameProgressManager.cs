@@ -116,7 +116,11 @@ public class GameProgressManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "MainMenu") return;
+        if (scene.name == "MainMenu")
+        {
+            AkSoundEngine.StopAll(gameObject);
+            return;
+        }
 
         AkSoundEngine.SetSwitch("TimeOfDay", IsNightActive ? "Night" : "Day", gameObject);
         timeOfDayMusic.Post(gameObject);
@@ -196,6 +200,8 @@ public class GameProgressManager : MonoBehaviour
 
     public void Save()
     {
+        if (TutorialModeFlag.IsActive) return;
+
         SaveData data = new SaveData
         {
             day = CurrentDay,

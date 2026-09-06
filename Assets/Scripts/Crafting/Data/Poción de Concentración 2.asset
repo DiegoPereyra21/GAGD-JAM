@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
   m_Name: "Poci\xF3n de Concentraci\xF3n 2"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: "pocion_concentraci\xF3n"
-  potionName: "Poci\xF3n de Concentraci\xF3n"
+  potionId: "pocion_concentraci\xF3n_1"
+  potionName: "Poci\xF3n de Concentraci\xF3n_1"
   visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}

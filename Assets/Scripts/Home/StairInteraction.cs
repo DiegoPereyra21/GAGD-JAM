@@ -17,6 +17,8 @@ public class StairInteraction : MonoBehaviour
     private static float lastTeleportTime = -999f;
     private const float teleportCooldown = 0.3f;
 
+    public event System.Action OnUsed;
+
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
@@ -47,5 +49,6 @@ public class StairInteraction : MonoBehaviour
         playerController.enabled = true;
 
         cameraTransition.TransitionTo(cameraViewAnchor);
+        OnUsed?.Invoke();
     }
 }

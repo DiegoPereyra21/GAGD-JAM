@@ -6,8 +6,11 @@
         </ui:VisualElement>
         <ui:VisualElement name="Content" class="content" style="flex-grow: 1;">
             <ui:Label text="The Sleepless Witch" name="Title" class="title" style="position: absolute; top: 141px; left: -5px;"/>
-            <ui:VisualElement name="MenuContainer" class="menu-container" style="flex-grow: 1;">
+            <ui:VisualElement name="MenuContainer" class="menu-container" style="flex-grow: 1; padding-top: 16%;">
                 <ui:Button text="Jugar" name="NewGameButton" class="menu-button" style="-unity-material: url(&quot;project://database/Assets/UI/MainMenu/ButtonPlasma_Mat.mat?fileID=2100000&amp;guid=16c0fbfa86f322846b0d0c587ef19f54&amp;type=2#ButtonPlasma_Mat&quot;);">
+                    <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+                </ui:Button>
+                <ui:Button text="Tutorial" name="TutorialButton" class="menu-button" style="-unity-material: url(&quot;project://database/Assets/UI/MainMenu/ButtonPlasma_Mat.mat?fileID=2100000&amp;guid=16c0fbfa86f322846b0d0c587ef19f54&amp;type=2#ButtonPlasma_Mat&quot;);">
                     <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
                 </ui:Button>
                 <ui:Button text="Continuar" name="ContinueButton" selectable="false" focusable="false" enabled="false" class="menu-button" style="background-color: rgba(61, 43, 82, 0.38); display: flex;">
