@@ -16,6 +16,7 @@ public class PlayerCollector : MonoBehaviour
     // Sonido de pickup
     [SerializeField] private AK.Wwise.Event pickupEvent;
 
+    public bool CollectionBlocked { get; set; }
     private InputAction interactAction;
     private void Awake()
     {
@@ -48,6 +49,12 @@ public class PlayerCollector : MonoBehaviour
         if (GameProgressManager.Instance.SleepIngredientObtained) return;
         if (inventory.IsFull) return;
 
+        if (CollectionBlocked)
+        {
+            DialogueUI.Instance.ShowMessage("Ofelia", "Todavía no acepté ningún pedido, mejor reviso el buzón primero.");
+            return;
+        }
+        
         Collectible target = FindNearestCollectible();
         if (target == null || target.IsCollected) return;
 

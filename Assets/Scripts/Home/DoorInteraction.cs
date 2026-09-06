@@ -25,6 +25,8 @@ public class DoorInteraction : MonoBehaviour
     private InputAction interactAction;
     private bool playerInRange;
 
+    public bool EntryBlocked { get; set; }
+
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
@@ -55,6 +57,12 @@ public class DoorInteraction : MonoBehaviour
     {
         if (Time.time - lastTeleportTime < teleportCooldown) return;
         if (!playerInRange) return;
+
+        if (EntryBlocked)
+        {
+            DialogueUI.Instance.ShowMessage("Ofelia", "Todavía no acepté los pedidos del buzón, no puedo entrar sin eso.");
+            return;
+        }
 
         lastTeleportTime = Time.time;
 

@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using Game.Collectibles;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,9 +11,14 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private QuestManager questManager;
     [SerializeField] private CauldronCraftingSystem cauldronCraftingSystem;
     [SerializeField] private DeliveryInteraction deliveryInteraction;
+    [SerializeField] private PlayerCollector playerCollector;
+    [SerializeField] private DoorInteraction doorInteraction;
+    [SerializeField] private PlayerInventory inventory;
+    [SerializeField] private StairInteraction upstairs; 
     [SerializeField] private int questsNeededForNextStep = 3;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
     [SerializeField] private float finalMessageDuration = 4f;
+
 
     private enum Step
     {
@@ -24,6 +32,56 @@ public class TutorialManager : MonoBehaviour
     private void Start()
     {
         TutorialUI.Instance.Show("Tutorial", "Usa WASD para moverte y E para interactuar con los objetos del ambiente.");
+    }
+
+    private void Update()
+    {
+        if (currentStep == Step.CollectItems && doorInteraction != null)
+        {
+            doorInteraction.EntryBlocked = !HasAllQuestMaterials();
+        }
+
+        if (upstairs != null)
+        {
+            bool blockUpstairs = currentStep == Step.CraftingIntro
+                || currentStep == Step.CraftPotion
+                || currentStep == Step.Deliver;
+
+            upstairs.EntryBlocked = blockUpstairs && !AllQuestsDelivered();
+        }
+    }
+
+    private bool HasAllQuestMaterials()
+    {
+        var remaining = new System.Collections.Generic.Dictionary<IngredientType, int>();
+
+        foreach (QuestData quest in questManager.ActiveQuests)
+        {
+            foreach (QuestObjective objective in quest.objectives)
+            {
+                IngredientType rawType = objective.type.rawSource != null ? objective.type.rawSource : objective.type;
+
+                if (!remaining.ContainsKey(rawType))
+                    remaining[rawType] = inventory.GetCount(rawType) + HomeStorage.Instance.Totals.GetValueOrDefault(rawType);
+
+                if (remaining[rawType] < objective.targetAmount) return false;
+
+                remaining[rawType] -= objective.targetAmount;
+            }
+        }
+
+        return true;
+    }
+
+    private bool AllQuestsDelivered()
+    {
+        foreach (QuestData quest in questManager.ActiveQuests)
+        {
+            if (!questManager.PendingDeliveries.Contains(quest))
+                return false;
+        }
+
+        return true;
     }
 
     private void OnEnable()
@@ -78,6 +136,9 @@ public class TutorialManager : MonoBehaviour
 
         currentStep = Step.CheckMailbox;
         TutorialUI.Instance.Show("Tutorial", "Recoge las misiones diarias del buzón.");
+
+        if (playerCollector != null) playerCollector.CollectionBlocked = true;
+        if (doorInteraction != null) doorInteraction.EntryBlocked = true;
     }
 
     private void HandleQuestsChanged()
@@ -87,6 +148,9 @@ public class TutorialManager : MonoBehaviour
 
         currentStep = Step.CollectItems;
         TutorialUI.Instance.Show("Tutorial", "Recolecta los ingredientes necesarios para las misiones.");
+
+        if (playerCollector != null) playerCollector.CollectionBlocked = false;
+        if (doorInteraction != null) doorInteraction.EntryBlocked = false;
     }
 
     // Entrar a la casa cierra la parte de afuera pase lo que pase (te saltees el buzón o no) —

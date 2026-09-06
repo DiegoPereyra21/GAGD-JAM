@@ -534,11 +534,11 @@ MonoBehaviour:
           m_EditorAssetChanged: 0
           id: 749912226
   currentPlatformAssets:
-    WwisePlatform: Web
+    WwisePlatform: Windows
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: 85272331abaf2f746b0fe75ea161c5a1
+    - m_AssetGUID: ed9b68ce8b148164aa7b764c0ee6ac10
       m_SubObjectName: 
       m_SubObjectType: 
       m_SubObjectGUID: 
@@ -548,91 +548,91 @@ MonoBehaviour:
     LocalizedStreamingMediaValues:
       localizedMediaList:
       - media:
-        - m_AssetGUID: 1dc0147b032173e46903ee1c238e14f6
+        - m_AssetGUID: 9d9b0ec41856b694e8222fa9c6f3ef30
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 51774552
-        - m_AssetGUID: 4d2933616c1135c45abb6007603b0b5e
+        - m_AssetGUID: 4f9ae805b4e381f4b8aac64813c8aa8f
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 3496576
-        - m_AssetGUID: d8cbc50a525d9e94f861a7242cfef047
+        - m_AssetGUID: 6cd7d4ef4f630be4d8a1869ec5a169f3
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 1028783762
-        - m_AssetGUID: a90afa4588d8ee54394315dcdfb72257
+        - m_AssetGUID: 0c4b8ec6a1d5c354eb0bd1717c8ead2c
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 277566653
-        - m_AssetGUID: 0316c26763cba614eb27bfabf4d0e7cd
+        - m_AssetGUID: ae83d4e64c29f7f43b85b977a54d58ae
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 86574945
-        - m_AssetGUID: d5d7ff07ffee8c64eb07fff376b663a6
+        - m_AssetGUID: e66accf69be06134998d8a83810d820e
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 635418451
-        - m_AssetGUID: 904df0f6d308e6c46aa64af5404c599b
+        - m_AssetGUID: 17e2aa626fe47f94fbab2afbf2008323
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 99849529
-        - m_AssetGUID: 82444dbf73270f04f9bc6fcefe75614a
+        - m_AssetGUID: 8a82dd3cb9dffbc46952fa4cff4dda50
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 228208572
-        - m_AssetGUID: e14dcd1d351eb0d45afb95726d450a4a
+        - m_AssetGUID: 342a6f9f4ecb9964a995870cd8f006c8
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 229322620
-        - m_AssetGUID: 6a55018fa3ff3654787fe5e7fda2f5f6
+        - m_AssetGUID: 9dd1a0e0db9974c43ae6611e7fe437e5
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 260049539
-        - m_AssetGUID: 47857c4da5194b04aa605151f570af9b
+        - m_AssetGUID: 8455e922c2073cb47a13bf053db00c81
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 354389179
-        - m_AssetGUID: 95343908a2a552344a5ea4122d302bbc
+        - m_AssetGUID: 069a76c67a547ed4d97134e5d5eb508b
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 358363011
-        - m_AssetGUID: 9aec069e3ffccde47bc16b8c24dee32f
+        - m_AssetGUID: 9a56e6f1712d40646b347a60fce4ff2c
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 392187951
-        - m_AssetGUID: 54213b4422144344b99107b04eba9a01
+        - m_AssetGUID: 8cb7cc955db23e74c9029ddcf7dce5ce
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 
           m_EditorAssetChanged: 0
           id: 656645410
-        - m_AssetGUID: 7daed1dd3435fbd46b205c4850e0e3d3
+        - m_AssetGUID: e71481f6044f2a0489c2101b57df357e
           m_SubObjectName: 
           m_SubObjectType: 
           m_SubObjectGUID: 

@@ -11,6 +11,8 @@ public class StairInteraction : MonoBehaviour
     [SerializeField] private Transform cameraViewAnchor;
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private float interactRadius = 1.5f;
+    [SerializeField] private string blockedMessage = "Todavía tengo que entregar los pedidos antes de acostarme";
+    public bool EntryBlocked { get; set; }
 
     private InputAction interactAction;
     //Test
@@ -41,6 +43,12 @@ public class StairInteraction : MonoBehaviour
     {
         if (Time.time - lastTeleportTime < teleportCooldown) return;
         if (!IsPlayerInRange()) return;
+
+        if (EntryBlocked)
+        {
+            DialogueUI.Instance.ShowMessage("Ofelia", blockedMessage);
+            return;
+        }
 
         lastTeleportTime = Time.time;
 
