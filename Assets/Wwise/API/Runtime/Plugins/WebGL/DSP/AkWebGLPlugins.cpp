@@ -12,6 +12,7 @@ class AkUnityStaticPlugin {
 extern AK::PluginRegistration _pluginName_##Registration; \
 AkUnityStaticPlugin _pluginName_##UnityStaticPlugin(&_pluginName_##Registration);
 #include "AkParametricEQFXFactory.h"
+#include "AkFlangerFXFactory.h"
 extern "C" {
 	__attribute__ ((visibility("default"))) bool AkVerifyPluginRegistration() {
 		bool bReg = true;
