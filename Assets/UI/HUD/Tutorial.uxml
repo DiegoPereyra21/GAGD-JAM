@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; bottom: 955px; position: absolute; height: 97px; width: 1303px; background-color: rgba(31, 0, 2, 0.851); border-top-left-radius: 300px; border-bottom-left-radius: 300px; border-top-right-radius: 300px; border-bottom-right-radius: 300px; left: 279px;">
+        <ui:Label text="Tutorial" name="TutorialName" style="color: rgb(255, 255, 255); font-size: 33px; justify-content: center; -unity-text-align: upper-center; margin-left: 500px; -unity-font-style: bold; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 0; margin-right: 500px; background-color: rgba(0, 0, 0, 0);"/>
+        <ui:Label text="Usa ASDW para moverte y E para interactuar con los objetos del ambiente" name="TutorialText" style="-unity-text-align: middle-center; bottom: 17px; right: 4px; top: -6px; left: -2px; position: absolute; align-content: flex-start; font-size: 24px; color: rgb(236, 217, 226); -unity-font-style: bold-and-italic; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 0; margin-top: 46px;"/>
+    </ui:VisualElement>
+</ui:UXML>
