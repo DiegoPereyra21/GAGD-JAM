@@ -175,10 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1018132212608544702, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 791841376}
+    - target: {fileID: 573695664688814651, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1018132212608544702, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: inventory
       value: 
@@ -203,14 +203,22 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
-    - target: {fileID: 4118032464696096002, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outlineRenderer
-      value: 
-      objectReference: {fileID: 904169342}
-    - target: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 207370012}
+    - target: {fileID: 1103633745659870530, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845996489457869513, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697419468244314942, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844420447442206741, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -219,12 +227,8 @@ PrefabInstance:
       propertyPath: questManager
       value: 
       objectReference: {fileID: 1952524287}
-    - target: {fileID: 4852434829833634073, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 00faba55d72a8094e86aa2cd310a32af, type: 2}
-    - target: {fileID: 5094955642870051600, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Materials.Array.size
+    - target: {fileID: 5432811494743919407, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
@@ -239,22 +243,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1097611480}
-    - target: {fileID: 5676045410824347799, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5736204252891480717, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: cameraFollow
       value: 
       objectReference: {fileID: 1560979843}
-    - target: {fileID: 5983300718150180747, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outlineRenderer
-      value: 
-      objectReference: {fileID: 839502202}
-    - target: {fileID: 5992739855093437766, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 817856832}
     - target: {fileID: 5992739855093437766, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -272,10 +264,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1097611479}
     - target: {fileID: 7000528412101637966, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 2121479960}
-    - target: {fileID: 7000528412101637966, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1097611476}
@@ -291,10 +279,6 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
-    - target: {fileID: 7261848673756056791, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 15915740}
     - target: {fileID: 7261848673756056791, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -308,10 +292,6 @@ PrefabInstance:
       value: HouseInGame
       objectReference: {fileID: 0}
     - target: {fileID: 7472512903651474787, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 2096367539}
-    - target: {fileID: 7472512903651474787, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1097611476}
@@ -327,14 +307,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
-    - target: {fileID: 8331808047687805519, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: label
-      value: 
+    - target: {fileID: 7572950780674279075, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8331808047687805519, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 1280649675}
     - target: {fileID: 8331808047687805519, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: inventory
       value: 
@@ -347,10 +323,6 @@ PrefabInstance:
       propertyPath: basketDisplay
       value: 
       objectReference: {fileID: 1097611478}
-    - target: {fileID: 8331808047687805519, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: billboardCamera
-      value: 
-      objectReference: {fileID: 1560979847}
     - target: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: player
       value: 
@@ -359,10 +331,6 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1097611476}
-    - target: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: interactRadius
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerMovement
       value: 
@@ -383,112 +351,19 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
-    m_RemovedComponents:
-    - {fileID: 6368297079358367783, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 6627097277901387632, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6752047414519763653, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 904169342}
-    - targetCorrespondingSourceObject: {fileID: 6180523404438028610, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 839502202}
-    - targetCorrespondingSourceObject: {fileID: 8242050026911153006, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 15915739}
-    - targetCorrespondingSourceObject: {fileID: 8242050026911153006, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 15915740}
-    - targetCorrespondingSourceObject: {fileID: 2014300312711865528, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 207370012}
-    - targetCorrespondingSourceObject: {fileID: 2014300312711865528, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 207370011}
-    - targetCorrespondingSourceObject: {fileID: 425173236729896118, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 817856832}
-    - targetCorrespondingSourceObject: {fileID: 425173236729896118, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 817856831}
-    - targetCorrespondingSourceObject: {fileID: 8260885773848482279, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 791841376}
-    - targetCorrespondingSourceObject: {fileID: 8260885773848482279, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 791841375}
-    - targetCorrespondingSourceObject: {fileID: 3670825679878250586, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2121479960}
-    - targetCorrespondingSourceObject: {fileID: 3670825679878250586, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2121479959}
-    - targetCorrespondingSourceObject: {fileID: 5615109236729451789, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2096367539}
-    - targetCorrespondingSourceObject: {fileID: 5615109236729451789, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2096367538}
     - targetCorrespondingSourceObject: {fileID: 7636367829590179206, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 370280460735777580, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1280649675}
-    - targetCorrespondingSourceObject: {fileID: 370280460735777580, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1280649674}
   m_SourcePrefab: {fileID: 100100000, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
 --- !u!4 &15915733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7716764483667501304, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
   m_PrefabInstance: {fileID: 15915732}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &15915734 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5676045410824347799, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &15915737 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8242050026911153006, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &15915738 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7593447912376769211, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &15915739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15915737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 15915738}
---- !u!114 &15915740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15915737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  outlineRenderer: {fileID: 15915739}
 --- !u!1 &30009878
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,44 +568,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -13.919}
---- !u!1 &207370009 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2014300312711865528, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &207370010 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 68898724587865453, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &207370011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207370009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 207370010}
---- !u!114 &207370012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207370009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  outlineRenderer: {fileID: 207370011}
 --- !u!1001 &405043814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,97 +795,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
   m_PrefabInstance: {fileID: 405043814}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &791841374 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8260885773848482279, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &791841375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791841374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 817856830}
---- !u!114 &791841376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791841374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  outlineRenderer: {fileID: 791841375}
---- !u!1 &817856829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 425173236729896118, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &817856830 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2680757840963462638, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &817856831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817856829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 817856830}
---- !u!114 &817856832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817856829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  outlineRenderer: {fileID: 817856831}
---- !u!1 &839502201 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6180523404438028610, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &839502202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839502201}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 15915734}
 --- !u!1001 &845642812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1163,31 +909,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f36837b4ef1095243805130530d59012, type: 3}
---- !u!1 &904169340 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6752047414519763653, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &904169341 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5094955642870051600, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &904169342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904169340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 904169341}
 --- !u!1 &937774064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,10 +1051,7 @@ PrefabInstance:
       objectReference: {fileID: 1860014185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1595960365}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
 --- !u!1 &1097611474 stripped
@@ -1474,50 +1192,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d5026643251b164489ffe49211bb731, type: 3}
---- !u!137 &1280649669 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7123656009270139273, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &1280649670 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8883546326536536598, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1280649672 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 370280460735777580, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1280649674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280649672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 1280649670}
-  - {fileID: 1280649669}
---- !u!114 &1280649675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280649672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  outlineRenderer: {fileID: 1280649674}
 --- !u!1001 &1295586517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1939,92 +1613,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4138654538697430699, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
   m_PrefabInstance: {fileID: 1560979841}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1595960364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1595960365}
-  - component: {fileID: 1595960367}
-  - component: {fileID: 1595960366}
-  - component: {fileID: 1595960368}
-  m_Layer: 6
-  m_Name: DialogueUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1595960365
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595960364}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1097611480}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1595960366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595960364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf9463f12e0660243ad8480c0564c3da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
-  defaultDuration: 3
-  fadeDuration: 0.3
---- !u!114 &1595960367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595960364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
-  m_PanelSettings: {fileID: 11400000, guid: 91b0f55e260a6f74a8f1ee601db25922, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: ced4e7f343d054c43a50e65cb3b0a979, type: 3}
-  m_SortingOrder: 0
-  m_Position: 0
-  m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 1920
-  m_WorldSpaceHeight: 1080
-  m_PivotReferenceSize: 0
-  m_Pivot: 0
-  m_WorldSpaceCollider: {fileID: 0}
---- !u!114 &1595960368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595960364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a61e203fbd8c4da4d9938a99918984cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DayWarningNotifier
-  speakerName: Ofelia
-  message: "Se hizo de d\xEDa... tengo que volver a casa"
-  displayDuration: 4
 --- !u!1001 &1771466862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2240,91 +1828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6025459582f486e4b8fd06390f52dd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
---- !u!1 &2096367534 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5615109236729451789, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &2096367535 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8917600947531950090, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &2096367536 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 181790590888512895, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &2096367537 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3931747702004407867, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2096367538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096367534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 2096367537}
-  - {fileID: 2096367536}
-  - {fileID: 2096367535}
---- !u!114 &2096367539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096367534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  outlineRenderer: {fileID: 2096367538}
---- !u!1 &2121479958 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3670825679878250586, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-  m_PrefabInstance: {fileID: 15915732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2121479959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121479958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
-  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
-  _outlineRenderers:
-  - {fileID: 2096367537}
-  - {fileID: 2096367536}
-  - {fileID: 2096367535}
---- !u!114 &2121479960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121479958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
-  outlineRenderer: {fileID: 2121479959}
 --- !u!4 &2144195161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6865081123137110508, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
