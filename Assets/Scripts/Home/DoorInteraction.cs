@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Collider))]
 public class DoorInteraction : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private float interactRadius = 2f;
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private BasketDisplay basketDisplay;
@@ -12,20 +13,17 @@ public class DoorInteraction : MonoBehaviour
     [SerializeField] private Transform houseViewAnchor;
     [SerializeField] private QuestManager questManager;
 
-
-    //para que por ahora me tepee al otro lado de la puerta, luego agregaremos animacion de puerta y que se mueva obligadamente hacia afuera
     [SerializeField] private CharacterController playerController;
     [SerializeField] private Transform teleportDestination;
     [SerializeField] private DayTransition dayTransition;
-    //mismo bug que en el tp de las escaleras
+
     private static float lastTeleportTime = -999f;
     private const float teleportCooldown = 0.3f;
 
+    public bool EntryBlocked { get; set; }
+    public string BlockedMessage { get; set; } = "No puedo entrar todavía.";
 
     private InputAction interactAction;
-    private bool playerInRange;
-
-    public bool EntryBlocked { get; set; }
 
     private void Awake()
     {
@@ -35,32 +33,24 @@ public class DoorInteraction : MonoBehaviour
     private void OnEnable() => interactAction.performed += OnInteract;
     private void OnDisable() => interactAction.performed -= OnInteract;
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-            outline?.SetHighlighted(true);
-        }
+        outline?.SetHighlighted(IsPlayerInRange());
     }
 
-    private void OnTriggerExit(Collider other)
+    private bool IsPlayerInRange()
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-            outline?.SetHighlighted(false);
-        }
+        return Vector3.Distance(transform.position, playerTransform.position) <= interactRadius;
     }
 
     private void OnInteract(InputAction.CallbackContext ctx)
     {
         if (Time.time - lastTeleportTime < teleportCooldown) return;
-        if (!playerInRange) return;
+        if (!IsPlayerInRange()) return;
 
         if (EntryBlocked)
         {
-            DialogueUI.Instance.ShowMessage("Ofelia", "Todavía no acepté los pedidos del buzón, no puedo entrar sin eso.");
+            DialogueUI.Instance.ShowMessage("Ofelia", BlockedMessage);
             return;
         }
 
@@ -81,7 +71,6 @@ public class DoorInteraction : MonoBehaviour
         playerController.enabled = false;
         playerController.transform.position = teleportDestination.position;
         playerController.enabled = true;
-        playerInRange = false;
 
         dayTransition.PlayEndOfNight(itemsCollected, () =>
         {

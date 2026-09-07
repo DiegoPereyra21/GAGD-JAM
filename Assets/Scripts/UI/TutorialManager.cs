@@ -39,6 +39,7 @@ public class TutorialManager : MonoBehaviour
         if (currentStep == Step.CollectItems && doorInteraction != null)
         {
             doorInteraction.EntryBlocked = !HasAllQuestMaterials();
+            doorInteraction.BlockedMessage = "Todavía me falta recolectar ingredientes para mis pedidos.";
         }
 
         if (upstairs != null)
@@ -138,7 +139,12 @@ public class TutorialManager : MonoBehaviour
         TutorialUI.Instance.Show("Tutorial", "Recoge las misiones diarias del buzón.");
 
         if (playerCollector != null) playerCollector.CollectionBlocked = true;
-        if (doorInteraction != null) doorInteraction.EntryBlocked = true;
+
+        if (doorInteraction != null)
+        {
+            doorInteraction.EntryBlocked = true;
+            doorInteraction.BlockedMessage = "Todavía no acepté los pedidos del buzón, no puedo entrar sin eso.";
+        }
     }
 
     private void HandleQuestsChanged()
