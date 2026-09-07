@@ -11,6 +11,8 @@ public class BookController : MonoBehaviour
     [SerializeField] private InputActionReference openBookAction;
 
     private UIDocument uiDocument;
+    private VisualElement bookContainer;
+    private bool isBookOpen = false;
     private VisualElement root;
 
     private Button recipesTab;
@@ -60,17 +62,18 @@ public class BookController : MonoBehaviour
         RegisterCallbacks();
 
         // El libro empieza cerrado visualmente
-        root.style.display = DisplayStyle.None;
+        if (bookContainer != null)
+        {
+            bookContainer.style.display = DisplayStyle.None;
+        }
 
-        // Activar la acción de abrir/cerrar
+        isBookOpen = false;
+
+        // Activar la accion de abrir/cerrar
         if (openBookAction != null)
         {
             openBookAction.action.Enable();
             openBookAction.action.performed += OnOpenBookPerformed;
-        }
-        else
-        {
-            Debug.LogError("BookController: Open Book Action no está asignada.");
         }
     }
 
@@ -87,6 +90,8 @@ public class BookController : MonoBehaviour
 
     private void FindElements()
     {
+        bookContainer = root.Q<VisualElement>("BookContainer");
+
         recipesTab = root.Q<Button>("RecipesTab");
         compendiumTab = root.Q<Button>("CompendiumTab");
         objectivesTab = root.Q<Button>("ObjectivesTab");
@@ -134,16 +139,13 @@ public class BookController : MonoBehaviour
 
     private void OnOpenBookPerformed(InputAction.CallbackContext context)
     {
-        if (root == null)
-            return;
-
-        if (root.resolvedStyle.display == DisplayStyle.None)
+        if (isBookOpen)
         {
-            OpenBook();
+            CloseBook();
         }
         else
         {
-            CloseBook();
+            OpenBook();
         }
     }
 
@@ -233,16 +235,12 @@ public class BookController : MonoBehaviour
 
         if (recipeDatabase == null)
         {
-            Debug.LogError("BookController: Recipe Database no está asignado.");
-
             ShowEmptyRecipePage("No hay recetas disponibles.");
             return;
         }
 
         if (recipeDatabase.Recipes == null || recipeDatabase.Recipes.Count == 0)
         {
-            Debug.LogWarning("BookController: El Recipe Database no contiene recetas.");
-
             ShowEmptyRecipePage("No hay recetas disponibles.");
             return;
         }
@@ -428,10 +426,14 @@ public class BookController : MonoBehaviour
 
     public void OpenBook()
     {
-        if (root == null)
+        if (bookContainer == null)
+        {
             return;
+        }
 
-        root.style.display = DisplayStyle.Flex;
+        bookContainer.style.display = DisplayStyle.Flex;
+
+        isBookOpen = true;
 
         currentRecipeIndex = 0;
 
@@ -440,9 +442,11 @@ public class BookController : MonoBehaviour
 
     public void CloseBook()
     {
-        if (root == null)
+        if (bookContainer == null)
             return;
 
-        root.style.display = DisplayStyle.None;
+        bookContainer.style.display = DisplayStyle.None;
+
+        isBookOpen = false;
     }
 }
