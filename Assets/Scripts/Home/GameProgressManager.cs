@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameProgressManager : MonoBehaviour
 {
     private const string SaveKey = "GameProgress_Data";
+    private const string DayKey = "GameProgress_Day";
 
     public static GameProgressManager Instance { get; private set; }
 
@@ -26,7 +27,8 @@ public class GameProgressManager : MonoBehaviour
     public bool HasBeenOutsideThisCycle { get; private set; }
     public bool IsInsane { get; private set; } = true; // para el indicador de sanidad en las transiciones
     public int InventoryCount { get; private set; } = 0; // para tener un conteo de items que se quedan en la casa
-    public static bool HasSaveData => PlayerPrefs.HasKey(SaveKey);
+    //public static bool HasSaveData => PlayerPrefs.HasKey(SaveKey);
+    public static bool HasSaveData => PlayerPrefs.HasKey(DayKey);
 
     public event Action OnWentOutside;
     public event Action OnNightTimeExpired;
@@ -174,7 +176,8 @@ public class GameProgressManager : MonoBehaviour
         SleepIngredientObtained = false;
         SleepIngredientPurchaseDay = 0;
         RequestWelcomeFade();
-        Save();
+        // en vez ed guardar aca vamos a hacerlo al final del dia (amanecer)
+        //Save();
         StartNight();
     }
 
@@ -190,7 +193,9 @@ public class GameProgressManager : MonoBehaviour
         CurrentDay++;
         HasBeenOutsideThisCycle = false;
         ShouldSpawnAtDoor = false;
+
         Save();
+
         StartNight();
     }
     public void AddMoney(int amount)
@@ -212,7 +217,10 @@ public class GameProgressManager : MonoBehaviour
             sleepIngredientPurchaseDay = SleepIngredientPurchaseDay
         };
         string json = JsonUtility.ToJson(data);
+
         PlayerPrefs.SetString(SaveKey, json);
+        PlayerPrefs.SetInt(DayKey, CurrentDay);
+
         PlayerPrefs.Save();
 
         Debug.Log($"[GameProgressManager] Guardado: {json}");

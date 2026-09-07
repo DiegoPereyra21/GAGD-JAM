@@ -63,7 +63,7 @@ public class DoorInteraction : MonoBehaviour
         HomeStorage.Instance.Deposit(inventory);
         GameProgressManager.Instance.MarkEnteredHouse();
         HomeStorage.Instance.Save();
-        GameProgressManager.Instance.Save();
+        //GameProgressManager.Instance.Save();
         questManager.Save();
         basketDisplay.ClearAll();
         basketDisplay.SetAvailable(false);

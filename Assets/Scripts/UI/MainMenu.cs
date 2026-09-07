@@ -161,11 +161,15 @@ public class MainMenu : MonoBehaviour
     
     private void OpenConfirmNewGame()
     {
+        
         if (!GameProgressManager.HasSaveData)
         {
+            Debug.Log("no hay data");
             StartNewGame();
             return;
         }
+
+        Debug.Log("hay data");
 
         content.style.display = DisplayStyle.None;
         confirmNewGamePanel.style.display = DisplayStyle.Flex;
