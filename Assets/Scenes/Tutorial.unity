@@ -245,22 +245,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 390422922870520055, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 390422922870520055, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 573695664688814651, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 612290673702815797, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1018132212608544702, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: inventory
       value: 
@@ -278,10 +262,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1097611478}
     - target: {fileID: 1018132212608544702, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: interactRadius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018132212608544702, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1097611480}
@@ -293,22 +273,6 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
-    - target: {fileID: 1103633745659870530, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2845996489457869513, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3697419468244314942, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3844420447442206741, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -317,26 +281,6 @@ PrefabInstance:
       propertyPath: questManager
       value: 
       objectReference: {fileID: 1952524287}
-    - target: {fileID: 4800694626331794911, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.217
-      objectReference: {fileID: 0}
-    - target: {fileID: 4800694626331794911, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.631
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957980818834458112, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.665
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957980818834458112, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.549
-      objectReference: {fileID: 0}
-    - target: {fileID: 5432811494743919407, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -349,22 +293,6 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1097611480}
-    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: pendingLetters.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: 'pendingLetters.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 467ef9e667af8954e8602759007da6c6, type: 2}
-    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: 'pendingLetters.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: eed30d0129c94ce47847ceed50a83536, type: 2}
-    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: 'pendingLetters.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 3fe175dbb28617047afe5d54bf67f4c4, type: 2}
     - target: {fileID: 5736204252891480717, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: cameraFollow
       value: 
@@ -429,14 +357,6 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
-    - target: {fileID: 7572950780674279075, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962825787158554632, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -15.34
-      objectReference: {fileID: 0}
     - target: {fileID: 8331808047687805519, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: inventory
       value: 
@@ -469,10 +389,6 @@ PrefabInstance:
       propertyPath: cameraTransition
       value: 
       objectReference: {fileID: 1560979842}
-    - target: {fileID: 8369159805672682718, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8378003800625922957, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: cameraTransition
       value: 
@@ -2085,7 +2001,6 @@ MonoBehaviour:
   upstairs: {fileID: 1713103485}
   questsNeededForNextStep: 3
   mainMenuSceneName: MainMenu
-  finalMessageDuration: 4
 --- !u!4 &1452695667
 Transform:
   m_ObjectHideFlags: 0

@@ -17,13 +17,12 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private StairInteraction upstairs; 
     [SerializeField] private int questsNeededForNextStep = 3;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
-    [SerializeField] private float finalMessageDuration = 4f;
 
 
     private enum Step
     {
         Movement, GoOutside, CheckMailbox, CollectItems,
-        CraftingIntro, CraftPotion, Deliver, Done
+        CraftingIntro, CraftPotion, Deliver, WaitingToSleep, Done
     }
 
     private Step currentStep = Step.Movement;
@@ -44,11 +43,21 @@ public class TutorialManager : MonoBehaviour
 
         if (upstairs != null)
         {
-            bool blockUpstairs = currentStep == Step.CraftingIntro
+            bool inCraftingPhase = currentStep == Step.CraftingIntro
                 || currentStep == Step.CraftPotion
                 || currentStep == Step.Deliver;
 
-            upstairs.EntryBlocked = blockUpstairs && !AllQuestsDelivered();
+            if (inCraftingPhase && !AllQuestsDelivered())
+            {
+                upstairs.EntryBlocked = true;
+                upstairs.BlockedMessage = HomeStorage.Instance.CraftedPotions.Count > 0
+                    ? "Entrega las pociones antes de acostarte."
+                    : "Crea las pociones antes de acostarte.";
+            }
+            else
+            {
+                upstairs.EntryBlocked = false;
+            }
         }
     }
 
@@ -102,6 +111,7 @@ public class TutorialManager : MonoBehaviour
 
         GameProgressManager.Instance.OnDayStarted += HandleWentInside;
         GameProgressManager.Instance.OnNightTimeExpired += HandleWentInside;
+        GameProgressManager.Instance.OnNightStarted += HandleSlept;
     }
 
     private void OnDisable()
@@ -121,6 +131,7 @@ public class TutorialManager : MonoBehaviour
 
         GameProgressManager.Instance.OnDayStarted -= HandleWentInside;
         GameProgressManager.Instance.OnNightTimeExpired -= HandleWentInside;
+        GameProgressManager.Instance.OnNightStarted -= HandleSlept;
     }
 
     private void HandleWentDownstairs()
@@ -191,10 +202,14 @@ public class TutorialManager : MonoBehaviour
     {
         if (currentStep != Step.Deliver) return;
 
-        currentStep = Step.Done;
-        TutorialUI.Instance.Show("Tutorial", "Asegurate de juntar el dinero suficiente para comprar el ingrediente especial para tu propia poción del sueño pesado, o de lo contrario... bueno, ya lo verás.");
+        currentStep = Step.WaitingToSleep;
+        TutorialUI.Instance.Show("Tutorial", "Asegurate de juntar el dinero suficiente para comprar el ingrediente especial para tu propia poción del sueño pesado, o de lo contrario... bueno, ya lo verás. Ahora podés subir a dormir.");
+    }
 
-        Invoke(nameof(FinishTutorial), finalMessageDuration);
+    private void HandleSlept()
+    {
+        if (currentStep != Step.WaitingToSleep) return;
+        FinishTutorial();
     }
 
     private void FinishTutorial()
