@@ -19,6 +19,7 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private GameObject player;
     private Renderer[] playerRenderers;
     [SerializeField] private CameraTransition cameraTransition;
+    [SerializeField] private PotionBoxDisplay potionBoxDisplay;
 
     [SerializeField] private Transform houseViewAnchor;
     [SerializeField] private Transform leftZoneAnchor;
@@ -181,7 +182,7 @@ public class CauldronCraftingSystem : MonoBehaviour
 
     private void SetPlayerVisible(bool visible)
     {
-        foreach (Renderer r in playerRenderers)
+        foreach (Renderer r in player.GetComponentsInChildren<Renderer>(true))
             r.enabled = visible;
     }
 
@@ -445,6 +446,8 @@ public class CauldronCraftingSystem : MonoBehaviour
         {
             HomeStorage.Instance.AddPotion(matchedRecipe);
             HomeStorage.Instance.Save();
+            potionBoxDisplay.AddOne(matchedRecipe, matchedRecipe.visualPrefab);
+            SetPlayerVisible(false);
             DialogueUI.Instance.ShowMessage("Ofelia", $"Creaste: {matchedRecipe.potionName}");
             OnPotionCrafted?.Invoke();
         }
