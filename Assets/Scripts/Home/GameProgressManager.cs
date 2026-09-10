@@ -136,6 +136,7 @@ public class GameProgressManager : MonoBehaviour
     private void Update()
     {
         if (!IsNightActive || !IsOutside) return;
+        if (TutorialModeFlag.IsActive) return;
 
         NightTimeRemaining -= Time.deltaTime;
         if (NightTimeRemaining <= 0f)
