@@ -18,6 +18,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private int questsNeededForNextStep = 3;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
+    private bool collectedMessageShown;
 
     private enum Step
     {
@@ -37,8 +38,15 @@ public class TutorialManager : MonoBehaviour
     {
         if (currentStep == Step.CollectItems && doorInteraction != null)
         {
-            doorInteraction.EntryBlocked = !HasAllQuestMaterials();
+            bool hasAll = HasAllQuestMaterials();
+            doorInteraction.EntryBlocked = !hasAll;
             doorInteraction.BlockedMessage = "Todavía me falta recolectar ingredientes para mis pedidos.";
+
+            if (hasAll && !collectedMessageShown)
+            {
+                collectedMessageShown = true;
+                TutorialUI.Instance.Show("Tutorial", "Ya tengo todo lo que necesito, vuelve a casa para terminar las pociones.");
+            }
         }
 
         if (upstairs != null)
@@ -139,7 +147,7 @@ public class TutorialManager : MonoBehaviour
         if (currentStep != Step.Movement) return;
 
         currentStep = Step.GoOutside;
-        TutorialUI.Instance.Show("Tutorial", "Sal afuera a recolectar ítems antes de intentar hacer alguna poción.");
+        TutorialUI.Instance.Show("Tutorial", "Dirígete hacia la puerta para salir a buscar ingredientes para los pedidos, no olvides revisar el buzón para verlos.");
     }
 
     private void HandleWentOutside()
@@ -164,7 +172,9 @@ public class TutorialManager : MonoBehaviour
         if (questManager.ActiveQuests.Count < questsNeededForNextStep) return;
 
         currentStep = Step.CollectItems;
-        TutorialUI.Instance.Show("Tutorial", "Recolecta los ingredientes necesarios para las misiones.");
+        TutorialUI.Instance.ShowSequence("Tutorial",
+            "Interactúa con los materiales para recolectarlos en tu canasta, puedes revisar tu inventario en cualquier momento pulsando TAB y tirar ingredientes que no quieras haciendo click en ellos.",
+            "Asegúrate de recolectar todo lo que necesites antes de que termine la noche o entres a casa, porque no podrás salir a recolectar de día.");
 
         if (playerCollector != null) playerCollector.CollectionBlocked = false;
         if (doorInteraction != null) doorInteraction.EntryBlocked = false;
@@ -187,7 +197,10 @@ public class TutorialManager : MonoBehaviour
         if (currentStep != Step.CraftingIntro) return;
 
         currentStep = Step.CraftPotion;
-        TutorialUI.Instance.Show("Tutorial", "Arrastra los ingredientes hacia el mortero o la tabla de picar para procesarlos, y hacé click izquierdo en el resultado para meterlo en el caldero (algunos van directo con click, sin procesar). Si algo no te gusta, hacé click sobre él para sacarlo. Cuando esté listo, hacé click en la cuchara para preparar la poción.");
+        TutorialUI.Instance.ShowSequence("Tutorial",
+            "Pulsa A y D para desplazarte entre las mesas de trabajo.",
+            "Arrastra los ingredientes de las respectivas mesadas hacia el mortero o la tabla de picar para moler o cortarlos. Una vez hecho eso, haz click izquierdo en el material conseguido para meterlo en el caldero, algunos ingredientes no requerirán molerse ni cortarse, y podrás colocarlos solo haciendo click izquierdo en ellos.",
+            "Si ves un ingrediente que no te gusta en el caldero, haz click izquierdo sobre él para quitarlo. Si ya tienes todos los ingredientes listos, haz click sobre la cuchara para preparar la poción.");
     }
 
     private void HandlePotionCrafted()
@@ -195,7 +208,7 @@ public class TutorialManager : MonoBehaviour
         if (currentStep != Step.CraftPotion) return;
 
         currentStep = Step.Deliver;
-        TutorialUI.Instance.Show("Tutorial", "Cuando termines la poción, ponla en el mostrador para entregarla y recibir el pago.");
+        TutorialUI.Instance.Show("Tutorial", "Cuando termines la poción, ponla en el mostrador para entregarla y recibir el pago, puedes salir de la mesa de fabricación con el botón de interacción.");
     }
 
     private void HandleDelivered()
@@ -203,7 +216,7 @@ public class TutorialManager : MonoBehaviour
         if (currentStep != Step.Deliver) return;
 
         currentStep = Step.WaitingToSleep;
-        TutorialUI.Instance.Show("Tutorial", "Asegurate de juntar el dinero suficiente para comprar el ingrediente especial para tu propia poción del sueño pesado, o de lo contrario... bueno, ya lo verás. Ahora podés subir a dormir.");
+        TutorialUI.Instance.Show("Tutorial", "Asegurate de juntar el dinero suficiente para comprar el ingrediente especial para tu propia poción del sueño pesado lo antes posible, de lo contrario… bueno, ya lo verás. Ahora podés subir a dormir.");
     }
 
     private void HandleSlept()
