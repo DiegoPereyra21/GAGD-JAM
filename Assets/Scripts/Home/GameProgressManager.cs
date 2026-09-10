@@ -147,6 +147,16 @@ public class GameProgressManager : MonoBehaviour
         }
     }
     
+
+    public float LinearNightProgress
+    {
+        get
+        {
+            if (!IsNightActive) return 1f;
+            return 1f - Mathf.Clamp01(NightTimeRemaining / nightDuration);
+        }
+    }
+
     public void StartNight()
     {
         NightTimeRemaining = nightDuration;

@@ -699,120 +699,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
   m_PrefabInstance: {fileID: 405043814}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &845642812
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7246741904705499738, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_Name
-      value: hromada_hlina_01_30k_f (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.802498
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.71227676
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -23.155846
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.52746254
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.48947617
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.50900394
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47234672
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.722
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f36837b4ef1095243805130530d59012, type: 3}
---- !u!1001 &889036994
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7246741904705499738, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_Name
-      value: hromada_hlina_01_30k_f (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.55047345
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.71227926
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -35.88445
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.52746254
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.48947617
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.50900394
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47234672
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.722
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f36837b4ef1095243805130530d59012, type: 3}
 --- !u!1 &937774064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +925,74 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+--- !u!1 &1193670160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1193670163}
+  - component: {fileID: 1193670162}
+  - component: {fileID: 1193670161}
+  m_Layer: 0
+  m_Name: ClockFace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1193670161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193670160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65d76fa53ccc114ba7907bb025ca626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalogClockUI
+--- !u!114 &1193670162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193670160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 91b0f55e260a6f74a8f1ee601db25922, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 5e516340a2a4cd446ac3322367752274, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &1193670163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193670160}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.56309, y: 0, z: -10.98123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1247662010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1096,63 +1050,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d5026643251b164489ffe49211bb731, type: 3}
---- !u!1001 &1295586517
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7246741904705499738, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_Name
-      value: hromada_hlina_01_30k_f (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.574492
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.7122743
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -40.874603
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.52746254
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.48947617
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.50900394
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47234672
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.722
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f36837b4ef1095243805130530d59012, type: 3}
 --- !u!1001 &1305071397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1517,63 +1414,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4138654538697430699, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
   m_PrefabInstance: {fileID: 1560979841}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1771466862
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7246741904705499738, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_Name
-      value: hromada_hlina_01_30k_f
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.063822
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.71227735
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -46.31274
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.52746254
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.48947617
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.50900394
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47234672
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.722
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f36837b4ef1095243805130530d59012, type: 3}
 --- !u!4 &1860014185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
@@ -1590,63 +1430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
---- !u!1001 &1917299034
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7246741904705499738, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_Name
-      value: hromada_hlina_01_30k_f (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.524493
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.7122748
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -51.0431
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.52746254
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.48947617
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.50900394
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47234672
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.722
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f36837b4ef1095243805130530d59012, type: 3}
 --- !u!4 &1928327697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
@@ -1750,8 +1533,4 @@ SceneRoots:
   - {fileID: 1952524286}
   - {fileID: 937774067}
   - {fileID: 1247662010}
-  - {fileID: 1771466862}
-  - {fileID: 1295586517}
-  - {fileID: 1917299034}
-  - {fileID: 889036994}
-  - {fileID: 845642812}
+  - {fileID: 1193670163}
