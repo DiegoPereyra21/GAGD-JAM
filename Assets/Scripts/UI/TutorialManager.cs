@@ -17,7 +17,9 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private StairInteraction upstairs; 
     [SerializeField] private int questsNeededForNextStep = 3;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
-
+    [SerializeField] private BasketDisplay basketDisplay;
+    private bool inventoryOpenedOnce;
+    private bool inventoryClosedMessageShown;
     private bool collectedMessageShown;
 
     private enum Step
@@ -107,6 +109,8 @@ public class TutorialManager : MonoBehaviour
         if (downstairs != null) downstairs.OnUsed += HandleWentDownstairs;
         if (doorExit != null) doorExit.OnUsed += HandleWentOutside;
         if (questManager != null) questManager.OnQuestsChanged += HandleQuestsChanged;
+        if (basketDisplay != null) basketDisplay.OnOpened += HandleInventoryOpened;
+        if (basketDisplay != null) basketDisplay.OnClosed += HandleInventoryClosed;
 
         if (cauldronCraftingSystem != null)
         {
@@ -127,6 +131,8 @@ public class TutorialManager : MonoBehaviour
         if (downstairs != null) downstairs.OnUsed -= HandleWentDownstairs;
         if (doorExit != null) doorExit.OnUsed -= HandleWentOutside;
         if (questManager != null) questManager.OnQuestsChanged -= HandleQuestsChanged;
+        if (basketDisplay != null) basketDisplay.OnOpened -= HandleInventoryOpened;
+        if (basketDisplay != null) basketDisplay.OnClosed -= HandleInventoryClosed;
 
         if (cauldronCraftingSystem != null)
         {
@@ -162,8 +168,16 @@ public class TutorialManager : MonoBehaviour
         if (doorInteraction != null)
         {
             doorInteraction.EntryBlocked = true;
-            doorInteraction.BlockedMessage = "Todavía no acepté los pedidos del buzón, no puedo entrar sin eso.";
+            doorInteraction.BlockedMessage = "Todavía no acepté todos los pedidos del buzón, no puedo entrar sin eso.";
         }
+    }
+
+    private void HandleInventoryClosed()
+    {
+        if (currentStep != Step.CollectItems || !inventoryOpenedOnce || inventoryClosedMessageShown) return;
+        inventoryClosedMessageShown = true;
+
+        TutorialUI.Instance.Show("Tutorial", "Recolecta todos los ingredientes necesarios antes de que sea de dia, luego no voy a poder salir.");
     }
 
     private void HandleQuestsChanged()
@@ -172,12 +186,19 @@ public class TutorialManager : MonoBehaviour
         if (questManager.ActiveQuests.Count < questsNeededForNextStep) return;
 
         currentStep = Step.CollectItems;
-        TutorialUI.Instance.ShowSequence("Tutorial",
-            "Interactúa con los materiales para recolectarlos en tu canasta, puedes revisar tu inventario en cualquier momento pulsando TAB y tirar ingredientes que no quieras haciendo click en ellos.",
-            "Asegúrate de recolectar todo lo que necesites antes de que termine la noche o entres a casa, porque no podrás salir a recolectar de día.");
+        TutorialUI.Instance.Show("Tutorial", "¡Ya tengo los pedidos! Ahora a juntar los ingredientes: con E los recojo, y con TAB puedo revisar en cualquier momento qué llevo encima.");
 
         if (playerCollector != null) playerCollector.CollectionBlocked = false;
         if (doorInteraction != null) doorInteraction.EntryBlocked = false;
+    }
+
+    private void HandleInventoryOpened()
+    {
+        if (currentStep != Step.CollectItems || inventoryOpenedOnce) return;
+        inventoryOpenedOnce = true;
+
+        TutorialUI.Instance.Show("Tutorial",
+            "Acá veo todo lo que fui juntando. Si algo no me sirve, con un click lo devuelvo.");
     }
 
     // Entrar a la casa cierra la parte de afuera pase lo que pase (te saltees el buzón o no) —

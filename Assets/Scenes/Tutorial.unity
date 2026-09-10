@@ -1918,6 +1918,7 @@ MonoBehaviour:
   upstairs: {fileID: 1713103485}
   questsNeededForNextStep: 3
   mainMenuSceneName: MainMenu
+  basketDisplay: {fileID: 1097611478}
 --- !u!4 &1452695667
 Transform:
   m_ObjectHideFlags: 0

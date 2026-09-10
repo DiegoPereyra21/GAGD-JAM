@@ -54,7 +54,7 @@ public class PlayerCollector : MonoBehaviour
 
         if (CollectionBlocked)
         {
-            DialogueUI.Instance.ShowMessage("Ofelia", "Todavía no acepté ningún pedido, mejor reviso el buzón primero.");
+            DialogueUI.Instance.ShowMessage("Ofelia", "Todavía no acepté todos los pedidos, mejor reviso el buzón primero.");
             return;
         }
 
