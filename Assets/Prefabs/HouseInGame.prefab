@@ -8689,6 +8689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CauldronCraftingSystem
   playerInput: {fileID: 0}
   playerMovement: {fileID: 0}
+  playerSpotlight: {fileID: 0}
   player: {fileID: 0}
   cameraTransition: {fileID: 0}
   potionBoxDisplay: {fileID: 0}
@@ -8851,13 +8852,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7361182289449874786}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.44233027, y: 0.3656608, z: -0.20407124, w: -0.79308957}
-  m_LocalPosition: {x: 0.087, y: 3.86, z: -0.207}
+  m_LocalRotation: {x: -0.40373743, y: 0.37503806, z: -0.18627752, w: -0.8134145}
+  m_LocalPosition: {x: 0.24000031, y: 3.847, z: -0.33600065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6280757653460094037}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 52.8, y: -49.496, z: 0.02}
 --- !u!1 &7403530955230796724
 GameObject:
   m_ObjectHideFlags: 0

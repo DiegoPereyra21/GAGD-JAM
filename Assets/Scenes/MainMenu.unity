@@ -164,6 +164,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioSettingsUI
   uiDocument: {fileID: 783657244}
+--- !u!1 &594691657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 594691660}
+  - component: {fileID: 594691659}
+  - component: {fileID: 594691658}
+  m_Layer: 0
+  m_Name: IntroSequence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &594691658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594691657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79776be0b1e9e6d4babc79f6e4074962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntroSequence
+  slides:
+  - backgroundImage: {fileID: 2800000, guid: e033a730ff7878149b808ea6892ff761, type: 3}
+    text: "En un rec\xF3ndito lugar del bosque lejos de la sociedad, habitaba una
+      bruja m\xE1s loca de lo que se podr\xEDa esperar, \xBFC\xF3mo se ganaba la
+      vida?, con la preparaci\xF3n y venta de pociones, por supuesto, sin embargo
+      el dinero poco duraba en sus manos, pues veras... sus h\xE1bitos financieros
+      no eran los mejores que digamos."
+  - backgroundImage: {fileID: 2800000, guid: 93512d09e92e9aa428402b100e14f14b, type: 3}
+    text: "Su falta de ahorros le pas\xF3 factura, ya que luego de disfrutar de un
+      lindo descanso nocturno despu\xE9s del trabajo, se fij\xF3 en su estante para
+      encontrar la poci\xF3n del sue\xF1o pesado y lo \xFAnico que encontr\xF3 fue
+      polvo y telara\xF1as.\n\n\"\xA1Oh, no! \xA1Se me acabaron!\", exclam\xF3 ella."
+  - backgroundImage: {fileID: 2800000, guid: d62194d092abf034e824afac48f3c056, type: 3}
+    text: "Que situaci\xF3n precaria la suya, porque para fabricar esa poci\xF3n
+      necesitaba un material muy raro y caro, el cual que no crec\xEDa en este bosque.
+      La despistada bruja inmediatamente not\xF3 su compra m\xE1s reciente en su
+      cabeza."
+  nextButtonText: Siguiente
+  lastButtonText: Comenzar la historia
+--- !u!114 &594691659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594691657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 3914c47e90b9c5648a3ed47e0793cb31, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: b3bd73bdbf452e94d9b45d66f751a94a, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &594691660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594691657}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00965, y: 0, z: 22.61116}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602452671
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +534,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 999ce031a4ff71c4b87103c5fb816760, type: 2}
   gameSceneName: Clean
   audioSettingsUI: {fileID: 330484797}
+  introSequence: {fileID: 594691658}
   tutorialSceneName: Tutorial
 --- !u!1 &973891691
 GameObject:
@@ -889,3 +977,4 @@ SceneRoots:
   - {fileID: 771513322}
   - {fileID: 1618223651}
   - {fileID: 1853430370}
+  - {fileID: 594691660}
