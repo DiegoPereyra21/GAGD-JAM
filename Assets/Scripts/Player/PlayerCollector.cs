@@ -45,12 +45,17 @@ public class PlayerCollector : MonoBehaviour
     private void OnDisable() => interactAction.performed -= OnInteract;
     private void OnInteract(InputAction.CallbackContext ctx)
     {
-        if (!GameProgressManager.Instance.IsNightActive) return;
         if (GameProgressManager.Instance.SleepIngredientObtained) return;
         if (inventory.IsFull) return;
 
         Collectible target = FindNearestCollectible();
         if (target == null || target.IsCollected) return;
+
+        if (!GameProgressManager.Instance.IsNightActive)
+        {
+            DialogueUI.Instance.ShowMessage("Ofelia", "Ya pasó demasiado tiempo, esto ya no sirve de nada.");
+            return;
+        }
 
         if (CollectionBlocked)
         {

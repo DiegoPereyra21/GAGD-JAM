@@ -138,6 +138,8 @@ MonoBehaviour:
   shakeStrength: 0.1
   freezeDuration: 0.8
   outline: {fileID: 1608406175643808536}
+  dayShrinkDuration: 1.5
+  dayShrinkScaleFactor: 0.35
 --- !u!114 &1608406175643808536
 MonoBehaviour:
   m_ObjectHideFlags: 0

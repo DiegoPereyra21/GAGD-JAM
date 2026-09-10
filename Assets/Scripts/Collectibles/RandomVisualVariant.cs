@@ -68,4 +68,10 @@ public class RandomVisualVariant : MonoBehaviour
             }
         }
     }
+
+    public void ShowDepletedLook()
+    {
+        if (chosenVariant.depletedModel == null) return;
+        SpawnModel(chosenVariant.depletedModel);
+    }
 }

@@ -29,6 +29,8 @@ namespace Game.Collectibles
         public float FreezeDuration => freezeDuration;
         public bool IsCollected => collected;
 
+        private RandomVisualVariant visualVariant;
+
         //para el outline al acercarse
         [SerializeField] private InteractableOutline outline;
         public void SetHighlighted(bool highlighted)
@@ -40,6 +42,83 @@ namespace Game.Collectibles
         public int Value => value;
         private bool collected;
         
+
+
+        [SerializeField] private float dayShrinkDuration = 1.5f;
+        [SerializeField] private float dayShrinkScaleFactor = 0.35f;
+        private bool shrunk;
+
+        private void OnEnable()
+        {
+            GameProgressManager.Instance.OnNightTimeExpired += HandleDayBroke;
+            GameProgressManager.Instance.OnDayStarted += HandleDayBroke;
+        }
+
+        private void OnDisable()
+        {
+            GameProgressManager.Instance.OnNightTimeExpired -= HandleDayBroke;
+            GameProgressManager.Instance.OnDayStarted -= HandleDayBroke;
+        }
+
+
+        private void Awake()
+        {
+            visualVariant = GetComponent<RandomVisualVariant>();
+        }
+        
+        private void HandleDayBroke()
+        {
+            if (collected || shrunk) return;
+            shrunk = true;
+
+            if (visualVariant != null)
+            {
+                visualVariant.ShowDepletedLook();
+                return;
+            }
+
+            StartCoroutine(ShrinkRoutine());
+        }
+
+        private IEnumerator ShrinkRoutine()
+        {
+            Vector3 startScale = transform.localScale;
+            Vector3 targetScale = startScale * dayShrinkScaleFactor;
+
+            Renderer[] renderers = GetComponentsInChildren<Renderer>();
+            float baseY = transform.position.y;
+            if (renderers.Length > 0)
+            {
+                float minY = float.MaxValue;
+                foreach (Renderer r in renderers)
+                    minY = Mathf.Min(minY, r.bounds.min.y);
+                baseY = minY;
+            }
+
+            float pivotOffset = transform.position.y - baseY;
+            Vector3 startPos = transform.position;
+            float elapsed = 0f;
+
+            while (elapsed < dayShrinkDuration)
+            {
+                elapsed += Time.deltaTime;
+                float t = elapsed / dayShrinkDuration;
+
+                Vector3 currentScale = Vector3.Lerp(startScale, targetScale, t);
+                transform.localScale = currentScale;
+
+                float scaleRatio = currentScale.y / startScale.y;
+                transform.position = new Vector3(startPos.x, baseY + pivotOffset * scaleRatio, startPos.z);
+
+                yield return null;
+            }
+
+            transform.localScale = targetScale;
+            transform.position = new Vector3(startPos.x, baseY + pivotOffset * dayShrinkScaleFactor, startPos.z);
+        }
+
+
+
         public void Collect(Action onComplete = null)
         {
             if (collected) return;
