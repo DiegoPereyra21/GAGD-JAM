@@ -69,11 +69,13 @@ public class BedInteraction : MonoBehaviour
             return;
         }
 
+        int moneyBeforeSleep = GameProgressManager.Instance.Money;
+
         questManager.ProcessPendingDeliveries();
         questManager.Save();
         potionDisplayArea.ClearAll();
         GameProgressManager.Instance.Sleep();
-        dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
+        dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay, moneyBeforeSleep);
     }
 
     private void Start()
@@ -81,6 +83,6 @@ public class BedInteraction : MonoBehaviour
         if (GameProgressManager.Instance.ShouldSpawnAtDoor) return;
 
         if (GameProgressManager.Instance.ConsumeWelcomeFade())
-            dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay);
+            dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay, GameProgressManager.Instance.Money);
     }
 }

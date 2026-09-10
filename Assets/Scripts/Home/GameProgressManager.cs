@@ -11,6 +11,8 @@ public class GameProgressManager : MonoBehaviour
     public static GameProgressManager Instance { get; private set; }
 
     [SerializeField] private float nightDuration = 300f;
+    [SerializeField] private float dayDuration = 300f; // duración real en segundos de las 6 horas de crafteo (6am a 12pm)
+
     //para que sea mas entendible la noche y el dia con el nuevo skybox
     [SerializeField] private float dawnFraction = 0.25f;
 
@@ -24,6 +26,8 @@ public class GameProgressManager : MonoBehaviour
     public int Money { get; private set; }
     public float NightTimeRemaining { get; private set; }
     public bool IsNightActive { get; private set; }
+    public bool IsCraftingTimeActive { get; private set; }
+    public float DayTimeRemaining { get; private set; }
     public bool HasBeenOutsideThisCycle { get; private set; }
     public bool IsInsane { get; private set; } = true; // para el indicador de sanidad en las transiciones
     public int InventoryCount { get; private set; } = 0; // para tener un conteo de items que se quedan en la casa
@@ -135,15 +139,25 @@ public class GameProgressManager : MonoBehaviour
 
     private void Update()
     {
-        if (!IsNightActive || !IsOutside) return;
-        if (TutorialModeFlag.IsActive) return;
-
-        NightTimeRemaining -= Time.deltaTime;
-        if (NightTimeRemaining <= 0f)
+        if (IsNightActive && IsOutside && !TutorialModeFlag.IsActive)
         {
-            NightTimeRemaining = 0f;
-            IsNightActive = false;
-            OnNightTimeExpired?.Invoke();
+            NightTimeRemaining -= Time.deltaTime;
+            if (NightTimeRemaining <= 0f)
+            {
+                NightTimeRemaining = 0f;
+                IsNightActive = false;
+                OnNightTimeExpired?.Invoke();
+            }
+        }
+
+        if (IsCraftingTimeActive && !TutorialModeFlag.IsActive)
+        {
+            DayTimeRemaining -= Time.deltaTime;
+            if (DayTimeRemaining <= 0f)
+            {
+                DayTimeRemaining = 0f;
+                IsCraftingTimeActive = false;
+            }
         }
     }
     
@@ -154,6 +168,15 @@ public class GameProgressManager : MonoBehaviour
         {
             if (!IsNightActive) return 1f;
             return 1f - Mathf.Clamp01(NightTimeRemaining / nightDuration);
+        }
+    }
+
+    public float DayProgress
+    {
+        get
+        {
+            if (!IsCraftingTimeActive) return 1f;
+            return 1f - Mathf.Clamp01(DayTimeRemaining / dayDuration);
         }
     }
 
@@ -196,6 +219,8 @@ public class GameProgressManager : MonoBehaviour
     {
         IsNightActive = false;
         IsOutside = false;
+        IsCraftingTimeActive = true;
+        DayTimeRemaining = dayDuration;
         OnDayStarted?.Invoke();
     }
 
@@ -204,11 +229,30 @@ public class GameProgressManager : MonoBehaviour
         CurrentDay++;
         HasBeenOutsideThisCycle = false;
         ShouldSpawnAtDoor = false;
+        IsCraftingTimeActive = false;
 
         Save();
 
         StartNight();
     }
+
+    public float FullCycleProgress
+    {
+        get
+        {
+            if (IsOutside)
+                return LinearNightProgress * 0.5f;
+
+            if (IsCraftingTimeActive)
+                return 0.5f + DayProgress * 0.25f;
+
+            if (!IsNightActive)
+                return 0.75f; // crafteo cerrado, todavía no dormiste: se queda acá
+
+            return 0f; // recién arrancando el ciclo (justo después de dormir, antes de salir)
+        }
+    }
+
     public void AddMoney(int amount)
     {
         Money += amount;

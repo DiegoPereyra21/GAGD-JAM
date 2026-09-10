@@ -13,17 +13,11 @@ public class AnalogClockUI : MonoBehaviour
         root = uiRoot.Q<VisualElement>("ClockRoot");
         hourHand = uiRoot.Q<VisualElement>("HourHand");
     }
-
     private void Update()
     {
-        bool visible = GameProgressManager.Instance.IsOutside;
-        root.style.display = visible ? DisplayStyle.Flex : DisplayStyle.None;
+        root.style.display = DisplayStyle.Flex;
 
-        if (!visible) return;
-
-        float t = GameProgressManager.Instance.LinearNightProgress;
-        float angle = (300f + t * 240f) % 360f;
-
+        float angle = GameProgressManager.Instance.FullCycleProgress * 360f;
         hourHand.style.rotate = new StyleRotate(new Rotate(new Angle(angle, AngleUnit.Degree)));
     }
 }

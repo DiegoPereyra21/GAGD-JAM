@@ -55,6 +55,12 @@ public class DeliveryInteraction : MonoBehaviour
     {
         if (!playerInRange) return;
 
+        if (!GameProgressManager.Instance.IsCraftingTimeActive)
+        {
+            DialogueUI.Instance.ShowMessage("Ofelia", "Ya es demasiado tarde, nadie va a recibir pedidos a esta hora.");
+            return;
+        }
+
         DeliverMatchingQuests();
         OnInteracted?.Invoke();
     }
