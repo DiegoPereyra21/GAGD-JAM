@@ -8814,6 +8814,10 @@ MonoBehaviour:
     processedType: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
   playerTransform: {fileID: 0}
   interactRadius: 6
+  potionShowcaseAnchor: {fileID: 4069298699191748284}
+  showcaseDuration: 3
+  swayAngle: 12
+  swaySpeed: 3
   clickMovementThreshold: 15
   playSTGCut:
     idInternal: 0
@@ -8823,6 +8827,37 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 969edca2c0834294aa3ec28b24e22d6e, type: 2}
+--- !u!1 &7361182289449874786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4069298699191748284}
+  m_Layer: 0
+  m_Name: Potion Showcase Anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4069298699191748284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361182289449874786}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.44233027, y: 0.3656608, z: -0.20407124, w: -0.79308957}
+  m_LocalPosition: {x: 0.087, y: 3.86, z: -0.207}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6280757653460094037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7403530955230796724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9171,6 +9206,7 @@ Transform:
   - {fileID: 5574948678529781715}
   - {fileID: 1369903525018808102}
   - {fileID: 4630350238378365622}
+  - {fileID: 4069298699191748284}
   - {fileID: 2170705171550760973}
   - {fileID: 8970895971425481537}
   - {fileID: 7123067276059870867}

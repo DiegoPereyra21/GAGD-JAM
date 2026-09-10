@@ -16,6 +16,7 @@ public class CauldronCraftingSystem : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Light playerSpotlight;
     [SerializeField] private GameObject player;
     private Renderer[] playerRenderers;
     [SerializeField] private CameraTransition cameraTransition;
@@ -50,6 +51,14 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private List<ProcessingRecipe> processingRecipes;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float interactRadius = 2f;
+
+    //para que la pocion aparezca unos segundos luego de crafteada
+    [SerializeField] private Transform potionShowcaseAnchor;
+    [SerializeField] private float showcaseDuration = 3f;
+    [SerializeField] private float swayAngle = 12f;
+    [SerializeField] private float swaySpeed = 3f;
+
+    private bool isShowcasing;
 
     //para detectar bien el click y drag
     private Vector2 dragStartScreenPos;
@@ -130,6 +139,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         }
 
         if (!isInside) return;
+        if (isShowcasing) return; // bloquea A/D, click y drag mientras se muestra la poción
 
         if (Keyboard.current.aKey.wasPressedThisFrame) MoveZone(-1);
         if (Keyboard.current.dKey.wasPressedThisFrame) MoveZone(1);
@@ -150,6 +160,8 @@ public class CauldronCraftingSystem : MonoBehaviour
 
     private void OnInteractPressed(InputAction.CallbackContext ctx)
     {
+        if (isShowcasing) return;
+
         if (!isInside)
         {
             if (playerInRange) EnterCauldron();
@@ -166,6 +178,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         playerMovement.SetFrozen(true);
         cameraTransition.TransitionTo(cauldronViewAnchor);
         SetPlayerVisible(false);
+        if (playerSpotlight != null) playerSpotlight.enabled = false;
         outline?.SetHighlighted(false);
         OnEnteredCrafting?.Invoke();
     }
@@ -176,10 +189,10 @@ public class CauldronCraftingSystem : MonoBehaviour
         playerMovement.SetFrozen(false);
         cameraTransition.TransitionTo(houseViewAnchor);
         SetPlayerVisible(true);
+        if (playerSpotlight != null) playerSpotlight.enabled = true;
         if (playerInRange)
             outline?.SetHighlighted(true);
     }
-
     private void SetPlayerVisible(bool visible)
     {
         foreach (Renderer r in player.GetComponentsInChildren<Renderer>(true))
@@ -440,27 +453,71 @@ public class CauldronCraftingSystem : MonoBehaviour
 
     private void Craft()
     {
-        PotionRecipe matchedRecipe = FindMatchingRecipe();
+        if (isShowcasing) return;
 
-        if (matchedRecipe != null)
-        {
-            HomeStorage.Instance.AddPotion(matchedRecipe);
-            HomeStorage.Instance.Save();
-            potionBoxDisplay.AddOne(matchedRecipe, matchedRecipe.visualPrefab);
-            SetPlayerVisible(false);
-            DialogueUI.Instance.ShowMessage("Ofelia", $"Creaste: {matchedRecipe.potionName}");
-            OnPotionCrafted?.Invoke();
-        }
-        else
-        {
-            DialogueUI.Instance.ShowMessage("Ofelia", "Ninguna receta coincide con los ingredientes en el caldero");
-        }
+        PotionRecipe matchedRecipe = FindMatchingRecipe();
 
         foreach (GameObject item in cauldronContents)
             Destroy(item);
 
         cauldronContents.Clear();
         cauldronIngredients.Clear();
+
+        if (matchedRecipe != null)
+            StartCoroutine(ShowcasePotionRoutine(matchedRecipe));
+        else
+            DialogueUI.Instance.ShowMessage("Ofelia", "Ninguna receta coincide con los ingredientes en el caldero");
+    }
+
+    private System.Collections.IEnumerator ShowcasePotionRoutine(PotionRecipe recipe)
+    {
+        isShowcasing = true;
+
+        GameObject showcaseVisual = null;
+        if (recipe.visualPrefab != null && potionShowcaseAnchor != null)
+            showcaseVisual = Instantiate(recipe.visualPrefab, potionShowcaseAnchor.position, potionShowcaseAnchor.rotation);
+
+        DialogueUI.Instance.ShowMessage("Ofelia", $"Creaste: {recipe.potionName}");
+
+        float elapsed = 0f;
+        Quaternion baseRotation = potionShowcaseAnchor != null ? potionShowcaseAnchor.rotation : Quaternion.identity;
+
+        while (elapsed < showcaseDuration)
+        {
+            elapsed += Time.deltaTime;
+
+            if (showcaseVisual != null)
+            {
+                float angle = Mathf.Sin(elapsed * swaySpeed) * swayAngle;
+                showcaseVisual.transform.rotation = baseRotation * Quaternion.Euler(0f, 0f, angle);
+            }
+
+            yield return null;
+        }
+
+        if (showcaseVisual != null)
+        {
+            float fadeDuration = 0.4f;
+            Vector3 startScale = showcaseVisual.transform.localScale;
+            float fadeElapsed = 0f;
+
+            while (fadeElapsed < fadeDuration)
+            {
+                fadeElapsed += Time.deltaTime;
+                showcaseVisual.transform.localScale = Vector3.Lerp(startScale, Vector3.zero, fadeElapsed / fadeDuration);
+                yield return null;
+            }
+
+            Destroy(showcaseVisual);
+        }
+
+        HomeStorage.Instance.AddPotion(recipe);
+        HomeStorage.Instance.Save();
+        potionBoxDisplay.AddOne(recipe, recipe.visualPrefab);
+        SetPlayerVisible(false);
+        OnPotionCrafted?.Invoke();
+
+        isShowcasing = false;
     }
 
     private PotionRecipe FindMatchingRecipe()

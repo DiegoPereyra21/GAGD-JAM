@@ -203,6 +203,46 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.24000031
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.847
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.33600065
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8134145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.40373743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.37503806
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.18627752
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 52.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -49.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069298699191748284, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -315,6 +355,10 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 1097611475}
+    - target: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: playerSpotlight
+      value: 
+      objectReference: {fileID: 1911019003}
     - target: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerTransform
       value: 
@@ -1362,6 +1406,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
+--- !u!108 &1911019003 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 755624492087950701, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+  m_PrefabInstance: {fileID: 1097611473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1928327697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1808789438798043641, guid: 8f43a073e24e0e443a3f872833ca7e82, type: 3}
