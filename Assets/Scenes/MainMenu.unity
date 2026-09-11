@@ -211,8 +211,10 @@ MonoBehaviour:
       necesitaba un material muy raro y caro, el cual que no crec\xEDa en este bosque.
       La despistada bruja inmediatamente not\xF3 su compra m\xE1s reciente en su
       cabeza."
-  nextButtonText: Siguiente
-  lastButtonText: Comenzar la historia
+  continuePrompt: "Presion\xE1 E para continuar"
+  finishPrompt: "Presion\xE1 E para comenzar la historia"
+  fadeDuration: 0.5
+  typewriterSpeed: 60
 --- !u!114 &594691659
 MonoBehaviour:
   m_ObjectHideFlags: 0
