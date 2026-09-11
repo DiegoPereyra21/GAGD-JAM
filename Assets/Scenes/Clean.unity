@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: potionBoxDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1975028666}
     - target: {fileID: 8378003800625922957, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: cameraTransition
       value: 
@@ -340,7 +340,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1097611479}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9087246981982350231, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6268949061869226111, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       insertIndex: -1
@@ -670,7 +671,7 @@ Transform:
   m_GameObject: {fileID: 345787285}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7029328, y: -0.076717444, z: -0.076717466, w: 0.7029327}
-  m_LocalPosition: {x: 0.0008226717, y: 0.000071577146, z: 0.014276857}
+  m_LocalPosition: {x: 0.00082, y: 0.00007, z: 0.01222}
   m_LocalScale: {x: 0.017726468, y: 0.003150362, z: 0.017726468}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -691,7 +692,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1338,16 +1339,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3712
+      objectReference: {fileID: 0}
+    - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3712
+      objectReference: {fileID: 0}
+    - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3712
+      objectReference: {fileID: 0}
+    - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.532391
       objectReference: {fileID: 0}
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.68
+      value: 17.893
       objectReference: {fileID: 0}
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.288959
+      value: 15.189
       objectReference: {fileID: 0}
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1453,6 +1466,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6865081123137110508, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7322736
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865081123137110508, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.763735
+      objectReference: {fileID: 0}
     - target: {fileID: 7022732521718067591, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1461,6 +1482,14 @@ PrefabInstance:
       propertyPath: potionBoxVisual
       value: 
       objectReference: {fileID: 1975028664}
+    - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: indoorSpeed
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: outdoorSpeed
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -2107,15 +2136,15 @@ PrefabInstance:
       objectReference: {fileID: 1860014185}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.532214
+      value: 6.532182
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.08569
+      value: 23.640398
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.8587794
+      value: 4.942482
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.w
