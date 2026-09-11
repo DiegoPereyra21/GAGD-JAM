@@ -203,6 +203,18 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
+    - target: {fileID: 1501153514068875231, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: groupSpacing
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501153514068875231, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: previewGroupCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501153514068875231, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: previewItemsPerGroup
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -214,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: potionBoxDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1975028666}
     - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -339,6 +351,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
+    - target: {fileID: 8898512138406957690, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898512138406957690, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9087246981982350231, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
