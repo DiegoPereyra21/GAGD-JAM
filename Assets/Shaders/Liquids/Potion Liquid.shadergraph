@@ -43,9 +43,6 @@
             "m_Id": "45df1bcf2a95494991d65f45d6af20b9"
         },
         {
-            "m_Id": "9e63af89d41a4ea8abc6bf9ab606df55"
-        },
-        {
             "m_Id": "d446ef978f9b4d1898ef3b17d7be02de"
         },
         {
@@ -5853,41 +5850,6 @@
 }
 
 {
-    "m_SGVersion": 3,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
-    "m_ObjectId": "9e63af89d41a4ea8abc6bf9ab606df55",
-    "m_Guid": {
-        "m_GuidSerialized": "0d55590a-f519-44fb-8804-2bcd7a99df56"
-    },
-    "promotedFromAssetID": "",
-    "promotedFromCategoryName": "",
-    "promotedOrdering": -1,
-    "m_Name": "Deep Color",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Deep Color",
-    "m_DefaultReferenceName": "_Deep_Color",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_PerRendererData": false,
-    "m_customAttributes": [],
-    "m_Value": {
-        "r": 0.6037735939025879,
-        "g": 0.3493078052997589,
-        "b": 0.1452474147081375,
-        "a": 1.0
-    },
-    "isMainColor": false,
-    "m_ColorMode": 0
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "9ff57c2cffdd410ebbd66e50bb7ab0f0",
@@ -6812,9 +6774,6 @@
         },
         {
             "m_Id": "45df1bcf2a95494991d65f45d6af20b9"
-        },
-        {
-            "m_Id": "9e63af89d41a4ea8abc6bf9ab606df55"
         },
         {
             "m_Id": "d446ef978f9b4d1898ef3b17d7be02de"
