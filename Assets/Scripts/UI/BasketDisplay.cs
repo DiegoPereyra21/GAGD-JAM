@@ -25,6 +25,8 @@ public class BasketDisplay : MonoBehaviour
     private InputAction toggleAction;
     private bool isOpen;
 
+    public bool IsOpen => isOpen;
+
     private void Awake()
     {
         toggleAction = playerInput.actions["Inventory"];
@@ -57,6 +59,7 @@ public class BasketDisplay : MonoBehaviour
     private void OnToggle(InputAction.CallbackContext ctx)
     {
         if (!isAvailable) return;
+        if (!isOpen && playerMovement.IsPickupInProgress) return;
 
         isOpen = !isOpen;
         playerMovement.SetFrozen(isOpen);

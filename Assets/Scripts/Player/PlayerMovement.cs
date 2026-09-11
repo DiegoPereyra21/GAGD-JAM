@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private int freezeCount;
     private bool IsFrozen => freezeCount > 0;//para pausar al pj cuando este recolectando hongos, la ides es q sea reutilizable para distintas situaciones donde necesite una pausa
+    
+    public bool IsPickupInProgress { get; private set; }
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -63,8 +66,10 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator TimedFreezeRoutine(float duration)
     {
         freezeCount++;
+        IsPickupInProgress = true;
         yield return new WaitForSeconds(duration);
         freezeCount--;
+        IsPickupInProgress = false;
     }
 
     // Freeze indefinido, controlado manualmente (ej. mientras el canasto está abierto)

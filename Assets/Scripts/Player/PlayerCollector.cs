@@ -45,6 +45,7 @@ public class PlayerCollector : MonoBehaviour
     private void OnDisable() => interactAction.performed -= OnInteract;
     private void OnInteract(InputAction.CallbackContext ctx)
     {
+        if (basketDisplay.IsOpen) return;
         if (GameProgressManager.Instance.SleepIngredientObtained) return;
         if (inventory.IsFull) return;
 
