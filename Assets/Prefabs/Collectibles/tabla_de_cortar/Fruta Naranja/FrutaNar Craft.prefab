@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdb90a2a922c1f84c9e02ee9689ff754, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.42
+      value: 33.44405
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdb90a2a922c1f84c9e02ee9689ff754, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.055
+      value: 142.76443
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdb90a2a922c1f84c9e02ee9689ff754, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.3935103
+      value: 198.25768
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdb90a2a922c1f84c9e02ee9689ff754, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bdb90a2a922c1f84c9e02ee9689ff754, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 503623e4407ec964fab1241ca3fdd033, type: 2}
     - target: {fileID: 919132149155446097, guid: bdb90a2a922c1f84c9e02ee9689ff754, type: 3}
       propertyPath: m_Name
       value: FrutaNar Craft

@@ -124,8 +124,9 @@ MonoBehaviour:
   destroyOnCollect: 0
   shakeDuration: 0.3
   shakeStrength: 0.1
-  freezeDuration: 0.8
   outline: {fileID: 7480186054338108522}
+  dayShrinkDuration: 1.5
+  dayShrinkScaleFactor: 0.35
 --- !u!65 &5188198895511535013
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4840187146014991126, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 45.097797
       objectReference: {fileID: 0}
     - target: {fileID: 4840187146014991126, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 141.62338
       objectReference: {fileID: 0}
     - target: {fileID: 4840187146014991126, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 209.97154
       objectReference: {fileID: 0}
     - target: {fileID: 4840187146014991126, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -68,6 +68,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArbolFrutaNaranjaC Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6008048520752093305, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a06c77b5f76ddf74da1704556a7d0d63, type: 2}
+    - target: {fileID: 6008048520752093305, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db7e156f7fa1c5d45864be2c4dbe9936, type: 2}
+    - target: {fileID: 6008048520752093305, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c5f92b5b806be44d81271798d655fcb, type: 2}
+    - target: {fileID: 6008048520752093305, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53d2b1f82b181dd4cadc0a9887b21ae0, type: 2}
+    - target: {fileID: 6008048520752093305, guid: 60525f1192a7c5748a437b8571b35cb1, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 209225fb551696148a6abce838a75a64, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
