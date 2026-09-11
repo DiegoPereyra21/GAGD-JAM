@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
         bool isMoving = direction.sqrMagnitude > 0.0001f;
         animator.SetBool("IsWalking", isMoving);
+        animator.SetBool("IsOutside", GameProgressManager.Instance.IsOutside);
 
         if (isMoving)
         {
