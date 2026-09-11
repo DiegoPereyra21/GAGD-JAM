@@ -15,12 +15,12 @@ public class DialogueUI : MonoBehaviour
     private Label textLabel;
     private Coroutine activeRoutine;
     private bool isShowing;
-
     private void Awake()
     {
         Instance = this;
 
-        root = GetComponent<UIDocument>().rootVisualElement;
+        VisualElement uiRoot = GetComponent<UIDocument>().rootVisualElement;
+        root = uiRoot.Q<VisualElement>("ConversationPanel");
         nameLabel = root.Q<Label>("ConversationName");
         textLabel = root.Q<Label>("Conversation");
 

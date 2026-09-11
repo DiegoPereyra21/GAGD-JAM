@@ -17,13 +17,15 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private StairInteraction upstairs; 
     [SerializeField] private int questsNeededForNextStep = 3;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
-    [SerializeField] private float finalMessageDuration = 4f;
-
+    [SerializeField] private BasketDisplay basketDisplay;
+    private bool inventoryOpenedOnce;
+    private bool inventoryClosedMessageShown;
+    private bool collectedMessageShown;
 
     private enum Step
     {
         Movement, GoOutside, CheckMailbox, CollectItems,
-        CraftingIntro, CraftPotion, Deliver, Done
+        CraftingIntro, CraftPotion, Deliver, WaitingToSleep, Done
     }
 
     private Step currentStep = Step.Movement;
@@ -38,17 +40,34 @@ public class TutorialManager : MonoBehaviour
     {
         if (currentStep == Step.CollectItems && doorInteraction != null)
         {
-            doorInteraction.EntryBlocked = !HasAllQuestMaterials();
+            bool hasAll = HasAllQuestMaterials();
+            doorInteraction.EntryBlocked = !hasAll;
             doorInteraction.BlockedMessage = "Todavía me falta recolectar ingredientes para mis pedidos.";
+
+            if (hasAll && !collectedMessageShown)
+            {
+                collectedMessageShown = true;
+                TutorialUI.Instance.Show("Tutorial", "Ya tengo todo lo que necesito, vuelve a casa para terminar las pociones.");
+            }
         }
 
         if (upstairs != null)
         {
-            bool blockUpstairs = currentStep == Step.CraftingIntro
+            bool inCraftingPhase = currentStep == Step.CraftingIntro
                 || currentStep == Step.CraftPotion
                 || currentStep == Step.Deliver;
 
-            upstairs.EntryBlocked = blockUpstairs && !AllQuestsDelivered();
+            if (inCraftingPhase && !AllQuestsDelivered())
+            {
+                upstairs.EntryBlocked = true;
+                upstairs.BlockedMessage = HomeStorage.Instance.CraftedPotions.Count > 0
+                    ? "Entrega las pociones antes de acostarte."
+                    : "Crea las pociones antes de acostarte.";
+            }
+            else
+            {
+                upstairs.EntryBlocked = false;
+            }
         }
     }
 
@@ -90,6 +109,8 @@ public class TutorialManager : MonoBehaviour
         if (downstairs != null) downstairs.OnUsed += HandleWentDownstairs;
         if (doorExit != null) doorExit.OnUsed += HandleWentOutside;
         if (questManager != null) questManager.OnQuestsChanged += HandleQuestsChanged;
+        if (basketDisplay != null) basketDisplay.OnOpened += HandleInventoryOpened;
+        if (basketDisplay != null) basketDisplay.OnClosed += HandleInventoryClosed;
 
         if (cauldronCraftingSystem != null)
         {
@@ -102,6 +123,7 @@ public class TutorialManager : MonoBehaviour
 
         GameProgressManager.Instance.OnDayStarted += HandleWentInside;
         GameProgressManager.Instance.OnNightTimeExpired += HandleWentInside;
+        GameProgressManager.Instance.OnNightStarted += HandleSlept;
     }
 
     private void OnDisable()
@@ -109,6 +131,8 @@ public class TutorialManager : MonoBehaviour
         if (downstairs != null) downstairs.OnUsed -= HandleWentDownstairs;
         if (doorExit != null) doorExit.OnUsed -= HandleWentOutside;
         if (questManager != null) questManager.OnQuestsChanged -= HandleQuestsChanged;
+        if (basketDisplay != null) basketDisplay.OnOpened -= HandleInventoryOpened;
+        if (basketDisplay != null) basketDisplay.OnClosed -= HandleInventoryClosed;
 
         if (cauldronCraftingSystem != null)
         {
@@ -121,6 +145,7 @@ public class TutorialManager : MonoBehaviour
 
         GameProgressManager.Instance.OnDayStarted -= HandleWentInside;
         GameProgressManager.Instance.OnNightTimeExpired -= HandleWentInside;
+        GameProgressManager.Instance.OnNightStarted -= HandleSlept;
     }
 
     private void HandleWentDownstairs()
@@ -128,7 +153,7 @@ public class TutorialManager : MonoBehaviour
         if (currentStep != Step.Movement) return;
 
         currentStep = Step.GoOutside;
-        TutorialUI.Instance.Show("Tutorial", "Sal afuera a recolectar ítems antes de intentar hacer alguna poción.");
+        TutorialUI.Instance.Show("Tutorial", "Dirígete hacia la puerta para salir a buscar ingredientes para los pedidos, no olvides revisar el buzón para verlos.");
     }
 
     private void HandleWentOutside()
@@ -143,8 +168,16 @@ public class TutorialManager : MonoBehaviour
         if (doorInteraction != null)
         {
             doorInteraction.EntryBlocked = true;
-            doorInteraction.BlockedMessage = "Todavía no acepté los pedidos del buzón, no puedo entrar sin eso.";
+            doorInteraction.BlockedMessage = "Todavía no acepté todos los pedidos del buzón, no puedo entrar sin eso.";
         }
+    }
+
+    private void HandleInventoryClosed()
+    {
+        if (currentStep != Step.CollectItems || !inventoryOpenedOnce || inventoryClosedMessageShown) return;
+        inventoryClosedMessageShown = true;
+
+        TutorialUI.Instance.Show("Tutorial", "Recolecta todos los ingredientes necesarios antes de que sea de dia, luego no voy a poder salir.");
     }
 
     private void HandleQuestsChanged()
@@ -153,10 +186,19 @@ public class TutorialManager : MonoBehaviour
         if (questManager.ActiveQuests.Count < questsNeededForNextStep) return;
 
         currentStep = Step.CollectItems;
-        TutorialUI.Instance.Show("Tutorial", "Recolecta los ingredientes necesarios para las misiones.");
+        TutorialUI.Instance.Show("Tutorial", "¡Ya tengo los pedidos! Ahora a juntar los ingredientes: con E los recojo, y con TAB puedo revisar en cualquier momento qué llevo encima.");
 
         if (playerCollector != null) playerCollector.CollectionBlocked = false;
         if (doorInteraction != null) doorInteraction.EntryBlocked = false;
+    }
+
+    private void HandleInventoryOpened()
+    {
+        if (currentStep != Step.CollectItems || inventoryOpenedOnce) return;
+        inventoryOpenedOnce = true;
+
+        TutorialUI.Instance.Show("Tutorial",
+            "Acá veo todo lo que fui juntando. Si algo no me sirve, con un click lo devuelvo.");
     }
 
     // Entrar a la casa cierra la parte de afuera pase lo que pase (te saltees el buzón o no) —
@@ -176,7 +218,10 @@ public class TutorialManager : MonoBehaviour
         if (currentStep != Step.CraftingIntro) return;
 
         currentStep = Step.CraftPotion;
-        TutorialUI.Instance.Show("Tutorial", "Arrastra los ingredientes hacia el mortero o la tabla de picar para procesarlos, y hacé click izquierdo en el resultado para meterlo en el caldero (algunos van directo con click, sin procesar). Si algo no te gusta, hacé click sobre él para sacarlo. Cuando esté listo, hacé click en la cuchara para preparar la poción.");
+        TutorialUI.Instance.ShowSequence("Tutorial",
+            "Pulsa A y D para desplazarte entre las mesas de trabajo.",
+            "Arrastra los ingredientes de las respectivas mesadas hacia el mortero o la tabla de picar para moler o cortarlos. Una vez hecho eso, haz click izquierdo en el material conseguido para meterlo en el caldero, algunos ingredientes no requerirán molerse ni cortarse, y podrás colocarlos solo haciendo click izquierdo en ellos.",
+            "Si ves un ingrediente que no te gusta en el caldero, haz click izquierdo sobre él para quitarlo. Si ya tienes todos los ingredientes listos, haz click sobre la cuchara para preparar la poción.");
     }
 
     private void HandlePotionCrafted()
@@ -184,17 +229,21 @@ public class TutorialManager : MonoBehaviour
         if (currentStep != Step.CraftPotion) return;
 
         currentStep = Step.Deliver;
-        TutorialUI.Instance.Show("Tutorial", "Cuando termines la poción, ponla en el mostrador para entregarla y recibir el pago.");
+        TutorialUI.Instance.Show("Tutorial", "Cuando termines la poción, ponla en el mostrador para entregarla y recibir el pago, puedes salir de la mesa de fabricación con el botón de interacción.");
     }
 
     private void HandleDelivered()
     {
         if (currentStep != Step.Deliver) return;
 
-        currentStep = Step.Done;
-        TutorialUI.Instance.Show("Tutorial", "Asegurate de juntar el dinero suficiente para comprar el ingrediente especial para tu propia poción del sueño pesado, o de lo contrario... bueno, ya lo verás.");
+        currentStep = Step.WaitingToSleep;
+        TutorialUI.Instance.Show("Tutorial", "Asegurate de juntar el dinero suficiente para comprar el ingrediente especial para tu propia poción del sueño pesado lo antes posible, de lo contrario… bueno, ya lo verás. Ahora podés subir a dormir.");
+    }
 
-        Invoke(nameof(FinishTutorial), finalMessageDuration);
+    private void HandleSlept()
+    {
+        if (currentStep != Step.WaitingToSleep) return;
+        FinishTutorial();
     }
 
     private void FinishTutorial()

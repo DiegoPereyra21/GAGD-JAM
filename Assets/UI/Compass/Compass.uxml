@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+        <ui:VisualElement name="CompassRoot" style="position: absolute; bottom: 30px; left: 50%; margin-left: -75px; width: 150px; height: 150px; display: none;">
+        <ui:VisualElement name="CompassArrow" style="width: 100%; height: 100%; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/Art/pngwing.com.png?fileID=2800000&amp;guid=39b3f642fa6cc2f4cad513e6143cf0aa&amp;type=3#pngwing.com&quot;);"/>
+    </ui:VisualElement>
+</ui:UXML>

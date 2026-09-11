@@ -19,6 +19,9 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private GameObject basketRoot;
     private bool isAvailable;
     
+    public event System.Action OnOpened;
+    public event System.Action OnClosed;
+
     private InputAction toggleAction;
     private bool isOpen;
 
@@ -59,11 +62,17 @@ public class BasketDisplay : MonoBehaviour
         playerMovement.SetFrozen(isOpen);
 
         if (isOpen)
+        {
             cameraTransition.TransitionTo(basketViewAnchor);
+            OnOpened?.Invoke();
+        }
         else
+        {
             cameraTransition.TransitionToPlayer();
+            OnClosed?.Invoke();
+        }
     }
-
+    
     public void SetAvailable(bool available)
     {
         isAvailable = available;

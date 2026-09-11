@@ -195,16 +195,21 @@ public class DayTransition : MonoBehaviour
         }
     }
 
-    public void PlayDayIntro(int day, Action onComplete = null)
+    public void PlayDayIntro(int day, int moneyBeforeSleep, Action onComplete = null)
     {
         if (transitionCoroutine != null) return;
-        transitionCoroutine = StartCoroutine(PlayDayIntroRoutine(day, onComplete));
+        transitionCoroutine = StartCoroutine(PlayDayIntroRoutine(day, moneyBeforeSleep, onComplete));
     }
 
-    private IEnumerator PlayDayIntroRoutine(int day, Action onComplete)
+    private IEnumerator PlayDayIntroRoutine(int day, int moneyBeforeSleep, Action onComplete)
     {
         PauseGame();
-        moneyValue.text = GameProgressManager.Instance.Money.ToString();
+
+        int earnedToday = GameProgressManager.Instance.Money - moneyBeforeSleep;
+        moneyValue.text = earnedToday > 0
+            ? $"{moneyBeforeSleep} + {earnedToday}"
+            : moneyBeforeSleep.ToString();
+
         sanityValue.text = GetSanityText();
         inventoryItemContainer.style.display = DisplayStyle.None;
 

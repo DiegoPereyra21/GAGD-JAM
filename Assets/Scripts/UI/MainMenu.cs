@@ -20,6 +20,8 @@ public class MainMenu : MonoBehaviour
     [Header("Manager de Audio")]
     [SerializeField] private AudioSettingsUI audioSettingsUI;
 
+    //para la intro si es que da a nueva partida
+    [SerializeField] private IntroSequence introSequence;
     //[Header("Manager de Idioma")]
     //[SerializeField] private LanguageSettingsUI languageSettingsUI;
 
@@ -156,7 +158,7 @@ public class MainMenu : MonoBehaviour
     private void StartTutorial()
     {
         stopMusicEvent.Post(gameObject);
-        SceneManager.LoadScene(tutorialSceneName);
+        SceneManager.LoadSceneAsync(tutorialSceneName);
     }
     
     private void OpenConfirmNewGame()
@@ -183,13 +185,21 @@ public class MainMenu : MonoBehaviour
 
     private void StartNewGame()
     {
-        stopMusicEvent.Post(gameObject);
+        confirmNewGamePanel.style.display = DisplayStyle.None;
 
-        PlayerPrefs.DeleteAll();
-        HomeStorage.Instance.Load();
-        GameProgressManager.Instance.ResetForNewGame();
+        AsyncOperation preload = SceneManager.LoadSceneAsync(gameSceneName);
+        preload.allowSceneActivation = false;
 
-        SceneManager.LoadScene(gameSceneName);
+        introSequence.Play(() =>
+        {
+            stopMusicEvent.Post(gameObject);
+
+            PlayerPrefs.DeleteAll();
+            HomeStorage.Instance.Load();
+            GameProgressManager.Instance.ResetForNewGame();
+
+            preload.allowSceneActivation = true;
+        });
     }
 
     private void ContinueGame()
@@ -201,7 +211,7 @@ public class MainMenu : MonoBehaviour
         GameProgressManager.Instance.StartNight();
         GameProgressManager.Instance.RequestWelcomeFade();
 
-        SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadSceneAsync(gameSceneName);
     }
 
     private void OpenOptions()

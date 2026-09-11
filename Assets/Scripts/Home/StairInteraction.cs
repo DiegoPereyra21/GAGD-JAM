@@ -11,8 +11,8 @@ public class StairInteraction : MonoBehaviour
     [SerializeField] private Transform cameraViewAnchor;
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private float interactRadius = 1.5f;
-    [SerializeField] private string blockedMessage = "Todavía tengo que entregar los pedidos antes de acostarme";
     public bool EntryBlocked { get; set; }
+    public string BlockedMessage { get; set; } = "Todavía tengo cosas pendientes antes de subir.";
 
     private InputAction interactAction;
     //Test
@@ -46,7 +46,7 @@ public class StairInteraction : MonoBehaviour
 
         if (EntryBlocked)
         {
-            DialogueUI.Instance.ShowMessage("Ofelia", blockedMessage);
+            DialogueUI.Instance.ShowMessage("Ofelia", BlockedMessage);
             return;
         }
 
