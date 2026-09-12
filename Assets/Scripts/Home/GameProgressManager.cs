@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 
 public class GameProgressManager : MonoBehaviour
@@ -21,6 +22,10 @@ public class GameProgressManager : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AK.Wwise.Event timeOfDayMusic;
+
+    [Header("Compass")]
+    [SerializeField] private UIDocument compassUIDocument;
+
 
     public int CurrentDay { get; private set; } = 1;
     public int Money { get; private set; }
@@ -75,6 +80,9 @@ public class GameProgressManager : MonoBehaviour
     public void MarkOutside()
     {
         IsOutside = true;
+
+        SetCompassVisible(true);
+
         OnWentOutside?.Invoke();
     }
     public void MarkWentOutside()
@@ -135,6 +143,8 @@ public class GameProgressManager : MonoBehaviour
     private void Start()
     {
         StartNight();
+
+        SetCompassVisible(false);
     }
 
     private void Update()
@@ -186,6 +196,8 @@ public class GameProgressManager : MonoBehaviour
         IsNightActive = true;
         IsOutside = false;
         OnNightStarted?.Invoke();
+
+        SetCompassVisible(false);
     }
     
     public float NightProgress
@@ -222,6 +234,8 @@ public class GameProgressManager : MonoBehaviour
         IsCraftingTimeActive = true;
         DayTimeRemaining = dayDuration;
         OnDayStarted?.Invoke();
+
+        SetCompassVisible(false);
     }
 
     public void Sleep()
@@ -334,5 +348,29 @@ public class GameProgressManager : MonoBehaviour
     {
         if (NightTimeRemaining > 0f)
             IsNightActive = true;
+    }
+
+    // manejo de compas
+    private void SetCompassVisible(bool visible)
+    {
+        if (compassUIDocument == null)
+        {
+            Debug.LogError("Compass UIDocument no está asignado.");
+            return;
+        }
+
+        VisualElement root = compassUIDocument.rootVisualElement;
+
+        if (root == null)
+        {
+            Debug.LogError("Compass rootVisualElement es null.");
+            return;
+        }
+
+        root.style.display = visible
+            ? DisplayStyle.Flex
+            : DisplayStyle.None;
+
+        Debug.Log($"🧭 Compass visible: {visible}");
     }
 }

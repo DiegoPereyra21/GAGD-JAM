@@ -119,6 +119,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &197148527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2895712268364449276, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_Name
+      value: Compass
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.9646
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 427.71484
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478185801336633073, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+--- !u!114 &197148528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6021866712386714339, guid: 7f01d629ec41bf84a8247bc3322e356c, type: 3}
+  m_PrefabInstance: {fileID: 197148527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1 &330484794
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +807,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: cd58abe050ced1346b1fb936ac39fedf, type: 2}
+  compassUIDocument: {fileID: 197148528}
 --- !u!4 &1618223651
 Transform:
   m_ObjectHideFlags: 0
@@ -1297,3 +1366,4 @@ SceneRoots:
   - {fileID: 1853430370}
   - {fileID: 594691660}
   - {fileID: 1840888439}
+  - {fileID: 197148527}
