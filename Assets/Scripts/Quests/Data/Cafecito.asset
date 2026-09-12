@@ -22,6 +22,6 @@ MonoBehaviour:
     targetAmount: 1
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     targetAmount: 2
-  moneyReward: 7
+  moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: 4687ae6da49096f469b1baca1666719c, type: 2}
-  availableDay: 4
+  availableDay: 1
