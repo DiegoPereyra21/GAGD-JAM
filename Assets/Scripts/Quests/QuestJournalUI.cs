@@ -11,6 +11,7 @@ public class QuestJournalUI : MonoBehaviour
     [SerializeField] private VisualTreeAsset questCardTemplate;
     [SerializeField] private VisualTreeAsset questRowTemplate;
     [SerializeField] private IngredientDatabase ingredientDatabase;
+    [SerializeField] private PotionRecipe sleepPotionRecipe;
     private ScrollView scrollView;
 
     private void Awake()
@@ -51,6 +52,23 @@ public class QuestJournalUI : MonoBehaviour
 
         foreach (QuestData quest in questManager.ActiveQuests)
             scrollView.Add(isOutside ? BuildGatherCard(quest, remaining) : BuildRecipeCard(quest));
+
+        if (GameProgressManager.Instance.SleepIngredientObtained && sleepPotionRecipe != null)
+            scrollView.Add(BuildSleepPotionCard());
+    }
+
+    private VisualElement BuildSleepPotionCard()
+    {
+        VisualElement card = questCardTemplate.Instantiate();
+
+        card.Q<Label>("VillagerName").text = "Para mí";
+        card.Q<Label>("MissionName").text = sleepPotionRecipe.potionName;
+
+        VisualElement rowsContainer = card.Q<VisualElement>("RowsContainer");
+        foreach (RecipeIngredient ingredient in sleepPotionRecipe.ingredients)
+            rowsContainer.Add(BuildRecipeRow(ingredient));
+
+        return card;
     }
 
     // Afuera: qué ir a recolectar. Convierte cualquier ingrediente procesado a su versión cruda.

@@ -264,24 +264,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroSequence
   slides:
   - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
-    text: "En un rinc\xF3n apartado del bosque, lejos de toda sociedad, viv\xEDa
-      una bruja... un poco m\xE1s loca de lo que cualquiera esperar\xEDa. Se ganaba
-      la vida preparando y vendiendo pociones; aunque, para ser sinceros, el dinero
-      nunca le duraba mucho entre sus manos."
+    text: "En un rinc\xF3n apartado del bosque viv\xEDa una bruja con un problema
+      serio: hac\xEDa semanas que no lograba dormir una noche entera. Su \xFAnica
+      cura era una Poci\xF3n del Sue\xF1o Pesado... y esa noche descubri\xF3 que
+      se le hab\xEDa acabado."
   - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
-    text: "Una noche, despu\xE9s de un buen descanso, fue a buscar su Poci\xF3n del
-      Sue\xF1o Pesado... y en la estanter\xEDa solo encontr\xF3 polvo y telara\xF1as."
+    text: "Para prepararla necesitaba un ingrediente rar\xEDsimo y car\xEDsimo, que
+      no crec\xEDa en ning\xFAn lugar cercano. Conseguirlo le iba a costar una fortuna
+      que, por supuesto, no ten\xEDa."
   - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
-    text: "\xAB\xA1Oh, no! \xA1Se me acabaron!\xBB, exclam\xF3. Esa poci\xF3n necesitaba
-      un ingrediente muy raro y car\xEDsimo \u2014 uno que no crec\xEDa en todo el
-      bosque."
+    text: "No le quedaba otra: tendr\xEDa que volver a tomar encargos de los aldeanos,
+      preparando pociones a cambio de monedas, hasta juntar lo suficiente para comprarlo."
   - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
-    text: "Enseguida pens\xF3 en su compra m\xE1s reciente: un sombrero nuevo y car\xEDsimo,
-      que llevaba puesto con orgullo. \xABNo es tu culpa, sombrerito... estabas en
-      oferta\xBB, se dijo, sin mucha convicci\xF3n."
-  - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
-    text: "Esa noche se acost\xF3 a pelear contra su propio insomnio. Iba a ser una
-      semana muy larga."
+    text: "Pero el insomnio no perdona: cada noche que pasaba sin dormir, algo en
+      su cabeza se iba soltando un poco m\xE1s. No ten\xEDa mucho tiempo antes de
+      perderse a s\xED misma por completo."
   continuePrompt: "Presion\xE1 E para continuar"
   finishPrompt: "Presion\xE1 E para comenzar la historia"
   fadeDuration: 0.5

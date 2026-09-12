@@ -47,9 +47,8 @@ public class PlayerCollector : MonoBehaviour
     {
         if (basketDisplay.IsOpen) return;
         if (playerMovement.IsPickupInProgress) return;
-        if (GameProgressManager.Instance.SleepIngredientObtained) return;
         if (inventory.IsFull) return;
-        
+
         Collectible target = FindNearestCollectible();
         if (target == null || target.IsCollected) return;
 

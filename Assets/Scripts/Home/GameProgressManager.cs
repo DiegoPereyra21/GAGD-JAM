@@ -221,9 +221,10 @@ public class GameProgressManager : MonoBehaviour
         SleepIngredientPurchased = false;
         SleepIngredientObtained = false;
         SleepIngredientPurchaseDay = 0;
+        IsCraftingTimeActive = true;
+        DayTimeRemaining = dayDuration;
         RequestWelcomeFade();
-        // en vez ed guardar aca vamos a hacerlo al final del dia (amanecer)
-        //Save();
+        Save();
         StartNight();
     }
 
