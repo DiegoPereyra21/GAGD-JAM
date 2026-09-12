@@ -136,7 +136,6 @@ MonoBehaviour:
   destroyOnCollect: 1
   shakeDuration: 0.3
   shakeStrength: 0.1
-  freezeDuration: 0.8
   outline: {fileID: 3512271657829121122}
   dayShrinkDuration: 1.5
   dayShrinkScaleFactor: 0.35
@@ -160,7 +159,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3448400778578221797}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
   m_Name: 
