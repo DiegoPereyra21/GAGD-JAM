@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208671729453974855}
-  m_Mesh: {fileID: 5786850811543570581, guid: e95eeb4cf8bff3547994c7bb88a523db, type: 3}
+  m_Mesh: {fileID: 4729085796499470811, guid: ad31b9bbce501134e9772cc2367347bd, type: 3}
 --- !u!23 &3458572707724667850
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0269000b3f084e4469849db4eb48b3da, type: 2}
+  - {fileID: 2100000, guid: 0a19353d29420264688e567e96182083, type: 2}
+  - {fileID: 2100000, guid: 22ded42c086247b479f07caca011d847, type: 2}
+  - {fileID: 2100000, guid: 00faba55d72a8094e86aa2cd310a32af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -137,8 +139,9 @@ MonoBehaviour:
   destroyOnCollect: 0
   shakeDuration: 0.3
   shakeStrength: 0.1
-  freezeDuration: 0.8
   outline: {fileID: 8299068508091276956}
+  dayShrinkDuration: 1.5
+  dayShrinkScaleFactor: 0.35
 --- !u!135 &-552512271856669258
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -173,10 +176,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomVisualVariant
   possibleModels:
-  - fullModel: {fileID: 2282965281734359569, guid: 7167c4b4ea07a1a4baa77aa437fed98e, type: 3}
-    depletedModel: {fileID: 4465718168198936348, guid: 4db2c84d3d20dc3468d1e077d6883235, type: 3}
-  - fullModel: {fileID: 208671729453974855, guid: c572f1170e5d9d545bbb9ddfa9e4a15e, type: 3}
-    depletedModel: {fileID: 8030008945717385381, guid: 83eb4dc59e209f149adf7c7e9429fa65, type: 3}
+  - fullModel: {fileID: 1531158906788390468, guid: d91005bb535fb1d409f95908dde159b3, type: 3}
+    depletedModel: {fileID: 4690961609005241132, guid: 1fbc3bca6d94d4d47bc6bf981a54b312, type: 3}
+  - fullModel: {fileID: 1531158906788390468, guid: d91005bb535fb1d409f95908dde159b3, type: 3}
+    depletedModel: {fileID: 4690961609005241132, guid: 1fbc3bca6d94d4d47bc6bf981a54b312, type: 3}
   outlineRenderer: {fileID: -1572336303396590555}
   randomizeRotation: 1
 --- !u!114 &8299068508091276956

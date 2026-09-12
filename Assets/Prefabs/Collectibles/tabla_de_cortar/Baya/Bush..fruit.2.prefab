@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8424937271508214061}
   - component: {fileID: 4630158013155721316}
   - component: {fileID: 4848585913167038783}
+  - component: {fileID: -5524494972637724874}
+  - component: {fileID: -5254689151773603972}
   m_Layer: 0
   m_Name: Bush..fruit.2
   m_TagString: Untagged
@@ -68,6 +70,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 0a19353d29420264688e567e96182083, type: 2}
   - {fileID: 2100000, guid: 22ded42c086247b479f07caca011d847, type: 2}
+  - {fileID: 2100000, guid: 00faba55d72a8094e86aa2cd310a32af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,3 +94,39 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-5524494972637724874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531158906788390468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e7b4ad7900a3e4fb4b54985313f464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.Collectible
+  value: 1
+  collectDuration: 0.3
+  collectRiseHeight: 1
+  basketVisualPrefab: {fileID: 7389265873749790332, guid: 99bc5acebdcaa5248aab92787bf775a1, type: 3}
+  type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
+  destroyOnCollect: 1
+  shakeDuration: 0.3
+  shakeStrength: 0.1
+  outline: {fileID: 8669400666810783549, guid: 3a194597b38209c43b2c8d05b817b7f9, type: 3}
+  dayShrinkDuration: 1.5
+  dayShrinkScaleFactor: 0.35
+--- !u!114 &-5254689151773603972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531158906788390468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -3856313200310441427, guid: 0d0c855eeec3af54e8076ad7dde7716a, type: 3}
