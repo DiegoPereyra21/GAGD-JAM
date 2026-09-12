@@ -3482,6 +3482,14 @@ PrefabInstance:
       propertyPath: questManager
       value: 
       objectReference: {fileID: 1952524287}
+    - target: {fileID: 4039738172186432351, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902561134774017611, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5548705520305781567, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_Name
       value: Player

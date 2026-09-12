@@ -166,8 +166,9 @@ MonoBehaviour:
   destroyOnCollect: 0
   shakeDuration: 0.3
   shakeStrength: 0.1
-  freezeDuration: 0.8
   outline: {fileID: -3772203639595644997}
+  dayShrinkDuration: 1.5
+  dayShrinkScaleFactor: 0.35
 --- !u!114 &-8992527412851840759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomVisualVariant
   possibleModels:
-  - fullModel: {fileID: 2108334796219246617, guid: 47e7c7c20b27f8845bb479fbd88daa88, type: 3}
-    depletedModel: {fileID: 404953847666051119, guid: 62441a85bfd08cd44945544fbebe67d1, type: 3}
+  - fullModel: {fileID: 103308766295183574, guid: a058a781b8bd7a544be0676e21d9f72e, type: 3}
+    depletedModel: {fileID: 3228239747335483890, guid: a703509c3d5de154c9f4414cdec294ab, type: 3}
   outlineRenderer: {fileID: 1312001648636297755}
   randomizeRotation: 1
 --- !u!114 &-3772203639595644997

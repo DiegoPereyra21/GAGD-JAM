@@ -284,7 +284,7 @@ PrefabInstance:
     - target: {fileID: 4391997574762106731, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: potionBoxDisplay
       value: 
-      objectReference: {fileID: 1470245147}
+      objectReference: {fileID: 714385784}
     - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -396,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 8354751397445860983, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: potionBoxDisplay
       value: 
-      objectReference: {fileID: 1470245147}
+      objectReference: {fileID: 714385784}
     - target: {fileID: 8378003800625922957, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: cameraTransition
       value: 
@@ -1037,6 +1037,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
   m_PrefabInstance: {fileID: 653710165}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &714385784 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2057798107335204560, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+  m_PrefabInstance: {fileID: 1097611473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c46c206f8c95b4e86b551a6aa5d05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionBoxDisplay
 --- !u!1 &937774064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,11 +1204,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.532391
+      value: 22.88
       objectReference: {fileID: 0}
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18
+      value: 27.31
       objectReference: {fileID: 0}
     - target: {fileID: 152918761134319503, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1239,9 +1250,29 @@ PrefabInstance:
       propertyPath: questManager
       value: 
       objectReference: {fileID: 1952524287}
+    - target: {fileID: 4039738172186432351, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5548705520305781567, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865081123137110508, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9804284
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865081123137110508, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.19687617
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865081123137110508, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1.5548486e-11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865081123137110508, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -5.022065e-12
       objectReference: {fileID: 0}
     - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: cameraTransform
@@ -1934,17 +1965,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1470245147 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2509216520490810202, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
-  m_PrefabInstance: {fileID: 1097611473}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52c46c206f8c95b4e86b551a6aa5d05e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PotionBoxDisplay
 --- !u!1001 &1560979841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1971,31 +1991,31 @@ PrefabInstance:
       objectReference: {fileID: 2144195161}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5321813
+      value: 22.88
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.726896
+      value: 33.798893
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.0914297
+      value: 3.2721252
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98043364
+      value: 0.9804284
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.19685008
+      value: 0.19687617
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000010085935
+      value: 1.5150959e-11
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000020250395
+      value: -3.0424077e-12
       objectReference: {fileID: 0}
     - target: {fileID: 6432262277579783965, guid: 2878466422381f64ca311bce8d84e78b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
