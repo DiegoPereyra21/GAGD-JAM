@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="Fila" style="flex-direction: row; justify-content: space-between; background-color: rgba(19, 19, 19, 0.937); color: rgb(236, 236, 236);">
-        <ui:Label name="IngredientLabel" text="Hongo" style="padding-left: 20px;"/>
-        <ui:Label name="ProgressLabel" text="0/3" style="padding-right: 20px; -unity-text-align: upper-left; -unity-font-style: bold; color: rgb(255, 80, 66);"/>
+        <ui:Label name="IngredientLabel" text="Hongo" style="padding-left: 20px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 26px; -unity-font-style: bold; letter-spacing: 11px; -unity-text-align: upper-center;"/>
+        <ui:Label name="ProgressLabel" text="0/3" style="padding-right: 20px; -unity-text-align: upper-left; -unity-font-style: bold; color: rgb(255, 80, 66); -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 25px;"/>
     </ui:VisualElement>
 </ui:UXML>

@@ -195,22 +195,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroSequence
   slides:
-  - backgroundImage: {fileID: 2800000, guid: e033a730ff7878149b808ea6892ff761, type: 3}
-    text: "En un rec\xF3ndito lugar del bosque lejos de la sociedad, habitaba una
-      bruja m\xE1s loca de lo que se podr\xEDa esperar, \xBFC\xF3mo se ganaba la
-      vida?, con la preparaci\xF3n y venta de pociones, por supuesto, sin embargo
-      el dinero poco duraba en sus manos, pues veras... sus h\xE1bitos financieros
-      no eran los mejores que digamos."
-  - backgroundImage: {fileID: 2800000, guid: 93512d09e92e9aa428402b100e14f14b, type: 3}
-    text: "Su falta de ahorros le pas\xF3 factura, ya que luego de disfrutar de un
-      lindo descanso nocturno despu\xE9s del trabajo, se fij\xF3 en su estante para
-      encontrar la poci\xF3n del sue\xF1o pesado y lo \xFAnico que encontr\xF3 fue
-      polvo y telara\xF1as.\n\n\"\xA1Oh, no! \xA1Se me acabaron!\", exclam\xF3 ella."
-  - backgroundImage: {fileID: 2800000, guid: d62194d092abf034e824afac48f3c056, type: 3}
-    text: "Que situaci\xF3n precaria la suya, porque para fabricar esa poci\xF3n
-      necesitaba un material muy raro y caro, el cual que no crec\xEDa en este bosque.
-      La despistada bruja inmediatamente not\xF3 su compra m\xE1s reciente en su
-      cabeza."
+  - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
+    text: "En un rinc\xF3n apartado del bosque, lejos de toda sociedad, viv\xEDa
+      una bruja... un poco m\xE1s loca de lo que cualquiera esperar\xEDa. Se ganaba
+      la vida preparando y vendiendo pociones; aunque, para ser sinceros, el dinero
+      nunca le duraba mucho entre sus manos."
+  - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
+    text: "Una noche, despu\xE9s de un buen descanso, fue a buscar su Poci\xF3n del
+      Sue\xF1o Pesado... y en la estanter\xEDa solo encontr\xF3 polvo y telara\xF1as."
+  - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
+    text: "\xAB\xA1Oh, no! \xA1Se me acabaron!\xBB, exclam\xF3. Esa poci\xF3n necesitaba
+      un ingrediente muy raro y car\xEDsimo \u2014 uno que no crec\xEDa en todo el
+      bosque."
+  - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
+    text: "Enseguida pens\xF3 en su compra m\xE1s reciente: un sombrero nuevo y car\xEDsimo,
+      que llevaba puesto con orgullo. \xABNo es tu culpa, sombrerito... estabas en
+      oferta\xBB, se dijo, sin mucha convicci\xF3n."
+  - backgroundImage: {fileID: 2800000, guid: cb0316811ae8d1e48946533f71943d2f, type: 3}
+    text: "Esa noche se acost\xF3 a pelear contra su propio insomnio. Iba a ser una
+      semana muy larga."
   continuePrompt: "Presion\xE1 E para continuar"
   finishPrompt: "Presion\xE1 E para comenzar la historia"
   fadeDuration: 0.5

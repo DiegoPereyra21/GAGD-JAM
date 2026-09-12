@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="Tarjeta" style="background-color: rgba(67, 26, 84, 0.894); color: rgb(243, 243, 243); margin-bottom: 6px; margin-top: 6px; margin-right: 10px; margin-left: 10px;">
-        <ui:Label name="VillagerName" text="Aldeano" style="-unity-text-align: upper-center; font-size: 18px; -unity-font-style: bold;"/>
-        <ui:Label name="MissionName" text="Misión" style="-unity-text-align: upper-center; -unity-font-style: italic; margin-top: 0; padding-top: 0; font-size: 14px;"/>
-        <ui:VisualElement name="RowsContainer"/>
+    <ui:VisualElement name="Tarjeta" style="background-color: rgba(67, 26, 84, 0.894); color: rgb(243, 243, 243); margin-bottom: 6px; margin-top: 6px; margin-right: 10px; margin-left: 10px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 16px;">
+        <ui:Label name="VillagerName" text="Aldeano" style="-unity-text-align: upper-center; font-size: 26px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;);"/>
+        <ui:Label name="MissionName" text="Misión" style="-unity-text-align: middle-center; -unity-font-style: bold; margin-top: 0; padding-top: 0; font-size: 22px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;);"/>
+        <ui:VisualElement name="RowsContainer" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 16px;"/>
     </ui:VisualElement>
 </ui:UXML>
