@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: cruijs_2
   villagerName: Cruijs
-  missionName: Para repartir
+  missionName: A ver si encuentro mis llaves
   objectives:
-  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+  - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
     targetAmount: 3
-  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
+  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
     targetAmount: 2
   moneyReward: 9
-  requiredPotion: {fileID: 11400000, guid: 04c44acfa683ece4f9f199f10e7e513a, type: 2}
+  requiredPotion: {fileID: 11400000, guid: 02b7a25fe908bd54e9c509001e8b34f1, type: 2}
   availableDay: 6

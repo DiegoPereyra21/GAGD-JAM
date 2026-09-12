@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: furia_3
   villagerName: Furia Firewrath
-  missionName: Pocion Dispersa para Furia
+  missionName: La mala suerte continua
   objectives:
-  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
-    targetAmount: 3
-  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
     targetAmount: 2
+  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
+    targetAmount: 1
   moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: 993692acc983b8a49803ca05b94d3d7e, type: 2}
   availableDay: 3

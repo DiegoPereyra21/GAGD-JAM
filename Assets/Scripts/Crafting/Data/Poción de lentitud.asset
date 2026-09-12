@@ -20,7 +20,7 @@ MonoBehaviour:
     amount: 2
   - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
     amount: 3
-  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     amount: 1
   description: "Hace que todo lo que est\xE9 cerca del bebedor se mueva aproximadamente
     a la mitad de velocidad. \xBFCu\xE1l es el problema? \xA1Que el bebedor tambi\xE9n

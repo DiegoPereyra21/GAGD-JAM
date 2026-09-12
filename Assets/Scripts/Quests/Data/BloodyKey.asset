@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: bloodyley_0
   villagerName: BloodyKey
-  missionName: Repartir Amor
+  missionName: Cuidando a un imbecil
   objectives:
-  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
     targetAmount: 3
-  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
-    targetAmount: 2
+  - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
+    targetAmount: 1
   moneyReward: 7
   requiredPotion: {fileID: 11400000, guid: 04c44acfa683ece4f9f199f10e7e513a, type: 2}
   availableDay: 4

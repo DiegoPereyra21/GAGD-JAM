@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: cruijs_1
   villagerName: Cruijs
-  missionName: "Pocion de sue\xF1o"
+  missionName: Quieras o no
   objectives:
   - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
-    targetAmount: 3
-  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
     targetAmount: 2
   moneyReward: 8
   requiredPotion: {fileID: 11400000, guid: b090215c6d7f0b740b8992b1c2afddde, type: 2}

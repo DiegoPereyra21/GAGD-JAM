@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: sebas_2
   villagerName: Sebas Housen
-  missionName: Pocion de Fibra para Sebas
+  missionName: Por que comer variado si puedo tomar pociones?
   objectives:
   - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
-    targetAmount: 3
+    targetAmount: 1
   - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    targetAmount: 2
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     targetAmount: 2
   moneyReward: 8
   requiredPotion: {fileID: 11400000, guid: 3ca334ed6139e524cae18432018275b6, type: 2}

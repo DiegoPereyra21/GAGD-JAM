@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: furia_2
   villagerName: Furia Firewrath
-  missionName: Pocion Dispersa para Furia
+  missionName: Necesito recordar lo que necesitaba..
   objectives:
-  - type: {fileID: 11400000, guid: 5cb1cba6d569b5d4da64cc813f0ca8e1, type: 2}
+  - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: 8e10425daaca93d4d977a097c3249546, type: 2}
     targetAmount: 3
-  - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
-    targetAmount: 2
   moneyReward: 8
   requiredPotion: {fileID: 11400000, guid: cafff4157321b664895f0e1f98829e33, type: 2}
   availableDay: 2

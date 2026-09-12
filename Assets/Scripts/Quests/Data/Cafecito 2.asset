@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: cafecito_2
   villagerName: Cafecito
-  missionName: Aflojando
+  missionName: Como sera vivir como un caracol?
   objectives:
+  - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
+    targetAmount: 2
   - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
     targetAmount: 3
-  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
-    targetAmount: 2
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
+    targetAmount: 1
   moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: 459a3309c6643da4c828a0a7e002c0f2, type: 2}
   availableDay: 6

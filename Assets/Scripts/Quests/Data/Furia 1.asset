@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: furia_1
   villagerName: Furia Firewrath
-  missionName: Pocion Dispersa para Furia
+  missionName: Solo me quedan un par de horas...
   objectives:
-  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     targetAmount: 3
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-    targetAmount: 2
+  - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
+    targetAmount: 1
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+    targetAmount: 1
   moneyReward: 7
-  requiredPotion: {fileID: 11400000, guid: 2d01246d9f99293458bcb84aae2d6461, type: 2}
+  requiredPotion: {fileID: 11400000, guid: 882ed834e1f19ea4e836054a70af727b, type: 2}
   availableDay: 1

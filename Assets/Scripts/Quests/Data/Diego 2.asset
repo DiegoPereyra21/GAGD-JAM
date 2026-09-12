@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: diego_2
   villagerName: Diego Thunderhand
-  missionName: Pocion de Despertar para Diego
+  missionName: No debi tomar tanto cafe
   objectives:
   - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
     targetAmount: 2
   - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
     targetAmount: 3
+  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
+    targetAmount: 2
   moneyReward: 8
   requiredPotion: {fileID: 11400000, guid: 24915c16a263c6e448e44c4a2fb5c7ab, type: 2}
   availableDay: 2
