@@ -17,8 +17,10 @@ MonoBehaviour:
   visualPrefab: {fileID: 4012180652467589445, guid: 17cca41b85386f64fa8d9e04f432cecf, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
-    amount: 3
+    amount: 1
   - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     amount: 2
   description: "Se usa para esos d\xEDas que necesitas una peque\xF1a ayuda en lugar
     de tener que hacer fuerza, si los del anti-dopping preguntan \xA1No estamos!"

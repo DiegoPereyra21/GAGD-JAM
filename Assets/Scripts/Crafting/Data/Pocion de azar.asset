@@ -16,9 +16,13 @@ MonoBehaviour:
   potionName: Pocion de Azar
   visualPrefab: {fileID: 5633016870742186332, guid: a249c0f082cad214197e0822c12e3eb9, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
     amount: 2
+  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
+    amount: 1
   description: "\xDAtil para cuando sientes que est\xE1s qued\xE1ndote sin suerte,
     aunque es una l\xE1stima que esta no estar\xE1 siempre de tu lado."

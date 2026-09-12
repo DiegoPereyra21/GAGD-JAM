@@ -16,10 +16,12 @@ MonoBehaviour:
   potionName: "Poci\xF3n De Anfibio"
   visualPrefab: {fileID: 2773675541687345034, guid: 5a81d967262cf5a4f965a918bd7caffd, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
     amount: 2
+  - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
+    amount: 1
   description: "Quien use esta poci\xF3n gozar\xE1 de poder respirar bajo el agua
     y nadar a gran velocidad durante una hora, con el efecto secundario de tener
     piel m\xE1s escamosa, membranas entre los dedos y un antojo infernal por comer

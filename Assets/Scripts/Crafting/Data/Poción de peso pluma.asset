@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n de lentitud"
+  m_Name: "Poci\xF3n de peso pluma"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_lentitud
-  potionName: "Poci\xF3n De Lentitud"
-  visualPrefab: {fileID: 3692877725328737120, guid: c89179895e7d4284881092be2002a3a5, type: 3}
+  potionId: pocion_peso_pluma
+  potionName: Pocion de Peso Pluma
+  visualPrefab: {fileID: 678515908760259906, guid: 3e3f94b064ea7fa4c8fc5df4dfffcd1f, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
+  - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     amount: 3
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
-    amount: 2
-  description: "Hace que todo lo que est\xE9 cerca del bebedor se mueva aproximadamente
-    a la mitad de velocidad. \xBFCu\xE1l es el problema? \xA1Que el bebedor tambi\xE9n
-    lo hace!"
+    amount: 1
+  description: "\xDAtil para perder peso, solo aseg\xFArese de no consumir demasiada
+    o una brisa ya lo mandar\xE1 volando."

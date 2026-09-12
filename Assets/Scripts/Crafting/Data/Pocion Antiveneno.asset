@@ -16,9 +16,11 @@ MonoBehaviour:
   potionName: 'Pocion Antiveneno '
   visualPrefab: {fileID: 3577460451240146545, guid: 230e2a2058e6754459d8b5ebb845a1d8, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
     amount: 3
-  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
-    amount: 2
+  - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
+    amount: 1
   description: "Para los que fueron lo suficientemente despistados o idiotas como
     para tomar la poci\xF3n de veneno."

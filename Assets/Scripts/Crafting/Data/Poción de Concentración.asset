@@ -16,9 +16,11 @@ MonoBehaviour:
   potionName: Pocion de Concentracion
   visualPrefab: {fileID: 8284658585461249048, guid: 0441686f2f9e1cd42b93f1b6f6a17ed5, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 5cb1cba6d569b5d4da64cc813f0ca8e1, type: 2}
+  - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 8e10425daaca93d4d977a097c3249546, type: 2}
     amount: 3
-  - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
-    amount: 2
   description: "Se usa para concentrarse en tareas mon\xF3tonas, util para personas
     distra\xEDdas, como cierta brujita."

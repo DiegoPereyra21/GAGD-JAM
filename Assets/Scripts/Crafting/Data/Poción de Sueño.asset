@@ -20,6 +20,8 @@ MonoBehaviour:
     amount: 2
   - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
     amount: 3
+  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
+    amount: 2
   description: "Se usa para descansar durante cortos periodos de tiempo, pero usarla
     demasiado seguido crea inmunidad. Por desgracia, t\xFA descubriste esto de la
     peor manera."

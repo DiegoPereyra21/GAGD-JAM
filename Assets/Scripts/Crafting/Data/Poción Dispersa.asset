@@ -16,9 +16,9 @@ MonoBehaviour:
   potionName: Pocion Dispersa
   visualPrefab: {fileID: 3731558795791989139, guid: ed9c95dcc1449934dba0e66cedfb6959, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     amount: 3
-  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+  - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
     amount: 2
   description: "Se usa para relajarse en esos d\xEDas tan estresantes, como por ejemplo
     durante una Game Jam."

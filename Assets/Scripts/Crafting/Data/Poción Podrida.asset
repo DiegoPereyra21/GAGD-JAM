@@ -17,8 +17,10 @@ MonoBehaviour:
   visualPrefab: {fileID: 8447261873446564785, guid: 93b4047deade6f54a83285370a436189, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
     amount: 2
   description: "Una poci\xF3n de horrible gusto, hedionda y con textura gomosa. En
     serio, \xA1\xBFa quien se le ocurrir\xEDa tomar esto?!"

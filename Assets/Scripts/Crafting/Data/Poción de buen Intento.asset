@@ -17,12 +17,12 @@ MonoBehaviour:
   visualPrefab: {fileID: 1838853731937684044, guid: 26fefb9e3c72f33429dadb66b78992e2, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
-    amount: 2
+    amount: 1
   - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
     amount: 2
-  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
-    amount: 2
-  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
     amount: 2
   description: "Lo usan solo  las personas t\xEDmidas que quieren resolver los problemas
     pensando primero."

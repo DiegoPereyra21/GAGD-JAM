@@ -16,9 +16,13 @@ MonoBehaviour:
   potionName: "Poci\xF3n Laxante"
   visualPrefab: {fileID: 9206889130490248292, guid: 46bb88099966ddb4cac54cfcc367b51f, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+  - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: d915aa33128898e41b1e22658441de77, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
     amount: 2
   description: "Para esos d\xEDas que necesitas usar toda la fuerza posible y un
     empujoncito m\xE1s."

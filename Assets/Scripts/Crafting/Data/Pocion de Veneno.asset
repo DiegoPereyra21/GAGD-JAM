@@ -16,9 +16,13 @@ MonoBehaviour:
   potionName: Pocion de Veneno
   visualPrefab: {fileID: 5194397245997810006, guid: 8f966cd8b683f2d45be41bf0cd07003b, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
+  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
     amount: 2
+  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: d915aa33128898e41b1e22658441de77, type: 2}
+    amount: 1
   description: "Veneno, as\xED de simple. Muy \xFAtil para matar cosas, no tanto
     para beber."

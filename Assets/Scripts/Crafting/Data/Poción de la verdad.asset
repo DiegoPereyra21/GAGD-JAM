@@ -17,8 +17,10 @@ MonoBehaviour:
   visualPrefab: {fileID: 6975055357862222401, guid: 125f7405e1ac66e48b15f478d664ae58, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+    amount: 2
+  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
     amount: 2
   description: "Impide a quien la beba mentir durante una hora. La sobredosis de
     esto es letal, proceda con precauci\xF3n."

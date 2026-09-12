@@ -16,10 +16,14 @@ MonoBehaviour:
   potionName: "Poci\xF3n de Prisa"
   visualPrefab: {fileID: 1196184435381183656, guid: a1d58e697cf192f4592a01ad15d84beb, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     amount: 3
-  - type: {fileID: 11400000, guid: 8e10425daaca93d4d977a097c3249546, type: 2}
-    amount: 2
+  - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
+    amount: 1
   description: "Ayuda a hacer todo m\xE1s r\xE1pido, pero con el costo de sufrir
     fatiga extrema despu\xE9s. \xA1La bruja no se hace responsable por excesos de
     consumo!"
