@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n Podrida 2"
+  m_Name: "Poci\xF3n de peso pluma"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_podrida_2
-  potionName: "Poci\xF3n Podrida 2"
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionId: pocion_peso_pluma
+  potionName: Pocion de Peso Pluma
+  visualPrefab: {fileID: 678515908760259906, guid: 3e3f94b064ea7fa4c8fc5df4dfffcd1f, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: d915aa33128898e41b1e22658441de77, type: 2}
     amount: 2
   - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
     amount: 3
-  description: "Una poci\xF3n de horrible gusto, hedionda y con textura gomosa. En
-    serio, \xA1\xBFa quien se le ocurrir\xEDa tomar esto?!"
+  description: "\xDAtil para perder peso, solo aseg\xFArese de no consumir demasiada
+    o una brisa ya lo mandar\xE1 volando."

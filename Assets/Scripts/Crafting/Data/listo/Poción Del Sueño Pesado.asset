@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Poci\xF3n Del Sue\xF1o Pesado"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_descanso
-  potionName: "Pocion de Sue\xF1o Profundo"
+  potionName: "Pocion de Sue\xF1o Pesado"
   visualPrefab: {fileID: 7520948132050687777, guid: d341ab4a3ec277443b6eab93f66fcbae, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}

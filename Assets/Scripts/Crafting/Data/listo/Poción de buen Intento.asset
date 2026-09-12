@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: "Poci\xF3n de buen Intento"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_buen_Intento
-  potionName: "Poci\xF3n de buen Intento"
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionName: "Poci\xF3n de Buen Intento"
+  visualPrefab: {fileID: 1838853731937684044, guid: 26fefb9e3c72f33429dadb66b78992e2, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
     amount: 2

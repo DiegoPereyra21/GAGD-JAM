@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n Dispersa 2"
+  m_Name: "Poci\xF3n de Sue\xF1o"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_dispersa_2
-  potionName: "Poci\xF3n Dispersa 2"
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionId: "pocion_sue\xF1o"
+  potionName: "Poci\xF3n de Sue\xF1o"
+  visualPrefab: {fileID: 7258419128477129906, guid: a745d08890cb42b4ea5dbaa4eecc6646, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
-    amount: 3
-  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
     amount: 2
-  description: "Se usa para relajarse en esos d\xEDas tan estresantes, como por ejemplo
-    durante una Game Jam."
+  - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+    amount: 3
+  description: "Se usa para descansar durante cortos periodos de tiempo, pero usarla
+    demasiado seguido crea inmunidad. Por desgracia, t\xFA descubriste esto de la
+    peor manera."

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: Pocion de Latigo 1
+  m_Name: "Poci\xF3n de Fibra"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_de_latigo 1
-  potionName: Pocion de Latigo 1
-  visualPrefab: {fileID: 8447261873446564785, guid: 93b4047deade6f54a83285370a436189, type: 3}
+  potionId: pocion_fibra
+  potionName: Pocion de Fibra
+  visualPrefab: {fileID: 4012180652467589445, guid: 17cca41b85386f64fa8d9e04f432cecf, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
     amount: 3
   - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
     amount: 2
-  description: 
+  description: "Se usa para esos d\xEDas que necesitas una peque\xF1a ayuda en lugar
+    de tener que hacer fuerza, si los del anti-dopping preguntan \xA1No estamos!"

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n de Fibra 2"
+  m_Name: "Poci\xF3n de fuego interno"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_fibra_2
-  potionName: "Poci\xF3n de Fibra 2"
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionId: pocion_fuego_interno
+  potionName: "Poci\xF3n de Fuego Interno"
+  visualPrefab: {fileID: 837558730682606830, guid: ef44539336224c242897da58fd36c4b1, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     amount: 3
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     amount: 2
-  description: "Se usa para esos d\xEDas que necesitas una peque\xF1a ayuda en lugar
-    de tener que hacer fuerza, si los del anti-dopping preguntan \xA1No estamos!"
+  description: "Tras beber esto, el cuerpo se volver\xE1 extremadamente caliente
+    y se podr\xE1 escupir fuego. Solo tenga cuidado cuando vaya al ba\xF1o despu\xE9s."

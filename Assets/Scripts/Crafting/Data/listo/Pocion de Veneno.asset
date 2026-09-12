@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n Despertar 2"
+  m_Name: Pocion de Veneno
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_despertar_2
-  potionName: "Poci\xF3n Despertar 2"
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionId: pocion_veneno
+  potionName: Pocion de Veneno
+  visualPrefab: {fileID: 5194397245997810006, guid: 8f966cd8b683f2d45be41bf0cd07003b, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
     amount: 3
-  - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
+  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     amount: 2
-  description: Se usa para mantenerse despierto durante largos periodos de tiempo,
-    pero cuidado que puede volverte loco.
+  description: "Veneno, as\xED de simple. Muy \xFAtil para matar cosas, no tanto
+    para beber."

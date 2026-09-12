@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: Pocion de Amor 2
+  m_Name: "Poci\xF3n de la verdad"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_de_amor_2
-  potionName: Pocion de Amor 2
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionId: "poci\xF3n_verdad"
+  potionName: "Poci\xF3n De la Verdad"
+  visualPrefab: {fileID: 6975055357862222401, guid: 125f7405e1ac66e48b15f478d664ae58, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
-    amount: 3
   - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
     amount: 2
-  description: 
+  description: "Impide a quien la beba mentir durante una hora. La sobredosis de
+    esto es letal, proceda con precauci\xF3n."

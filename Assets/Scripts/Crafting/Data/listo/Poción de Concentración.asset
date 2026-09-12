@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n de Concentraci\xF3n 1"
+  m_Name: "Poci\xF3n de Concentraci\xF3n"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: "pocion_concentraci\xF3n"
-  potionName: "Poci\xF3n de Concentraci\xF3n"
-  visualPrefab: {fileID: 8447261873446564785, guid: 93b4047deade6f54a83285370a436189, type: 3}
+  potionId: pocion_concentracion
+  potionName: Pocion de Concentracion
+  visualPrefab: {fileID: 8284658585461249048, guid: 0441686f2f9e1cd42b93f1b6f6a17ed5, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 5cb1cba6d569b5d4da64cc813f0ca8e1, type: 2}
     amount: 3

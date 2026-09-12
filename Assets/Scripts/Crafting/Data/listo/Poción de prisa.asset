@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: "Poci\xF3n de Concentraci\xF3n 2"
+  m_Name: "Poci\xF3n de prisa"
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: "pocion_concentraci\xF3n_1"
-  potionName: "Poci\xF3n de Concentraci\xF3n_1"
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionId: pocion_prisa
+  potionName: "Poci\xF3n de Prisa"
+  visualPrefab: {fileID: 1196184435381183656, guid: a1d58e697cf192f4592a01ad15d84beb, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
     amount: 3
   - type: {fileID: 11400000, guid: 8e10425daaca93d4d977a097c3249546, type: 2}
     amount: 2
-  description: "Se usa para concentrarse en tareas mon\xF3tonas, util para personas
-    distra\xEDdas, como cierta brujita."
+  description: "Ayuda a hacer todo m\xE1s r\xE1pido, pero con el costo de sufrir
+    fatiga extrema despu\xE9s. \xA1La bruja no se hace responsable por excesos de
+    consumo!"
