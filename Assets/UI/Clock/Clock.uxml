@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="ClockRoot" style="position: absolute; top: 30px; left: 30px; width: 150px; height: 150px; display: none;">
-        <ui:VisualElement name="ClockFace" picking-mode="Ignore" style="width: 100%; height: 100%; background-image: url(&quot;project://database/Assets/Art/Models/AmiPolyGon_Forest_Free_Pack/Preview/1.png?fileID=2800000&amp;guid=05d166d780c011a44963e843e4d8f951&amp;type=3#1&quot;);"/>
-        <ui:VisualElement name="HourHand" picking-mode="Ignore" style="position: absolute; width: 6px; height: 55px; background-color: rgb(20, 20, 20); left: 50%; top: 50%; margin-left: -3px; margin-top: -55px; transform-origin: 50% 100%; background-image: url(&quot;project://database/Assets/Art/Icons/Free-Undead-Loot-Game-Icons/PNG/without_shadow/2.png?fileID=2800000&amp;guid=85227aaaa42f75046a43c7fcd674bfed&amp;type=3#2&quot;);"/>
+    <ui:VisualElement name="ClockRoot" style="position: absolute; top: 29px; left: 30px; width: 150px; height: 150px; display: flex;">
+        <ui:VisualElement name="ClockFace" picking-mode="Ignore" style="width: 172px; height: 150px; background-image: resource(&quot;mapa brujita&quot;); margin-right: 0; right: 13px;"/>
+        <ui:VisualElement name="HourHand" picking-mode="Ignore" style="position: absolute; width: 6px; height: 55px; background-color: rgb(255, 255, 255); left: 50%; top: 50%; margin-left: -3px; margin-top: -55px; transform-origin: 50% 100%; background-image: url(&quot;project://database/Assets/Art/Icons/Free-Undead-Loot-Game-Icons/PNG/without_shadow/2.png?fileID=2800000&amp;guid=85227aaaa42f75046a43c7fcd674bfed&amp;type=3#2&quot;); -unity-text-outline-color: rgb(55, 45, 45); color: rgb(0, 0, 0); -unity-background-image-tint-color: rgb(255, 182, 0);"/>
     </ui:VisualElement>
 </ui:UXML>
