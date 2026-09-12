@@ -1,25 +1,49 @@
 #CompassViewport {
     position: relative;
     overflow: hidden;
+
+    /* Fondo oscuro para separar la UI del fog */
+    background-color: rgba(12, 14, 28, 0.55);
 }
+
+
+/* ============================= */
+/*          BACKGROUND           */
+/* ============================= */
 
 #Background {
     position: absolute;
+
     left: 0;
     top: 0;
+
     width: 100%;
     height: 100%;
+
+    /* Azul/violeta profundo translúcido */
+    background-color: rgba(18, 22, 45, 0.70);
 }
+
+
+/* ============================= */
+/*       CONTENIDO COMPASS       */
+/* ============================= */
 
 #CompassContent {
     position: absolute;
+
     left: 0;
     top: 0;
+
     width: 100%;
     height: 100%;
 }
 
-/* Todas las direcciones */
+
+/* ============================= */
+/*       TODAS DIRECCIONES       */
+/* ============================= */
+
 #Direction_N,
 #Direction_NE,
 #Direction_E,
@@ -28,32 +52,16 @@
 #Direction_SW,
 #Direction_W,
 #Direction_NW {
+
     position: absolute;
+
     top: 0;
+
     margin: 0;
     padding: 0;
-}
 
-/* Marcador central fijo */
-#CenterMarker {
-    position: absolute;
-}
-
-/* ============================= */
-/*      BRÚJULA DORADA ✨         */
-/* ============================= */
-
-#Direction_N,
-#Direction_NE,
-#Direction_E,
-#Direction_SE,
-#Direction_S,
-#Direction_SW,
-#Direction_W,
-#Direction_NW {
-
-    /* Dorado base */
-    color: rgb(232, 196, 112);
+    /* Dorado más brillante */
+    color: rgb(245, 210, 130);
 
     font-size: 20px;
 
@@ -61,16 +69,24 @@
 
     -unity-font-style: bold;
 
-    /* ✨ Glow violeta/dorado */
+    /*
+        Primero sombra OSCURA fuerte.
+        Esto es lo que más ayuda contra el fog.
+    */
     text-shadow:
-        0px 0px 2px rgb(255, 225, 150),
-        0px 0px 5px rgb(190, 130, 255),
-        0px 0px 10px rgb(85, 35, 120);
+        2px 2px 3px rgb(8, 6, 18),
+        -1px -1px 2px rgb(8, 6, 18),
+
+        /* Glow dorado sutil */
+        0px 0px 4px rgb(225, 180, 90),
+
+        /* Aura violeta */
+        0px 0px 8px rgb(70, 35, 110);
 }
 
 
 /* ============================= */
-/*   DIRECCIONES PRINCIPALES ✨   */
+/*    PUNTOS CARDINALES ✨       */
 /* ============================= */
 
 #Direction_N,
@@ -78,12 +94,26 @@
 #Direction_S,
 #Direction_W {
 
-    color: rgb(255, 221, 145);
+    /* Dorado más intenso */
+    color: rgb(255, 226, 150);
 
     font-size: 24px;
 
+    -unity-font-style: bold;
+
     text-shadow:
-        0px 0px 3px rgb(255, 235, 180),
-        0px 0px 7px rgb(220, 170, 80),
-        0px 0px 14px rgb(115, 55, 150);
+        2px 2px 4px rgb(5, 4, 15),
+        -2px -2px 3px rgb(5, 4, 15),
+
+        0px 0px 5px rgb(255, 215, 120),
+        0px 0px 10px rgb(110, 60, 150);
+}
+
+
+/* ============================= */
+/*      MARCADOR CENTRAL         */
+/* ============================= */
+
+#CenterMarker {
+    position: absolute;
 }

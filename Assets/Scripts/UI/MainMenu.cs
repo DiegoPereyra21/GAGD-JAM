@@ -185,21 +185,16 @@ public class MainMenu : MonoBehaviour
 
     private void StartNewGame()
     {
-        confirmNewGamePanel.style.display = DisplayStyle.None;
+        Debug.Log("Cargando Level 1 directamente");
 
-        AsyncOperation preload = SceneManager.LoadSceneAsync(gameSceneName);
-        preload.allowSceneActivation = false;
+        PlayerPrefs.DeleteAll();
 
-        introSequence.Play(() =>
-        {
-            stopMusicEvent.Post(gameObject);
+        HomeStorage.Instance.Load();
+        GameProgressManager.Instance.ResetForNewGame();
 
-            PlayerPrefs.DeleteAll();
-            HomeStorage.Instance.Load();
-            GameProgressManager.Instance.ResetForNewGame();
+        stopMusicEvent.Post(gameObject);
 
-            preload.allowSceneActivation = true;
-        });
+        SceneManager.LoadSceneAsync(gameSceneName);
     }
 
     private void ContinueGame()

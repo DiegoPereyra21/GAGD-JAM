@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/HUD/Compass.uss?fileID=7433441132597879392&amp;guid=04028a8eb7b3b9642bc1adc3986f724e&amp;type=3#Compass"/>
     <ui:VisualElement name="CompassViewport" enabled="true" style="flex-grow: 1; display: flex; overflow: hidden; height: auto; max-height: 50px;">
-        <ui:VisualElement name="Background" style="flex-grow: 1;"/>
+        <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgba(18, 22, 45, 0.227);"/>
         <ui:VisualElement name="CompassContent" style="flex-grow: 1; position: absolute; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Jim_Nightshade/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=a26fdf46d1e98834383f2f89eb2e721b&amp;type=3#JimNightshade-Regular&quot;);">
             <ui:Label text="N" name="Direction_N" style="position: absolute;"/>
             <ui:Label text="NE" name="Direction_NE" style="position: absolute;"/>
