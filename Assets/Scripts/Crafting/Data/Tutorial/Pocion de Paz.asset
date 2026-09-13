@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
-  m_Name: Pocion de Hongos Cortados
+  m_Name: Pocion de Paz
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_hongos_cortados
-  potionName: Pocion de Hongos Cortados
-  visualPrefab: {fileID: 3508398167670694522, guid: fd8ab4e00087bd245ab76bee34da6f1b, type: 3}
+  potionId: pocion_hongos
+  potionName: Pocion de Hongos
+  visualPrefab: {fileID: 3577460451240146545, guid: 230e2a2058e6754459d8b5ebb845a1d8, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
-    amount: 1
-  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
-    amount: 1
-  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
-    amount: 1
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     amount: 1
   description: 

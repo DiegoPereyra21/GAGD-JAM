@@ -10,19 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
-  m_Name: Hongos Cortados
+  m_Name: Hadas
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: tutorial_hongos_molidos
+  questId: tutorial_hadas
   villagerName: Tutorial 2
   missionName: Hongos Molidos
   objectives:
-  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     targetAmount: 1
-  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
-    targetAmount: 1
-  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
-    targetAmount: 1
-  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
+  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
     targetAmount: 1
   moneyReward: 50
   requiredPotion: {fileID: 11400000, guid: 82f961311f15a8c4d918d449f6fdf598, type: 2}
