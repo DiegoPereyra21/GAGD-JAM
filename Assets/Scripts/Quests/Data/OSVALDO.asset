@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: osvaldo_quest
   villagerName: OSVALDO
-  missionName: Lo de siempre
+  missionName: Lo de siempre...
   objectives:
   - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
     targetAmount: 2

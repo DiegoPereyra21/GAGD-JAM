@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: mari_quest
   villagerName: Mari Juana de Arco
-  missionName: Nice try dude
+  missionName: Nice try dude...
   objectives:
   - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
     targetAmount: 1

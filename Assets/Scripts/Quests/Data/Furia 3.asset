@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: furia_3
   villagerName: Furia Firewrath
-  missionName: La mala suerte continua
+  missionName: La mala suerte continua...
   objectives:
   - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
     targetAmount: 2
@@ -26,4 +26,4 @@ MonoBehaviour:
     targetAmount: 1
   moneyReward: 12
   requiredPotion: {fileID: 11400000, guid: 993692acc983b8a49803ca05b94d3d7e, type: 2}
-  availableDay: 2
+  availableDay: 7

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: cruijs_0
   villagerName: Cruijs
-  missionName: Para seguir viciando Brotato...
+  missionName: Para seguir viciando a Brotato...
   objectives:
   - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
     targetAmount: 1

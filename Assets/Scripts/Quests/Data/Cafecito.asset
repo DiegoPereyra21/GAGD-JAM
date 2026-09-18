@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: cafecito_0
   villagerName: Cafecito
-  missionName: Animando la fiesta
+  missionName: Animando la fiesta...
   objectives:
   - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
     targetAmount: 1

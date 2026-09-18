@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: cruijs_2
   villagerName: Cruijs
-  missionName: A ver si encuentro mis llaves
+  missionName: A ver si encuentro mis llaves...
   objectives:
   - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
     targetAmount: 3
@@ -22,4 +22,4 @@ MonoBehaviour:
     targetAmount: 2
   moneyReward: 9
   requiredPotion: {fileID: 11400000, guid: 02b7a25fe908bd54e9c509001e8b34f1, type: 2}
-  availableDay: 2
+  availableDay: 1

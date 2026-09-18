@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: bloodyley_0
   villagerName: BloodyKey
-  missionName: Cuidando a un imbecil
+  missionName: Cuidando...
   objectives:
   - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
     targetAmount: 3
@@ -24,4 +24,4 @@ MonoBehaviour:
     targetAmount: 1
   moneyReward: 8
   requiredPotion: {fileID: 11400000, guid: 04c44acfa683ece4f9f199f10e7e513a, type: 2}
-  availableDay: 4
+  availableDay: 2

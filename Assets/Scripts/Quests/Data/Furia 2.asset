@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: furia_2
   villagerName: Furia Firewrath
-  missionName: Necesito recordar lo que necesitaba..
+  missionName: Necesito recordar...
   objectives:
   - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
     targetAmount: 1
@@ -24,4 +24,4 @@ MonoBehaviour:
     targetAmount: 3
   moneyReward: 10
   requiredPotion: {fileID: 11400000, guid: cafff4157321b664895f0e1f98829e33, type: 2}
-  availableDay: 1
+  availableDay: 5
