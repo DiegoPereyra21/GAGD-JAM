@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6393142698867399998}
   - component: {fileID: 7734017984657620660}
   - component: {fileID: 8456925755654003923}
+  - component: {fileID: 2226271282819634211}
   m_Layer: 0
   m_Name: pino2
   m_TagString: Untagged
@@ -91,3 +92,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2226271282819634211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281657656345677497}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.2880807, y: 14.021031, z: 5.2880807}
+  m_Center: {x: -0.00000011920928, y: 6.774902, z: 0}

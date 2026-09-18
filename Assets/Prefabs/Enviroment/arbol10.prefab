@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1602213975761131146}
   - component: {fileID: 4418273094815037649}
   - component: {fileID: 8574555862672733619}
+  - component: {fileID: -6968062786902310460}
   m_Layer: 0
   m_Name: arbol10
   m_TagString: Untagged
@@ -92,3 +93,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6968062786902310460
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673299164676564246}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.4, y: 27.560246, z: 5.49}
+  m_Center: {x: 0.71253324, y: 12.311207, z: 0.14978433}
