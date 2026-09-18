@@ -28,6 +28,8 @@ namespace Game.Collectibles
         private float freezeDuration = 1.7f;
         public float FreezeDuration => freezeDuration;
         public bool IsCollected => collected;
+        private Vector3 originalScale;
+        private Vector3 originalPosition;
 
         private RandomVisualVariant visualVariant;
 
@@ -52,20 +54,16 @@ namespace Game.Collectibles
         {
             GameProgressManager.Instance.OnNightTimeExpired += HandleDayBroke;
             GameProgressManager.Instance.OnDayStarted += HandleDayBroke;
+            GameProgressManager.Instance.OnNightStarted += HandleNightStarted;
         }
 
         private void OnDisable()
         {
             GameProgressManager.Instance.OnNightTimeExpired -= HandleDayBroke;
             GameProgressManager.Instance.OnDayStarted -= HandleDayBroke;
+            GameProgressManager.Instance.OnNightStarted -= HandleNightStarted;
         }
 
-
-        private void Awake()
-        {
-            visualVariant = GetComponent<RandomVisualVariant>();
-        }
-        
         private void HandleDayBroke()
         {
             if (collected || shrunk) return;
@@ -79,6 +77,36 @@ namespace Game.Collectibles
 
             StartCoroutine(ShrinkRoutine());
         }
+
+
+        private void HandleNightStarted()
+        {
+            if (!collected && !shrunk) return;
+
+            collected = false;
+            shrunk = false;
+
+            StopAllCoroutines();
+
+            if (visualVariant != null)
+            {
+                visualVariant.ShowFullLook();
+                return;
+            }
+
+            transform.localScale = originalScale;
+            transform.position = originalPosition;
+        }
+
+
+
+        private void Awake()
+        {
+            visualVariant = GetComponent<RandomVisualVariant>();
+            originalScale = transform.localScale;
+            originalPosition = transform.position;
+        }
+
 
         private IEnumerator ShrinkRoutine()
         {
@@ -121,7 +149,7 @@ namespace Game.Collectibles
 
         public void Collect(Action onComplete = null)
         {
-            if (collected) return;
+            if (collected) return; // nunca se resetea a false
             collected = true;
             outline?.SetHighlighted(false);
 

@@ -4326,6 +4326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6782177752970946954, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: CollideAgainst.m_Bits
+      value: 129
+      objectReference: {fileID: 0}
     - target: {fileID: 8450418057453193184, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: cameraTransform
       value: 
