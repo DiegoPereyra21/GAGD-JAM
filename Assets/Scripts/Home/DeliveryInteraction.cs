@@ -57,7 +57,7 @@ public class DeliveryInteraction : MonoBehaviour
 
         if (!GameProgressManager.Instance.IsCraftingTimeActive)
         {
-            DialogueUI.Instance.ShowMessage("Ofelia", "Ya es demasiado tarde, nadie va a recibir pedidos a esta hora.");
+            DialogueUI.Instance.ShowMessage("Ofelia", "Ya es demasiado tarde, ya no podes enviar pedidos a esta hora.");
             return;
         }
 
@@ -86,11 +86,11 @@ public class DeliveryInteraction : MonoBehaviour
         {
             HomeStorage.Instance.Save();
             questManager.Save();
-            DialogueUI.Instance.ShowMessage("Ofelia", $"Entregadas {delivered.Count} misión(es), pendientes de venta hasta dormir.");
+            DialogueUI.Instance.ShowMessage("Ofelia", $"Entregaste {delivered.Count} pocion(es) de pedidos, ahora podes ir a acostarte.");
         }
         else
         {
-            DialogueUI.Instance.ShowMessage("Ofelia", "No tengo ninguna poción que coincida con un pedido.");
+            DialogueUI.Instance.ShowMessage("Ofelia", "No tengo ninguna poción que pueda entregar.");
         }
     }
 }
