@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_de_hadas
   potionName: Pocion De Hadas
+  image2D: {fileID: 21300000, guid: e4897f0146fcc574f810e2087405babe, type: 3}
   visualPrefab: {fileID: 6394765580149092223, guid: 69f44dfc97e24e3458a7be487b258b34, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}

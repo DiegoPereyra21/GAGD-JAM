@@ -6,6 +6,8 @@ public class PotionRecipe : ScriptableObject
 {
     public string potionId;
     public string potionName;
+
+    public Sprite image2D;
     public GameObject visualPrefab;
     public List<RecipeIngredient> ingredients;
     public string description;

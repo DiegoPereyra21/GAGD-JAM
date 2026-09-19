@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_cool
   potionName: Pocion Cool
+  image2D: {fileID: 21300000, guid: 74c2f3ce8208dc54ead4908cff39196b, type: 3}
   visualPrefab: {fileID: 8409905227460784093, guid: ce93568f9d53f9d49848498ad5535cb4, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}

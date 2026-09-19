@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_veneno
   potionName: Pocion de Veneno
+  image2D: {fileID: 21300000, guid: 26dbac70536d77646a8d659d8fa78ae3, type: 3}
   visualPrefab: {fileID: 5194397245997810006, guid: 8f966cd8b683f2d45be41bf0cd07003b, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}

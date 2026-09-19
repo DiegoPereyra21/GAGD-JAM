@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_azar
   potionName: Pocion de Azar
+  image2D: {fileID: 21300000, guid: c1d0874b7dec7154db2840de00366c30, type: 3}
   visualPrefab: {fileID: 5633016870742186332, guid: a249c0f082cad214197e0822c12e3eb9, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_prisa
   potionName: "Poci\xF3n de Prisa"
+  image2D: {fileID: 21300000, guid: c34b65f32350dba4bba856dcaf89fde0, type: 3}
   visualPrefab: {fileID: 1196184435381183656, guid: a1d58e697cf192f4592a01ad15d84beb, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}

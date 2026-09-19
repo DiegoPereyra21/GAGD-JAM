@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_laxante
   potionName: "Poci\xF3n Laxante"
+  image2D: {fileID: 21300000, guid: e48aecd9890862d418f82a7e93c1dd8b, type: 3}
   visualPrefab: {fileID: 9206889130490248292, guid: 46bb88099966ddb4cac54cfcc367b51f, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}

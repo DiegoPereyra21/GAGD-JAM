@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_lentitud
   potionName: "Poci\xF3n De Lentitud"
+  image2D: {fileID: 21300000, guid: daa26c44ee8ca6440aadd810f42d8eeb, type: 3}
   visualPrefab: {fileID: 3692877725328737120, guid: c89179895e7d4284881092be2002a3a5, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}

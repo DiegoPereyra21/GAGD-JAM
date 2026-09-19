@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_de_paz
   potionName: Pocion de Paz
+  image2D: {fileID: 21300000, guid: b5c448f60b5cbd547a28677a325bbc7d, type: 3}
   visualPrefab: {fileID: 6244905504358461353, guid: 5b2f9bf22cdb3c94bb5d4e733d62c289, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}

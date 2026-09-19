@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_despertar
   potionName: Pocion Despertar
+  image2D: {fileID: 21300000, guid: 05532780908346046b44491566a65e20, type: 3}
   visualPrefab: {fileID: 4915837485952909435, guid: 4df3671bb26493343a355fc429d1e1e2, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}

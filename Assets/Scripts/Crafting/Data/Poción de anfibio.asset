@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
   potionId: pocion_anfibio
   potionName: "Poci\xF3n De Anfibio"
+  image2D: {fileID: 21300000, guid: 6e15f2f3b2a4bae4c8f98f5164509bed, type: 3}
   visualPrefab: {fileID: 2773675541687345034, guid: 5a81d967262cf5a4f965a918bd7caffd, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
