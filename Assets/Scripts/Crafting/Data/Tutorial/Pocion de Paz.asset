@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
   m_Name: Pocion de Paz
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_hongos
-  potionName: Pocion de Hongos
-  visualPrefab: {fileID: 3577460451240146545, guid: 230e2a2058e6754459d8b5ebb845a1d8, type: 3}
+  potionId: pocion_de_paz
+  potionName: Pocion de Paz
+  visualPrefab: {fileID: 6244905504358461353, guid: 5b2f9bf22cdb3c94bb5d4e733d62c289, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     amount: 1
   - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     amount: 1
-  description: 
+  description: Para cuando queres relajarte despues de un dia pesado.

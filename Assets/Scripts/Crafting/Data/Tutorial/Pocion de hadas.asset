@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
   m_Name: Pocion de hadas
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: pocion_hongos_cortados
-  potionName: Pocion De Paz
-  visualPrefab: {fileID: 9206889130490248292, guid: 46bb88099966ddb4cac54cfcc367b51f, type: 3}
+  potionId: pocion_de_hadas
+  potionName: Pocion De Hadas
+  visualPrefab: {fileID: 6394765580149092223, guid: 69f44dfc97e24e3458a7be487b258b34, type: 3}
   ingredients:
   - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     amount: 1
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     amount: 1
-  description: 
+  description: Para cuando queres un pelin extra de magia.

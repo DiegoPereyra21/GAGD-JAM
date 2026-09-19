@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddcf47cc8e576f4f8bccae5500c4d14, type: 3}
   m_Name: Pocion de Frutas y Flores
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipe
-  potionId: potion_inicial
+  potionId: potion_frutas
   potionName: Pocion de frutas
-  visualPrefab: {fileID: 5736402345008831696, guid: 2e7a2b6fc4355ec46909af84f3e2a6cd, type: 3}
+  visualPrefab: {fileID: 4012180652467589445, guid: 17cca41b85386f64fa8d9e04f432cecf, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
+  - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
     amount: 1
-  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
     amount: 1
-  description: 
+  description: Un jugo refrescante para antes de jugar!
