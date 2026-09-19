@@ -8,6 +8,9 @@ namespace Game.Collectibles
         public string ingredientId;
         public string displayName;
         public IngredientType rawSource;
+
+        public Sprite image;
+
         [TextArea(2, 4)]
         public string locationDescription;
     }
