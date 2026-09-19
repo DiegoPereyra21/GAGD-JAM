@@ -465,6 +465,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 8847429989974313482, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: maxDistance
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970895971425481537, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2600002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970895971425481537, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.8100004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970895971425481537, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.980002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970895971425481537, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6310728
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970895971425481537, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.24272956
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970895971425481537, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6866418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970895971425481537, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.26711887
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2460,7 +2492,7 @@ MonoBehaviour:
   doorInteraction: {fileID: 174860963}
   inventory: {fileID: 1097611477}
   upstairs: {fileID: 1713103485}
-  questsNeededForNextStep: 3
+  questsNeededForNextStep: 2
   mainMenuSceneName: MainMenu
   basketDisplay: {fileID: 1097611478}
 --- !u!4 &1452695667

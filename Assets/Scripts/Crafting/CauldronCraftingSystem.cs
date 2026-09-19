@@ -58,6 +58,9 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private float swayAngle = 12f;
     [SerializeField] private float swaySpeed = 3f;
 
+    private float dragHeightOffset = 0.8f; //eleva el item mientras se arrastra para que despeje mortero/tabla
+
+
     private bool isShowcasing;
 
     //para detectar bien el click y drag
@@ -303,7 +306,7 @@ public class CauldronCraftingSystem : MonoBehaviour
 
         draggedType = type;
         draggedSourceArea = sourceArea;
-        dragPlaneHeight = clickedVisual.transform.position.y;
+        dragPlaneHeight = clickedVisual.transform.position.y + dragHeightOffset;
         draggedVisual = clickedVisual;
         draggedVisual.transform.SetParent(null);
         dragStartScreenPos = Mouse.current.position.ReadValue();
@@ -461,12 +464,45 @@ public class CauldronCraftingSystem : MonoBehaviour
             Destroy(item);
 
         cauldronContents.Clear();
-        cauldronIngredients.Clear();
 
         if (matchedRecipe != null)
+        {
+            cauldronIngredients.Clear();
             StartCoroutine(ShowcasePotionRoutine(matchedRecipe));
+        }
         else
+        {
+            RefundCauldronIngredients();
+            cauldronIngredients.Clear();
             DialogueUI.Instance.ShowMessage("Ofelia", "Ninguna receta coincide con los ingredientes en el caldero");
+        }
+    }
+
+    private void RefundCauldronIngredients()
+    {
+        foreach (var pair in cauldronIngredients)
+        {
+            IngredientType type = pair.Key;
+            ProcessingRecipe sourceRecipe = processingRecipes.Find(r => r.processedType == type);
+
+            for (int i = 0; i < pair.Value; i++)
+            {
+                if (sourceRecipe != null)
+                {
+                    if (!processedWaiting.ContainsKey(type))
+                        processedWaiting[type] = 0;
+                    processedWaiting[type]++;
+
+                    GetAreaForStation(sourceRecipe.station).AddOne(type, GetVisualPrefab(type));
+                }
+                else
+                {
+                    HomeStorage.Instance.AddIngredient(type);
+                }
+            }
+        }
+
+        HomeStorage.Instance.Save();
     }
 
     private System.Collections.IEnumerator ShowcasePotionRoutine(PotionRecipe recipe)
