@@ -16,12 +16,12 @@ MonoBehaviour:
   villagerName: BloodyKey
   missionName: Cuidando...
   objectives:
-  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
+  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
     targetAmount: 3
-  - type: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
+  - type: {fileID: 11400000, guid: 63269a9ef1fd7174dbf79fdd19f23760, type: 2}
     targetAmount: 1
   - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     targetAmount: 1
-  moneyReward: 8
+  moneyReward: 10
   requiredPotion: {fileID: 11400000, guid: 04c44acfa683ece4f9f199f10e7e513a, type: 2}
   availableDay: 2

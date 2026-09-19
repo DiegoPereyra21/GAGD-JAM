@@ -16,7 +16,7 @@ MonoBehaviour:
   villagerName: Cafecito
   missionName: Como sera vivir como un caracol?...
   objectives:
-  - type: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
+  - type: {fileID: 11400000, guid: 8e10425daaca93d4d977a097c3249546, type: 2}
     targetAmount: 2
   - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
     targetAmount: 3
@@ -24,4 +24,4 @@ MonoBehaviour:
     targetAmount: 1
   moneyReward: 10
   requiredPotion: {fileID: 11400000, guid: 459a3309c6643da4c828a0a7e002c0f2, type: 2}
-  availableDay: 5
+  availableDay: 3

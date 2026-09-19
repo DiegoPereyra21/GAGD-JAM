@@ -18,9 +18,9 @@ MonoBehaviour:
   objectives:
   - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     targetAmount: 2
-  - type: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+  - type: {fileID: 11400000, guid: 315ce643c00a2624086b6e4c5b58a2ed, type: 2}
     targetAmount: 2
-  - type: {fileID: 11400000, guid: 51830256f6321724f900e366cedbce59, type: 2}
+  - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     targetAmount: 2
   moneyReward: 10
   requiredPotion: {fileID: 11400000, guid: b090215c6d7f0b740b8992b1c2afddde, type: 2}

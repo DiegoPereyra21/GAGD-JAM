@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Game.Collectibles;
 
+
 [Serializable]
 public class TypeVisualPrefab
 {
@@ -42,6 +43,7 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private List<IngredientType> leftShelfTypes;
     [SerializeField] private List<IngredientType> rightShelfTypes;
 
+
     [SerializeField] private IngredientDisplayArea mortarProcessedDisplay;
     [SerializeField] private IngredientDisplayArea cuttingBoardProcessedDisplay;
     private readonly Dictionary<IngredientType, int> processedWaiting = new Dictionary<IngredientType, int>();
@@ -59,8 +61,7 @@ public class CauldronCraftingSystem : MonoBehaviour
     [SerializeField] private float swaySpeed = 3f;
 
     private float dragHeightOffset = 0.8f; //eleva el item mientras se arrastra para que despeje mortero/tabla
-
-
+    public event System.Action OnExitedCrafting;
     private bool isShowcasing;
 
     //para detectar bien el click y drag
@@ -195,6 +196,7 @@ public class CauldronCraftingSystem : MonoBehaviour
         if (playerSpotlight != null) playerSpotlight.enabled = true;
         if (playerInRange)
             outline?.SetHighlighted(true);
+        OnExitedCrafting?.Invoke();
     }
     private void SetPlayerVisible(bool visible)
     {

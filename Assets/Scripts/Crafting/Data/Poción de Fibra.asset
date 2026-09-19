@@ -17,9 +17,9 @@ MonoBehaviour:
   image2D: {fileID: 21300000, guid: 91a38642ea731b545b8c2e5553e63b99, type: 3}
   visualPrefab: {fileID: 4012180652467589445, guid: 17cca41b85386f64fa8d9e04f432cecf, type: 3}
   ingredients:
-  - type: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+  - type: {fileID: 11400000, guid: 9808efdaf971b094bb3195e442354ed2, type: 2}
     amount: 1
-  - type: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+  - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     amount: 2
   - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     amount: 2

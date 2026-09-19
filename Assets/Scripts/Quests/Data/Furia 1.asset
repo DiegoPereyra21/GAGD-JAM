@@ -20,7 +20,7 @@ MonoBehaviour:
     targetAmount: 3
   - type: {fileID: 11400000, guid: ee986e57f306c4d40890ffad72e4ba7b, type: 2}
     targetAmount: 1
-  - type: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
+  - type: {fileID: 11400000, guid: 560c71a9dbf7fc841b9c7bff9d81278c, type: 2}
     targetAmount: 1
   - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     targetAmount: 1

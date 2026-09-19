@@ -5,6 +5,8 @@ using Game.Collectibles;
 
 public class IngredientDisplayArea : MonoBehaviour
 {
+    [SerializeField] private IngredientType[] knownTypes; //todos los tipos que puede mostrar esta área, para reservarles su lugar desde el arranque
+
     [SerializeField] private Transform areaOrigin;
     [SerializeField] private float areaWidth = 3f;
     [SerializeField] private float areaDepth = 2f;
@@ -34,6 +36,12 @@ public class IngredientDisplayArea : MonoBehaviour
             SpawnVisual(group, visualPrefab);
 
         group.label.text = group.trueCount.ToString();
+    }
+
+    private void Awake()
+    {
+        foreach (IngredientType type in knownTypes)
+            GetOrCreateGroup(type);
     }
 
     public void RemoveOne(IngredientType type, GameObject visualPrefab = null)
