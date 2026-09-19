@@ -357,7 +357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2650740557453673704}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1968464, y: -0.0000021630278, z: 0.00000043410245, w: 0.98043436}
+  m_LocalRotation: {x: 0.19687597, y: -2.4413657e-10, z: 4.2406318e-11, w: 0.98042846}
   m_LocalPosition: {x: 0, y: 3.133151, z: -5.8023076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDeoccluder
   CollideAgainst:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 129
   IgnoreTag: Player
   TransparentLayers:
     serializedVersion: 2
@@ -668,7 +668,7 @@ Transform:
   m_GameObject: {fileID: 4039738172186432351}
   serializedVersion: 2
   m_LocalRotation: {x: 0.47646773, y: -0.45544663, z: -0.543095, w: 0.5201872}
-  m_LocalPosition: {x: -0.49969018, y: -0.48493063, z: 0.08718884}
+  m_LocalPosition: {x: -0.444, y: -0.485, z: 0.08}
   m_LocalScale: {x: 3.7502587, y: 3.750269, z: 3.7502697}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1151,8 +1151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf3eb8dddc8df848ab459c2b73e2ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  outdoorSpeed: 20
-  indoorSpeed: 7
+  outdoorSpeed: 25
+  indoorSpeed: 12
   rotationSpeed: 14
   gravity: -9.81
   cameraTransform: {fileID: 0}
@@ -2056,7 +2056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2409066c10a947643ab15b0ad307c3ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
