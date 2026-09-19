@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Hadas
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: tutorial_hadas
-  villagerName: Tutorial 2
-  missionName: Hongos Molidos
+  villagerName: Tutorial
+  missionName: Hadas Alegres
   objectives:
   - type: {fileID: 11400000, guid: de4b82ee255f5ec46b2d5a16a71d25cd, type: 2}
     targetAmount: 1
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     targetAmount: 1
   moneyReward: 50
   requiredPotion: {fileID: 11400000, guid: 82f961311f15a8c4d918d449f6fdf598, type: 2}

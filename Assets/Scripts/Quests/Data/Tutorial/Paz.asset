@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942caeb98a52344c987158e4b2a9752, type: 3}
   m_Name: Paz
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: tutorial_hongos_molidos
-  villagerName: Tutorial 2
-  missionName: Hongos Molidos
+  questId: tutorial_paz
+  villagerName: Tutorial
+  missionName: Algo de paz...
   objectives:
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     targetAmount: 1

@@ -16,9 +16,9 @@ MonoBehaviour:
   villagerName: Tutorial
   missionName: Pocion de frutas
   objectives:
-  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
     targetAmount: 1
-  - type: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
+  - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
     targetAmount: 1
   moneyReward: 50
   requiredPotion: {fileID: 11400000, guid: 2aae066860076d5468998bf334037e44, type: 2}

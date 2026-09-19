@@ -353,6 +353,22 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1097611480}
+    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: pendingLetters.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'pendingLetters.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 467ef9e667af8954e8602759007da6c6, type: 2}
+    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'pendingLetters.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: eed30d0129c94ce47847ceed50a83536, type: 2}
+    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'pendingLetters.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f628fe60986413e41ae3e26374c68737, type: 2}
     - target: {fileID: 5736204252891480717, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: cameraFollow
       value: 
