@@ -16,6 +16,9 @@ public class PlayerCollector : MonoBehaviour
     // Sonido de pickup
     [SerializeField] private AK.Wwise.Event pickupEvent;
 
+    [SerializeField] private float pickupDelay = 0.2f; //tiempo para que la animación de agacharse se asiente antes de soltar el item en el canasto
+    [SerializeField] private float dropPauseDuration = 0.15f; //pausa la animación mientras el item cae al canasto
+
     public bool CollectionBlocked { get; set; }
     private InputAction interactAction;
     private void Awake()
@@ -64,21 +67,40 @@ public class PlayerCollector : MonoBehaviour
             return;
         }
 
+        playerMovement.FreezeMovement(target.FreezeDuration);
+        animator.SetTrigger("Interact");
+
+        StartCoroutine(CollectAfterDelay(target));
+    }
+
+    private System.Collections.IEnumerator CollectAfterDelay(Collectible target)
+    {
+        yield return new WaitForSeconds(pickupDelay);
+        if (target == null) yield break;
+
         IngredientType type = target.Type;
         int value = target.Value;
         GameObject visualPrefab = target.BasketVisualPrefab;
-
-        playerMovement.FreezeMovement(target.FreezeDuration);
-        animator.SetTrigger("Interact");
 
         target.Collect(() =>
         {
             pickupEvent.Post(gameObject);
             inventory.AddItem(type, value);
             if (visualPrefab != null)
+            {
                 basketDisplay.Drop(type, visualPrefab);
+                StartCoroutine(PauseAnimatorBriefly());
+            }
         });
     }
+
+    private System.Collections.IEnumerator PauseAnimatorBriefly()
+    {
+        animator.speed = 0f;
+        yield return new WaitForSeconds(dropPauseDuration);
+        animator.speed = 1f;
+    }
+
     //hace como un collider frente al player para que "agarre" lo que tenga al frente suyo(luego tengo q hacer un inventario en el player para q los "guarde")
     private Collectible FindNearestCollectible()
     {

@@ -17,6 +17,10 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private Transform basketViewAnchor;
     //para activar desactivar segun si esta dentro o fuera de la casa
     [SerializeField] private GameObject basketRoot;
+    [SerializeField] private Transform[] dropSlots;
+    private GameObject[] slotOccupants;
+
+    [SerializeField] private Renderer[] playerRenderers; //renderers del personaje a ocultar mientras se ve el canasto
     private bool isAvailable;
     
     public event System.Action OnOpened;
@@ -30,6 +34,7 @@ public class BasketDisplay : MonoBehaviour
     private void Awake()
     {
         toggleAction = playerInput.actions["Inventory"];
+        slotOccupants = new GameObject[dropSlots.Length];
     }
     private void Update()
     {
@@ -66,14 +71,20 @@ public class BasketDisplay : MonoBehaviour
 
         if (isOpen)
         {
-            cameraTransition.TransitionTo(basketViewAnchor);
+            cameraTransition.TransitionTo(basketViewAnchor, cameraTransition.BasketViewFov, () => SetPlayerVisible(false));
             OnOpened?.Invoke();
         }
         else
         {
+            SetPlayerVisible(true);
             cameraTransition.TransitionToPlayer();
             OnClosed?.Invoke();
         }
+    }
+    private void SetPlayerVisible(bool visible)
+    {
+        foreach (Renderer r in playerRenderers)
+            if (r != null) r.enabled = visible;
     }
     
     public void SetAvailable(bool available)
@@ -91,14 +102,26 @@ public class BasketDisplay : MonoBehaviour
     //logica de spawneo del item en el canasto
     public void Drop(IngredientType type, GameObject visualPrefab)
     {
-        Vector3 spawnPos = dropPoint.position + new Vector3(
+        int slotIndex = FindFreeSlot();
+        Transform slot = dropSlots[slotIndex];
+
+        Vector3 spawnPos = slot.position + new Vector3(
             Random.Range(-spawnHorizontalSpread, spawnHorizontalSpread),
             spawnHeight,
             Random.Range(-spawnHorizontalSpread, spawnHorizontalSpread));
 
         GameObject go = Instantiate(visualPrefab, spawnPos, Random.rotation);
         go.AddComponent<BasketItemVisual>().Init(type);
+        slotOccupants[slotIndex] = go;
         StartCoroutine(SettleThenFreeze(go));
+    }
+
+    private int FindFreeSlot()
+    {
+        for (int i = 0; i < dropSlots.Length; i++)
+            if (slotOccupants[i] == null) return i;
+
+        return Random.Range(0, dropSlots.Length); //canasto lleno
     }
     //FIX BUG, se salia todo el rato los objetos de dentro del canasto
     //con esto quedan inmoviles luego de 0.5f
@@ -115,15 +138,23 @@ public class BasketDisplay : MonoBehaviour
     //para visualizar el "area" donde pueden aparecer los objetos en el canasto, sigue sin convencerme
     private void OnDrawGizmosSelected()
     {
-        if (dropPoint == null) return;
+        if (dropSlots == null) return;
+
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(dropPoint.position + Vector3.up * spawnHeight * 0.5f,
-            new Vector3(spawnHorizontalSpread * 2f, spawnHeight, spawnHorizontalSpread * 2f));
+        foreach (Transform slot in dropSlots)
+        {
+            if (slot == null) continue;
+            Gizmos.DrawWireCube(slot.position + Vector3.up * spawnHeight * 0.5f,
+                new Vector3(spawnHorizontalSpread * 2f, spawnHeight, spawnHorizontalSpread * 2f));
+        }
     }
     //para que al guardar en el homestorage se borre todo lo que este en el canasto
     public void ClearAll()
     {
         for (int i = dropPoint.childCount - 1; i >= 0; i--)
             Destroy(dropPoint.GetChild(i).gameObject);
+
+        for (int i = 0; i < slotOccupants.Length; i++)
+            slotOccupants[i] = null;
     }
 }
