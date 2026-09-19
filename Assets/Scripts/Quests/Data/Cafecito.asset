@@ -18,7 +18,7 @@ MonoBehaviour:
   objectives:
   - type: {fileID: 11400000, guid: d91de8af336e4b94cbea0a7480ff3d66, type: 2}
     targetAmount: 1
-  - type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+  - type: {fileID: 11400000, guid: 693c6981a32a66a4fbbe54f6e641c859, type: 2}
     targetAmount: 1
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     targetAmount: 2

@@ -113,6 +113,7 @@ public class GameProgressManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        TutorialModeFlag.IsActive = false;
         Load();
         OnDayStarted += SetDayMusic;
         OnNightStarted += SetNightMusic;

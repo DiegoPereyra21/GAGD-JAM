@@ -16,7 +16,7 @@ MonoBehaviour:
   villagerName: Diego Thunderhand
   missionName: Esto no pega...
   objectives:
-  - type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  - type: {fileID: 11400000, guid: fcb57ec5d99573342bddbb64d44bc1b6, type: 2}
     targetAmount: 3
   - type: {fileID: 11400000, guid: 41bbc9f48e0c9fc4f854627d354d7044, type: 2}
     targetAmount: 1
