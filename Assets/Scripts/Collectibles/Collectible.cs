@@ -25,7 +25,7 @@ namespace Game.Collectibles
         [SerializeField] private float shakeStrength = 0.1f;
         
         //para q no me congele al recolectar objetos q ya no puedo recolectar
-        private float freezeDuration = 1.7f;
+        private float freezeDuration = 2.1f;
         public float FreezeDuration => freezeDuration;
         public bool IsCollected => collected;
         private Vector3 originalScale;

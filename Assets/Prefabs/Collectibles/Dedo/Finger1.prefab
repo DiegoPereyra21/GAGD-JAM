@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4145944569818679781}
   - component: {fileID: 6799544364039439278}
   - component: {fileID: 2754635309362648251}
+  - component: {fileID: -6155743439129138874}
+  - component: {fileID: -116080117701758569}
+  - component: {fileID: 7089006289400825378}
   m_Layer: 0
   m_Name: Finger1
   m_TagString: Untagged
@@ -90,3 +93,48 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-6155743439129138874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982600343399483129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0531420a9c3e741b0e8e015268e426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverOutline
+  outline: {fileID: 5516494542448084031, guid: a36737bfe0d69d6419674a147fc57d73, type: 3}
+  hoverLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  maxDistance: 5
+--- !u!114 &-116080117701758569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982600343399483129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -5804585140418751786, guid: a36737bfe0d69d6419674a147fc57d73, type: 3}
+--- !u!114 &7089006289400825378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982600343399483129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 2754635309362648251}

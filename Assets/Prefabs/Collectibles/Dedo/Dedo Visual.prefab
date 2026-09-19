@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 1744944411104757758}
   - component: {fileID: 8881008395536089526}
   - component: {fileID: 8182993150582765093}
+  - component: {fileID: -754530405242967650}
+  - component: {fileID: -2348052618065770723}
+  - component: {fileID: 5607939035982340789}
   m_Layer: 9
   m_Name: Dedo Visual
   m_TagString: Untagged
@@ -140,3 +143,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-754530405242967650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083801397981548104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0531420a9c3e741b0e8e015268e426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverOutline
+  outline: {fileID: 5516494542448084031, guid: a36737bfe0d69d6419674a147fc57d73, type: 3}
+  hoverLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  maxDistance: 5
+--- !u!114 &-2348052618065770723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083801397981548104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -5804585140418751786, guid: a36737bfe0d69d6419674a147fc57d73, type: 3}
+--- !u!114 &5607939035982340789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083801397981548104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 1744944411104757758}

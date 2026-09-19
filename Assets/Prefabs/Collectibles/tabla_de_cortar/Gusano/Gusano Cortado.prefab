@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4594496181475803153}
   - component: {fileID: 1141756047739122941}
   - component: {fileID: 3300468674137221820}
+  - component: {fileID: 4074470174627355493}
+  - component: {fileID: -1757983474311622218}
+  - component: {fileID: 2062359000336895096}
   m_Layer: 10
   m_Name: Gusano Cortado
   m_TagString: Untagged
@@ -28,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.492, y: -0, z: -10.182}
-  m_LocalScale: {x: 0.035, y: 0.035, z: 0.035}
+  m_LocalScale: {x: 0.055, y: 0.055, z: 0.055}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5312203334502506755}
@@ -83,6 +86,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4074470174627355493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303803367480725716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0531420a9c3e741b0e8e015268e426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverOutline
+  outline: {fileID: -1757983474311622218}
+  hoverLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  maxDistance: 12
+--- !u!114 &-1757983474311622218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303803367480725716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: 2062359000336895096}
+--- !u!114 &2062359000336895096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303803367480725716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 5769684157475713957}
+  - {fileID: 525885007605441685}
 --- !u!1001 &1831941644448485848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204,6 +253,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96108389cfbbc4642a1ace9562219a89, type: 3}
+--- !u!137 &525885007605441685 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7052623165299722931, guid: 96108389cfbbc4642a1ace9562219a89, type: 3}
+  m_PrefabInstance: {fileID: 1831941644448485848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2226718051995596339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 96108389cfbbc4642a1ace9562219a89, type: 3}
@@ -333,5 +387,10 @@ PrefabInstance:
 --- !u!4 &5312203334502506755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de8492844c9761b4c9884b66764d0702, type: 3}
+  m_PrefabInstance: {fileID: 5634572358356797160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5769684157475713957 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7052623165299722931, guid: de8492844c9761b4c9884b66764d0702, type: 3}
   m_PrefabInstance: {fileID: 5634572358356797160}
   m_PrefabAsset: {fileID: 0}

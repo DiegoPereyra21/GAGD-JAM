@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1157446205443809596}
   - component: {fileID: 6698028396646453801}
   - component: {fileID: -2395556824654854176}
+  - component: {fileID: -2844719971957004633}
+  - component: {fileID: 8358263088188539720}
+  - component: {fileID: -4640540063641317364}
   m_Layer: 10
   m_Name: Fruta Roja Cortada
   m_TagString: Untagged
@@ -28,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5564438920118029544}
@@ -83,6 +86,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-2844719971957004633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529832154013381966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0531420a9c3e741b0e8e015268e426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverOutline
+  outline: {fileID: 8358263088188539720}
+  hoverLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  maxDistance: 12
+--- !u!114 &8358263088188539720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529832154013381966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -4640540063641317364}
+--- !u!114 &-4640540063641317364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529832154013381966}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 6733997911008458631}
+  - {fileID: 8615869362129295813}
 --- !u!1001 &5382473125076347651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,6 +202,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a78e95073dfcdb45b3ed7b5d65d43fd, type: 3}
   m_PrefabInstance: {fileID: 5382473125076347651}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &6733997911008458631 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8a78e95073dfcdb45b3ed7b5d65d43fd, type: 3}
+  m_PrefabInstance: {fileID: 5382473125076347651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6940084584902149441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,5 +275,10 @@ PrefabInstance:
 --- !u!4 &7483464522703610538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a78e95073dfcdb45b3ed7b5d65d43fd, type: 3}
+  m_PrefabInstance: {fileID: 6940084584902149441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8615869362129295813 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8a78e95073dfcdb45b3ed7b5d65d43fd, type: 3}
   m_PrefabInstance: {fileID: 6940084584902149441}
   m_PrefabAsset: {fileID: 0}

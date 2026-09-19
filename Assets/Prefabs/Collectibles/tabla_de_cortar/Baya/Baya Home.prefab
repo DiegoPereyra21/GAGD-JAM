@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6419366546015896626}
   - component: {fileID: 7855143171569437623}
   - component: {fileID: -3096994553947001133}
+  - component: {fileID: -5825296419056216137}
+  - component: {fileID: 5434031952584648962}
+  - component: {fileID: -5643501986031639487}
   m_Layer: 10
   m_Name: Baya Home
   m_TagString: Untagged
@@ -28,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3833075700504561854}
@@ -83,6 +86,54 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5825296419056216137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083948910245881578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0531420a9c3e741b0e8e015268e426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverOutline
+  outline: {fileID: 5434031952584648962}
+  hoverLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  maxDistance: 12
+--- !u!114 &5434031952584648962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083948910245881578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -5643501986031639487}
+--- !u!114 &-5643501986031639487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083948910245881578}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 2700751122340934609}
+  - {fileID: 5808104436497516527}
+  - {fileID: 260185115383297190}
+  - {fileID: 8537745291461492888}
 --- !u!1001 &1467550442796967970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148,9 +199,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68817130085c25b45922e224b9f266a5, type: 3}
+--- !u!23 &260185115383297190 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 68817130085c25b45922e224b9f266a5, type: 3}
+  m_PrefabInstance: {fileID: 1467550442796967970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1429734720834113481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 68817130085c25b45922e224b9f266a5, type: 3}
+  m_PrefabInstance: {fileID: 1467550442796967970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8537745291461492888 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7071182760956848314, guid: 68817130085c25b45922e224b9f266a5, type: 3}
   m_PrefabInstance: {fileID: 1467550442796967970}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3655633685605838677
@@ -218,8 +279,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68817130085c25b45922e224b9f266a5, type: 3}
+--- !u!23 &2700751122340934609 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 68817130085c25b45922e224b9f266a5, type: 3}
+  m_PrefabInstance: {fileID: 3655633685605838677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3833075700504561854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 68817130085c25b45922e224b9f266a5, type: 3}
+  m_PrefabInstance: {fileID: 3655633685605838677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5808104436497516527 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7071182760956848314, guid: 68817130085c25b45922e224b9f266a5, type: 3}
   m_PrefabInstance: {fileID: 3655633685605838677}
   m_PrefabAsset: {fileID: 0}
