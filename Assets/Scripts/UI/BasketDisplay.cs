@@ -102,6 +102,12 @@ public class BasketDisplay : MonoBehaviour
     //logica de spawneo del item en el canasto
     public void Drop(IngredientType type, GameObject visualPrefab)
     {
+        if (dropSlots == null || dropSlots.Length == 0)
+        {
+            Debug.LogWarning("BasketDisplay: no hay Drop Slots asignados.", this);
+            return;
+        }
+
         int slotIndex = FindFreeSlot();
         Transform slot = dropSlots[slotIndex];
 
