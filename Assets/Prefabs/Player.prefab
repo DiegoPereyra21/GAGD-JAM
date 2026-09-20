@@ -2288,8 +2288,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6162499939966115575, guid: 3b8e67fcceb68fa44a9b89191285b503, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8273482610402941784}
   m_SourcePrefab: {fileID: 100100000, guid: 3b8e67fcceb68fa44a9b89191285b503, type: 3}
+--- !u!114 &3822260219237961790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3590985882602910217, guid: 3b8e67fcceb68fa44a9b89191285b503, type: 3}
+  m_PrefabInstance: {fileID: 350959479114965559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862352744722988224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+--- !u!1 &5862352744722988224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6162499939966115575, guid: 3b8e67fcceb68fa44a9b89191285b503, type: 3}
+  m_PrefabInstance: {fileID: 350959479114965559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8273482610402941784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862352744722988224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9977fed1dd27ed4d9625bc8092f30a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HUDPanelVisibility
+  document: {fileID: 3822260219237961790}
+  cauldron: {fileID: 0}
 --- !u!4 &8902375579132959059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9175324088604900196, guid: 3b8e67fcceb68fa44a9b89191285b503, type: 3}
@@ -2519,7 +2552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2409066c10a947643ab15b0ad307c3ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2982,6 +3015,10 @@ PrefabInstance:
       propertyPath: basketViewAnchor
       value: 
       objectReference: {fileID: 6047731141686985405}
+    - target: {fileID: 6441380400695140205, guid: c9b9ad43b22e5644bb5afca64d1b08e7, type: 3}
+      propertyPath: specialIngredient
+      value: 
+      objectReference: {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}
     - target: {fileID: 6441380400695140205, guid: c9b9ad43b22e5644bb5afca64d1b08e7, type: 3}
       propertyPath: dropSlots.Array.size
       value: 10
