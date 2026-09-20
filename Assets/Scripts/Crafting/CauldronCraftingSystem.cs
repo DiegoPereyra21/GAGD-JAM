@@ -304,7 +304,7 @@ public class CauldronCraftingSystem : MonoBehaviour
 
     private void TryBeginDrag(IngredientType type, GameObject clickedVisual, IngredientDisplayArea sourceArea)
     {
-        if (!sourceArea.TryPickUp(type, clickedVisual)) return;
+        if (!sourceArea.TryPickUp(type, clickedVisual, GetVisualPrefab(type))) return;
 
         draggedType = type;
         draggedSourceArea = sourceArea;

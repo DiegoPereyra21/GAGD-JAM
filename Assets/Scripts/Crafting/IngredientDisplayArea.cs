@@ -108,12 +108,16 @@ public class IngredientDisplayArea : MonoBehaviour
         RepositionAll(group);
     }
 
-    public bool TryPickUp(IngredientType type, GameObject visual)
+    public bool TryPickUp(IngredientType type, GameObject visual, GameObject visualPrefab = null)
     {
         if (!groups.TryGetValue(type, out TypeGroup group)) return false;
         if (!group.visuals.Remove(visual)) return false;
 
         group.trueCount = Mathf.Max(0, group.trueCount - 1);
+
+        if (visualPrefab != null && group.trueCount >= maxVisualsPerGroup && group.visuals.Count < maxVisualsPerGroup)
+            SpawnVisual(group, visualPrefab);
+
         RepositionAll(group);
         group.label.text = group.trueCount.ToString();
         return true;
@@ -142,18 +146,20 @@ public class IngredientDisplayArea : MonoBehaviour
         labelObject.transform.localPosition = new Vector3(0f, labelHeight, 0f);
 
         TextMeshPro label = labelObject.AddComponent<TextMeshPro>();
-        label.fontSize = 3f;
+        label.fontSize = 1.5f; //antes 3f
         label.alignment = TextAlignmentOptions.Center;
         label.text = "0";
+        labelObject.AddComponent<Billboard>();
 
         GameObject nameLabelObject = new GameObject($"NameLabel_{type.displayName}");
         nameLabelObject.transform.SetParent(anchorObject.transform, false);
         nameLabelObject.transform.localPosition = new Vector3(0f, nameLabelHeight, 0f);
 
         TextMeshPro nameLabel = nameLabelObject.AddComponent<TextMeshPro>();
-        nameLabel.fontSize = 2f;
+        nameLabel.fontSize = 1f; //antes 2f
         nameLabel.alignment = TextAlignmentOptions.Center;
         nameLabel.text = type.displayName.Replace(" ", "\n");
+        nameLabelObject.AddComponent<Billboard>();
 
         TypeGroup group = new TypeGroup { type = type, anchor = anchorObject.transform, label = label, nameLabel = nameLabel };
         groups[type] = group;
