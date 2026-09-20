@@ -102,7 +102,26 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5714230863633546828}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 910363225954248200}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3878111801705832109}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7892033338639830214}
   m_SourcePrefab: {fileID: 100100000, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+--- !u!23 &1126906414449591079 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6448678818323749754, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+  m_PrefabInstance: {fileID: 6259401354148927581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2351580920590281191 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8538721803357123002, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+  m_PrefabInstance: {fileID: 6259401354148927581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6493264391912842508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
@@ -156,3 +175,49 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.63
   m_Center: {x: 0.04, y: -0.18, z: 0}
+--- !u!114 &910363225954248200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493264391912842508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0531420a9c3e741b0e8e015268e426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverOutline
+  outline: {fileID: -3878111801705832109}
+  hoverLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  maxDistance: 15
+--- !u!114 &-3878111801705832109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493264391912842508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: 7892033338639830214}
+--- !u!114 &7892033338639830214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493264391912842508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 1126906414449591079}
+  - {fileID: 2351580920590281191}
