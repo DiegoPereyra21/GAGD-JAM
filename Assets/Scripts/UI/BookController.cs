@@ -14,6 +14,9 @@ public class BookController : MonoBehaviour
     [Header("Ingredientes")]
     [SerializeField] private IngredientDatabase ingredientDatabase;
 
+    [Header("Quests")]
+    [SerializeField] private QuestManager questManager;
+
     private UIDocument uiDocument;
 
     private VisualElement root;
@@ -60,6 +63,10 @@ public class BookController : MonoBehaviour
     private Label compendiumDescription;
 
 
+    //objetivos
+    private VisualElement objectiveEntry;
+
+
     //navegacion
     private VisualElement pageNavigation;
     private Button previousButton;
@@ -101,6 +108,9 @@ public class BookController : MonoBehaviour
         FindElements();
         RegisterCallbacks();
 
+        if (questManager != null)
+            questManager.OnQuestsChanged += RefreshObjectives;
+
         if (bookContainer != null)
             bookContainer.style.display = DisplayStyle.None;
 
@@ -117,6 +127,9 @@ public class BookController : MonoBehaviour
     private void OnDisable()
     {
         UnregisterCallbacks();
+
+        if (questManager != null)
+            questManager.OnQuestsChanged -= RefreshObjectives;
 
         if (openBookAction != null)
         {
@@ -156,6 +169,8 @@ public class BookController : MonoBehaviour
         compendiumTitle = root.Q<Label>("CompendiumTitle");
         compendiumImage = root.Q<Image>("CompendiumImage");
         compendiumDescription = root.Q<Label>("CompendiumDescription");
+
+        objectiveEntry = root.Q<VisualElement>("ObjectiveEntry");
 
         pageNavigation = root.Q<VisualElement>("PageNavigation");
         previousButton = root.Q<Button>("PreviousButton");
@@ -538,6 +553,95 @@ public class BookController : MonoBehaviour
 
         if (title != null)
             title.text = "GRIMORIO";
+
+        RefreshObjectives();
+    }
+
+    private void RefreshObjectives()
+    {
+        if (objectivesPage == null || objectiveEntry == null)
+            return;
+
+        objectiveEntry.parent?.Clear();
+
+        if (questManager == null)
+            return;
+
+        foreach (QuestData quest in questManager.ActiveQuests)
+        {
+            if (quest == null)
+                continue;
+
+            CreateObjectiveEntry(quest);
+        }
+    }
+
+    private void CreateObjectiveEntry(QuestData quest)
+    {
+        VisualElement entry = new VisualElement();
+        entry.AddToClassList("objective-entry");
+
+        VisualElement info = new VisualElement();
+        info.AddToClassList("objective-info");
+
+        Label objectiveTitle = new Label();
+        objectiveTitle.name = "ObjectiveTitle";
+        objectiveTitle.text = quest.missionName;
+        objectiveTitle.AddToClassList("objective-title");
+
+        Label objectiveDescription = new Label();
+        objectiveDescription.name = "ObjectiveDescription";
+        objectiveDescription.text = BuildQuestDescription(quest);
+        objectiveDescription.AddToClassList("objective-description");
+
+        info.Add(objectiveTitle);
+        info.Add(objectiveDescription);
+
+        VisualElement right = new VisualElement();
+        right.AddToClassList("objective-right");
+
+        Image objectiveImage = new Image();
+        objectiveImage.name = "ObjectiveImage";
+        objectiveImage.AddToClassList("objective-image");
+
+        if (quest.requiredPotion != null)
+            objectiveImage.sprite = quest.requiredPotion.image2D;
+
+        Button objectiveButton = new Button();
+        objectiveButton.name = "ObjectiveButton";
+        objectiveButton.text = "✓";
+        objectiveButton.SetEnabled(false);
+        objectiveButton.AddToClassList("objective-button");
+
+        right.Add(objectiveImage);
+        right.Add(objectiveButton);
+
+        entry.Add(info);
+        entry.Add(right);
+
+        objectiveEntry.parent.Add(entry);
+    }
+
+    private string BuildQuestDescription(QuestData quest)
+    {
+        if (quest.objectives == null || quest.objectives.Count == 0)
+            return quest.villagerName;
+
+        string description = "";
+
+        if (!string.IsNullOrEmpty(quest.villagerName))
+            description += $"Para {quest.villagerName}:\n";
+
+        foreach (QuestObjective objective in quest.objectives)
+        {
+            if (objective == null || objective.type == null)
+                continue;
+
+            description +=
+                $"{objective.type.displayName} x{objective.targetAmount}\n";
+        }
+
+        return description.TrimEnd();
     }
 
     private void UpdateNavigationVisibility()

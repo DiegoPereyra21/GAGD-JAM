@@ -56,14 +56,14 @@
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="CompendiumPage" class="compendium-page" style="flex-grow: 1; display: flex;">
+                <ui:VisualElement name="CompendiumPage" class="compendium-page" style="flex-grow: 1; display: none;">
                     <ui:VisualElement name="CompendiumBody" class="compendium-body" style="flex-grow: 1;">
                         <ui:Label text="Label" name="CompendiumTitle" class="compendium-title"/>
                         <ui:Image name="CompendiumImage" class="compendium-image" style="width: 300px; height: 300px;"/>
                         <ui:Label text="Label" name="CompendiumDescription" class="compendium-description" style="font-size: 35px; padding-left: 45px; padding-top: 40px;"/>
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="ObjectivesPage" style="flex-grow: 1; display: none;">
+                <ui:VisualElement name="ObjectivesPage" style="flex-grow: 1; display: flex;">
                     <ui:VisualElement name="ObjectiveEntry" style="flex-grow: 1;">
                         <ui:VisualElement name="ObjectiveInfo" style="flex-grow: 1;">
                             <ui:Label text="Label" name="ObjectiveTitle"/>
