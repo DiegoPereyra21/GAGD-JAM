@@ -43,7 +43,7 @@
                     <ui:Label text="Esta zona del bosque no es demasiado extensa, asi que no hay mucho que dibujar (por ahora). Solo no vayas por el camino de la cruz roja, ese sendero va hacia el pueblo, la gente nos compra pociones pero es mejor manterner distancia.&#10;" class="entry-text" style="padding-top: 40px;"/>
                     <ui:Label text="&#10;Igualmente puse un hechizo de barrera por si lo olvidas ♥" class="entry-text" style="padding-top: 10px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement name="RecipesPage" class="recipe-page" style="flex-grow: 1; display: flex;">
+                <ui:VisualElement name="RecipesPage" class="recipe-page" style="flex-grow: 1; display: none;">
                     <ui:VisualElement name="Page" class="recipe-page-container" style="flex-grow: 1;">
                         <ui:Label text="Label" name="RecipeTitle" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf?fileID=12800000&amp;guid=d12faeabb8a48584e9b79c222915b17d&amp;type=3#NotoSerif_SemiCondensed-SemiBoldItalic&quot;); font-size: 50px; -unity-font-style: normal;"/>
                         <ui:VisualElement name="RecipeBody" class="recipe-body" style="flex-grow: 1;">
@@ -56,7 +56,13 @@
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="CompendiumPage" style="flex-grow: 1; display: none;"/>
+                <ui:VisualElement name="CompendiumPage" class="compendium-page" style="flex-grow: 1; display: flex;">
+                    <ui:VisualElement name="CompendiumBody" class="compendium-body" style="flex-grow: 1;">
+                        <ui:Label text="Label" name="CompendiumTitle" class="compendium-title"/>
+                        <ui:Image name="CompendiumImage" class="compendium-image" style="width: 250px; height: 250px;"/>
+                        <ui:Label text="Label" name="CompendiumDescription" class="compendium-description" style="font-size: 35px;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
                 <ui:VisualElement name="ObjectivesPage" style="flex-grow: 1; display: none;">
                     <ui:VisualElement name="ObjectiveEntry" style="flex-grow: 1;">
                         <ui:VisualElement name="ObjectiveInfo" style="flex-grow: 1;">

@@ -8720,6 +8720,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2184416763169968396, guid: 4d5026643251b164489ffe49211bb731, type: 3}
+      propertyPath: ingredientDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: abca3c595ceab214da1a804d23895a90, type: 2}
     - target: {fileID: 4206616066283449012, guid: 4d5026643251b164489ffe49211bb731, type: 3}
       propertyPath: m_LocalPosition.x
       value: -203.5812

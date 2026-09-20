@@ -1,3 +1,4 @@
+using Game.Collectibles;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -9,6 +10,9 @@ public class BookController : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private InputActionReference openBookAction;
+
+    [Header("Ingredientes")]
+    [SerializeField] private IngredientDatabase ingredientDatabase;
 
     private UIDocument uiDocument;
 
@@ -50,6 +54,12 @@ public class BookController : MonoBehaviour
     private VisualElement ingredients;
 
 
+    //compendio
+    private Label compendiumTitle;
+    private Image compendiumImage;
+    private Label compendiumDescription;
+
+
     //navegacion
     private VisualElement pageNavigation;
     private Button previousButton;
@@ -57,10 +67,11 @@ public class BookController : MonoBehaviour
     private Label pageNumber;
 
 
-   //estado
+    //estado
     private bool isBookOpen = false;
 
     private int currentRecipeIndex = 0;
+    private int currentIngredientIndex = 0;
 
 
     private enum BookSection
@@ -142,6 +153,10 @@ public class BookController : MonoBehaviour
         ingredientsTitle = root.Q<Label>("IngredientsTitle");
         ingredients = root.Q<VisualElement>("Ingredients");
 
+        compendiumTitle = root.Q<Label>("CompendiumTitle");
+        compendiumImage = root.Q<Image>("CompendiumImage");
+        compendiumDescription = root.Q<Label>("CompendiumDescription");
+
         pageNavigation = root.Q<VisualElement>("PageNavigation");
         previousButton = root.Q<Button>("PreviousButton");
         nextButton = root.Q<Button>("NextButton");
@@ -201,6 +216,8 @@ public class BookController : MonoBehaviour
 
     private void OnCompendiumClicked(ClickEvent evt)
     {
+        currentIngredientIndex = 0;
+
         ShowSection(BookSection.Compendium);
     }
 
@@ -284,6 +301,7 @@ public class BookController : MonoBehaviour
         if (startPageTitle != null)
             startPageTitle.text = "Inicio";
     }
+
 
     private void ShowRecipes()
     {
@@ -432,7 +450,78 @@ public class BookController : MonoBehaviour
 
         if (title != null)
             title.text = "GRIMORIO";
+
+        if (ingredientDatabase == null ||
+            ingredientDatabase.AllIngredients == null ||
+            ingredientDatabase.AllIngredients.Count == 0)
+        {
+            ShowEmptyCompendiumPage();
+            return;
+        }
+
+        if (currentIngredientIndex >= ingredientDatabase.AllIngredients.Count)
+            currentIngredientIndex = 0;
+
+        DisplayCurrentIngredient();
     }
+
+    private void DisplayCurrentIngredient()
+    {
+        IngredientType ingredient =
+            ingredientDatabase.AllIngredients[currentIngredientIndex];
+
+        if (ingredient == null)
+        {
+            ShowEmptyCompendiumPage();
+            return;
+        }
+
+        if (compendiumTitle != null)
+            compendiumTitle.text = ingredient.displayName;
+
+        if (compendiumImage != null)
+        {
+            compendiumImage.sprite = ingredient.image;
+            compendiumImage.style.display = DisplayStyle.Flex;
+        }
+
+        if (compendiumDescription != null)
+        {
+            compendiumDescription.text = ingredient.locationDescription;
+            compendiumDescription.style.display = DisplayStyle.Flex;
+        }
+
+        UpdatePageNumber();
+        UpdateNavigationButtons();
+    }
+
+    private void ShowEmptyCompendiumPage()
+    {
+        if (compendiumTitle != null)
+            compendiumTitle.text = "No hay ingredientes disponibles.";
+
+        if (compendiumImage != null)
+        {
+            compendiumImage.sprite = null;
+            compendiumImage.style.display = DisplayStyle.None;
+        }
+
+        if (compendiumDescription != null)
+        {
+            compendiumDescription.text = "";
+            compendiumDescription.style.display = DisplayStyle.None;
+        }
+
+        if (pageNumber != null)
+            pageNumber.text = "0 / 0";
+
+        if (previousButton != null)
+            previousButton.SetEnabled(false);
+
+        if (nextButton != null)
+            nextButton.SetEnabled(false);
+    }
+
     private void ShowMap()
     {
         if (mapPage != null)
@@ -465,7 +554,6 @@ public class BookController : MonoBehaviour
                     : DisplayStyle.None;
         }
 
-
         if (!showNavigation)
         {
             if (previousButton != null)
@@ -482,16 +570,28 @@ public class BookController : MonoBehaviour
 
     private void UpdateNavigationButtons()
     {
-        bool hasRecipes =
-            recipeDatabase != null &&
-            recipeDatabase.Recipes != null &&
-            recipeDatabase.Recipes.Count > 0;
+        bool hasPages = false;
+
+        if (currentSection == BookSection.Recipes)
+        {
+            hasPages =
+                recipeDatabase != null &&
+                recipeDatabase.Recipes != null &&
+                recipeDatabase.Recipes.Count > 0;
+        }
+        else if (currentSection == BookSection.Compendium)
+        {
+            hasPages =
+                ingredientDatabase != null &&
+                ingredientDatabase.AllIngredients != null &&
+                ingredientDatabase.AllIngredients.Count > 0;
+        }
 
         if (previousButton != null)
-            previousButton.SetEnabled(hasRecipes);
+            previousButton.SetEnabled(hasPages);
 
         if (nextButton != null)
-            nextButton.SetEnabled(hasRecipes);
+            nextButton.SetEnabled(hasPages);
     }
 
 
@@ -500,55 +600,100 @@ public class BookController : MonoBehaviour
         if (pageNumber == null)
             return;
 
-        if (recipeDatabase == null ||
-            recipeDatabase.Recipes == null ||
-            recipeDatabase.Recipes.Count == 0)
+        if (currentSection == BookSection.Recipes)
         {
-            pageNumber.text = "0 / 0";
-            return;
-        }
+            if (recipeDatabase == null ||
+                recipeDatabase.Recipes == null ||
+                recipeDatabase.Recipes.Count == 0)
+            {
+                pageNumber.text = "0 / 0";
+                return;
+            }
 
-        pageNumber.text =
-            $"{currentRecipeIndex + 1} / {recipeDatabase.Recipes.Count}";
+            pageNumber.text =
+                $"{currentRecipeIndex + 1} / {recipeDatabase.Recipes.Count}";
+        }
+        else if (currentSection == BookSection.Compendium)
+        {
+            if (ingredientDatabase == null ||
+                ingredientDatabase.AllIngredients == null ||
+                ingredientDatabase.AllIngredients.Count == 0)
+            {
+                pageNumber.text = "0 / 0";
+                return;
+            }
+
+            pageNumber.text =
+                $"{currentIngredientIndex + 1} / {ingredientDatabase.AllIngredients.Count}";
+        }
     }
 
 
     private void OnPreviousClicked(ClickEvent evt)
     {
-        if (currentSection != BookSection.Recipes)
-            return;
+        if (currentSection == BookSection.Recipes)
+        {
+            if (recipeDatabase == null ||
+                recipeDatabase.Recipes == null ||
+                recipeDatabase.Recipes.Count == 0)
+                return;
 
-        if (recipeDatabase == null ||
-            recipeDatabase.Recipes == null ||
-            recipeDatabase.Recipes.Count == 0)
-            return;
+            currentRecipeIndex--;
 
-        currentRecipeIndex--;
+            if (currentRecipeIndex < 0)
+                currentRecipeIndex =
+                    recipeDatabase.Recipes.Count - 1;
 
-        if (currentRecipeIndex < 0)
-            currentRecipeIndex =
-                recipeDatabase.Recipes.Count - 1;
+            DisplayCurrentRecipe();
+        }
+        else if (currentSection == BookSection.Compendium)
+        {
+            if (ingredientDatabase == null ||
+                ingredientDatabase.AllIngredients == null ||
+                ingredientDatabase.AllIngredients.Count == 0)
+                return;
 
-        DisplayCurrentRecipe();
+            currentIngredientIndex--;
+
+            if (currentIngredientIndex < 0)
+                currentIngredientIndex =
+                    ingredientDatabase.AllIngredients.Count - 1;
+
+            DisplayCurrentIngredient();
+        }
     }
 
 
     private void OnNextClicked(ClickEvent evt)
     {
-        if (currentSection != BookSection.Recipes)
-            return;
+        if (currentSection == BookSection.Recipes)
+        {
+            if (recipeDatabase == null ||
+                recipeDatabase.Recipes == null ||
+                recipeDatabase.Recipes.Count == 0)
+                return;
 
-        if (recipeDatabase == null ||
-            recipeDatabase.Recipes == null ||
-            recipeDatabase.Recipes.Count == 0)
-            return;
+            currentRecipeIndex++;
 
-        currentRecipeIndex++;
+            if (currentRecipeIndex >= recipeDatabase.Recipes.Count)
+                currentRecipeIndex = 0;
 
-        if (currentRecipeIndex >= recipeDatabase.Recipes.Count)
-            currentRecipeIndex = 0;
+            DisplayCurrentRecipe();
+        }
+        else if (currentSection == BookSection.Compendium)
+        {
+            if (ingredientDatabase == null ||
+                ingredientDatabase.AllIngredients == null ||
+                ingredientDatabase.AllIngredients.Count == 0)
+                return;
 
-        DisplayCurrentRecipe();
+            currentIngredientIndex++;
+
+            if (currentIngredientIndex >= ingredientDatabase.AllIngredients.Count)
+                currentIngredientIndex = 0;
+
+            DisplayCurrentIngredient();
+        }
     }
 
     public void OpenBook()
@@ -561,6 +706,7 @@ public class BookController : MonoBehaviour
         isBookOpen = true;
 
         currentRecipeIndex = 0;
+        currentIngredientIndex = 0;
 
         ShowSection(BookSection.Start);
     }
