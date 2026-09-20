@@ -4,12 +4,16 @@ using UnityEngine.InputSystem;
 
 public class Mailbox : MonoBehaviour
 {
+    private const string SaveKey = "Mailbox_Data";
+
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private QuestManager questManager;
-    [SerializeField] private List<QuestData> pendingLetters = new List<QuestData>();
+    [SerializeField] private List<QuestData> allLetters = new List<QuestData>(); //el catálogo completo, se configura en el Inspector
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private float interactRadius = 2f;
+
+    private List<QuestData> pendingLetters = new List<QuestData>();
 
     public int RemainingCount
     {
@@ -28,6 +32,7 @@ public class Mailbox : MonoBehaviour
     private void Awake()
     {
         interactAction = playerInput.actions["Interact"];
+        Load();
     }
 
     private void OnEnable()
@@ -45,8 +50,11 @@ public class Mailbox : MonoBehaviour
     private void DiscardExpiredLetters()
     {
         int currentDay = GameProgressManager.Instance.CurrentDay;
+        int before = pendingLetters.Count;
         pendingLetters.RemoveAll(letter => letter.availableDay < currentDay);
+        if (pendingLetters.Count != before) Save();
     }
+
     private void Update()
     {
         outline?.SetHighlighted(IsPlayerInRange());
@@ -74,8 +82,48 @@ public class Mailbox : MonoBehaviour
         }
 
         if (questManager.AddQuest(letter))
+        {
             pendingLetters.Remove(letter);
+            Save();
+        }
         else
+        {
             DialogueUI.Instance.ShowMessage("Ofelia", "Ya tengo demasiados pedidos, no puedo aceptar más por ahora.");
+        }
+    }
+
+    private void Save()
+    {
+        if (TutorialModeFlag.IsActive) return;
+
+        SaveData data = new SaveData();
+        foreach (QuestData letter in pendingLetters)
+            data.letterIds.Add(letter.questId);
+
+        PlayerPrefs.SetString(SaveKey, JsonUtility.ToJson(data));
+        PlayerPrefs.Save();
+    }
+
+    private void Load()
+    {
+        if (TutorialModeFlag.IsActive || !PlayerPrefs.HasKey(SaveKey))
+        {
+            pendingLetters = new List<QuestData>(allLetters);
+            return;
+        }
+
+        SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(SaveKey));
+        pendingLetters = new List<QuestData>();
+        foreach (string id in data.letterIds)
+        {
+            QuestData letter = allLetters.Find(q => q.questId == id);
+            if (letter != null) pendingLetters.Add(letter);
+        }
+    }
+
+    [System.Serializable]
+    private class SaveData
+    {
+        public List<string> letterIds = new List<string>();
     }
 }

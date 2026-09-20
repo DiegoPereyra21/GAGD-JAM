@@ -298,6 +298,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1097611480}
     - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: allLetters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'allLetters.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f628fe60986413e41ae3e26374c68737, type: 2}
+    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'allLetters.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 467ef9e667af8954e8602759007da6c6, type: 2}
+    - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: pendingLetters.Array.size
       value: 2
       objectReference: {fileID: 0}
