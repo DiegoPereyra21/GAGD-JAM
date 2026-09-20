@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Gusano Cortado
   rawSource: {fileID: 11400000, guid: 273ad0139e2149340a19c866adde0de5, type: 2}
   image: {fileID: 21300000, guid: 5869839a2e84c374980dc23cda931589, type: 3}
-  locationDescription: 
+  locationDescription: 'Agarras un pobre e indefenso gusanito, lo pones en la tabla
+    de picar, y chop chop: pobre gusaniyo cortado.'

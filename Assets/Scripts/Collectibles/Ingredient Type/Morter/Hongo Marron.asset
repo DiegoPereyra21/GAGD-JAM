@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Hongo Marron
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: f22cb80c4bb18db4eb9efef2694f9e5b, type: 3}
-  locationDescription: 
+  locationDescription: Crecen en los bordes del mudno y zonas rocosas.

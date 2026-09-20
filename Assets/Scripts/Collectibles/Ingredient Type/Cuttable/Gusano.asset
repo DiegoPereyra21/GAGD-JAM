@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Gusano
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: d8afe5aebd5cff6409e7b037590444f9, type: 3}
-  locationDescription: 
+  locationDescription: Se recolectan de troncos de madera que podes encontrar en
+    el bosque, suelen haber mas cerca de zonas de agua.

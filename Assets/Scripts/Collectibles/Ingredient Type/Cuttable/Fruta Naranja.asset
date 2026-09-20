@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Fruta Naranja
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: a10c8d122fbf7994a8c0b3aefc0e1263, type: 3}
-  locationDescription: 
+  locationDescription: La dan los arboles de frutas naranjas, bastante faciles de
+    ubicar, usualmente no se encuentran tanto cerca de zonas muertas.

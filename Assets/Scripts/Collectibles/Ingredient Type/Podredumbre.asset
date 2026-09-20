@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
   ingredientId: podredumbre
   displayName: Podredumbre
+  rawSource: {fileID: 0}
+  image: {fileID: 0}
+  locationDescription: Cuando no mantenes bien las cosas, se pudren.

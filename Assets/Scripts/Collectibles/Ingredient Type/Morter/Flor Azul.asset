@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Flor Azul
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: 878502d119523d548bc7df7f6ba9f7c6, type: 3}
-  locationDescription: 
+  locationDescription: Estas flores circulares crecen cerca del agua, emiten un ligero
+    brillo verdoso.

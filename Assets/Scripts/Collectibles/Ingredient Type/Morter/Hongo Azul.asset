@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Hongo Azul
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: a7941f3d40455fc49b28f5dd5697c096, type: 3}
-  locationDescription: 
+  locationDescription: Estos hongos crecen exclusivamente cerca de fuentes de agua.

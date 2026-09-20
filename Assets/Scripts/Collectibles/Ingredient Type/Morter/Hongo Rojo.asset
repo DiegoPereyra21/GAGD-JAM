@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Hongo Rojo
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: b6490406a56783a41a14c5174475fd04, type: 3}
-  locationDescription: 
+  locationDescription: Crecen en medio del bosque, pero no cerca del agua ni de los
+    muertos.

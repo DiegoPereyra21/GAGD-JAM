@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Ojo
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: fa82c49a1a7c62b479c7838a4b5c595d, type: 3}
-  locationDescription: 
+  locationDescription: Se recolectan de las flores del ojos, usualmente se encuentran
+    alrededor de cementerios o lugares donde se encuentran cadaveres.

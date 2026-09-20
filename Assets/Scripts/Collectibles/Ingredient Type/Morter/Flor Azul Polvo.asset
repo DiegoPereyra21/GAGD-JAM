@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Flor Azul Polvo
   rawSource: {fileID: 11400000, guid: 5cb1cba6d569b5d4da64cc813f0ca8e1, type: 2}
   image: {fileID: 21300000, guid: 127132a622cbdf74bb750f5959ba9b39, type: 3}
-  locationDescription: 
+  locationDescription: 'Agarras la flor, la pones en el mortero, y trac trac: flor
+    hecha polvo. No la confundas con el polvo de hongo azul! Esta es verdosa.'

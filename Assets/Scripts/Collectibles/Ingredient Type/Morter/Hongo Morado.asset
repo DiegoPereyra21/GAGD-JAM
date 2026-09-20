@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Hongo Morado
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: a022b7251510a5a46b35809bf944cb74, type: 3}
-  locationDescription: 
+  locationDescription: Crecen cerca de zonas con cuerpos en descomposicion. Son besties
+    con las flores de ojos.

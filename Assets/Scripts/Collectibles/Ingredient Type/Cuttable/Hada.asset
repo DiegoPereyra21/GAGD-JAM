@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Hada
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: 3ecf6b58a4a37b54c904ffdcd148d82c, type: 3}
-  locationDescription: 
+  locationDescription: Las hadas cuidan el bosque, van y vienen por todos lados,
+    es mas facil encontrarlas en el centro del bosque que por los bordes.

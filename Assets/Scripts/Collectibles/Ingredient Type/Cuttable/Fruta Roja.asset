@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Fruta Roja
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: f6465b347c5eff0449b160e526286d5a, type: 3}
-  locationDescription: 
+  locationDescription: La dan los arboles de frutas rojas, bastante faciles de ubicar,
+    usualmente no se encuentran tanto cerca de zonas muertas.

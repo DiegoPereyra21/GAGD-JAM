@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Baya
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: bb4064a999271bc499d2b0ff3319d736, type: 3}
-  locationDescription: 
+  locationDescription: "Se recolectan de los peque\xF1os arbustos que pueblan el
+    bosque, practicamente estan por todos lados."

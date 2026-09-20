@@ -16,4 +16,5 @@ MonoBehaviour:
   displayName: Dedo
   rawSource: {fileID: 0}
   image: {fileID: 21300000, guid: b8ab5a9643595374bb59260772e43078, type: 3}
-  locationDescription: 
+  locationDescription: Se consigue excavando tumbas humanas, raros de localizar pero
+    faciles de mantener.
