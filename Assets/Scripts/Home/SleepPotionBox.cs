@@ -59,13 +59,13 @@ public class SleepPotionBox : MonoBehaviour
         {
             if (!CanDeliverToday(progress))
             {
-                DialogueUI.Instance.ShowMessage("Ofelia", "Todavía no llegó, tengo que volver mañana");
+                DialogueUI.Instance.ShowMessage("Ofelia", "Vuelve mañana y te tendre el ingrediente especial.");
                 return;
             }
 
             if (inventory.IsFull)
             {
-                DialogueUI.Instance.ShowMessage("Ofelia", "No tengo lugar en el canasto para el ingrediente especial");
+                DialogueUI.Instance.ShowMessage("Ofelia", "No te puedo dar el ojo, tenes el canasto lleno.");
                 return;
             }
 
@@ -75,14 +75,14 @@ public class SleepPotionBox : MonoBehaviour
             progress.MarkSleepIngredientObtained();
             progress.Save();
 
-            DialogueUI.Instance.ShowMessage("Ofelia", "¡Llegó el ingrediente especial!");
+            DialogueUI.Instance.ShowMessage("Ofelia", "Toma el ingrediente espacial y crea la pocion de sueño profundo con el.");
             return;
         }
 
         if (progress.Money < potionCost)
         {
             int missing = potionCost - progress.Money;
-            DialogueUI.Instance.ShowMessage("Ofelia", $"Todavía me faltan {missing} monedas para el ingrediente especial");
+            DialogueUI.Instance.ShowMessage("Ofelia", $"Todavía te faltan {missing} monedas, no te lo dare gratis.");
             return;
         }
 
@@ -90,6 +90,6 @@ public class SleepPotionBox : MonoBehaviour
         progress.MarkSleepIngredientPurchased();
         progress.Save();
 
-        DialogueUI.Instance.ShowMessage("Ofelia", "Ya pagué. Tengo que volver mañana a buscarlo");
+        DialogueUI.Instance.ShowMessage("Ofelia", "Vuelve mañana, te tendre el ingrediente espacial listo.");
     }
 }
