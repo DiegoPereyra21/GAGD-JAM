@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,7 +102,26 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1323878899380155252}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2921594973234350350}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -9132383364609871888}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7930417325845781420}
   m_SourcePrefab: {fileID: 100100000, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+--- !u!23 &1126906414449591079 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6448678818323749754, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+  m_PrefabInstance: {fileID: 6259401354148927581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2351580920590281191 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8538721803357123002, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+  m_PrefabInstance: {fileID: 6259401354148927581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6493264391912842508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
@@ -156,3 +175,49 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2921594973234350350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493264391912842508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0531420a9c3e741b0e8e015268e426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverOutline
+  outline: {fileID: -9132383364609871888}
+  hoverLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  maxDistance: 12
+--- !u!114 &-9132383364609871888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493264391912842508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: -7930417325845781420}
+--- !u!114 &-7930417325845781420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493264391912842508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 1126906414449591079}
+  - {fileID: 2351580920590281191}

@@ -15,7 +15,7 @@ public class QuestManager : MonoBehaviour
 
     private readonly List<QuestData> pendingDeliveries = new List<QuestData>();
     public IReadOnlyList<QuestData> PendingDeliveries => pendingDeliveries;
-    private const int MaxActiveQuests = 6;
+    private const int MaxActiveQuests = 4;
 
     public bool IsQuestActive(QuestData quest) => activeQuests.Contains(quest);
     public bool IsAtCapacity() => activeQuests.Count >= MaxActiveQuests;

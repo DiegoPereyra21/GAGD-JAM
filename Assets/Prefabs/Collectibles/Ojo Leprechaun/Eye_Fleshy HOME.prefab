@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 9943345fe9db3704985eb4033342eacf, type: 2}
+    - target: {fileID: 8538721803357123002, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8538721803357123002, guid: e6b4a161801417744bf1b190c8d0abdb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -212,7 +216,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6493264391912842508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
   m_Name: 
