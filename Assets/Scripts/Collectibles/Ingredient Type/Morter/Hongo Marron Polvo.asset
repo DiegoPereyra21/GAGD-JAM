@@ -15,3 +15,5 @@ MonoBehaviour:
   ingredientId: hongo_marron_polvo
   displayName: Hongo Marron Polvo
   rawSource: {fileID: 11400000, guid: 90806bca4ebced54dbd1bca06be12042, type: 2}
+  image: {fileID: 21300000, guid: 2fa1ec7c39fbd094e8aa4fdc90e583d7, type: 3}
+  locationDescription: 

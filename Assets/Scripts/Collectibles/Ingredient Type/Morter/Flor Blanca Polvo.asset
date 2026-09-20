@@ -15,3 +15,5 @@ MonoBehaviour:
   ingredientId: flor_blanca_polvo
   displayName: Flor Blanca Polvo
   rawSource: {fileID: 11400000, guid: a79e6710a36801b429b79eeed00e2f3f, type: 2}
+  image: {fileID: 21300000, guid: 79f325906a42a68418bbb4cdb1af3051, type: 3}
+  locationDescription: 

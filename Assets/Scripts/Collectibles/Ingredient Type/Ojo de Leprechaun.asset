@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
   ingredientId: ojo_de_leprechaun
   displayName: Ojo de Leprechaun
+  rawSource: {fileID: 0}
+  image: {fileID: 21300000, guid: dd1ef966fbfb16649883561f091286bf, type: 3}
+  locationDescription: Solo se consigue mediante pedido magico.

@@ -15,3 +15,5 @@ MonoBehaviour:
   ingredientId: hongo_morado_polvo
   displayName: Hongo Morado Polvo
   rawSource: {fileID: 11400000, guid: 239a1c9cc9032e446bccdcf3baaf40f8, type: 2}
+  image: {fileID: 21300000, guid: dbe06d47e538973408305051d072894e, type: 3}
+  locationDescription: 
