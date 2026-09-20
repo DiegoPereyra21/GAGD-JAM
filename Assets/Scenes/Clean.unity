@@ -434,6 +434,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 529532886940939902, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: itemsPerRow
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 529532886940939902, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: maxVisualsPerGroup
       value: 4
       objectReference: {fileID: 0}
