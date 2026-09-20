@@ -13,13 +13,17 @@ public class IngredientDisplayArea : MonoBehaviour
     [SerializeField] private int itemsPerRow = 3;
     [SerializeField] private float itemSpacing = 0.3f;
     [SerializeField] private float labelHeight = 0.5f;
+    [SerializeField] private float nameLabelHeight = 0.8f; //arriba del label de cantidad
     [SerializeField] private int maxVisualsPerGroup = 6;
+
+
 
     private class TypeGroup
     {
         public IngredientType type;
         public Transform anchor;
         public TextMeshPro label;
+        public TextMeshPro nameLabel;
         public List<GameObject> visuals = new List<GameObject>();
         public int trueCount;
     }
@@ -142,7 +146,16 @@ public class IngredientDisplayArea : MonoBehaviour
         label.alignment = TextAlignmentOptions.Center;
         label.text = "0";
 
-        TypeGroup group = new TypeGroup { type = type, anchor = anchorObject.transform, label = label };
+        GameObject nameLabelObject = new GameObject($"NameLabel_{type.displayName}");
+        nameLabelObject.transform.SetParent(anchorObject.transform, false);
+        nameLabelObject.transform.localPosition = new Vector3(0f, nameLabelHeight, 0f);
+
+        TextMeshPro nameLabel = nameLabelObject.AddComponent<TextMeshPro>();
+        nameLabel.fontSize = 2f;
+        nameLabel.alignment = TextAlignmentOptions.Center;
+        nameLabel.text = type.displayName.Replace(" ", "\n");
+
+        TypeGroup group = new TypeGroup { type = type, anchor = anchorObject.transform, label = label, nameLabel = nameLabel };
         groups[type] = group;
         groupOrder.Add(group);
 
