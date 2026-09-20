@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientType
   ingredientId: hongo_rojo
   displayName: Hongo Rojo
+  rawSource: {fileID: 0}
+  image: {fileID: 21300000, guid: b6490406a56783a41a14c5174475fd04, type: 3}
+  locationDescription: 

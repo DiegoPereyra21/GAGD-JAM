@@ -15,3 +15,5 @@ MonoBehaviour:
   ingredientId: fruta_naranja_cortada
   displayName: Fruta Naranja Cortada
   rawSource: {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
+  image: {fileID: 21300000, guid: 25bab5084b2d29045ad694ea3a32ae2e, type: 3}
+  locationDescription: 

@@ -15,3 +15,5 @@ MonoBehaviour:
   ingredientId: hongo_azul_polvo
   displayName: Hongo Azul Polvo
   rawSource: {fileID: 11400000, guid: f338dc3d37e4cd04b913b998b264460c, type: 2}
+  image: {fileID: 21300000, guid: 2dcf573ad4faf0f48a0b1b35abb83c7e, type: 3}
+  locationDescription: 

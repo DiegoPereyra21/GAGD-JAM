@@ -15,3 +15,5 @@ MonoBehaviour:
   ingredientId: hongo_rojo_polvo
   displayName: Hongo Rojo Polvo
   rawSource: {fileID: 11400000, guid: 08821aed015aae647abda8e08863bb43, type: 2}
+  image: {fileID: 21300000, guid: 97c8b8be6ddcfb3419f30e930d0ece96, type: 3}
+  locationDescription: 
