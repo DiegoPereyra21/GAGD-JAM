@@ -19,6 +19,7 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private GameObject basketRoot;
     [SerializeField] private Transform[] dropSlots;
     private GameObject[] slotOccupants;
+    [SerializeField] private IngredientType specialIngredient; //el Ojo de Leprechaun, no se puede tirar del canasto
 
     [SerializeField] private Renderer[] playerRenderers; //renderers del personaje a ocultar mientras se ve el canasto
     private bool isAvailable;
@@ -52,6 +53,12 @@ public class BasketDisplay : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out BasketItemVisual visual))
             {
+                if (visual.Type == specialIngredient)
+                {
+                    DialogueUI.Instance.ShowMessage("Ofelia", "Necesito hacer la poción con esto, no puedo tirarlo.");
+                    return;
+                }
+
                 inventory.RemoveItem(visual.Type, 1);
                 Destroy(visual.gameObject);
             }

@@ -7770,6 +7770,10 @@ PrefabInstance:
       propertyPath: cameraTransition
       value: 
       objectReference: {fileID: 1560979842}
+    - target: {fileID: 1147105402780765961, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
+      propertyPath: specialIngredient
+      value: 
+      objectReference: {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}
     - target: {fileID: 2284559751954648029, guid: 0910d19801bb0c54c9be9f52198483b8, type: 3}
       propertyPath: questManager
       value: 

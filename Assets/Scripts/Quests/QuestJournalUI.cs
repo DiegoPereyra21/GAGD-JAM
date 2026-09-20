@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(UIDocument))]
 public class QuestJournalUI : MonoBehaviour
@@ -17,12 +18,40 @@ public class QuestJournalUI : MonoBehaviour
     private static readonly Color CraftedColor = new Color(1f, 0.5f, 0f, 0.25f);   //naranja, poca transparencia
     private static readonly Color DeliveredColor = new Color(0f, 0.8f, 0.2f, 0.25f); //verde, poca transparencia
 
+
+    private VisualElement journalRoot;
+    private Label titleLabel;
+    private bool isCollapsed;
     private ScrollView scrollView;
 
     private void Awake()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         scrollView = root.Q<ScrollView>("QuestScrollView");
+
+        journalRoot = root.Q<VisualElement>("QuestJournalRoot");
+        titleLabel = root.Q<Label>("JournalTitle");
+        journalRoot.style.transformOrigin = new TransformOrigin(Length.Percent(100), Length.Percent(0));
+        journalRoot.style.width = 380;
+        journalRoot.style.scale = new Scale(new Vector3(1.15f, 1.15f, 1f));
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            isCollapsed = !isCollapsed;
+            scrollView.style.display = isCollapsed ? DisplayStyle.None : DisplayStyle.Flex;
+        }
+    }
+
+    private void OnFirstLayout(GeometryChangedEvent evt)
+    {
+        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+        root.UnregisterCallback<GeometryChangedEvent>(OnFirstLayout);
+
+        root.style.width = root.resolvedStyle.width + 60;
+        root.style.scale = new Scale(new Vector3(1.15f, 1.15f, 1f));
     }
     private void OnEnable()
     {
@@ -60,6 +89,11 @@ public class QuestJournalUI : MonoBehaviour
 
         if (GameProgressManager.Instance.SleepIngredientObtained && sleepPotionRecipe != null)
             scrollView.Add(BuildSleepPotionCard());
+
+        int totalCount = questManager.ActiveQuests.Count +
+        (GameProgressManager.Instance.SleepIngredientObtained && sleepPotionRecipe != null ? 1 : 0);
+
+        titleLabel.text = totalCount > 0 ? $"Diario de objetivos ({totalCount})" : "Diario de objetivos";
     }
 
     private VisualElement BuildSleepPotionCard()
@@ -135,9 +169,13 @@ public class QuestJournalUI : MonoBehaviour
     {
         VisualElement row = questRowTemplate.Instantiate();
 
-        row.Q<Label>("IngredientLabel").text = ingredient.type.displayName;
-        row.Q<Label>("ProgressLabel").text = $"x{ingredient.amount}";
-        row.Q<Label>("ProgressLabel").style.color = Color.white;
+        Label ingredientLabel = row.Q<Label>("IngredientLabel");
+        ingredientLabel.text = $"{ingredient.amount} x {ingredient.type.displayName}";
+        ingredientLabel.style.letterSpacing = 1;
+        ingredientLabel.style.flexGrow = 1;
+        ingredientLabel.style.whiteSpace = WhiteSpace.NoWrap;
+
+        row.Q<Label>("ProgressLabel").style.display = DisplayStyle.None;
 
         return row;
     }
