@@ -3,32 +3,76 @@
     <ui:VisualElement name="BookContainer" style="flex-grow: 1; display: flex;">
         <ui:VisualElement name="Header" style="flex-grow: 1;">
             <ui:VisualElement name="CloseArea" style="flex-grow: 1;">
-                <ui:Button text="Cerrar" name="CloseButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 32px;"/>
+                <ui:Button text="X" name="CloseButton" emoji-fallback-support="false" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 35px; width: 40px;"/>
             </ui:VisualElement>
-            <ui:Label text="Cuaderno" name="Title" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 50px; -unity-font-style: normal;"/>
+            <ui:Label text="GRIMORIO" name="Title" parse-escape-sequences="true" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Jim_Nightshade/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=a26fdf46d1e98834383f2f89eb2e721b&amp;type=3#JimNightshade-Regular&quot;); font-size: 60px; -unity-font-style: normal;"/>
         </ui:VisualElement>
         <ui:VisualElement name="BookContent" style="flex-grow: 1;">
             <ui:VisualElement name="Tabs" style="flex-grow: 1;">
-                <ui:Button text="Recetas" name="RecipesTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 32px;"/>
-                <ui:Button text="Compendio" name="CompendiumTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 30px;"/>
-                <ui:Button text="Objetivos" name="ObjectivesTab" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;);"/>
+                <ui:Button text="Inicio" name="StartTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf?fileID=12800000&amp;guid=d12faeabb8a48584e9b79c222915b17d&amp;type=3#NotoSerif_SemiCondensed-SemiBoldItalic&quot;); font-size: 32px;"/>
+                <ui:Button text="Mapa" name="MapTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf?fileID=12800000&amp;guid=d12faeabb8a48584e9b79c222915b17d&amp;type=3#NotoSerif_SemiCondensed-SemiBoldItalic&quot;); font-size: 30px; height: 54px;"/>
+                <ui:Button text="Recetas" name="RecipesTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf?fileID=12800000&amp;guid=d12faeabb8a48584e9b79c222915b17d&amp;type=3#NotoSerif_SemiCondensed-SemiBoldItalic&quot;); font-size: 32px;"/>
+                <ui:Button text="Compendio" name="CompendiumTab" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf?fileID=12800000&amp;guid=d12faeabb8a48584e9b79c222915b17d&amp;type=3#NotoSerif_SemiCondensed-SemiBoldItalic&quot;); font-size: 30px; height: 54px;"/>
+                <ui:Button text="Objetivos" name="ObjectivesTab" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf?fileID=12800000&amp;guid=d12faeabb8a48584e9b79c222915b17d&amp;type=3#NotoSerif_SemiCondensed-SemiBoldItalic&quot;); display: none;"/>
             </ui:VisualElement>
             <ui:VisualElement name="PageArea" style="flex-grow: 1;">
-                <ui:VisualElement name="Page" style="flex-grow: 1;">
-                    <ui:Label text="Label" name="RecipeTitle" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 85px;"/>
-                    <ui:VisualElement name="RecipeBody" style="flex-grow: 1;">
-                        <ui:VisualElement name="RecipeInfo" style="flex-grow: 1;">
-                            <ui:Label text="Label" name="IngredientsTitle" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 65px; -unity-font-style: bold;"/>
-                            <ui:VisualElement name="Ingredients" style="flex-grow: 1; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 25px;"/>
-                            <ui:Label text="Label" name="RecipeDescription" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 45px;"/>
-                            <ui:Image name="RecipeImage" style="display: none;"/>
+                <ui:VisualElement name="StartPage" class="start-page" style="flex-grow: 1; display: none;">
+                    <ui:Label text="Inicio" name="StartPageTitle" class="start-page-title" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBold.ttf?fileID=12800000&amp;guid=1418c3a80caf0fc4bb1acf57ddb68923&amp;type=3#NotoSerif_SemiCondensed-SemiBold&quot;);"/>
+                    <ui:VisualElement name="DescriptionBox" class="description-box" style="flex-grow: 1; white-space: normal; min-height: 65px; flex-direction: row; flex-wrap: wrap; max-height: 15%;">
+                        <ui:Label text="Este es mi grimorio personal. Tengo todo bien documentado y ordenado porque siempre me olvido de las cosas. Si sos la Ofelia del futuro y no te acordás de algo o estas confundida, como siempre... acá te dejo un resumen de todo lo que podes necesitar, con amor niñita.  " name="DescriptionLabel" class="description-label" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=8bbb46f254a8ad84f832aa89d18f5a46&amp;type=3#NotInter-Regular&quot;); -unity-font-style: italic;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StartEntry" class="start-entry" style="flex-grow: 1;">
+                        <ui:Label text="Exploracion" name="EntryTitle" class="entry-title"/>
+                        <ui:Label text="- Estando en el bosque se habilita un compas de puntos cardinales en la parte superior de la pantalla, muy util para guiarte por el bosque. Recorda que los ingredientes crecen en lugares especificos!" name="EntryText" class="entry-text" style="-unity-text-align: upper-left; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=8bbb46f254a8ad84f832aa89d18f5a46&amp;type=3#NotInter-Regular&quot;); font-size: 20px;"/>
+                        <ui:Label text="- Siempre que te alejes de la casa va a aparecer una flechita en la parte baja de la pantalla que te guia para volver." name="EntryText" class="entry-text" style="-unity-text-align: upper-left;"/>
+                        <ui:Label text="- Recolecta los ingredientes antes de que amaneza porque algunos materiales pierden efectividad cuando los toca el sol y ya no te van a servir para las pociones." name="EntryText" class="entry-text" style="-unity-text-align: upper-left;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StartEntry" class="start-entry" style="flex-grow: 1;">
+                        <ui:Label text="Pociones" name="EntryTitle" class="entry-title"/>
+                        <ui:Label text="- Seguramente recordas tu entrenamiento en el Tutorial, guiño guiño, pero asegurate de moler o cortar los ingredientes antes de usarlos,no hay devoluciones!" name="EntryText" class="entry-text"/>
+                        <ui:Label text="- El delivery magico tiene limite de tiempo asi que tenes que enviar las pociones antes de que se haga de tarde o el pedido va a esperar hasta el otro dia." name="EntryText" class="entry-text"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StartEntry" class="start-entry" style="flex-grow: 1;">
+                        <ui:Label text="Recomendacion Ultra Mega Especial Solo Para Vos ♥" name="EntryTitle" class="entry-title"/>
+                        <ui:Label text="Si no encontras un ingrediente lee el compendio, asi vas a saber donde encontrar exactamente lo que necesitas." name="EntryText" class="entry-text" style="-unity-font-style: bold-and-italic; -unity-text-outline-color: rgb(60, 55, 55); -unity-text-outline-width: 0; font-size: 18px;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="MapPage" class="map-page" style="flex-grow: 1; display: none; flex-direction: row-reverse; flex-wrap: wrap; background-position-x: center;">
+                    <ui:Label text="Boceto del bosque" name="MapDescription" class="entry-title" style="flex-direction: column-reverse; flex-wrap: wrap-reverse;"/>
+                    <ui:Image name="MapImage" class="map-image" style="background-image: resource(&quot;mapa brujita final&quot;);"/>
+                    <ui:Label text="Esta zona del bosque no es demasiado extensa, asi que no hay mucho que dibujar (por ahora). Solo no vayas por el camino de la cruz roja, ese sendero va hacia el pueblo, la gente nos compra pociones pero es mejor manterner distancia.&#10;" class="entry-text" style="padding-top: 40px;"/>
+                    <ui:Label text="&#10;Igualmente puse un hechizo de barrera por si lo olvidas ♥" class="entry-text" style="padding-top: 10px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="RecipesPage" class="recipe-page" style="flex-grow: 1; display: flex;">
+                    <ui:VisualElement name="Page" class="recipe-page-container" style="flex-grow: 1;">
+                        <ui:Label text="Label" name="RecipeTitle" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Alegreya,Jim_Nightshade,Noto_Serif/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf?fileID=12800000&amp;guid=d12faeabb8a48584e9b79c222915b17d&amp;type=3#NotoSerif_SemiCondensed-SemiBoldItalic&quot;); font-size: 50px; -unity-font-style: normal;"/>
+                        <ui:VisualElement name="RecipeBody" class="recipe-body" style="flex-grow: 1;">
+                            <ui:VisualElement name="RecipeInfo" style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap;">
+                                <ui:Image name="RecipeImage" class="recipe-image" style="display: flex; position: relative; flex-direction: column; width: 25%; height: 25%; left: -13px;"/>
+                                <ui:VisualElement name="Ingredients" class="ingredients" style="flex-grow: 1; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=8bbb46f254a8ad84f832aa89d18f5a46&amp;type=3#NotInter-Regular&quot;); font-size: 25px; padding-left: 35px; padding-top: 40px; margin-bottom: 0;"/>
+                                <ui:Label text="Descripcion:" name="RecipeDescriptionTitle" class="recipe-description" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=8bbb46f254a8ad84f832aa89d18f5a46&amp;type=3#NotInter-Regular&quot;); font-size: 35px; flex-direction: column; padding-bottom: 0; margin-bottom: 0; max-height: 50px; min-height: 50px; left: -30px;"/>
+                                <ui:Label text="Label" name="RecipeDescription" class="recipe-description" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=8bbb46f254a8ad84f832aa89d18f5a46&amp;type=3#NotInter-Regular&quot;); font-size: 30px; flex-direction: column; padding-top: 0; margin-top: 0; left: -6px; -unity-font-style: bold-and-italic;"/>
+                            </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="PageNavigation" style="flex-grow: 1; bottom: 2px; right: -1px; left: 2px;">
-                    <ui:Button text="‹" name="PreviousButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 100px;"/>
+                <ui:VisualElement name="CompendiumPage" style="flex-grow: 1; display: none;"/>
+                <ui:VisualElement name="ObjectivesPage" style="flex-grow: 1; display: none;">
+                    <ui:VisualElement name="ObjectiveEntry" style="flex-grow: 1;">
+                        <ui:VisualElement name="ObjectiveInfo" style="flex-grow: 1;">
+                            <ui:Label text="Label" name="ObjectiveTitle"/>
+                            <ui:Label text="Label" name="ObjectiveDescription"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="ObjectiveRight" style="flex-grow: 1;">
+                            <ui:Image name="ObjectiveImage"/>
+                            <ui:Button text="Button" name="ObjectiveButton"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="PageNavigation" style="flex-grow: 1; bottom: 2px; right: -1px; left: 2px; display: none;">
+                    <ui:Button text="‹" name="PreviousButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 100px; margin-left: 14px;"/>
                     <ui:Label text="Label" name="PageNumber" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 35px;"/>
-                    <ui:Button text="›" name="NextButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 100px;"/>
+                    <ui:Button text="›" name="NextButton" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/JimNightshade-Regular.ttf?fileID=12800000&amp;guid=18f4c9b27a364ec4582c28b0363973e9&amp;type=3#JimNightshade-Regular&quot;); font-size: 100px; margin-right: 14px;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
