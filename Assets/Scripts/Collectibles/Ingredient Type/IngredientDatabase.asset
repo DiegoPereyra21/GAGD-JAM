@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: IngredientDatabase
   m_EditorClassIdentifier: Assembly-CSharp::Game.Collectibles.IngredientDatabase
   allIngredients:
-  - {fileID: 11400000, guid: c39b2aa72e0904b4fb7bb02d66d9dc29, type: 2}
   - {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
   - {fileID: 11400000, guid: ad6d2a7804309044a92bf17c651a6172, type: 2}
   - {fileID: 11400000, guid: 1c5081f59b56a8743844a7ccd0c7ace3, type: 2}
