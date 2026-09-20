@@ -39,6 +39,7 @@ public class QuestManager : MonoBehaviour
     {
         if (pendingDeliveries.Contains(quest)) return;
         pendingDeliveries.Add(quest);
+        OnQuestsChanged?.Invoke();
     }
 
     public void ProcessPendingDeliveries()

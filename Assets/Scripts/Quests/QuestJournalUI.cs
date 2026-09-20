@@ -1,7 +1,8 @@
+using Game.Collectibles;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
-using Game.Collectibles;
 
 [RequireComponent(typeof(UIDocument))]
 public class QuestJournalUI : MonoBehaviour
@@ -12,6 +13,10 @@ public class QuestJournalUI : MonoBehaviour
     [SerializeField] private VisualTreeAsset questRowTemplate;
     [SerializeField] private IngredientDatabase ingredientDatabase;
     [SerializeField] private PotionRecipe sleepPotionRecipe;
+
+    private static readonly Color CraftedColor = new Color(1f, 0.5f, 0f, 0.25f);   //naranja, poca transparencia
+    private static readonly Color DeliveredColor = new Color(0f, 0.8f, 0.2f, 0.25f); //verde, poca transparencia
+
     private ScrollView scrollView;
 
     private void Awake()
@@ -83,6 +88,7 @@ public class QuestJournalUI : MonoBehaviour
         foreach (QuestObjective objective in quest.objectives)
             rowsContainer.Add(BuildGatherRow(objective, remaining));
 
+        ApplyQuestStatus(card, quest);
         return card;
     }
 
@@ -121,6 +127,7 @@ public class QuestJournalUI : MonoBehaviour
                 rowsContainer.Add(BuildRecipeRow(ingredient));
         }
 
+        ApplyQuestStatus(card, quest);
         return card;
     }
 
@@ -133,5 +140,24 @@ public class QuestJournalUI : MonoBehaviour
         row.Q<Label>("ProgressLabel").style.color = Color.white;
 
         return row;
+    }
+
+    private void ApplyQuestStatus(VisualElement card, QuestData quest)
+    {
+        bool delivered = questManager.PendingDeliveries.Contains(quest);
+        bool crafted = !delivered && quest.requiredPotion != null
+            && HomeStorage.Instance.CraftedPotions.Contains(quest.requiredPotion);
+
+        if (!delivered && !crafted) return;
+
+        card.style.backgroundColor = delivered ? DeliveredColor : CraftedColor;
+
+        Label statusLabel = new Label(delivered ? "Entregada" : "Crafteada");
+        statusLabel.style.position = Position.Absolute;
+        statusLabel.style.top = 4;
+        statusLabel.style.right = 4;
+        statusLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
+        statusLabel.style.color = Color.white;
+        card.Add(statusLabel);
     }
 }
