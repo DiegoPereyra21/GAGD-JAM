@@ -158,7 +158,11 @@ public class BasketDisplay : MonoBehaviour
     public void ClearAll()
     {
         for (int i = dropPoint.childCount - 1; i >= 0; i--)
-            Destroy(dropPoint.GetChild(i).gameObject);
+        {
+            Transform child = dropPoint.GetChild(i);
+            if (child.TryGetComponent(out BasketItemVisual _))
+                Destroy(child.gameObject);
+        }
 
         for (int i = 0; i < slotOccupants.Length; i++)
             slotOccupants[i] = null;
