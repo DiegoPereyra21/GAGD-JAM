@@ -37,6 +37,10 @@ public class MainMenu : MonoBehaviour
     private VisualElement optionsPanel;
     private VisualElement content;
 
+    private VisualElement askTutorialPanel;
+    private Button askTutorialYesButton;
+    private Button askTutorialNoButton;
+
     private VisualElement confirmNewGamePanel;
     private Button confirmNewGameButton;
     private Button cancelNewGameButton;
@@ -68,6 +72,10 @@ public class MainMenu : MonoBehaviour
         confirmNewGamePanel = root.Q<VisualElement>("ConfirmNewGamePanel");
         confirmNewGameButton = root.Q<Button>("ConfirmNewGameButton");
         cancelNewGameButton = root.Q<Button>("CancelNewGameButton");
+
+        askTutorialPanel = root.Q<VisualElement>("AskTutorialPanel");
+        askTutorialYesButton = root.Q<Button>("AskTutorialYesButton");
+        askTutorialNoButton = root.Q<Button>("AskTutorialNoButton");
 
         if (newGameButton != null)
             newGameButton.clicked += OpenConfirmNewGame;
@@ -105,6 +113,15 @@ public class MainMenu : MonoBehaviour
 
         if (tutorialButton != null)
             tutorialButton.clicked += StartTutorial;
+
+
+        if (askTutorialYesButton != null)
+            askTutorialYesButton.clicked += AskTutorialYes;
+
+        if (askTutorialNoButton != null)
+            askTutorialNoButton.clicked += AskTutorialNo;
+
+        askTutorialPanel.style.display = DisplayStyle.None;
 
         optionsPanel.style.display = DisplayStyle.None;
         confirmNewGamePanel.style.display = DisplayStyle.None;
@@ -147,6 +164,12 @@ public class MainMenu : MonoBehaviour
         if (tutorialButton != null)
             tutorialButton.clicked -= StartTutorial;
 
+        if (askTutorialYesButton != null)
+            askTutorialYesButton.clicked -= AskTutorialYes;
+
+        if (askTutorialNoButton != null)
+            askTutorialNoButton.clicked -= AskTutorialNo;
+
         stopMusicEvent.Post(gameObject);
     }
 
@@ -160,21 +183,31 @@ public class MainMenu : MonoBehaviour
         stopMusicEvent.Post(gameObject);
         SceneManager.LoadSceneAsync(tutorialSceneName);
     }
-    
+
     private void OpenConfirmNewGame()
     {
-        
         if (!GameProgressManager.HasSaveData)
         {
-            Debug.Log("no hay data");
-            StartNewGame();
+            content.style.display = DisplayStyle.None;
+            askTutorialPanel.style.display = DisplayStyle.Flex;
             return;
         }
 
-        Debug.Log("hay data");
-
         content.style.display = DisplayStyle.None;
         confirmNewGamePanel.style.display = DisplayStyle.Flex;
+    }
+
+    private void AskTutorialYes()
+    {
+        askTutorialPanel.style.display = DisplayStyle.None;
+        StartTutorial();
+    }
+
+    private void AskTutorialNo()
+    {
+        askTutorialPanel.style.display = DisplayStyle.None;
+        content.style.display = DisplayStyle.Flex;
+        StartNewGame();
     }
 
     private void CloseConfirmNewGame()

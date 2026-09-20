@@ -79,5 +79,16 @@
                 </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
+        <ui:VisualElement name="AskTutorialPanel" focusable="false" class="confirm-panel" style="display: none;">
+    <ui:Label text="¿Querés hacer el tutorial antes de empezar?" name="AskTutorialLabel" class="confirm-label"/>
+    <ui:VisualElement name="AskTutorialButtonsRow" class="confirm-buttons-row">
+        <ui:Button text="Sí" name="AskTutorialYesButton" class="menu-button confirm-button">
+            <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+        </ui:Button>
+        <ui:Button text="No" name="AskTutorialNoButton" class="menu-button confirm-button">
+            <ui:VisualElement name="Sparkles" picking-mode="Ignore" class="sparkles" style="flex-grow: 1;"/>
+        </ui:Button>
+    </ui:VisualElement>
+</ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
