@@ -537,6 +537,17 @@
                 },
                 {
                     "name": "",
+                    "id": "1ca89d36-b1cb-4fcc-a151-bd6b158e650f",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2e4d4491-40e2-4071-8222-359383fe5709",
                     "path": "<Mouse>/scroll",
                     "interactions": "",
