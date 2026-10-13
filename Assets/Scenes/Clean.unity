@@ -373,6 +373,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 27174204062781689, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d8def04847419746b9fc253b2e96bad, type: 2}
     - target: {fileID: 78192352627318645, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: hudDocument
       value: 
@@ -461,6 +465,18 @@ PrefabInstance:
       propertyPath: potionBoxDisplay
       value: 
       objectReference: {fileID: 1975028666}
+    - target: {fileID: 4407033470786092527, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aeb4be5c42b48d04bb7ab6a0bbb47612, type: 2}
+    - target: {fileID: 4499901761995073868, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d8def04847419746b9fc253b2e96bad, type: 2}
+    - target: {fileID: 4675842697967368406, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d7aaf5be588415e40b5d238ccb229ab6, type: 2}
     - target: {fileID: 5493438591194862085, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -645,6 +661,10 @@ PrefabInstance:
       propertyPath: cameraFollow
       value: 
       objectReference: {fileID: 1560979843}
+    - target: {fileID: 5872695234609448459, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d7aaf5be588415e40b5d238ccb229ab6, type: 2}
     - target: {fileID: 5992739855093437766, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: playerInput
       value: 
@@ -705,6 +725,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1097611479}
+    - target: {fileID: 8267542902355988764, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d7aaf5be588415e40b5d238ccb229ab6, type: 2}
     - target: {fileID: 8331808047687805519, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       propertyPath: inventory
       value: 
@@ -12314,6 +12338,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2184416763169968396, guid: 4d5026643251b164489ffe49211bb731, type: 3}
+      propertyPath: questManager
+      value: 
+      objectReference: {fileID: 1952524287}
     - target: {fileID: 2184416763169968396, guid: 4d5026643251b164489ffe49211bb731, type: 3}
       propertyPath: ingredientDatabase
       value: 
