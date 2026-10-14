@@ -29,6 +29,7 @@ public class GameDatabase : ScriptableObject
     [Header("Contenido")]
     [SerializeField] private List<ItemData> items = new List<ItemData>();
     [SerializeField] private List<PotionData> potions = new List<PotionData>();
+    [SerializeField] private List<QuestData> quests = new List<QuestData>();
 
     [Header("Referencias especiales")]
     [SerializeField] private PotionData sleepPotion;
@@ -37,14 +38,17 @@ public class GameDatabase : ScriptableObject
 
     private Dictionary<string, ItemData> itemsById;
     private Dictionary<string, PotionData> potionsById;
+    private Dictionary<string, QuestData> questsById;
 
     public IReadOnlyList<ItemData> Items => items;
     public IReadOnlyList<PotionData> Potions => potions;
+    public IReadOnlyList<QuestData> Quests => quests;
     public PotionData SleepPotion => sleepPotion;
     public ItemData SleepIngredient => sleepIngredient;
 
     public ItemData FindItem(string id) => Find(id, items, ref itemsById);
     public PotionData FindPotion(string id) => Find(id, potions, ref potionsById);
+    public QuestData FindQuest(string id) => Find(id, quests, ref questsById);
 
     private static T Find<T>(string id, List<T> source, ref Dictionary<string, T> cache) where T : GameDataAsset
     {
@@ -67,5 +71,6 @@ public class GameDatabase : ScriptableObject
     {
         itemsById = null;
         potionsById = null;
+        questsById = null;
     }
 }

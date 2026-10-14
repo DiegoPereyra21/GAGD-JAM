@@ -1,14 +1,18 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewQuest", menuName = "Quests/Quest Data")]
-public class QuestData : ScriptableObject
+// El "Display Name" es el nombre de la misión. Lo que hay que recolectar sale de la receta de la poción.
+[CreateAssetMenu(fileName = "NewQuest", menuName = "Game Data/Quest")]
+public class QuestData : GameDataAsset
 {
-    public string questId;
-    public string villagerName;
-    public string missionName;
-    public List<QuestObjective> objectives;
-    public int moneyReward;
-    public PotionRecipe requiredPotion;
-    public int availableDay = 1;
+    [Header("Pedido")]
+    [SerializeField] private string villagerName;
+    [SerializeField] private PotionData potion;
+    [SerializeField, Min(0)] private int moneyReward;
+    [SerializeField, Min(1)] private int availableDay = 1;
+
+    public string VillagerName => villagerName;
+    public string MissionName => DisplayName;
+    public PotionData Potion => potion;
+    public int MoneyReward => moneyReward;
+    public int AvailableDay => availableDay;
 }

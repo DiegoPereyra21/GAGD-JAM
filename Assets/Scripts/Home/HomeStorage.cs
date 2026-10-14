@@ -1,24 +1,24 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Game.Collectibles;
 
+// Todo lo que está guardado en la casa: despensa (crudos y procesados), caldero y pociones hechas.
+// Las operaciones no guardan solas: quien las llama decide cuándo hacer Save() o GameSaveSystem.SaveAll().
 public class HomeStorage : MonoBehaviour
 {
-    private const string SaveKey = "HomeStorage_Data";
+    private const string SaveKey = "HomeStorage_v2";
+    private const string LegacySaveKey = "HomeStorage_Data";
 
     public static HomeStorage Instance { get; private set; }
 
-    public event Action OnStorageChanged;
+    public event Action OnStorageChanged; // cualquier cambio: despensa, caldero o pociones
+    public event Action OnPotionsChanged;
 
-    [SerializeField] private IngredientDatabase ingredientDatabase;
-    [SerializeField] private PotionRecipeDatabase potionDatabase;
+    public ItemContainer Pantry { get; } = new ItemContainer();
+    public ItemContainer Cauldron { get; } = new ItemContainer();
 
-    private readonly Dictionary<IngredientType, int> totals = new Dictionary<IngredientType, int>();
-    public IReadOnlyDictionary<IngredientType, int> Totals => totals;
-
-    private readonly List<PotionRecipe> craftedPotions = new List<PotionRecipe>();
-    public IReadOnlyList<PotionRecipe> CraftedPotions => craftedPotions;
+    private readonly List<PotionData> craftedPotions = new List<PotionData>();
+    public IReadOnlyList<PotionData> CraftedPotions => craftedPotions;
 
     private void Awake()
     {
@@ -30,34 +30,93 @@ public class HomeStorage : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        Pantry.OnChanged += RaiseStorageChanged;
+        Cauldron.OnChanged += RaiseStorageChanged;
+
         Load();
     }
 
-    public void Deposit(PlayerInventory inventory)
+    private void RaiseStorageChanged() => OnStorageChanged?.Invoke();
+
+    private void RaisePotionsChanged()
     {
-        foreach (var pair in inventory.Items)
-        {
-            if (!totals.ContainsKey(pair.Key))
-                totals[pair.Key] = 0;
-
-            totals[pair.Key] += pair.Value;
-        }
-
-        inventory.Clear();
+        OnPotionsChanged?.Invoke();
         OnStorageChanged?.Invoke();
     }
+
+    // ---------- Recolección ----------
+
+    public void Deposit(PlayerInventory inventory)
+    {
+        inventory.Container.MoveAllTo(Pantry);
+    }
+
+    // ---------- Crafteo ----------
+
+    public bool TryProcess(ItemData item)
+    {
+        if (item == null || !item.Processable) return false;
+        if (!Pantry.TryRemove(ItemKey.Raw(item))) return false;
+
+        Pantry.TryAdd(ItemKey.Processed(item));
+        return true;
+    }
+
+    public bool TryMoveToCauldron(ItemKey key)
+    {
+        if (!Pantry.TryRemove(key)) return false;
+
+        Cauldron.TryAdd(key);
+        return true;
+    }
+
+    public bool TryReturnFromCauldron(ItemKey key)
+    {
+        if (!Cauldron.TryRemove(key)) return false;
+
+        Pantry.TryAdd(key);
+        return true;
+    }
+
+    public void ReturnCauldronToPantry() => Cauldron.MoveAllTo(Pantry);
+
+    // Vacía el caldero y agrega la poción. La coincidencia con la receta se valida antes de llamar.
+    public void CompleteCraft(PotionData potion)
+    {
+        if (potion == null) return;
+
+        Cauldron.Clear();
+        craftedPotions.Add(potion);
+        RaisePotionsChanged();
+    }
+
+    // ---------- Pociones ----------
+
+    public bool HasCraftedPotion(PotionData potion) => craftedPotions.Contains(potion);
+
+    public bool RemoveCraftedPotion(PotionData potion)
+    {
+        if (!craftedPotions.Remove(potion)) return false;
+
+        RaisePotionsChanged();
+        return true;
+    }
+
+    // ---------- Save ----------
 
     public void Save()
     {
         if (TutorialModeFlag.IsActive) return;
 
-        SaveData data = new SaveData();
+        SaveData data = new SaveData
+        {
+            pantry = Pantry.ToEntries(),
+            cauldron = Cauldron.ToEntries()
+        };
 
-        foreach (var pair in totals)
-            data.entries.Add(new SerializableEntry { ingredientId = pair.Key.ingredientId, count = pair.Value });
-
-        foreach (PotionRecipe potion in craftedPotions)
-            data.potionIds.Add(potion.potionId);
+        foreach (PotionData potion in craftedPotions)
+            data.potionIds.Add(potion.Id);
 
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
@@ -65,96 +124,50 @@ public class HomeStorage : MonoBehaviour
 
         Debug.Log($"[HomeStorage] Guardado: {json}");
     }
-    
-    public void ResetInMemory()
-    {
-        totals.Clear();
-        craftedPotions.Clear();
-        OnStorageChanged?.Invoke();
-    }
 
     public void Load()
     {
-        totals.Clear();
+        if (PlayerPrefs.HasKey(LegacySaveKey))
+            PlayerPrefs.DeleteKey(LegacySaveKey); // formato viejo, incompatible
+
+        SaveData data = null;
+        if (PlayerPrefs.HasKey(SaveKey))
+            data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(SaveKey));
+        if (data == null)
+            data = new SaveData();
+
+        GameDatabase database = GameDatabase.Instance;
+
+        Pantry.LoadEntries(data.pantry, database);
+        Cauldron.LoadEntries(data.cauldron, database);
+
         craftedPotions.Clear();
-
-        if (!PlayerPrefs.HasKey(SaveKey))
+        if (database != null)
         {
-            Debug.Log("[HomeStorage] No hay datos guardados, arranca vacío.");
-            return;
+            foreach (string potionId in data.potionIds)
+            {
+                PotionData potion = database.FindPotion(potionId);
+                if (potion != null) craftedPotions.Add(potion);
+                else Debug.LogWarning($"[HomeStorage] Poción guardada desconocida: '{potionId}'.");
+            }
         }
 
-        string json = PlayerPrefs.GetString(SaveKey);
-        SaveData data = JsonUtility.FromJson<SaveData>(json);
-
-        foreach (var entry in data.entries)
-        {
-            IngredientType ingredient = ingredientDatabase.FindById(entry.ingredientId);
-            if (ingredient != null)
-                totals[ingredient] = entry.count;
-        }
-
-        foreach (string potionId in data.potionIds)
-        {
-            PotionRecipe recipe = potionDatabase.FindById(potionId);
-            if (recipe != null)
-                craftedPotions.Add(recipe);
-        }
-
-        OnStorageChanged?.Invoke();
-        Debug.Log($"[HomeStorage] Cargado: {json}");
+        RaisePotionsChanged();
     }
 
-    [Serializable]
-    private class SerializableEntry
+    public void ResetInMemory()
     {
-        public string ingredientId;
-        public int count;
+        Pantry.Clear();
+        Cauldron.Clear();
+        craftedPotions.Clear();
+        RaisePotionsChanged();
     }
 
     [Serializable]
     private class SaveData
     {
-        public List<SerializableEntry> entries = new List<SerializableEntry>();
+        public List<ItemEntry> pantry = new List<ItemEntry>();
+        public List<ItemEntry> cauldron = new List<ItemEntry>();
         public List<string> potionIds = new List<string>();
-    }
-
-    public bool HasEnough(IngredientType type, int amount)
-    {
-        return totals.TryGetValue(type, out int count) && count >= amount;
-    }
-
-    public bool RemoveOne(IngredientType type)
-    {
-        if (!totals.TryGetValue(type, out int count) || count <= 0)
-            return false;
-
-        totals[type] = count - 1;
-        OnStorageChanged?.Invoke();
-        return true;
-    }
-
-    public void AddPotion(PotionRecipe recipe)
-    {
-        craftedPotions.Add(recipe);
-        OnStorageChanged?.Invoke();
-    }
-
-    public bool RemoveCraftedPotion(PotionRecipe recipe)
-    {
-        int index = craftedPotions.IndexOf(recipe);
-        if (index < 0) return false;
-
-        craftedPotions.RemoveAt(index);
-        OnStorageChanged?.Invoke();
-        return true;
-    }
-    public void AddIngredient(IngredientType type, int amount = 1)
-    {
-        if (!totals.ContainsKey(type))
-            totals[type] = 0;
-
-        totals[type] += amount;
-        OnStorageChanged?.Invoke();
     }
 }

@@ -1,51 +1,35 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-using Game.Collectibles;
-//inventario del player donde POR AHORA, va guardando los items en un inventario, la idea es luego hacer la UI interactiva
+
+// Canasto del player. Solo guarda ítems crudos.
 public class PlayerInventory : MonoBehaviour
 {
-    //para q tengaq sentido el "tirar" items, q tenga limite
-    [SerializeField] private int maxTotalItems = 10;
-    public bool IsFull => TotalCount >= maxTotalItems;
+    [Tooltip("Capacidad del canasto.")]
+    [SerializeField, Min(1)] private int maxTotalItems = 10;
 
     public event Action OnInventoryChanged;
-    private readonly Dictionary<IngredientType, int> items = new Dictionary<IngredientType, int>();
-    public IReadOnlyDictionary<IngredientType, int> Items => items;
 
-    public void AddItem(IngredientType type, int amount = 1)
-    {
-        if (IsFull) return;
-        if (!items.ContainsKey(type)) items[type] = 0;
-        items[type] += amount;
-        OnInventoryChanged?.Invoke();
-    }
+    private ItemContainer container;
 
-    public int GetCount(IngredientType type)
-    {
-        return items.TryGetValue(type, out int count) ? count : 0;
-    }
-
-    public void RemoveItem(IngredientType type, int amount = 1)
-    {
-        if (!items.ContainsKey(type)) return;
-        items[type] = Mathf.Max(0, items[type] - amount);
-        OnInventoryChanged?.Invoke();
-    }
-    public void Clear()
-    {
-        items.Clear();
-        OnInventoryChanged?.Invoke();
-    }
-
-    public int TotalCount
+    // Lazy: otro componente puede pedirlo en su OnEnable antes del Awake de este.
+    public ItemContainer Container
     {
         get
         {
-            int total = 0;
-            foreach (var count in items.Values)
-                total += count;
-            return total;
+            if (container == null)
+            {
+                container = new ItemContainer(maxTotalItems);
+                container.OnChanged += () => OnInventoryChanged?.Invoke();
+            }
+            return container;
         }
     }
+
+    public bool IsFull => Container.IsFull;
+    public int TotalCount => Container.TotalCount;
+
+    public bool TryAdd(ItemData item, int amount = 1) => Container.TryAdd(ItemKey.Raw(item), amount);
+    public bool TryRemove(ItemData item, int amount = 1) => Container.TryRemove(ItemKey.Raw(item), amount);
+    public int GetCount(ItemData item) => Container.Count(ItemKey.Raw(item));
+    public void Clear() => Container.Clear();
 }

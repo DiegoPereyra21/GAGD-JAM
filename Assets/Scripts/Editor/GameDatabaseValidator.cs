@@ -58,11 +58,14 @@ public class GameDatabaseValidator : IPreprocessBuildWithReport
 
         ValidateIdentity(db.Items, "ítems", db, result);
         ValidateIdentity(db.Potions, "pociones", db, result);
+        ValidateIdentity(db.Quests, "quests", db, result);
         ValidateItems(db, result);
         ValidatePotions(db, result);
+        ValidateQuests(db, result);
         ValidateSpecialReferences(db, result);
         ValidateUnlisted(db.Items, result);
         ValidateUnlisted(db.Potions, result);
+        ValidateUnlisted(db.Quests, result);
 
         return result;
     }
@@ -241,6 +244,26 @@ public class GameDatabaseValidator : IPreprocessBuildWithReport
         return string.Join("|", potion.GetRequirements()
             .Select(pair => $"{pair.Key.Item.GetHashCode()}:{(int)pair.Key.State}:{pair.Value}")
             .OrderBy(s => s, StringComparer.Ordinal));
+    }
+
+    private static void ValidateQuests(GameDatabase db, Result result)
+    {
+        HashSet<PotionData> dbPotions = new HashSet<PotionData>(db.Potions.Where(p => p != null));
+
+        foreach (QuestData quest in db.Quests)
+        {
+            if (quest == null) continue;
+
+            if (string.IsNullOrWhiteSpace(quest.VillagerName))
+                result.Warning($"'{quest.name}' no tiene aldeano.", quest);
+
+            if (quest.Potion == null)
+                result.Error($"'{quest.name}' no tiene poción asignada.", quest);
+            else if (!dbPotions.Contains(quest.Potion))
+                result.Error($"'{quest.name}': la poción '{quest.Potion.name}' no está en el GameDatabase.", quest);
+            else if (quest.Potion == db.SleepPotion)
+                result.Warning($"'{quest.name}' pide la poción del sueño.", quest);
+        }
     }
 
     private static void ValidateSpecialReferences(GameDatabase db, Result result)
