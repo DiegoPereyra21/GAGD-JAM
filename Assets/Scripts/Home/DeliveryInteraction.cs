@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 [RequireComponent(typeof(Collider))]
 public class DeliveryInteraction : MonoBehaviour
@@ -8,7 +9,6 @@ public class DeliveryInteraction : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private QuestManager questManager;
     [SerializeField] private PotionDisplayArea potionDisplayArea;
-    [SerializeField] private PotionBoxDisplay potionBoxDisplay;
     [SerializeField] private InteractableOutline outline;
 
     private InputAction interactAction;
@@ -24,10 +24,7 @@ public class DeliveryInteraction : MonoBehaviour
     private void Start()
     {
         foreach (QuestData quest in questManager.PendingDeliveries)
-            potionDisplayArea.AddOne(quest.requiredPotion, quest.requiredPotion.visualPrefab);
-
-        foreach (PotionRecipe recipe in HomeStorage.Instance.CraftedPotions)
-            potionBoxDisplay.AddOne(recipe, recipe.visualPrefab);
+            potionDisplayArea.AddOne(quest.Potion);
     }
 
     private void OnEnable() => interactAction.performed += OnInteract;
@@ -71,21 +68,20 @@ public class DeliveryInteraction : MonoBehaviour
 
         foreach (QuestData quest in questManager.ActiveQuests)
         {
-            if (quest.requiredPotion == null) continue;
+            if (quest.Potion == null) continue;
+            if (questManager.PendingDeliveries.Contains(quest)) continue;
 
-            if (HomeStorage.Instance.RemoveCraftedPotion(quest.requiredPotion))
+            if (HomeStorage.Instance.RemoveCraftedPotion(quest.Potion))
             {
                 questManager.MarkPendingDelivery(quest);
                 delivered.Add(quest);
-                potionBoxDisplay.RemoveOne(quest.requiredPotion);
-                potionDisplayArea.AddOne(quest.requiredPotion, quest.requiredPotion.visualPrefab);
+                potionDisplayArea.AddOne(quest.Potion);
             }
         }
 
         if (delivered.Count > 0)
         {
-            HomeStorage.Instance.Save();
-            questManager.Save();
+            GameSaveSystem.SaveAll(questManager);
             DialogueUI.Instance.ShowMessage("Ofelia", $"Entregaste {delivered.Count} pocion(es) de pedidos, ahora podes ir a acostarte.");
         }
         else

@@ -1,4 +1,3 @@
-using Game.Collectibles;
 using UnityEngine;
 using UnityEngine.InputSystem;
 //administra todo lo referido al "spawnear" el item dentro del canasto
@@ -12,6 +11,7 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private float spawnHeight = 0.5f;
     [SerializeField] private float settleDelay = 0.5f;
     [SerializeField] private PlayerInventory inventory;
+    [Tooltip("Capa de los ítems del canasto. Los modelos se pasan a esta capa al aparecer.")]
     [SerializeField] private LayerMask basketItemLayer;
     //para cambiar la llamda q tenia
     [SerializeField] private Transform basketViewAnchor;
@@ -19,11 +19,10 @@ public class BasketDisplay : MonoBehaviour
     [SerializeField] private GameObject basketRoot;
     [SerializeField] private Transform[] dropSlots;
     private GameObject[] slotOccupants;
-    [SerializeField] private IngredientType specialIngredient; //el Ojo de Leprechaun, no se puede tirar del canasto
 
     [SerializeField] private Renderer[] playerRenderers; //renderers del personaje a ocultar mientras se ve el canasto
     private bool isAvailable;
-    
+
     public event System.Action OnOpened;
     public event System.Action OnClosed;
 
@@ -49,20 +48,21 @@ public class BasketDisplay : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f, basketItemLayer))
-        {
-            if (hit.collider.TryGetComponent(out BasketItemVisual visual))
-            {
-                if (visual.Type == specialIngredient)
-                {
-                    DialogueUI.Instance.ShowMessage("Ofelia", "Necesito hacer la poción con esto, no puedo tirarlo.");
-                    return;
-                }
+        if (!Physics.Raycast(ray, out RaycastHit hit, 100f, basketItemLayer)) return;
 
-                inventory.RemoveItem(visual.Type, 1);
-                Destroy(visual.gameObject);
-            }
+        ItemVisual visual = hit.collider.GetComponentInParent<ItemVisual>();
+        if (visual == null || visual.Owner != this) return;
+
+        ItemData item = visual.Key.Item;
+
+        if (item.IsKeyItem)
+        {
+            DialogueUI.Instance.ShowMessage("Ofelia", "Necesito hacer la poción con esto, no puedo tirarlo.");
+            return;
         }
+
+        if (inventory.TryRemove(item))
+            Destroy(visual.gameObject);
     }
 
     private void OnEnable() => toggleAction.performed += OnToggle;
@@ -93,7 +93,7 @@ public class BasketDisplay : MonoBehaviour
         foreach (Renderer r in playerRenderers)
             if (r != null) r.enabled = visible;
     }
-    
+
     public void SetAvailable(bool available)
     {
         isAvailable = available;
@@ -106,12 +106,21 @@ public class BasketDisplay : MonoBehaviour
             cameraTransition.TransitionToPlayer();
         }
     }
-    //logica de spawneo del item en el canasto
-    public void Drop(IngredientType type, GameObject visualPrefab)
+    //logica de spawneo del item en el canasto: usa el modelo crudo del ítem escalado por basketScale
+    public void Drop(ItemData item)
     {
+        if (item == null) return;
+
         if (dropSlots == null || dropSlots.Length == 0)
         {
             Debug.LogWarning("BasketDisplay: no hay Drop Slots asignados.", this);
+            return;
+        }
+
+        GameObject model = item.GetModel(ItemState.Raw);
+        if (model == null)
+        {
+            Debug.LogWarning($"BasketDisplay: '{item.name}' no tiene modelo crudo.", this);
             return;
         }
 
@@ -123,8 +132,14 @@ public class BasketDisplay : MonoBehaviour
             spawnHeight,
             Random.Range(-spawnHorizontalSpread, spawnHorizontalSpread));
 
-        GameObject go = Instantiate(visualPrefab, spawnPos, Random.rotation);
-        go.AddComponent<BasketItemVisual>().Init(type);
+        GameObject go = Instantiate(model, spawnPos, Random.rotation);
+        go.transform.localScale = model.transform.localScale * item.BasketScale;
+        SetLayerRecursively(go, GetLayerFromMask(basketItemLayer));
+
+        if (go.TryGetComponent(out Rigidbody rb))
+            rb.isKinematic = false;
+
+        go.AddComponent<ItemVisual>().Init(ItemKey.Raw(item), this);
         slotOccupants[slotIndex] = go;
         StartCoroutine(SettleThenFreeze(go));
     }
@@ -148,6 +163,23 @@ public class BasketDisplay : MonoBehaviour
 
         go.transform.SetParent(dropPoint, true);
     }
+
+    private static int GetLayerFromMask(LayerMask mask)
+    {
+        int value = mask.value;
+        for (int layer = 0; layer < 32; layer++)
+            if ((value & (1 << layer)) != 0) return layer;
+
+        return 0;
+    }
+
+    private static void SetLayerRecursively(GameObject go, int layer)
+    {
+        go.layer = layer;
+        foreach (Transform child in go.transform)
+            SetLayerRecursively(child.gameObject, layer);
+    }
+
     //para visualizar el "area" donde pueden aparecer los objetos en el canasto, sigue sin convencerme
     private void OnDrawGizmosSelected()
     {
@@ -167,11 +199,15 @@ public class BasketDisplay : MonoBehaviour
         for (int i = dropPoint.childCount - 1; i >= 0; i--)
         {
             Transform child = dropPoint.GetChild(i);
-            if (child.TryGetComponent(out BasketItemVisual _))
+            if (child.TryGetComponent(out ItemVisual _))
                 Destroy(child.gameObject);
         }
 
         for (int i = 0; i < slotOccupants.Length; i++)
+        {
+            if (slotOccupants[i] != null)
+                Destroy(slotOccupants[i]); //por si todavía no se había asentado en el canasto
             slotOccupants[i] = null;
+        }
     }
 }

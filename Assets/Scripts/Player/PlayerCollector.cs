@@ -78,19 +78,19 @@ public class PlayerCollector : MonoBehaviour
         yield return new WaitForSeconds(pickupDelay);
         if (target == null) yield break;
 
-        IngredientType type = target.Type;
+        ItemData item = target.Item;
         int value = target.Value;
-        GameObject visualPrefab = target.BasketVisualPrefab;
 
         target.Collect(() =>
         {
             pickupEvent.Post(gameObject);
-            inventory.AddItem(type, value);
-            if (visualPrefab != null)
-            {
-                basketDisplay.Drop(type, visualPrefab);
-                StartCoroutine(PauseAnimatorBriefly());
-            }
+
+            if (!inventory.TryAdd(item, value)) return;
+
+            for (int i = 0; i < value; i++)
+                basketDisplay.Drop(item);
+
+            StartCoroutine(PauseAnimatorBriefly());
         });
     }
 
