@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8784aec97f6740d43975af654de44718, type: 3}
+  m_Name: Fruta Naranja
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: fruta_naranja
+  displayName: Fruta Naranja
+  description: La dan los arboles de frutas naranjas, bastante faciles de ubicar,
+    usualmente no se encuentran tanto cerca de zonas muertas.
+  table: 1
+  processable: 1
+  isKeyItem: 0
+  rawIcon: {fileID: 21300000, guid: a10c8d122fbf7994a8c0b3aefc0e1263, type: 3}
+  rawModel: {fileID: 6088912655057974279, guid: c1417a60a1c06dc45b928f93a4a6f810, type: 3}
+  basketScale: 0.7
+  processedName: Fruta Naranja Cortada
+  processedIcon: {fileID: 21300000, guid: 25bab5084b2d29045ad694ea3a32ae2e, type: 3}
+  processedModel: {fileID: 7122769619803019215, guid: 43c96ee7fb80ddc428176af6eaa503d3, type: 3}

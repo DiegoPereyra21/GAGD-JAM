@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8784aec97f6740d43975af654de44718, type: 3}
+  m_Name: Flor Blanca
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: flor_blanca
+  displayName: Flor Blanca
+  description: Crecen cerca de caminos, les gusta recibir mucho sol.
+  table: 0
+  processable: 1
+  isKeyItem: 0
+  rawIcon: {fileID: 21300000, guid: 3e8d3a59c6a9e4740852665e573535ff, type: 3}
+  rawModel: {fileID: 7255502035055602732, guid: 297cda47cf4f2f24bbdbd8b9c9b4360d, type: 3}
+  basketScale: 0.68
+  processedName: Flor Blanca Polvo
+  processedIcon: {fileID: 21300000, guid: 79f325906a42a68418bbb4cdb1af3051, type: 3}
+  processedModel: {fileID: 6306181808556498813, guid: 30a6335083ddc0a4e88f274a8a95c378, type: 3}

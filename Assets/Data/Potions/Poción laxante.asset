@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8d145e2e103174d9c8ee5cfe4c4746, type: 3}
+  m_Name: "Poci\xF3n laxante"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionData
+  id: pocion_laxante
+  displayName: "Poci\xF3n Laxante"
+  description: "Para esos d\xEDas que necesitas usar toda la fuerza posible y un
+    empujoncito m\xE1s."
+  image: {fileID: 21300000, guid: e48aecd9890862d418f82a7e93c1dd8b, type: 3}
+  model: {fileID: 9206889130490248292, guid: 46bb88099966ddb4cac54cfcc367b51f, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: 20e2ca4a60d7f5f4287a10424bfc7183, type: 2}
+    state: 0
+    amount: 1
+  - item: {fileID: 11400000, guid: f040f4ab777c52e40b3a5bb6af14e13b, type: 2}
+    state: 1
+    amount: 2
+  - item: {fileID: 11400000, guid: 4fc1050208336f54781f3543f3583c2a, type: 2}
+    state: 0
+    amount: 1
+  - item: {fileID: 11400000, guid: a1b53aafc693db4418bdbd86d418e289, type: 2}
+    state: 1
+    amount: 2

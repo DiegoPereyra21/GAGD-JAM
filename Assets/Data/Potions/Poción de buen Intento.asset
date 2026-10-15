@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8d145e2e103174d9c8ee5cfe4c4746, type: 3}
+  m_Name: "Poci\xF3n de buen Intento"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionData
+  id: pocion_buen_intento
+  displayName: "Poci\xF3n de Buen Intento"
+  description: "Lo usan solo  las personas t\xEDmidas que quieren resolver los problemas
+    pensando primero."
+  image: {fileID: 21300000, guid: 4e4e9a8d13a8d2e4b9cc009078a2b618, type: 3}
+  model: {fileID: 1838853731937684044, guid: 26fefb9e3c72f33429dadb66b78992e2, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: f80b318ae5282834ab04b0f725614fc9, type: 2}
+    state: 1
+    amount: 1
+  - item: {fileID: 11400000, guid: 3ddc0b359b13e7c43b560c21fe3b528c, type: 2}
+    state: 1
+    amount: 1
+  - item: {fileID: 11400000, guid: ed085998d2c65804d8e1a37831b36fae, type: 2}
+    state: 1
+    amount: 2
+  - item: {fileID: 11400000, guid: a1b53aafc693db4418bdbd86d418e289, type: 2}
+    state: 1
+    amount: 2

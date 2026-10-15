@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8784aec97f6740d43975af654de44718, type: 3}
+  m_Name: Fruta Roja
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: fruta_roja
+  displayName: Fruta Roja
+  description: La dan los arboles de frutas rojas, bastante faciles de ubicar, usualmente
+    no se encuentran tanto cerca de zonas muertas.
+  table: 1
+  processable: 1
+  isKeyItem: 0
+  rawIcon: {fileID: 21300000, guid: f6465b347c5eff0449b160e526286d5a, type: 3}
+  rawModel: {fileID: 2354549108154012539, guid: d344fc4055031334a8ef3d959fa05cc7, type: 3}
+  basketScale: 0.65
+  processedName: Fruta Roja Cortada
+  processedIcon: {fileID: 21300000, guid: ecb7d42d891a9f34dae04058af6ad07c, type: 3}
+  processedModel: {fileID: 1529832154013381966, guid: 7716751b6fe802741800c53eace40329, type: 3}

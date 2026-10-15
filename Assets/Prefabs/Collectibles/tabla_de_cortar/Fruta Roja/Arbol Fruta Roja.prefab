@@ -185,8 +185,7 @@ MonoBehaviour:
   value: 1
   collectDuration: 0.3
   collectRiseHeight: 1
-  basketVisualPrefab: {fileID: 2354549108154012539, guid: daf00b8e20b76404390b523d10bd0adb, type: 3}
-  type: {fileID: 11400000, guid: 04b0dd2d21067a747b8f9a0f5f399941, type: 2}
+  item: {fileID: 11400000, guid: a1b53aafc693db4418bdbd86d418e289, type: 2}
   destroyOnCollect: 0
   shakeDuration: 0.3
   shakeStrength: 0.1

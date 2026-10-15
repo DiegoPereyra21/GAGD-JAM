@@ -70,13 +70,13 @@ MonoBehaviour:
   value: 1
   collectDuration: 0.3
   collectRiseHeight: 1
-  basketVisualPrefab: {fileID: 3135222020907653588, guid: 89b653eaad6e6da4a9aff6c2f4cc1998, type: 3}
-  type: {fileID: 11400000, guid: c5719c9c5354c144a8beb5323e128829, type: 2}
+  item: {fileID: 11400000, guid: 20e2ca4a60d7f5f4287a10424bfc7183, type: 2}
   destroyOnCollect: 0
   shakeDuration: 0.3
   shakeStrength: 0.1
-  freezeDuration: 0.8
   outline: {fileID: 4647403338757886164}
+  dayShrinkDuration: 1.5
+  dayShrinkScaleFactor: 0.35
 --- !u!65 &5825502968529124409
 BoxCollider:
   m_ObjectHideFlags: 0

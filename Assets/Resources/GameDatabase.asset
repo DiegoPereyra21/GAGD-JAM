@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f9f49a4718ab94e87a9d8432f34130, type: 3}
+  m_Name: GameDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::GameDatabase
+  items:
+  - {fileID: 11400000, guid: 3ddc0b359b13e7c43b560c21fe3b528c, type: 2}
+  - {fileID: 11400000, guid: a8e0b8ff55d9e914ea7e09c204f903ac, type: 2}
+  - {fileID: 11400000, guid: f80b318ae5282834ab04b0f725614fc9, type: 2}
+  - {fileID: 11400000, guid: ed085998d2c65804d8e1a37831b36fae, type: 2}
+  - {fileID: 11400000, guid: c9be85a1e97fb7048984aa2f5849034f, type: 2}
+  - {fileID: 11400000, guid: 92abb7ebae28c1f4a92111fea5d0a941, type: 2}
+  - {fileID: 11400000, guid: 56576e2cd2da023429f14be9af9d1117, type: 2}
+  - {fileID: 11400000, guid: f6ae417d5710f0e448489672d37a404a, type: 2}
+  - {fileID: 11400000, guid: f040f4ab777c52e40b3a5bb6af14e13b, type: 2}
+  - {fileID: 11400000, guid: 6fdfb97b68293be43a68816a6544a3ee, type: 2}
+  - {fileID: 11400000, guid: 20e2ca4a60d7f5f4287a10424bfc7183, type: 2}
+  - {fileID: 11400000, guid: eb70433d7f9733b4fa22b9235f36b5ff, type: 2}
+  - {fileID: 11400000, guid: a1b53aafc693db4418bdbd86d418e289, type: 2}
+  - {fileID: 11400000, guid: 4fc1050208336f54781f3543f3583c2a, type: 2}
+  potions:
+  - {fileID: 11400000, guid: ec4df1e222be70f45bb3728ca066b698, type: 2}
+  - {fileID: 11400000, guid: e5727bf847cadc648a1a17c8049adfeb, type: 2}
+  - {fileID: 11400000, guid: 7b4b5d4673a7d86478facb632ff80182, type: 2}
+  - {fileID: 11400000, guid: feb569f1568ed474094c77425c51c792, type: 2}
+  - {fileID: 11400000, guid: a4bf350eee36b8e478e544628382159d, type: 2}
+  - {fileID: 11400000, guid: 09db0339a5ef0cc44ae31445c08c16e1, type: 2}
+  - {fileID: 11400000, guid: fbf4de2ec65c0874d816fab6f03ba11d, type: 2}
+  - {fileID: 11400000, guid: 40833a3db79b044459627a5ccd9b5313, type: 2}
+  - {fileID: 11400000, guid: e43ce8b4cc37b2643b2ad55804656982, type: 2}
+  - {fileID: 11400000, guid: 055851faf71ee9343860697131602862, type: 2}
+  - {fileID: 11400000, guid: ce153079c6959354c9ae224f03201e4b, type: 2}
+  - {fileID: 11400000, guid: a132fff7375e45344add3dd9123bc36f, type: 2}
+  - {fileID: 11400000, guid: 3ce0a733d51ec4141b9fa6ff1fe724a1, type: 2}
+  - {fileID: 11400000, guid: e3cf01db7f6870346b2393e4daabacc7, type: 2}
+  - {fileID: 11400000, guid: 87f9f695e80fedd40b6dfdff621d5abc, type: 2}
+  - {fileID: 11400000, guid: f1125af579d2f7c44b69cdfa428c9127, type: 2}
+  - {fileID: 11400000, guid: d90363fa66aa45347969eba7cb297d30, type: 2}
+  - {fileID: 11400000, guid: 4c242cf82da7203408bc81bf898560a5, type: 2}
+  - {fileID: 11400000, guid: 60e09424dd646994b803b6057e63f690, type: 2}
+  - {fileID: 11400000, guid: 89a02107a22beee4184f0a4990a1a007, type: 2}
+  - {fileID: 11400000, guid: d66f877dfea2bb2428dce39dbf0277fc, type: 2}
+  - {fileID: 11400000, guid: dd571700381de75409de9e1618ae1f40, type: 2}
+  - {fileID: 11400000, guid: 8bb01ea19684c894badaf1de57b3eac1, type: 2}
+  - {fileID: 11400000, guid: afaa90087d668ec4db2af9110726bc0b, type: 2}
+  quests:
+  - {fileID: 11400000, guid: fb2b7e915d4134841ade079100e8da69, type: 2}
+  - {fileID: 11400000, guid: d8ed2b9b76cd31847a08f5e6c5e67baf, type: 2}
+  - {fileID: 11400000, guid: 7b2b1de0503f5e24d9dc0abdb85a3262, type: 2}
+  - {fileID: 11400000, guid: 8e5d93e362ecce243b65f3c825a35d52, type: 2}
+  - {fileID: 11400000, guid: 1cc18421f7cb3294db902cef3138294a, type: 2}
+  - {fileID: 11400000, guid: 12257750ceb7ee846a851a4bc4ed3195, type: 2}
+  - {fileID: 11400000, guid: daf51394ce9268e4b9b26d67b669091a, type: 2}
+  - {fileID: 11400000, guid: e7326a2e864e46c49832f58ff8f8ebd8, type: 2}
+  - {fileID: 11400000, guid: 438d0b273f8724941837f259cb007bc0, type: 2}
+  - {fileID: 11400000, guid: cca473c29de1bef4292603db61d8e20e, type: 2}
+  - {fileID: 11400000, guid: ecfc3f18212f9484483bfcbddb5da97b, type: 2}
+  - {fileID: 11400000, guid: f5867c320e16f9c40ac914b405063040, type: 2}
+  - {fileID: 11400000, guid: 6b07e57a21db35f48b56b11e2b888ec0, type: 2}
+  - {fileID: 11400000, guid: 184b64800628097478c2a566ec14a587, type: 2}
+  - {fileID: 11400000, guid: 47a519459cd8c834aa5cd3224f763384, type: 2}
+  - {fileID: 11400000, guid: 8f689824ee376654f872399de6b8c678, type: 2}
+  - {fileID: 11400000, guid: 7a6329bae21658a42ac598bff304996f, type: 2}
+  - {fileID: 11400000, guid: 9ba8f14c9c1f580478ff8da2273b2906, type: 2}
+  - {fileID: 11400000, guid: e9c5be2f962b8ac42ae149e58ac19a4b, type: 2}
+  - {fileID: 11400000, guid: a85c944a706c7bc4fbf953a381ed44cb, type: 2}
+  - {fileID: 11400000, guid: 0ac66318b25f6af408c8b4c78d89a577, type: 2}
+  - {fileID: 11400000, guid: c0ec2cbbb951dff438db49758d195352, type: 2}
+  - {fileID: 11400000, guid: b6ba64b35d10f454b95729d049a482a5, type: 2}
+  sleepPotion: {fileID: 11400000, guid: d90363fa66aa45347969eba7cb297d30, type: 2}
+  sleepIngredient: {fileID: 11400000, guid: 56576e2cd2da023429f14be9af9d1117, type: 2}

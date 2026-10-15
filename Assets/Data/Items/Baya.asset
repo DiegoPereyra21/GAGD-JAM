@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8784aec97f6740d43975af654de44718, type: 3}
+  m_Name: Baya
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: baya
+  displayName: Baya
+  description: "Se recolectan de los peque\xF1os arbustos que pueblan el bosque,
+    practicamente estan por todos lados."
+  table: 1
+  processable: 1
+  isKeyItem: 0
+  rawIcon: {fileID: 21300000, guid: bb4064a999271bc499d2b0ff3319d736, type: 3}
+  rawModel: {fileID: 8083948910245881578, guid: 5944f500c1acb8c44b90e84e71b84710, type: 3}
+  basketScale: 0.83
+  processedName: Baya Cortada
+  processedIcon: {fileID: 21300000, guid: c8d17e38879aebb43af2e7664c4f5f1d, type: 3}
+  processedModel: {fileID: 4584401948836683489, guid: 623356aab28cf4e49b8e7a2cbde7f27b, type: 3}
