@@ -13,7 +13,8 @@ public class HoverOutline : MonoBehaviour
         if (Camera.main == null) return;
 
         Ray ray = Camera.main.ScreenPointToRay(UnityEngine.InputSystem.Mouse.current.position.ReadValue());
-        bool hitThisObject = Physics.Raycast(ray, out RaycastHit hit, maxDistance, hoverLayer)
+        int mask = hoverLayer.value | (1 << gameObject.layer); //también su capa actual, el canasot los pasa  a basketvisual
+        bool hitThisObject = Physics.Raycast(ray, out RaycastHit hit, maxDistance, mask)
             && hit.collider.gameObject == gameObject;
 
         if (hitThisObject != isHovering)
