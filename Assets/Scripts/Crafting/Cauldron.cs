@@ -7,8 +7,10 @@ using UnityEngine;
 public class Cauldron : MonoBehaviour
 {
     [SerializeField] private CraftingRoom room;
-    [Tooltip("Objeto del caldero: click = craftear, soltar encima = agregar ítem.")]
+    [Tooltip("Objeto que se clickea para craftear (la cuchara).")]
     [SerializeField] private GameObject clickTarget;
+    [Tooltip("Objeto donde se pueden soltar ítems arrastrados (el caldero, incluye sus hijos).")]
+    [SerializeField] private GameObject dropTarget;
     [SerializeField] private Transform dropPoint;
     [SerializeField] private float dropSpread = 0.2f;
     [SerializeField] private float dropHeight = 0.3f;
@@ -46,8 +48,10 @@ public class Cauldron : MonoBehaviour
 
     public bool IsDropTarget(GameObject target)
     {
+        if (target == null) return false;
         if (IsClickTarget(target)) return true;
-        return target != null && target.TryGetComponent(out ItemVisual visual) && visual.Owner == this;
+        if (dropTarget != null && (target == dropTarget || target.transform.IsChildOf(dropTarget.transform))) return true;
+        return target.TryGetComponent(out ItemVisual visual) && visual.Owner == this;
     }
 
     public bool TryAddFromPantry(ItemKey key)

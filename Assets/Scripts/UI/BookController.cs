@@ -62,6 +62,7 @@ public class BookController : MonoBehaviour
 
     //objetivos
     private VisualElement objectiveEntry;
+    private VisualElement objectivesContainer;
 
 
     //navegacion
@@ -168,6 +169,7 @@ public class BookController : MonoBehaviour
         compendiumDescription = root.Q<Label>("CompendiumDescription");
 
         objectiveEntry = root.Q<VisualElement>("ObjectiveEntry");
+        objectivesContainer = objectiveEntry?.parent;
 
         pageNavigation = root.Q<VisualElement>("PageNavigation");
         previousButton = root.Q<Button>("PreviousButton");
@@ -544,10 +546,10 @@ public class BookController : MonoBehaviour
 
     private void RefreshObjectives()
     {
-        if (objectivesPage == null || objectiveEntry == null)
+        if (objectivesPage == null || objectivesContainer == null)
             return;
 
-        objectiveEntry.parent?.Clear();
+        objectivesContainer.Clear();
 
         if (questManager == null)
             return;
@@ -604,7 +606,7 @@ public class BookController : MonoBehaviour
         entry.Add(info);
         entry.Add(right);
 
-        objectiveEntry.parent.Add(entry);
+        objectivesContainer.Add(entry);
     }
 
     private string BuildQuestDescription(QuestData quest)
