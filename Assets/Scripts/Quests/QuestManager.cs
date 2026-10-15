@@ -6,7 +6,6 @@ public class QuestManager : MonoBehaviour
 {
     private const string SaveKey = "QuestManager_Data";
 
-    [SerializeField] private QuestDatabase questDatabase;
     [SerializeField] private List<QuestData> activeQuests = new List<QuestData>();
 
     public event Action OnQuestsChanged;
@@ -46,7 +45,7 @@ public class QuestManager : MonoBehaviour
     {
         foreach (QuestData quest in pendingDeliveries)
         {
-            GameProgressManager.Instance.AddMoney(quest.moneyReward);
+            GameProgressManager.Instance.AddMoney(quest.MoneyReward);
             CompleteQuest(quest);
         }
 
@@ -66,10 +65,10 @@ public class QuestManager : MonoBehaviour
         SaveData data = new SaveData();
 
         foreach (QuestData quest in activeQuests)
-            data.questIds.Add(quest.questId);
+            data.questIds.Add(quest.Id);
 
         foreach (QuestData quest in pendingDeliveries)
-            data.pendingDeliveryIds.Add(quest.questId);
+            data.pendingDeliveryIds.Add(quest.Id);
 
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
@@ -97,17 +96,18 @@ public class QuestManager : MonoBehaviour
 
         string json = PlayerPrefs.GetString(SaveKey);
         SaveData data = JsonUtility.FromJson<SaveData>(json);
+        GameDatabase database = GameDatabase.Instance;
 
         foreach (string id in data.questIds)
         {
-            QuestData quest = questDatabase.FindById(id);
+            QuestData quest = database.FindQuest(id);
             if (quest != null)
                 activeQuests.Add(quest);
         }
 
         foreach (string id in data.pendingDeliveryIds)
         {
-            QuestData quest = questDatabase.FindById(id);
+            QuestData quest = database.FindQuest(id);
             if (quest != null)
                 pendingDeliveries.Add(quest);
         }

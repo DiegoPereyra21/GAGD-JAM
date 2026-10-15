@@ -9,7 +9,6 @@ public class BedInteraction : MonoBehaviour
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private QuestManager questManager;
     [SerializeField] private PotionDisplayArea potionDisplayArea;
-    [SerializeField] private PotionRecipe sleepPotionRecipe;
     private DayTransition dayTransition;
     private InputAction interactAction;
     private bool playerInRange;
@@ -52,7 +51,7 @@ public class BedInteraction : MonoBehaviour
             return;
         }
 
-        if (HomeStorage.Instance.RemoveCraftedPotion(sleepPotionRecipe))
+        if (HomeStorage.Instance.RemoveCraftedPotion(GameDatabase.Instance.SleepPotion))
         {
             questManager.ProcessPendingDeliveries();
             questManager.Save();
@@ -71,10 +70,11 @@ public class BedInteraction : MonoBehaviour
 
         int moneyBeforeSleep = GameProgressManager.Instance.Money;
 
+        HomeStorage.Instance.ReturnCauldronToPantry(); //lo que quedó en el caldero vuelve a su mesa
         questManager.ProcessPendingDeliveries();
-        questManager.Save();
         potionDisplayArea.ClearAll();
         GameProgressManager.Instance.Sleep();
+        GameSaveSystem.SaveAll(questManager);
         dayTransition.PlayDayIntro(GameProgressManager.Instance.CurrentDay, moneyBeforeSleep);
     }
 

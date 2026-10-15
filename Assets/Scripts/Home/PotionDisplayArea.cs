@@ -17,13 +17,15 @@ public class PotionDisplayArea : MonoBehaviour
         public List<GameObject> visuals = new List<GameObject>();
     }
 
-    private readonly Dictionary<PotionRecipe, TypeGroup> groups = new Dictionary<PotionRecipe, TypeGroup>();
+    private readonly Dictionary<PotionData, TypeGroup> groups = new Dictionary<PotionData, TypeGroup>();
     private readonly List<TypeGroup> groupOrder = new List<TypeGroup>();
 
-    public void AddOne(PotionRecipe recipe, GameObject visualPrefab)
+    public void AddOne(PotionData potion)
     {
-        TypeGroup group = GetOrCreateGroup(recipe);
-        SpawnVisual(group, visualPrefab);
+        if (potion == null) return;
+
+        TypeGroup group = GetOrCreateGroup(potion);
+        SpawnVisual(group, potion.Model);
     }
 
     public void ClearAll()
@@ -36,27 +38,27 @@ public class PotionDisplayArea : MonoBehaviour
         }
     }
 
-    private void SpawnVisual(TypeGroup group, GameObject visualPrefab)
+    private void SpawnVisual(TypeGroup group, GameObject model)
     {
-        if (visualPrefab == null) return;
+        if (model == null) return;
 
         int index = group.visuals.Count;
         Vector3 offset = group.anchor.right * (index * itemSpacing);
 
-        GameObject visual = Instantiate(visualPrefab, group.anchor.position + offset, group.anchor.rotation, group.anchor);
+        GameObject visual = Instantiate(model, group.anchor.position + offset, group.anchor.rotation, group.anchor);
         group.visuals.Add(visual);
     }
 
-    private TypeGroup GetOrCreateGroup(PotionRecipe recipe)
+    private TypeGroup GetOrCreateGroup(PotionData potion)
     {
-        if (groups.TryGetValue(recipe, out TypeGroup existing))
+        if (groups.TryGetValue(potion, out TypeGroup existing))
             return existing;
 
-        GameObject anchorObject = new GameObject($"Group_{recipe.potionName}");
+        GameObject anchorObject = new GameObject($"Group_{potion.DisplayName}");
         anchorObject.transform.SetParent(areaOrigin, false);
 
         TypeGroup group = new TypeGroup { anchor = anchorObject.transform };
-        groups[recipe] = group;
+        groups[potion] = group;
         groupOrder.Add(group);
 
         RelayoutGroups();

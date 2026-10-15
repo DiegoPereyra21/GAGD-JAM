@@ -1,9 +1,8 @@
-using Game.Collectibles;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 [RequireComponent(typeof(UIDocument))]
 public class QuestJournalUI : MonoBehaviour
@@ -12,8 +11,6 @@ public class QuestJournalUI : MonoBehaviour
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private VisualTreeAsset questCardTemplate;
     [SerializeField] private VisualTreeAsset questRowTemplate;
-    [SerializeField] private IngredientDatabase ingredientDatabase;
-    [SerializeField] private PotionRecipe sleepPotionRecipe;
 
     private static readonly Color CraftedColor = new Color(1f, 0.5f, 0f, 0.25f);   //naranja, poca transparencia
     private static readonly Color DeliveredColor = new Color(0f, 0.8f, 0.2f, 0.25f); //verde, poca transparencia
@@ -45,14 +42,6 @@ public class QuestJournalUI : MonoBehaviour
         }
     }
 
-    private void OnFirstLayout(GeometryChangedEvent evt)
-    {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-        root.UnregisterCallback<GeometryChangedEvent>(OnFirstLayout);
-
-        root.style.width = root.resolvedStyle.width + 60;
-        root.style.scale = new Scale(new Vector3(1.15f, 1.15f, 1f));
-    }
     private void OnEnable()
     {
         inventory.OnInventoryChanged += Refresh;
@@ -79,98 +68,115 @@ public class QuestJournalUI : MonoBehaviour
         scrollView.Clear();
 
         bool isOutside = GameProgressManager.Instance.IsOutside;
+        PotionData sleepPotion = GameDatabase.Instance.SleepPotion;
+        bool showSleepPotion = GameProgressManager.Instance.SleepIngredientObtained && sleepPotion != null;
 
-        var remaining = new Dictionary<IngredientType, int>();
-        foreach (IngredientType type in ingredientDatabase.AllIngredients)
-            remaining[type] = inventory.GetCount(type) + HomeStorage.Instance.Totals.GetValueOrDefault(type);
+        List<QuestData> uncovered = QuestRequirements.GetUncoveredQuests(questManager);
+        Dictionary<ItemData, int> remaining = new Dictionary<ItemData, int>();
 
         foreach (QuestData quest in questManager.ActiveQuests)
-            scrollView.Add(isOutside ? BuildGatherCard(quest, remaining) : BuildRecipeCard(quest));
+        {
+            if (quest == null) continue;
 
-        if (GameProgressManager.Instance.SleepIngredientObtained && sleepPotionRecipe != null)
-            scrollView.Add(BuildSleepPotionCard());
+            bool covered = !uncovered.Contains(quest);
 
-        int totalCount = questManager.ActiveQuests.Count +
-        (GameProgressManager.Instance.SleepIngredientObtained && sleepPotionRecipe != null ? 1 : 0);
+            scrollView.Add(isOutside
+                ? BuildGatherCard(quest, covered, remaining)
+                : BuildRecipeCard(quest, covered));
+        }
 
+        if (showSleepPotion)
+            scrollView.Add(BuildSleepPotionCard(sleepPotion));
+
+        int totalCount = questManager.ActiveQuests.Count + (showSleepPotion ? 1 : 0);
         titleLabel.text = totalCount > 0 ? $"Diario de objetivos ({totalCount})" : "Diario de objetivos";
     }
 
-    private VisualElement BuildSleepPotionCard()
+    private VisualElement BuildSleepPotionCard(PotionData sleepPotion)
     {
         VisualElement card = questCardTemplate.Instantiate();
 
         card.Q<Label>("VillagerName").text = "Para mí";
-        card.Q<Label>("MissionName").text = sleepPotionRecipe.potionName;
+        card.Q<Label>("MissionName").text = sleepPotion.DisplayName;
 
         VisualElement rowsContainer = card.Q<VisualElement>("RowsContainer");
-        foreach (RecipeIngredient ingredient in sleepPotionRecipe.ingredients)
-            rowsContainer.Add(BuildRecipeRow(ingredient));
+        foreach (PotionIngredient ingredient in sleepPotion.Ingredients)
+        {
+            if (ingredient != null && ingredient.Item != null)
+                rowsContainer.Add(BuildRecipeRow(ingredient));
+        }
 
         return card;
     }
 
-    // Afuera: qué ir a recolectar. Convierte cualquier ingrediente procesado a su versión cruda.
-    private VisualElement BuildGatherCard(QuestData quest, Dictionary<IngredientType, int> remaining)
+    // Afuera: qué ir a recolectar, por ítem (sin importar si después se procesa).
+    // Las quests ya cubiertas (poción hecha o entregada) se muestran completas y no consumen lo recolectado.
+    private VisualElement BuildGatherCard(QuestData quest, bool covered, Dictionary<ItemData, int> remaining)
     {
         VisualElement card = questCardTemplate.Instantiate();
 
-        card.Q<Label>("VillagerName").text = quest.villagerName;
-        card.Q<Label>("MissionName").text = quest.missionName;
+        card.Q<Label>("VillagerName").text = quest.VillagerName;
+        card.Q<Label>("MissionName").text = quest.MissionName;
 
         VisualElement rowsContainer = card.Q<VisualElement>("RowsContainer");
-        foreach (QuestObjective objective in quest.objectives)
-            rowsContainer.Add(BuildGatherRow(objective, remaining));
+        foreach (KeyValuePair<ItemData, int> pair in QuestRequirements.GetItemTotals(quest.Potion))
+            rowsContainer.Add(BuildGatherRow(pair.Key, pair.Value, covered, remaining));
 
-        ApplyQuestStatus(card, quest);
+        ApplyQuestStatus(card, quest, covered);
         return card;
     }
 
-    private VisualElement BuildGatherRow(QuestObjective objective, Dictionary<IngredientType, int> remaining)
+    private VisualElement BuildGatherRow(ItemData item, int needed, bool covered, Dictionary<ItemData, int> remaining)
     {
         VisualElement row = questRowTemplate.Instantiate();
 
-        IngredientType rawType = objective.type.rawSource != null ? objective.type.rawSource : objective.type;
+        int allocated = needed;
 
-        int available = remaining[rawType];
-        int allocated = Mathf.Min(available, objective.targetAmount);
-        remaining[rawType] -= allocated;
+        if (!covered)
+        {
+            if (!remaining.ContainsKey(item))
+                remaining[item] = QuestRequirements.GetOwned(item, inventory);
 
-        row.Q<Label>("IngredientLabel").text = rawType.displayName;
-        row.Q<Label>("ProgressLabel").text = $"{allocated}/{objective.targetAmount}";
+            allocated = Mathf.Min(remaining[item], needed);
+            remaining[item] -= allocated;
+        }
 
-        bool isComplete = allocated >= objective.targetAmount;
-        row.Q<Label>("ProgressLabel").style.color = isComplete ? Color.green : Color.red;
+        row.Q<Label>("IngredientLabel").text = item.DisplayName;
+        row.Q<Label>("ProgressLabel").text = $"{allocated}/{needed}";
+        row.Q<Label>("ProgressLabel").style.color = allocated >= needed ? Color.green : Color.red;
 
         return row;
     }
 
-    // Adentro: la receta real de la poción, con los ingredientes procesados tal como se usan en el caldero.
-    private VisualElement BuildRecipeCard(QuestData quest)
+    // Adentro: la receta real de la poción, con el estado de cada ingrediente tal como va al caldero.
+    private VisualElement BuildRecipeCard(QuestData quest, bool covered)
     {
         VisualElement card = questCardTemplate.Instantiate();
 
-        card.Q<Label>("VillagerName").text = quest.villagerName;
-        card.Q<Label>("MissionName").text = quest.missionName;
+        card.Q<Label>("VillagerName").text = quest.VillagerName;
+        card.Q<Label>("MissionName").text = quest.MissionName;
 
         VisualElement rowsContainer = card.Q<VisualElement>("RowsContainer");
 
-        if (quest.requiredPotion != null)
+        if (quest.Potion != null)
         {
-            foreach (RecipeIngredient ingredient in quest.requiredPotion.ingredients)
-                rowsContainer.Add(BuildRecipeRow(ingredient));
+            foreach (PotionIngredient ingredient in quest.Potion.Ingredients)
+            {
+                if (ingredient != null && ingredient.Item != null)
+                    rowsContainer.Add(BuildRecipeRow(ingredient));
+            }
         }
 
-        ApplyQuestStatus(card, quest);
+        ApplyQuestStatus(card, quest, covered);
         return card;
     }
 
-    private VisualElement BuildRecipeRow(RecipeIngredient ingredient)
+    private VisualElement BuildRecipeRow(PotionIngredient ingredient)
     {
         VisualElement row = questRowTemplate.Instantiate();
 
         Label ingredientLabel = row.Q<Label>("IngredientLabel");
-        ingredientLabel.text = $"{ingredient.amount} x {ingredient.type.displayName}";
+        ingredientLabel.text = $"{ingredient.Amount} x {ingredient.Key.DisplayName}";
         ingredientLabel.style.letterSpacing = 1;
         ingredientLabel.style.flexGrow = 1;
         ingredientLabel.style.whiteSpace = WhiteSpace.NoWrap;
@@ -180,11 +186,11 @@ public class QuestJournalUI : MonoBehaviour
         return row;
     }
 
-    private void ApplyQuestStatus(VisualElement card, QuestData quest)
+    // covered = la quest ya no necesita ingredientes (poción hecha o entregada).
+    private void ApplyQuestStatus(VisualElement card, QuestData quest, bool covered)
     {
         bool delivered = questManager.PendingDeliveries.Contains(quest);
-        bool crafted = !delivered && quest.requiredPotion != null
-            && HomeStorage.Instance.CraftedPotions.Contains(quest.requiredPotion);
+        bool crafted = !delivered && covered;
 
         if (!delivered && !crafted) return;
 

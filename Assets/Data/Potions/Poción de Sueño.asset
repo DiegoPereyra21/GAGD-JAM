@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8d145e2e103174d9c8ee5cfe4c4746, type: 3}
+  m_Name: "Poci\xF3n de Sue\xF1o"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionData
+  id: pocion_sueno
+  displayName: "Poci\xF3n de Sue\xF1o"
+  description: "Se usa para descansar durante cortos periodos de tiempo, pero usarla
+    demasiado seguido crea inmunidad. Por desgracia, t\xFA descubriste esto de la
+    peor manera."
+  image: {fileID: 21300000, guid: 956c1e9e2f6dcbd43885580dbe50d058, type: 3}
+  model: {fileID: 7258419128477129906, guid: a745d08890cb42b4ea5dbaa4eecc6646, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: f6ae417d5710f0e448489672d37a404a, type: 2}
+    state: 1
+    amount: 2
+  - item: {fileID: 11400000, guid: f040f4ab777c52e40b3a5bb6af14e13b, type: 2}
+    state: 1
+    amount: 3
+  - item: {fileID: 11400000, guid: a8e0b8ff55d9e914ea7e09c204f903ac, type: 2}
+    state: 1
+    amount: 2

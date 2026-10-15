@@ -117,8 +117,7 @@ MonoBehaviour:
   value: 1
   collectDuration: 0.3
   collectRiseHeight: 1
-  basketVisualPrefab: {fileID: 6590866449139015112, guid: 6a7e07c39d8e0fd48bdcb3b00802fbcc, type: 3}
-  type: {fileID: 11400000, guid: a26ffed3f3756604ba3b59024c5291b3, type: 2}
+  item: {fileID: 11400000, guid: f6ae417d5710f0e448489672d37a404a, type: 2}
   destroyOnCollect: 1
   shakeDuration: 0.3
   shakeStrength: 0.1
@@ -190,7 +189,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6590866449139015112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
   m_Name: 

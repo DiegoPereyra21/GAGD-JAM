@@ -1,57 +1,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Caja de pociones hechas. Se redibuja sola a partir de HomeStorage.CraftedPotions.
 public class PotionBoxDisplay : MonoBehaviour
 {
     [SerializeField] private Transform[] slots;
+    [Tooltip("Renderer de la caja. Las pociones nuevas copian si está visible o no (por ejemplo, cuando el player está oculto en el crafteo).")]
+    [SerializeField] private Renderer visibilityReference;
 
-    private readonly Dictionary<int, PotionRecipe> slotOccupants = new Dictionary<int, PotionRecipe>();
-    private readonly Dictionary<int, GameObject> slotVisuals = new Dictionary<int, GameObject>();
+    private readonly List<GameObject> visuals = new List<GameObject>();
+    private bool subscribed;
 
-    public bool AddOne(PotionRecipe recipe, GameObject visualPrefab)
+    private void Start()
     {
-        if (visualPrefab == null) return false;
+        HomeStorage.Instance.OnPotionsChanged += Rebuild;
+        subscribed = true;
+        Rebuild();
+    }
 
-        int freeSlot = FindFreeSlot();
-        if (freeSlot == -1)
+    private void OnDestroy()
+    {
+        if (subscribed && HomeStorage.Instance != null)
+            HomeStorage.Instance.OnPotionsChanged -= Rebuild;
+    }
+
+    private void Rebuild()
+    {
+        foreach (GameObject visual in visuals)
         {
-            Debug.LogWarning("[PotionBoxDisplay] No hay slots libres en la caja de pociones.");
-            return false;
+            if (visual != null)
+                Destroy(visual);
         }
+        visuals.Clear();
 
-        GameObject visual = Instantiate(visualPrefab, slots[freeSlot].position, slots[freeSlot].rotation, slots[freeSlot]);
-        slotOccupants[freeSlot] = recipe;
-        slotVisuals[freeSlot] = visual;
-        return true;
-    }
+        IReadOnlyList<PotionData> potions = HomeStorage.Instance.CraftedPotions;
 
-    public void RemoveOne(PotionRecipe recipe)
-    {
-        foreach (int slotIndex in new List<int>(slotOccupants.Keys))
+        if (potions.Count > slots.Length)
+            Debug.LogWarning($"[PotionBoxDisplay] Hay {potions.Count} pociones pero solo {slots.Length} slots en la caja.", this);
+
+        bool visible = visibilityReference == null || visibilityReference.enabled;
+        int count = Mathf.Min(potions.Count, slots.Length);
+
+        for (int i = 0; i < count; i++)
         {
-            if (slotOccupants[slotIndex] != recipe) continue;
+            PotionData potion = potions[i];
+            if (potion == null || potion.Model == null) continue;
 
-            Destroy(slotVisuals[slotIndex]);
-            slotOccupants.Remove(slotIndex);
-            slotVisuals.Remove(slotIndex);
-            return;
+            GameObject visual = Instantiate(potion.Model, slots[i].position, slots[i].rotation, slots[i]);
+
+            if (visual.TryGetComponent(out Rigidbody rb))
+                rb.isKinematic = true;
+
+            foreach (Renderer r in visual.GetComponentsInChildren<Renderer>(true))
+                r.enabled = visible;
+
+            visuals.Add(visual);
         }
-    }
-
-    public void ClearAll()
-    {
-        foreach (GameObject visual in slotVisuals.Values)
-            Destroy(visual);
-
-        slotOccupants.Clear();
-        slotVisuals.Clear();
-    }
-
-    private int FindFreeSlot()
-    {
-        for (int i = 0; i < slots.Length; i++)
-            if (!slotOccupants.ContainsKey(i)) return i;
-
-        return -1;
     }
 }

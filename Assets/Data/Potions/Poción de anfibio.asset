@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8d145e2e103174d9c8ee5cfe4c4746, type: 3}
+  m_Name: "Poci\xF3n de anfibio"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionData
+  id: pocion_anfibio
+  displayName: "Poci\xF3n De Anfibio"
+  description: "Quien use esta poci\xF3n gozar\xE1 de poder respirar bajo el agua
+    y nadar a gran velocidad durante una hora, con el efecto secundario de tener
+    piel m\xE1s escamosa, membranas entre los dedos y un antojo infernal por comer
+    insectos mientras dure el efecto."
+  image: {fileID: 21300000, guid: 6e15f2f3b2a4bae4c8f98f5164509bed, type: 3}
+  model: {fileID: 2773675541687345034, guid: 5a81d967262cf5a4f965a918bd7caffd, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: f040f4ab777c52e40b3a5bb6af14e13b, type: 2}
+    state: 1
+    amount: 2
+  - item: {fileID: 11400000, guid: 20e2ca4a60d7f5f4287a10424bfc7183, type: 2}
+    state: 0
+    amount: 1
+  - item: {fileID: 11400000, guid: 92abb7ebae28c1f4a92111fea5d0a941, type: 2}
+    state: 1
+    amount: 1

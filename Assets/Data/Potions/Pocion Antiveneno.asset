@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8d145e2e103174d9c8ee5cfe4c4746, type: 3}
+  m_Name: Pocion Antiveneno
+  m_EditorClassIdentifier: Assembly-CSharp::PotionData
+  id: pocion_antiveneno
+  displayName: Pocion Antiveneno
+  description: "Para los que fueron lo suficientemente despistados o idiotas como
+    para tomar la poci\xF3n de veneno."
+  image: {fileID: 21300000, guid: 1278b928dbee1c84384b87c1e510c7ed, type: 3}
+  model: {fileID: 3577460451240146545, guid: 230e2a2058e6754459d8b5ebb845a1d8, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: ed085998d2c65804d8e1a37831b36fae, type: 2}
+    state: 1
+    amount: 3
+  - item: {fileID: 11400000, guid: f040f4ab777c52e40b3a5bb6af14e13b, type: 2}
+    state: 1
+    amount: 1
+  - item: {fileID: 11400000, guid: 3ddc0b359b13e7c43b560c21fe3b528c, type: 2}
+    state: 1
+    amount: 1

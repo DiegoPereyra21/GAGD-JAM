@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8784aec97f6740d43975af654de44718, type: 3}
+  m_Name: Hongo Morado
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: hongo_morado
+  displayName: Hongo Morado
+  description: Crecen cerca de zonas con cuerpos en descomposicion. Son besties con
+    las flores de ojos.
+  table: 0
+  processable: 1
+  isKeyItem: 0
+  rawIcon: {fileID: 21300000, guid: a022b7251510a5a46b35809bf944cb74, type: 3}
+  rawModel: {fileID: 3448400778578221797, guid: 48eaa9b3fad42f242b22109457d0339a, type: 3}
+  basketScale: 1.12
+  processedName: Hongo Morado Polvo
+  processedIcon: {fileID: 21300000, guid: dbe06d47e538973408305051d072894e, type: 3}
+  processedModel: {fileID: 6306181808556498813, guid: 66f50df8f0fc7b140a871fe0f160a77f, type: 3}

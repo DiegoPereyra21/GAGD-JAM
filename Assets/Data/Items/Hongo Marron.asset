@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8784aec97f6740d43975af654de44718, type: 3}
+  m_Name: Hongo Marron
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: hongo_marron
+  displayName: Hongo Marron
+  description: Crecen en los bordes del mudno y zonas rocosas.
+  table: 0
+  processable: 1
+  isKeyItem: 0
+  rawIcon: {fileID: 21300000, guid: f22cb80c4bb18db4eb9efef2694f9e5b, type: 3}
+  rawModel: {fileID: 8985010166073262076, guid: 780e4a246b98bca4ca3535fe53a78ec6, type: 3}
+  basketScale: 0.84
+  processedName: Hongo Marron Polvo
+  processedIcon: {fileID: 21300000, guid: 2fa1ec7c39fbd094e8aa4fdc90e583d7, type: 3}
+  processedModel: {fileID: 6306181808556498813, guid: 133c881e3aae1e541b499433f12bc643, type: 3}

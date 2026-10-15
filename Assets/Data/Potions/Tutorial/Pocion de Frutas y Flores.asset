@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8d145e2e103174d9c8ee5cfe4c4746, type: 3}
+  m_Name: Pocion de Frutas y Flores
+  m_EditorClassIdentifier: Assembly-CSharp::PotionData
+  id: potion_frutas
+  displayName: Pocion de frutas
+  description: Un jugo refrescante para antes de jugar!
+  image: {fileID: 21300000, guid: 91a38642ea731b545b8c2e5553e63b99, type: 3}
+  model: {fileID: 4012180652467589445, guid: 17cca41b85386f64fa8d9e04f432cecf, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: eb70433d7f9733b4fa22b9235f36b5ff, type: 2}
+    state: 1
+    amount: 1
+  - item: {fileID: 11400000, guid: a1b53aafc693db4418bdbd86d418e289, type: 2}
+    state: 1
+    amount: 1

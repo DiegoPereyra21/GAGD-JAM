@@ -22,7 +22,7 @@ public class Mailbox : MonoBehaviour
             int currentDay = GameProgressManager.Instance.CurrentDay;
             int count = 0;
             foreach (QuestData letter in pendingLetters)
-                if (letter.availableDay <= currentDay) count++;
+                if (letter.AvailableDay <= currentDay) count++;
             return count;
         }
     }
@@ -51,7 +51,7 @@ public class Mailbox : MonoBehaviour
     {
         int currentDay = GameProgressManager.Instance.CurrentDay;
         int before = pendingLetters.Count;
-        pendingLetters.RemoveAll(letter => letter.availableDay < currentDay);
+        pendingLetters.RemoveAll(letter => letter.AvailableDay < currentDay);
         if (pendingLetters.Count != before) Save();
     }
 
@@ -73,7 +73,7 @@ public class Mailbox : MonoBehaviour
         pendingLetters.RemoveAll(q => questManager.IsQuestActive(q));
 
         int currentDay = GameProgressManager.Instance.CurrentDay;
-        QuestData letter = pendingLetters.Find(q => q.availableDay <= currentDay);
+        QuestData letter = pendingLetters.Find(q => q.AvailableDay <= currentDay);
 
         if (letter == null)
         {
@@ -98,7 +98,7 @@ public class Mailbox : MonoBehaviour
 
         SaveData data = new SaveData();
         foreach (QuestData letter in pendingLetters)
-            data.letterIds.Add(letter.questId);
+            data.letterIds.Add(letter.Id);
 
         PlayerPrefs.SetString(SaveKey, JsonUtility.ToJson(data));
         PlayerPrefs.Save();
@@ -116,7 +116,7 @@ public class Mailbox : MonoBehaviour
         pendingLetters = new List<QuestData>();
         foreach (string id in data.letterIds)
         {
-            QuestData letter = allLetters.Find(q => q.questId == id);
+            QuestData letter = allLetters.Find(q => q.Id == id);
             if (letter != null) pendingLetters.Add(letter);
         }
     }

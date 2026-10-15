@@ -1,15 +1,14 @@
-using System.Collections.Generic;
-using System.Linq;
-using Game.Collectibles;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private StairInteraction downstairs;
     [SerializeField] private DoorExitInteraction doorExit;
     [SerializeField] private QuestManager questManager;
-    [SerializeField] private CauldronCraftingSystem cauldronCraftingSystem;
+    [SerializeField] private CraftingRoom craftingRoom;
+    [SerializeField] private Cauldron cauldron;
     [SerializeField] private DeliveryInteraction deliveryInteraction;
     [SerializeField] private PlayerCollector playerCollector;
     [SerializeField] private DoorInteraction doorInteraction;
@@ -71,27 +70,7 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    private bool HasAllQuestMaterials()
-    {
-        var remaining = new System.Collections.Generic.Dictionary<IngredientType, int>();
-
-        foreach (QuestData quest in questManager.ActiveQuests)
-        {
-            foreach (QuestObjective objective in quest.objectives)
-            {
-                IngredientType rawType = objective.type.rawSource != null ? objective.type.rawSource : objective.type;
-
-                if (!remaining.ContainsKey(rawType))
-                    remaining[rawType] = inventory.GetCount(rawType) + HomeStorage.Instance.Totals.GetValueOrDefault(rawType);
-
-                if (remaining[rawType] < objective.targetAmount) return false;
-
-                remaining[rawType] -= objective.targetAmount;
-            }
-        }
-
-        return true;
-    }
+    private bool HasAllQuestMaterials() => QuestRequirements.HasAllMaterials(questManager, inventory);
 
     private bool AllQuestsDelivered()
     {
@@ -112,11 +91,8 @@ public class TutorialManager : MonoBehaviour
         if (basketDisplay != null) basketDisplay.OnOpened += HandleInventoryOpened;
         if (basketDisplay != null) basketDisplay.OnClosed += HandleInventoryClosed;
 
-        if (cauldronCraftingSystem != null)
-        {
-            cauldronCraftingSystem.OnEnteredCrafting += HandleEnteredCrafting;
-            cauldronCraftingSystem.OnPotionCrafted += HandlePotionCrafted;
-        }
+        if (craftingRoom != null) craftingRoom.OnEntered += HandleEnteredCrafting;
+        if (cauldron != null) cauldron.OnPotionCrafted += HandlePotionCrafted;
 
         if (deliveryInteraction != null)
             deliveryInteraction.OnInteracted += HandleDelivered;
@@ -134,11 +110,8 @@ public class TutorialManager : MonoBehaviour
         if (basketDisplay != null) basketDisplay.OnOpened -= HandleInventoryOpened;
         if (basketDisplay != null) basketDisplay.OnClosed -= HandleInventoryClosed;
 
-        if (cauldronCraftingSystem != null)
-        {
-            cauldronCraftingSystem.OnEnteredCrafting -= HandleEnteredCrafting;
-            cauldronCraftingSystem.OnPotionCrafted -= HandlePotionCrafted;
-        }
+        if (craftingRoom != null) craftingRoom.OnEntered -= HandleEnteredCrafting;
+        if (cauldron != null) cauldron.OnPotionCrafted -= HandlePotionCrafted;
 
         if (deliveryInteraction != null)
             deliveryInteraction.OnInteracted -= HandleDelivered;
@@ -224,7 +197,7 @@ public class TutorialManager : MonoBehaviour
             "Si ves un ingrediente que no te gusta en el caldero, haz click izquierdo sobre él para quitarlo. Si ya tienes todos los ingredientes listos, haz click sobre la cuchara para preparar la poción.");
     }
 
-    private void HandlePotionCrafted()
+    private void HandlePotionCrafted(PotionData potion)
     {
         if (currentStep != Step.CraftPotion) return;
 

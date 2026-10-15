@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 5517362793545278447}
   - component: {fileID: 8332971229055134849}
   m_Layer: 6
-  m_Name: Point Light
+  m_Name: Point Light Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,6 +911,7 @@ MonoBehaviour:
   - {fileID: 2297072761763198844}
   - {fileID: 3879637865631681220}
   - {fileID: 7200824213806233195}
+  visibilityReference: {fileID: 8934731868220534812}
 --- !u!1 &4048491331838811606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,8 +1619,6 @@ MonoBehaviour:
   inventory: {fileID: 3258103731965618708}
   questCardTemplate: {fileID: 9197481963319205126, guid: b77133b3a6eb9f04d961892c82e844fb, type: 3}
   questRowTemplate: {fileID: 9197481963319205126, guid: 226ee017ba9f0624585098888f7588ee, type: 3}
-  ingredientDatabase: {fileID: 11400000, guid: abca3c595ceab214da1a804d23895a90, type: 2}
-  sleepPotionRecipe: {fileID: 11400000, guid: 428cc45607c2ee64b9610d969c4ac9f0, type: 2}
 --- !u!1 &6378490897512570353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,7 +2321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HUDPanelVisibility
   document: {fileID: 3822260219237961790}
-  cauldron: {fileID: 0}
+  craftingRoom: {fileID: 0}
 --- !u!4 &8902375579132959059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9175324088604900196, guid: 3b8e67fcceb68fa44a9b89191285b503, type: 3}

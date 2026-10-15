@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Game.Collectibles;
 
 [RequireComponent(typeof(Collider))]
 public class SleepPotionBox : MonoBehaviour
@@ -8,8 +7,6 @@ public class SleepPotionBox : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InteractableOutline outline;
     [SerializeField] private int potionCost = 100;
-    [SerializeField] private IngredientType specialIngredient;
-    [SerializeField] private GameObject basketVisualPrefab;
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private BasketDisplay basketDisplay;
 
@@ -63,14 +60,15 @@ public class SleepPotionBox : MonoBehaviour
                 return;
             }
 
-            if (inventory.IsFull)
+            ItemData sleepIngredient = GameDatabase.Instance.SleepIngredient;
+
+            if (!inventory.TryAdd(sleepIngredient))
             {
                 DialogueUI.Instance.ShowMessage("Ofelia", "No te puedo dar el ojo, tenes el canasto lleno.");
                 return;
             }
 
-            inventory.AddItem(specialIngredient, 1);
-            basketDisplay.Drop(specialIngredient, basketVisualPrefab);
+            basketDisplay.Drop(sleepIngredient);
 
             progress.MarkSleepIngredientObtained();
             progress.Save();

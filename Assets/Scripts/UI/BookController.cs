@@ -1,23 +1,20 @@
-using Game.Collectibles;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class BookController : MonoBehaviour
 {
-    [Header("Data")]
-    [SerializeField] private PotionRecipeDatabase recipeDatabase;
-
     [Header("Input")]
     [SerializeField] private InputActionReference openBookAction;
-
-    [Header("Ingredientes")]
-    [SerializeField] private IngredientDatabase ingredientDatabase;
 
     [Header("Quests")]
     [SerializeField] private QuestManager questManager;
 
     private UIDocument uiDocument;
+
+    private static IReadOnlyList<PotionData> Recipes => GameDatabase.Instance != null ? GameDatabase.Instance.Potions : null;
+    private static IReadOnlyList<ItemData> Ingredients => GameDatabase.Instance != null ? GameDatabase.Instance.Items : null;
 
     private VisualElement root;
     private VisualElement bookContainer;
@@ -65,6 +62,7 @@ public class BookController : MonoBehaviour
 
     //objetivos
     private VisualElement objectiveEntry;
+    private VisualElement objectivesContainer;
 
 
     //navegacion
@@ -171,6 +169,7 @@ public class BookController : MonoBehaviour
         compendiumDescription = root.Q<Label>("CompendiumDescription");
 
         objectiveEntry = root.Q<VisualElement>("ObjectiveEntry");
+        objectivesContainer = objectiveEntry?.parent;
 
         pageNavigation = root.Q<VisualElement>("PageNavigation");
         previousButton = root.Q<Button>("PreviousButton");
@@ -326,20 +325,13 @@ public class BookController : MonoBehaviour
         if (title != null)
             title.text = "GRIMORIO";
 
-        if (recipeDatabase == null)
+        if (Recipes == null || Recipes.Count == 0)
         {
             ShowEmptyRecipePage("No hay recetas disponibles.");
             return;
         }
 
-        if (recipeDatabase.Recipes == null ||
-            recipeDatabase.Recipes.Count == 0)
-        {
-            ShowEmptyRecipePage("No hay recetas disponibles.");
-            return;
-        }
-
-        if (currentRecipeIndex >= recipeDatabase.Recipes.Count)
+        if (currentRecipeIndex >= Recipes.Count)
             currentRecipeIndex = 0;
 
         DisplayCurrentRecipe();
@@ -348,8 +340,8 @@ public class BookController : MonoBehaviour
 
     private void DisplayCurrentRecipe()
     {
-        PotionRecipe recipe =
-            recipeDatabase.Recipes[currentRecipeIndex];
+        PotionData recipe =
+            Recipes[currentRecipeIndex];
 
         if (recipe == null)
         {
@@ -358,18 +350,18 @@ public class BookController : MonoBehaviour
         }
 
         if (recipeTitle != null)
-            recipeTitle.text = recipe.potionName;
+            recipeTitle.text = recipe.DisplayName;
 
 
         if (recipeImage != null)
         {
-            recipeImage.sprite = recipe.image2D;
+            recipeImage.sprite = recipe.Image;
             recipeImage.style.display = DisplayStyle.Flex;
         }
 
         if (recipeDescription != null)
         {
-            recipeDescription.text = recipe.description;
+            recipeDescription.text = recipe.Description;
             recipeDescription.style.display = DisplayStyle.Flex;
         }
 
@@ -378,18 +370,15 @@ public class BookController : MonoBehaviour
 
         ClearIngredients();
 
-        if (recipe.ingredients != null)
+        foreach (PotionIngredient ingredient in recipe.Ingredients)
         {
-            foreach (RecipeIngredient ingredient in recipe.ingredients)
-            {
-                if (ingredient == null || ingredient.type == null)
-                    continue;
+            if (ingredient == null || ingredient.Item == null)
+                continue;
 
-                AddIngredientLine(
-                    ingredient.type.displayName,
-                    ingredient.amount
-                );
-            }
+            AddIngredientLine(
+                ingredient.Key.DisplayName,
+                ingredient.Amount
+            );
         }
 
         UpdatePageNumber();
@@ -466,15 +455,13 @@ public class BookController : MonoBehaviour
         if (title != null)
             title.text = "GRIMORIO";
 
-        if (ingredientDatabase == null ||
-            ingredientDatabase.AllIngredients == null ||
-            ingredientDatabase.AllIngredients.Count == 0)
+        if (Ingredients == null || Ingredients.Count == 0)
         {
             ShowEmptyCompendiumPage();
             return;
         }
 
-        if (currentIngredientIndex >= ingredientDatabase.AllIngredients.Count)
+        if (currentIngredientIndex >= Ingredients.Count)
             currentIngredientIndex = 0;
 
         DisplayCurrentIngredient();
@@ -482,8 +469,8 @@ public class BookController : MonoBehaviour
 
     private void DisplayCurrentIngredient()
     {
-        IngredientType ingredient =
-            ingredientDatabase.AllIngredients[currentIngredientIndex];
+        ItemData ingredient =
+            Ingredients[currentIngredientIndex];
 
         if (ingredient == null)
         {
@@ -492,17 +479,17 @@ public class BookController : MonoBehaviour
         }
 
         if (compendiumTitle != null)
-            compendiumTitle.text = ingredient.displayName;
+            compendiumTitle.text = ingredient.DisplayName;
 
         if (compendiumImage != null)
         {
-            compendiumImage.sprite = ingredient.image;
+            compendiumImage.sprite = ingredient.GetIcon(ItemState.Raw);
             compendiumImage.style.display = DisplayStyle.Flex;
         }
 
         if (compendiumDescription != null)
         {
-            compendiumDescription.text = ingredient.locationDescription;
+            compendiumDescription.text = BuildCompendiumDescription(ingredient);
             compendiumDescription.style.display = DisplayStyle.Flex;
         }
 
@@ -559,10 +546,10 @@ public class BookController : MonoBehaviour
 
     private void RefreshObjectives()
     {
-        if (objectivesPage == null || objectiveEntry == null)
+        if (objectivesPage == null || objectivesContainer == null)
             return;
 
-        objectiveEntry.parent?.Clear();
+        objectivesContainer.Clear();
 
         if (questManager == null)
             return;
@@ -586,7 +573,7 @@ public class BookController : MonoBehaviour
 
         Label objectiveTitle = new Label();
         objectiveTitle.name = "ObjectiveTitle";
-        objectiveTitle.text = quest.missionName;
+        objectiveTitle.text = quest.MissionName;
         objectiveTitle.AddToClassList("objective-title");
 
         Label objectiveDescription = new Label();
@@ -604,8 +591,8 @@ public class BookController : MonoBehaviour
         objectiveImage.name = "ObjectiveImage";
         objectiveImage.AddToClassList("objective-image");
 
-        if (quest.requiredPotion != null)
-            objectiveImage.sprite = quest.requiredPotion.image2D;
+        if (quest.Potion != null)
+            objectiveImage.sprite = quest.Potion.Image;
 
         Button objectiveButton = new Button();
         objectiveButton.name = "ObjectiveButton";
@@ -619,29 +606,45 @@ public class BookController : MonoBehaviour
         entry.Add(info);
         entry.Add(right);
 
-        objectiveEntry.parent.Add(entry);
+        objectivesContainer.Add(entry);
     }
 
     private string BuildQuestDescription(QuestData quest)
     {
-        if (quest.objectives == null || quest.objectives.Count == 0)
-            return quest.villagerName;
+        if (quest.Potion == null || quest.Potion.Ingredients.Count == 0)
+            return quest.VillagerName;
 
         string description = "";
 
-        if (!string.IsNullOrEmpty(quest.villagerName))
-            description += $"Para {quest.villagerName}:\n";
+        if (!string.IsNullOrEmpty(quest.VillagerName))
+            description += $"Para {quest.VillagerName}:\n";
 
-        foreach (QuestObjective objective in quest.objectives)
+        foreach (PotionIngredient ingredient in quest.Potion.Ingredients)
         {
-            if (objective == null || objective.type == null)
+            if (ingredient == null || ingredient.Item == null)
                 continue;
 
             description +=
-                $"{objective.type.displayName} x{objective.targetAmount}\n";
+                $"{ingredient.Key.DisplayName} x{ingredient.Amount}\n";
         }
 
         return description.TrimEnd();
+    }
+
+    // Descripción del ítem + en qué mesa va y si se procesa.
+    private static string BuildCompendiumDescription(ItemData item)
+    {
+        string description = item.Description;
+
+        string usage;
+        if (item.IsGrindable)
+            usage = $"Se muele en el mortero: {item.GetName(ItemState.Processed)}.";
+        else if (item.IsCuttable)
+            usage = $"Se corta en la tabla: {item.GetName(ItemState.Processed)}.";
+        else
+            usage = "No se procesa, se usa entero.";
+
+        return string.IsNullOrEmpty(description) ? usage : $"{description}\n\n{usage}";
     }
 
     private void UpdateNavigationVisibility()
@@ -679,16 +682,12 @@ public class BookController : MonoBehaviour
         if (currentSection == BookSection.Recipes)
         {
             hasPages =
-                recipeDatabase != null &&
-                recipeDatabase.Recipes != null &&
-                recipeDatabase.Recipes.Count > 0;
+                Recipes != null && Recipes.Count > 0;
         }
         else if (currentSection == BookSection.Compendium)
         {
             hasPages =
-                ingredientDatabase != null &&
-                ingredientDatabase.AllIngredients != null &&
-                ingredientDatabase.AllIngredients.Count > 0;
+                Ingredients != null && Ingredients.Count > 0;
         }
 
         if (previousButton != null)
@@ -706,29 +705,25 @@ public class BookController : MonoBehaviour
 
         if (currentSection == BookSection.Recipes)
         {
-            if (recipeDatabase == null ||
-                recipeDatabase.Recipes == null ||
-                recipeDatabase.Recipes.Count == 0)
+            if (Recipes == null || Recipes.Count == 0)
             {
                 pageNumber.text = "0 / 0";
                 return;
             }
 
             pageNumber.text =
-                $"{currentRecipeIndex + 1} / {recipeDatabase.Recipes.Count}";
+                $"{currentRecipeIndex + 1} / {Recipes.Count}";
         }
         else if (currentSection == BookSection.Compendium)
         {
-            if (ingredientDatabase == null ||
-                ingredientDatabase.AllIngredients == null ||
-                ingredientDatabase.AllIngredients.Count == 0)
+            if (Ingredients == null || Ingredients.Count == 0)
             {
                 pageNumber.text = "0 / 0";
                 return;
             }
 
             pageNumber.text =
-                $"{currentIngredientIndex + 1} / {ingredientDatabase.AllIngredients.Count}";
+                $"{currentIngredientIndex + 1} / {Ingredients.Count}";
         }
     }
 
@@ -737,31 +732,27 @@ public class BookController : MonoBehaviour
     {
         if (currentSection == BookSection.Recipes)
         {
-            if (recipeDatabase == null ||
-                recipeDatabase.Recipes == null ||
-                recipeDatabase.Recipes.Count == 0)
+            if (Recipes == null || Recipes.Count == 0)
                 return;
 
             currentRecipeIndex--;
 
             if (currentRecipeIndex < 0)
                 currentRecipeIndex =
-                    recipeDatabase.Recipes.Count - 1;
+                    Recipes.Count - 1;
 
             DisplayCurrentRecipe();
         }
         else if (currentSection == BookSection.Compendium)
         {
-            if (ingredientDatabase == null ||
-                ingredientDatabase.AllIngredients == null ||
-                ingredientDatabase.AllIngredients.Count == 0)
+            if (Ingredients == null || Ingredients.Count == 0)
                 return;
 
             currentIngredientIndex--;
 
             if (currentIngredientIndex < 0)
                 currentIngredientIndex =
-                    ingredientDatabase.AllIngredients.Count - 1;
+                    Ingredients.Count - 1;
 
             DisplayCurrentIngredient();
         }
@@ -772,28 +763,24 @@ public class BookController : MonoBehaviour
     {
         if (currentSection == BookSection.Recipes)
         {
-            if (recipeDatabase == null ||
-                recipeDatabase.Recipes == null ||
-                recipeDatabase.Recipes.Count == 0)
+            if (Recipes == null || Recipes.Count == 0)
                 return;
 
             currentRecipeIndex++;
 
-            if (currentRecipeIndex >= recipeDatabase.Recipes.Count)
+            if (currentRecipeIndex >= Recipes.Count)
                 currentRecipeIndex = 0;
 
             DisplayCurrentRecipe();
         }
         else if (currentSection == BookSection.Compendium)
         {
-            if (ingredientDatabase == null ||
-                ingredientDatabase.AllIngredients == null ||
-                ingredientDatabase.AllIngredients.Count == 0)
+            if (Ingredients == null || Ingredients.Count == 0)
                 return;
 
             currentIngredientIndex++;
 
-            if (currentIngredientIndex >= ingredientDatabase.AllIngredients.Count)
+            if (currentIngredientIndex >= Ingredients.Count)
                 currentIngredientIndex = 0;
 
             DisplayCurrentIngredient();

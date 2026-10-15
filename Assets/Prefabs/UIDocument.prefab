@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9175324088604900196}
   - component: {fileID: 3590985882602910217}
-  - component: {fileID: 3501665771516579099}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -56,17 +55,3 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
---- !u!114 &3501665771516579099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6162499939966115575}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1dafb7527b7b0b48bdad98672d187e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryHUD
-  inventory: {fileID: 0}
-  ingredientDatabase: {fileID: 11400000, guid: abca3c595ceab214da1a804d23895a90, type: 2}

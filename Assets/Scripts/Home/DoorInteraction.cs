@@ -56,9 +56,7 @@ public class DoorInteraction : MonoBehaviour
 
         lastTeleportTime = Time.time;
 
-        int itemsCollected = 0;
-        foreach (var pair in inventory.Items)
-            itemsCollected += pair.Value;
+        int itemsCollected = inventory.TotalCount;
 
         HomeStorage.Instance.Deposit(inventory);
         GameProgressManager.Instance.MarkEnteredHouse();

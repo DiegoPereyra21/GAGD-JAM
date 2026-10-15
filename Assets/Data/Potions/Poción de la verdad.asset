@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8d145e2e103174d9c8ee5cfe4c4746, type: 3}
+  m_Name: "Poci\xF3n de la verdad"
+  m_EditorClassIdentifier: Assembly-CSharp::PotionData
+  id: pocion_verdad
+  displayName: "Poci\xF3n De la Verdad"
+  description: "Impide a quien la beba mentir durante una hora. La sobredosis de
+    esto es letal, proceda con precauci\xF3n."
+  image: {fileID: 21300000, guid: 0dadcb17c7efca445b0a5fe80b19eb7a, type: 3}
+  model: {fileID: 6975055357862222401, guid: 125f7405e1ac66e48b15f478d664ae58, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: f6ae417d5710f0e448489672d37a404a, type: 2}
+    state: 1
+    amount: 2
+  - item: {fileID: 11400000, guid: a8e0b8ff55d9e914ea7e09c204f903ac, type: 2}
+    state: 1
+    amount: 2
+  - item: {fileID: 11400000, guid: 6fdfb97b68293be43a68816a6544a3ee, type: 2}
+    state: 1
+    amount: 2
