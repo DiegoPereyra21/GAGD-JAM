@@ -425,6 +425,18 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2718206787728577738, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1371944567}
+    - targetCorrespondingSourceObject: {fileID: 2718206787728577738, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1371944566}
+    - targetCorrespondingSourceObject: {fileID: 2261686038596759475, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 278110453}
+    - targetCorrespondingSourceObject: {fileID: 2261686038596759475, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 278110452}
     - targetCorrespondingSourceObject: {fileID: 7636367829590179206, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -500,6 +512,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e20213f70f40e24a8f30814827c838d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cauldron
+--- !u!23 &278110443 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5079265049657437009, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &278110444 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7568223804856010890, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &278110445 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5916013091342516826, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &278110446 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 310216736446519461, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &278110447 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3912940279847436685, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &278110448 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7090870888634020814, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &278110449 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4958476603854100452, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &278110450 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 719536938767374324, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &278110451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2261686038596759475, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &278110452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278110451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: 278110453}
+--- !u!114 &278110453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278110451}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 278110450}
+  - {fileID: 278110449}
+  - {fileID: 278110448}
+  - {fileID: 278110447}
+  - {fileID: 278110446}
+  - {fileID: 278110445}
+  - {fileID: 278110444}
+  - {fileID: 278110443}
 --- !u!1001 &284892887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2200,6 +2292,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8059835789184919776, guid: f36837b4ef1095243805130530d59012, type: 3}
   m_PrefabInstance: {fileID: 1371367604}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1371944563 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4703426002807471892, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1371944564 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2168933112440180814, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1371944565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2718206787728577738, guid: 1e4ef9b36895ee942a7c73a32c2fc293, type: 3}
+  m_PrefabInstance: {fileID: 15915732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1371944566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371944565}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a02ce7e0751584f9df445e3740e21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityURP.Outline::UnityURP.Outline.OutlineRenderer
+  _outlineMaterial: {fileID: 11400000, guid: 412e063c445e6f344a2a89a103547f7a, type: 2}
+  _outlineRenderers:
+  - {fileID: 1371944564}
+  - {fileID: 1371944563}
+--- !u!114 &1371944567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371944565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa61338ba781ad4492280de55501980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableOutline
+  outlineRenderer: {fileID: 1371944566}
 --- !u!1001 &1450473270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2360,6 +2496,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d24287560fdbb408047a64465589ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialUI
+  pulseDuration: 0.5
+  pulseScale: 1.06
+  pulseBorderColor: {r: 1, g: 0.84, b: 0.29, a: 1}
+  borderWidth: 4
 --- !u!114 &1452695665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2408,6 +2548,8 @@ MonoBehaviour:
   questsNeededForNextStep: 2
   mainMenuSceneName: MainMenu
   basketDisplay: {fileID: 1097611478}
+  collectibleHighlightRadius: 40
+  guideRefreshInterval: 0.2
 --- !u!4 &1452695667
 Transform:
   m_ObjectHideFlags: 0
