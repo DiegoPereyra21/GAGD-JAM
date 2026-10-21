@@ -830,7 +830,7 @@ public class BookController : MonoBehaviour
         bookContainer.style.display = DisplayStyle.None;
 
         isBookOpen = false;
-        PauseGame();
+        ResumeGame();      // antes: PauseGame();
         RestoreCursor();
     }
 
