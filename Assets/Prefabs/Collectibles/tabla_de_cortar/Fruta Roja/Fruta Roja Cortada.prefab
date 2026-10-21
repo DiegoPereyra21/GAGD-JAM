@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 118.679
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 460cd7bebc3a41c44bcf714f3625f516, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 706d1eb5fbee44844893342ce8235490, type: 2}
     - target: {fileID: 919132149155446097, guid: 460cd7bebc3a41c44bcf714f3625f516, type: 3}
       propertyPath: m_Name
       value: 1_4manzana
@@ -271,6 +275,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -69.5
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 032d4bec330bb884b9be346e512368c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 706d1eb5fbee44844893342ce8235490, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 032d4bec330bb884b9be346e512368c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: faafd9e302fc9ac4ba7e527d50cac94f, type: 2}
     - target: {fileID: 919132149155446097, guid: 032d4bec330bb884b9be346e512368c9, type: 3}
       propertyPath: m_Name
       value: 1_2manzana

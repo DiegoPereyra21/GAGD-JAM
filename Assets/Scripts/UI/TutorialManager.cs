@@ -31,7 +31,7 @@ public class TutorialManager : MonoBehaviour
     private bool inventoryOpenedOnce;
     private bool inventoryClosedMessageShown;
     private bool collectedMessageShown;
-
+    private bool grimoireTipShown;
     private enum Step
     {
         Movement, GoOutside, CheckMailbox, CollectItems,
@@ -119,6 +119,7 @@ public class TutorialManager : MonoBehaviour
         if (downstairs != null) downstairs.OnUsed += HandleWentDownstairs;
         if (doorExit != null) doorExit.OnUsed += HandleWentOutside;
         if (questManager != null) questManager.OnQuestsChanged += HandleQuestsChanged;
+        if (inventory != null) inventory.OnInventoryChanged += HandleInventoryChanged;
         if (basketDisplay != null) basketDisplay.OnOpened += HandleInventoryOpened;
         if (basketDisplay != null) basketDisplay.OnClosed += HandleInventoryClosed;
 
@@ -138,6 +139,7 @@ public class TutorialManager : MonoBehaviour
         if (downstairs != null) downstairs.OnUsed -= HandleWentDownstairs;
         if (doorExit != null) doorExit.OnUsed -= HandleWentOutside;
         if (questManager != null) questManager.OnQuestsChanged -= HandleQuestsChanged;
+        if (inventory != null) inventory.OnInventoryChanged -= HandleInventoryChanged;
         if (basketDisplay != null) basketDisplay.OnOpened -= HandleInventoryOpened;
         if (basketDisplay != null) basketDisplay.OnClosed -= HandleInventoryClosed;
 
@@ -206,6 +208,16 @@ public class TutorialManager : MonoBehaviour
         inventoryClosedMessageShown = true;
 
         Show("Juntá todo antes de que amanezca: de día los ingredientes se marchitan y ya no se pueden recolectar.");
+    }
+
+    // Aviso del grimorio (tecla J): sale una sola vez al juntar el primer ingrediente.
+    private void HandleInventoryChanged()
+    {
+        if (currentStep != Step.CollectItems || grimoireTipShown) return;
+        if (inventory.TotalCount <= 0) return;
+
+        grimoireTipShown = true;
+        Show("¿No conocés un ingrediente? Pulsá J para abrir el grimorio: en la pestaña Compendio ves qué es y para qué sirve cada uno.");
     }
 
     // Entrar a la casa cierra la parte de afuera pase lo que pase (te saltees el buzón o no) —
