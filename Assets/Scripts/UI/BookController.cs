@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using Unity.Cinemachine;
 
 public class BookController : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class BookController : MonoBehaviour
     [SerializeField] private QuestManager questManager;
 
     private UIDocument uiDocument;
-
+    private CinemachineInputAxisController lookController;
+    private bool cursorUnlockedByBook;
     private static IReadOnlyList<PotionData> Recipes => GameDatabase.Instance != null ? GameDatabase.Instance.Potions : null;
     private static IReadOnlyList<ItemData> Ingredients => GameDatabase.Instance != null ? GameDatabase.Instance.Items : null;
 
@@ -124,6 +126,7 @@ public class BookController : MonoBehaviour
 
     private void OnDisable()
     {
+        RestoreCursor();
         UnregisterCallbacks();
 
         if (questManager != null)
@@ -795,6 +798,7 @@ public class BookController : MonoBehaviour
         bookContainer.style.display = DisplayStyle.Flex;
 
         isBookOpen = true;
+        UnlockCursor();
 
         currentRecipeIndex = 0;
         currentIngredientIndex = 0;
@@ -811,5 +815,35 @@ public class BookController : MonoBehaviour
         bookContainer.style.display = DisplayStyle.None;
 
         isBookOpen = false;
+        RestoreCursor();
+    }
+
+    // Solo si estás afuera (cursor bloqueado): libera el mouse y frena el giro de cámara mientras el libro está abierto.
+    // Adentro (canasto, crafteo) el cursor ya está libre y no se toca nada.
+    private void UnlockCursor()
+    {
+        if (UnityEngine.Cursor.lockState != CursorLockMode.Locked) return;
+
+        cursorUnlockedByBook = true;
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
+
+        if (lookController == null)
+            lookController = FindFirstObjectByType<CinemachineInputAxisController>();
+
+        if (lookController != null)
+            lookController.enabled = false;
+    }
+
+    private void RestoreCursor()
+    {
+        if (!cursorUnlockedByBook) return;
+
+        cursorUnlockedByBook = false;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
+
+        if (lookController != null)
+            lookController.enabled = true;
     }
 }
