@@ -51,10 +51,17 @@ public class PauseMenu : MonoBehaviour
 
     private void OnPausePressed(InputAction.CallbackContext ctx)
     {
+        // Con el compendio abierto, la tecla de pausa solo lo cierra
+        if (BookController.IsOpen)
+        {
+            BookController.Instance.CloseBook();
+            return;
+        }
+
         if (isPaused) Resume();
         else Pause();
     }
-    
+
     private void Pause()
     {
         isPaused = true;

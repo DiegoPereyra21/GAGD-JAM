@@ -20,7 +20,11 @@ public class BookController : MonoBehaviour
 
     private VisualElement root;
     private VisualElement bookContainer;
+    public static BookController Instance { get; private set; }
+    public static bool IsOpen => Instance != null && Instance.isBookOpen;
 
+    private float timeScaleBeforeBook = 1f;
+    private bool pausedByBook;
 
     // tabs
     private Button startTab;
@@ -100,6 +104,8 @@ public class BookController : MonoBehaviour
 
     private void OnEnable()
     {
+        Instance = this;
+
         if (uiDocument == null)
             uiDocument = GetComponent<UIDocument>();
 
@@ -126,7 +132,10 @@ public class BookController : MonoBehaviour
 
     private void OnDisable()
     {
+        if (Instance == this) Instance = null;
+
         RestoreCursor();
+        ResumeGame();
         UnregisterCallbacks();
 
         if (questManager != null)
@@ -212,9 +221,14 @@ public class BookController : MonoBehaviour
     private void OnOpenBookPerformed(InputAction.CallbackContext context)
     {
         if (isBookOpen)
+        {
             CloseBook();
-        else
-            OpenBook();
+            return;
+        }
+
+        if (Time.timeScale == 0f) return;
+
+        OpenBook();
     }
 
     private void OnStartClicked(ClickEvent evt)
@@ -798,6 +812,7 @@ public class BookController : MonoBehaviour
         bookContainer.style.display = DisplayStyle.Flex;
 
         isBookOpen = true;
+        PauseGame();
         UnlockCursor();
 
         currentRecipeIndex = 0;
@@ -815,9 +830,27 @@ public class BookController : MonoBehaviour
         bookContainer.style.display = DisplayStyle.None;
 
         isBookOpen = false;
+        PauseGame();
         RestoreCursor();
     }
 
+
+    private void PauseGame()
+    {
+        if (pausedByBook) return;
+
+        pausedByBook = true;
+        timeScaleBeforeBook = Time.timeScale;
+        Time.timeScale = 0f;
+    }
+
+    private void ResumeGame()
+    {
+        if (!pausedByBook) return;
+
+        pausedByBook = false;
+        Time.timeScale = timeScaleBeforeBook;
+    }
     // Solo si estás afuera (cursor bloqueado): libera el mouse y frena el giro de cámara mientras el libro está abierto.
     // Adentro (canasto, crafteo) el cursor ya está libre y no se toca nada.
     private void UnlockCursor()
