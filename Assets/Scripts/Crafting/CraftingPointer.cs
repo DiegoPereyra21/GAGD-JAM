@@ -52,6 +52,8 @@ public class CraftingPointer : MonoBehaviour
 
     private void HandlePress(Vector2 screenPos)
     {
+        if (CraftingNavArrows.PointerOverUI) return;
+
         if (!TryRaycast(screenPos, out RaycastHit hit)) return;
 
         GameObject target = hit.collider.gameObject;

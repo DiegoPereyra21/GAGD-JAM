@@ -32,11 +32,17 @@ public class CraftingCameraRail : MonoBehaviour
 
     public CraftingZone CurrentZone { get; private set; } = CraftingZone.Center;
     public bool IsActive { get; private set; }
-
+    public bool IsBusy => room.IsBusy;
     private InputAction moveAction;
     private int lastDirection;
 
-    private void Awake() => moveAction = playerInput.actions["Move"];
+    private void Awake()
+    {
+        moveAction = playerInput.actions["Move"];
+
+        if (GetComponent<CraftingNavArrows>() == null)
+            gameObject.AddComponent<CraftingNavArrows>();
+    }
 
     public void Activate()
     {
@@ -99,7 +105,7 @@ public class CraftingCameraRail : MonoBehaviour
         OnZoneChanged?.Invoke(zone);
     }
 
-    private Transform GetAnchor(CraftingZone zone)
+    public Transform GetAnchor(CraftingZone zone)
     {
         switch (zone)
         {
@@ -108,4 +114,15 @@ public class CraftingCameraRail : MonoBehaviour
             default: return centerAnchor;
         }
     }
+    public void Navigate(int direction)
+    {
+        if (!IsActive || room.IsBusy) return;
+        Move(direction);
+    }
+    public void SetClickZonesActive(bool active)
+    {
+        if (leftClickZone != null) leftClickZone.SetActive(active);
+        if (rightClickZone != null) rightClickZone.SetActive(active);
+    }
+
 }

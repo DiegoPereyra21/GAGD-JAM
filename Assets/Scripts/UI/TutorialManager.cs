@@ -49,6 +49,8 @@ public class TutorialManager : MonoBehaviour
     private Collectible[] collectibles;
     private float guideTimer;
     private string lastCraftingHint;
+    private CraftingNavArrows navArrows;
+    private CraftingZone? navHintZone;
 
     private void Start()
     {
@@ -285,6 +287,7 @@ public class TutorialManager : MonoBehaviour
     // Decide qué titila según el paso actual (y en el crafteo, también qué indicación mostrar).
     private void RefreshGuide()
     {
+        navHintZone = null;
         switch (currentStep)
         {
             case Step.Movement:
@@ -321,6 +324,9 @@ public class TutorialManager : MonoBehaviour
                 highlighter.Add(bed);
                 break;
         }
+
+        if (navArrows == null) navArrows = FindFirstObjectByType<CraftingNavArrows>();
+        if (navArrows != null) navArrows.Hint(navHintZone);
 
         highlighter.Apply();
     }
@@ -390,7 +396,8 @@ public class TutorialManager : MonoBehaviour
         }
 
         string instruction = BuildCraftingInstruction(target);
-        ShowCraftingHint($"Preparando: {TutorialUI.Item(target.DisplayName)}\n{instruction}\n<size=75%>A y D: cambiar de mesa   ·   E: salir de la mesa</size>");
+
+        ShowCraftingHint($"Preparando: {TutorialUI.Item(target.DisplayName)}\n{instruction}\n<size=75%>Flechas de la pantalla (o A y D): cambiar de mesa   ·   E: salir de la mesa</size>");
     }
 
     private PotionData GetTargetPotion()
@@ -494,12 +501,15 @@ public class TutorialManager : MonoBehaviour
         return anyVisible;
     }
 
-    private static string WithNavigation(bool visible, TableType table, string text)
+    private string WithNavigation(bool visible, TableType table, string text)
     {
         if (visible) return text;
 
+        if (navArrows == null) navArrows = FindFirstObjectByType<CraftingNavArrows>();
+        if (navArrows != null) navHintZone = navArrows.ZoneOf(table);
+
         string tableName = table == TableType.Mortar ? "del mortero" : "de la tabla de picar";
-        return $"{text}\nEstá en la mesa {tableName}: usá A y D para ir hasta ahí.";
+        return $"{text}\nEstá en la mesa {tableName}: hacé click en la flecha de la pantalla para ir hasta ahí.";
     }
 
     private GameObject GetStation(TableType table)
